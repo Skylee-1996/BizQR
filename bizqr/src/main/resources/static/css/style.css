@@ -32,7 +32,7 @@ nav{
 nav a.logo{
     font-size: 33px;
     color: #0f2182;
-    font-weight: 600px;
+    font-weight: 900;
 }
 
 nav .links a:not(:last-child){
@@ -100,4 +100,58 @@ header .left a span{
 
 header img{
     width: 600px;
+}
+
+h2 .separator{
+    padding: 0 80px;
+    font-size: 40px;
+    margin-top: 40px;
+    color: #fff;
+}
+h2.separator{
+    padding: 0 80px;
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+.store{
+    padding: 0 80px;
+    margin: 50px 0 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.store .item,
+.nft-shop .nft-list .item{
+    padding: 20px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.store .item:hover,
+.nft-shop .nft-list .item:hover,
+.sellers .item:hover{
+    box-shadow: none;
+}
+
+.store .item .header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.store .item .header i{
+    font-size: 40px;
+}
+
+.store .item .header h5{
+    font-size: 17px;
+}
+
+.store .item p{
+    margin-top: 10px;
+    padding: 0 4px;
 }
