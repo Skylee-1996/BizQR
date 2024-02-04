@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="kor" xmlns:th="https://www.thymeleaf.org">
+<html lang="kor" xmlns:th="http://www.thymeleaf.org">
 
 <th:block th:replace="~{/layout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
 
-<body>     
+<body>
 <header>
     <div class="left">
         <h1>내 핸드폰의 메뉴판 <span>BizQR</span></h1>
@@ -16,7 +15,7 @@
             <span>가입하기</span>
         </a>
     </div>
-    <img src="/static/asset/큐오더_원형.png" alt="">
+    <img src="/asset/근심.png">
 
 </header>
 
@@ -24,7 +23,7 @@
     BizQR에 가입하세요
 </h2>
 
-<div class="store">
+<div class="forwards">
     <div class="item">
         <div class="header">
             <i class='bx bx-wallet-alt'></i>
@@ -50,7 +49,127 @@
             fuga sed earum.</p>
     </div>
 </div>
+<h2 class="separator">
+    가맹점
+</h2>
 
+<div class="stores">
+    <div class="category">
+        <a href="#">Cafe</a>
+        <a href="#">Restaurant</a>
+        <a href="#">Bar</a>
+        <a href="#">Hotel</a>
+        <a href="#">Etc.</a>
+    </div>
+
+    <div class="store-list">
+        <div class="item">
+            <img src="/asset/근심.png">
+            <div class="info">
+                <div>
+                    <h5>가맹점1</h5>
+                    <div class="btc">
+                        <p>writer</p>
+                    </div>
+                </div>
+                <p>5 of 33</p>
+            </div>
+            <div class="bid">
+                <p>조회수</p>
+                <a href="#">Place a Bid</a>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/asset/근심2.png">
+            <div class="info">
+                <div>
+                    <h5>가맹점2</h5>
+                    <div class="btc">
+                        <p>writer</p>
+                    </div>
+                </div>
+                <p>7 of 12</p>
+            </div>
+            <div class="bid">
+                <p>1h 28m 1s</p>
+                <a href="#">Place a Bid</a>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/asset/근심.png">
+            <div class="info">
+                <div>
+                    <h5>가맹점3</h5>
+                    <div class="btc">
+                        <p>writer</p>
+                    </div>
+                </div>
+                <p>9 of 23</p>
+            </div>
+            <div class="bid">
+                <p>4h 21m 1s</p>
+                <a href="#">Place a Bid</a>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/asset/근심2.png">
+            <div class="info">
+                <div>
+                    <h5>가맹점4</h5>
+                    <div class="btc">
+                        <p>writer</p>
+                    </div>
+                </div>
+                <p>1 of 33</p>
+            </div>
+            <div class="bid">
+                <p>0h 28m 1s</p>
+                <a href="#">Place a Bid</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="view-more">
+    <button>View More</button>
+</div>
+
+<h2 class="separator">
+    Best Sellers
+</h2>
+
+<div class="sellers">
+    <div class="item">
+        <img src="assets/profile-1.png">
+        <div class="info">
+            <h4>Jhone D</h4>
+            <p>15.2K</p>
+        </div>
+    </div>
+    <div class="item">
+        <img src="assets/profile-2.png">
+        <div class="info">
+            <h4>Gregory B</h4>
+            <p>12.7K</p>
+        </div>
+    </div>
+    <div class="item">
+        <img src="assets/profile-3.png">
+        <div class="info">
+            <h4>Stephen E</h4>
+            <p>7.9K</p>
+        </div>
+    </div>
+    <div class="item">
+        <img src="assets/profile-4.png">
+        <div class="info">
+            <h4>Russell M</h4>
+            <p>4.2K</p>
+        </div>
+    </div>
+</div>
 </body>
     </th:block>
 </th:block>
+</html>
