@@ -1,0 +1,26 @@
+<html lang="kor" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="~{/layout :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <link rel="stylesheet" th:href="@{/css/loginstyle.css}">
+
+
+    <body>
+
+    <div class="login-card">
+        <h2>Login</h2>
+        <h3>Enter your credentials</h3>
+
+        <form class="login-form" >
+            <input type="text" placeholder="UserEmail">
+            <input type="password" placeholder="Password">
+            <a href="#">Forgot your password?</a>
+            <button type="submit">LOGIN</button>
+        </form>
+    </div>
+
+
+
+</body>
+    </th:block>
+</th:block>
