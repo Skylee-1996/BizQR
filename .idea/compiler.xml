@@ -10,10 +10,5 @@
         <module name="bizqr.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="bizqr" target="17" />
-      <module name="bizqr.main" target="17" />
-      <module name="bizqr.test" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>
