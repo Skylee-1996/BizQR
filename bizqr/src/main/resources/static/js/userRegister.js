@@ -59,7 +59,7 @@ function checkPwd(){
 
 async function checkEmailToServer(email){
     try {
-      const resp = await fetch("/member/checkEmail/" + email);
+      const resp = await fetch("/user/checkEmail/" + email);
       const result = await resp.text();
       return result;
     } catch (error){
