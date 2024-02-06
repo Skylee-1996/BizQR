@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="kor" xmlns:th="https://www.thymeleaf.org">
+
+<th:block th:replace="~{/layout :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+
+<body>     
+<header>
+    <div class="left">
+        <h1>내 핸드폰의 메뉴판 <span>BizQR</span></h1>
+        <p>
+            지금시작하세요!
+        </p>
+        <a href="#">
+            <i class='bx bx-basket'></i>
+            <span>가입하기</span>
+        </a>
+    </div>
+    <img src="/static/asset/큐오더_원형.png" alt="">
+
+</header>
+
+<h2 class="separator">
+    BizQR에 가입하세요
+</h2>
+
+<div class="store">
+    <div class="item">
+        <div class="header">
+            <i class='bx bx-wallet-alt'></i>
+            <h5>신청하기</h5>
+        </div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste modi ab sunt dolores ex dolor, suscipit
+            fuga sed earum.</p>
+    </div>
+    <div class="item">
+        <div class="header">
+            <i class='bx bx-cart-alt'></i>
+            <h5>가게 목록</h5>
+        </div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste modi ab sunt dolores ex dolor, suscipit
+            fuga sed earum.</p>
+    </div>
+    <a th:href="@{/board/list}">
+    <div class="item">
+        <div class="header">
+            <i class='bx bx-grid-alt'></i>
+            <h5>공지사항</h5>
+        </div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste modi ab sunt dolores ex dolor, suscipit
+            fuga sed earum.</p>
+    </div>
+    </a>
+</div>
+
+
+</body>
+    </th:block>
+</th:block>

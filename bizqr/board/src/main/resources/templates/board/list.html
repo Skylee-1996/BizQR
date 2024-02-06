@@ -1,0 +1,129 @@
+<meta charset="UTF-8">
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{layout :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <link rel="stylesheet" th:href="@{/css/searchBar.css}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" th:href="@{/css/noticeList.css}">
+
+        <div class="container">
+
+
+            <!-- search line -->
+
+
+            <!-- menu btn -->
+            <div class="fab-wrapper">
+                <input id="fabCheckbox" type="checkbox" class="fab-checkbox" />
+                <label class="fab" for="fabCheckbox">
+                    <span class="fab-dots fab-dots-1"></span>
+                    <span class="fab-dots fab-dots-2"></span>
+                    <span class="fab-dots fab-dots-3"></span>
+                </label>
+                <div class="fab-wheel">
+                    <a class="fab-action fab-action-1" href="/board/register">
+                        <i class="fas fa-question"></i>
+                    </a>
+                    <a class="fab-action fab-action-2">
+                        <i class="fas fa-book"></i>
+                    </a>
+                    <a class="fab-action fab-action-3">
+                        <i class="fas fa-address-book"></i>
+                    </a>
+                    <a class="fab-action fab-action-4">
+                        <i class="fas fa-info"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- board list -->
+            <div class="listContainer">
+            <div class="image-container" th:each="bvo:${list}">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
+                    </div>
+                    <div class="card-body">
+                        <span class="tag tag-teal">Technology</span>
+                        <h4 th:text="${bvo.title}">
+                        </h4>
+                        <p th:text="${bvo.content}">
+
+                        </p>
+                        <div class="user">
+                            <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+                            <div class="user-info">
+                                <h5 th:text="${bvo.email}"></h5>
+                                <small th:text="${bvo.modDate}"></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://www.newsbtc.com/wp-content/uploads/2020/06/mesut-kaya-LcCdl__-kO0-unsplash-scaled.jpg" alt="ballons" />
+                    </div>
+                    <div class="card-body">
+                        <span class="tag tag-purple">Popular</span>
+                        <h4 th:text="${bvo.title}">
+
+                        </h4>
+                        <p th:text="${bvo.content}">
+
+                        </p>
+                        <div class="user">
+                            <img src="https://lh3.googleusercontent.com/ogw/ADGmqu8sn9zF15pW59JIYiLgx3PQ3EyZLFp5Zqao906l=s32-c-mo" alt="user" />
+                            <div class="user-info">
+                                <h5>Eyup Ucmaz</h5>
+                                <small>Yesterday</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg" alt="city" />
+                    </div>
+                    <div class="card-body">
+                        <span class="tag tag-pink">Design</span>
+                        <h4 th:text="${bvo.title}">
+
+                        </h4>
+                        <p th:text="${bvo.content}">
+
+                        </p>
+                        <div class="user">
+                            <img src="https://studyinbaltics.ee/wp-content/uploads/2020/03/3799Ffxy.jpg" alt="user" />
+                            <div class="user-info">
+                                <h5>Carrie Brewer</h5>
+                                <small>1w ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Pagination line -->
+            <br>
+            <ul class="pagination modal-2">
+                <li th:if="${ph.prev}" class="page-item">
+                    <a class="page-link" th:href="@{/board/list(pageNo=${ph.startPage-1},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" aria-label="Previous">
+                        <span aria-hidden="true">prev</span>
+                    </a>
+                </li>
+                <th:block th:each="i: ${#numbers.sequence(ph.startPage,ph.endPage)}">
+                    <li class="page-item" th:classappend="${ph.pgvo.pageNo == i ? 'active' : ''}" aria-current="page">
+                        <a class="page-link" th:href="@{/board/list(pageNo=${i},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" th:text="${i}"></a>
+                    </li>
+                    <li th:if="${ph.next}" class="page-item">
+                        <a class="page-link" th:href="@{/board/list(pageNo=${ph.endPage+1},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" aria-label="Next">
+                            <span aria-hidden="true">Next</span>
+                        </a>
+                    </li>
+                </th:block>
+            </ul>
+        </div>
+    </th:block>
+</th:block>
+</html>
