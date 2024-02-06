@@ -125,3 +125,40 @@ form .button{
 form .button input{
     height: 100%;
 }
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    
+}
+
+form .button input:hover{
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+@media(max-width: 584px){
+.container{
+    max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom:  15px;
+    width: 100%;
+}
+form .store-details .category{
+    width: 100%;
+}
+.container form .user-details{
+    max-height:  300px;
+    overflow-y: scroll;
+}
+.user-details::-webkit-scrollbar{
+    width: 0;
+}
+}
