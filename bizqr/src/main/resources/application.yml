@@ -1,0 +1,19 @@
+oauth2:
+  google:
+    client-id: 1027936285605-j6ht762ft6t918egov1gd478il0p7j6v.apps.googleusercontent.com
+    client-secret: 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
+    redirect-uri: http://localhost:8090/login/oauth2/code/google
+    token-uri: https://oauth2.googleapis.com/token
+    resource-uri: https://www.googleapis.com/oauth2/v2/userinfo
+  kakao:
+    client-id: c027ee27cf37e74d36b28bb663f05c27
+    admin-key: BtV4lHEboNeZZsfdNaCuTYCqMDZgkmMN
+    redirect-uri: http://localhost:8090/login/oauth2/code/kakao
+    token-uri: https://kauth.kakao.com/oauth/token
+    resource-uri: https://kapi.kakao.com/v2/user/me
+  naver:
+    client-id: gtlqB_7ePWyiOvjI9CaB
+    client-secret: 5ttNPtUHKd
+    redirect-uri: http://localhost:8090/login/oauth2/code/naver
+    token-uri: https://nid.naver.com/oauth2.0/token
+    resource-uri: https://openapi.naver.com/v1/nid/me
