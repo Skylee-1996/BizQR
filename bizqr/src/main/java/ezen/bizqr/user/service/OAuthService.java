@@ -24,8 +24,8 @@ public class OAuthService {
 
     public void socialLogin(String code, String registrationId){
         String accessToken = getAccessToken(code, registrationId);
-        JsonNode userResourceNode = getUserResource(accessToken, registrationId);
         System.out.println("accessToken = " + accessToken);
+        JsonNode userResourceNode = getUserResource(accessToken, registrationId);
 
         UserVO uvo = new UserVO();
         log.info(">>> UserVO >>> ", uvo);
@@ -82,7 +82,7 @@ public class OAuthService {
         String resourceUri = env.getProperty("oauth2." + registrationId + ".resource-uri");
 
         HttpHeaders headers = new HttpHeaders();
-        headers.set("Authorization", "Bearer" + accessToken);
+        headers.set("Authorization", "Bearer " + accessToken);
         HttpEntity entity = new HttpEntity(headers);
         return  restTemplate.exchange(resourceUri, HttpMethod.GET, entity, JsonNode.class).getBody();
     }

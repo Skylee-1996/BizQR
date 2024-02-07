@@ -1,0 +1,116 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    margin: auto;
+    padding: 20px 25px; /* Adjusted padding */
+}
+
+.container header {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px; /* Added margin */
+}
+
+.input-box label {
+    color: #333;
+}
+
+.input-box input[type="text"],
+.input-box textarea {
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.mb-3 label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* File Upload Styling */
+#num-of-files {
+    font-weight: 400;
+    text-align: center;
+    margin: 1.25em 0 1.87em 0;
+}
+
+#fileZone ul {
+    list-style-type: none;
+}
+
+#fileZone li {
+    font-weight: 500;
+    background-color: #eff5ff;
+    color: #025bee;
+    margin-bottom: 1em;
+    padding: 1.1em 1em;
+    border-radius: 0.3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Button Styling */
+.container button {
+    height: 50px;
+    width: 100px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgb(130, 106, 251);
+}
+
+.container button[id="trigger"]{
+    display: block;
+    position: relative;
+    background-color: #025bee;
+    color: #ffffff;
+    font-size: 1.12em;
+    font-weight: 500;
+    text-align: center;
+    width: 18.75em;
+    padding: 1.12em 0;
+    margin: auto;
+    border-radius: 0.31em;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background: rgb(88, 56, 250);
+}
+
+@media screen and (max-width: 500px) {
+    .form .column {
+        flex-wrap: wrap;
+    }
+    .form .gender-option,
+    .form .gender {
+        row-gap: 15px;
+    }
+}

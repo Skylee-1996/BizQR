@@ -1,0 +1,65 @@
+<meta charset="UTF-8">
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{layout :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+            <link rel="stylesheet" href="/css/boardRegister.css" />
+        <section class="container">
+            <form action="/board/register" class="form" method="post" enctype="multipart/form-data">
+
+              <div class="registerContainer">
+                <div class="wrapper">
+                    <div class="input-data">
+                        <input type="text" class="form-control" id="title" name="title" required>
+                            <div class="underline"></div>
+                        <label>title</label>
+                    </div>
+              </div>
+
+                <div class="wrapper">
+                    <div class="input-data">
+                        <input type="text" class="form-control" id="userEmail" name="userEmail" required>
+                        <div class="underline"></div>
+                        <label>email</label>
+                    </div>
+                </div>
+
+                    <!-- file upload -->
+                    <div class="fileContainer">
+                        <input type="file" id="file-input" name="files" multiple />
+                        <label for="file-input">
+                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                            Choose Files To Upload
+                        </label>
+                        <div id="num-of-files">No Files Selected</div>
+                        <ul id="files-list"></ul>
+                    </div>
+
+                  <!-- text edit: content -->
+                  <div class="texteditorAll">
+                  <div class="jsx-2303464893 editor">
+                      <div class="fr-box fr-basic fr-top" role="application">
+                          <div class="fr-wrapper show-placeholder" dir="auto" style="overflow: auto;">
+			<textarea name="content" id="smartEditor" style="width: 800px; height: 412px;"></textarea>
+                          </div>
+                      </div>
+                  </div>
+                  </div>
+
+                </div>
+                <div class="parentBtn">
+                <button type="submit" class="btn-gradient-2">Submit</button>
+                <a href="/board/list"><button type="button" class="btn-gradient-2">Cancel</button></a>
+                </div>
+            </form>
+        </section>
+        </body>
+    </th:block>
+</th:block>
+</html>
+<script src="/js/boardRegister2.js"></script>
+<!-- SmartEditor2 -->
+<!-- SmartEditor2 라이브러리  -->
+<script type="text/javascript" src="/css/smarteditor2-master/workspace/package/dist/js/service/HuskyEZCreator.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src = "/js/smartEditor.js"></script>
