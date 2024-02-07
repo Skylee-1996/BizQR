@@ -1,0 +1,604 @@
+<html lang="kor" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>index</title>
+    <style>
+        @media (max-width: 767px){
+            /* 모달 설정 */
+            /* 모달 스타일 */
+            .modal {
+                display: none; /* 초기에는 숨겨진 상태 */
+                position: fixed; /* 화면 기준으로 고정 위치 */
+                top: 0; /* 화면 위에서부터 시작 */
+                left: 0; /* 화면 왼쪽에서부터 시작 */
+                width: 100%; /* 화면 전체 너비 */
+                height: 100%; /* 화면 전체 높이 */
+                background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+                z-index: 9999; /* 다른 요소보다 위에 표시 */
+                overflow: auto; /* 내용이 넘칠 경우 스크롤 가능하도록 설정 */
+            }
+
+            /* 모달 내용 스타일 */
+            .modal-content {
+                background-color: #fefefe;
+                margin: 20% auto; /* 화면 상단에서부터 20% 떨어진 위치에 정렬 */
+                border-radius: 5px;
+                width: 80%;
+                height: 80%;
+                max-width: 80%; /* 최대 너비 설정 */
+                max-height: 80%; /* 최대 높이 설정 */
+            }
+
+            /* 모달 내용 */
+            .modal-menu-list{
+                margin: 0 auto;
+                margin-top: 10%;
+                display: flex;
+                height: 50%;
+                width: 90%;
+                border: solid 1px black;
+                border-radius: 5px;
+                flex-wrap: wrap;
+            }
+
+            .closeBtn{
+                width: 100%;
+                border-bottom: solid 3px rgb(135, 134, 134);
+                border-radius: 0 0 5px 5px;
+            }
+
+            .modal-menu-img{
+                width: 100%;
+                height: 80%;
+            }
+
+            .modal-menu-img > img{
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            /* 모달 상품명, 가격 컨테이너 */
+            .modal-menu-info{
+                display: flex;
+                height: 20%;
+                width: 100%;
+                flex-direction: row;
+                border-top: solid 1px black;
+                border-radius: 5px;
+            }
+
+            /* 모달 상품 가격 */
+            .modal-menu-price{
+                font-size: 25px;
+                height: 100%;
+                width: 100%;
+                color: #3634c9;
+                text-align: center;
+                line-height: 250%;
+            }
+
+            /* 모달 상품명 */
+            .modal-menu-name{
+                font-size: 25px;
+                height: 100%;
+                width: 100%;
+                text-align: center;
+                line-height: 250%;
+                border-right: solid 1px black;
+            }
+
+            /* 요청사항 */
+            .request{
+                width: 100%;
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .request-bar{
+                width: 80%;
+                height: 40%;
+            }
+
+            .request-limit{
+                color: rgb(135, 134, 134);
+                margin-left: 3%;
+            }
+
+            .modal-amount{
+                display: flex;
+                flex-direction: row;
+                margin: 5% 0 10% 55%;
+                height: 5%;
+                width: auto;
+            }
+
+            .amount{
+                margin: 0 10% 0 10%;
+            }
+
+            .modal-order{
+                border: solid 1px #9595c3;
+                background-color: rgb(204, 204, 236);
+                height: 10%;
+                border-radius: 0 0 5px 5px;
+                display: flex;
+                width: auto;
+                text-align: center;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+            }
+            /* 모달 설정 */
+
+            /* 모바일 */
+            /* 기타 초기화 설정 */
+            a{
+                text-decoration-line: none;
+                color: rgb(135, 134, 134);
+            }
+
+            .menu-container, footer{
+                width: 100%;
+                height: auto;
+            }
+
+            /* 헤더 */
+
+            /* 메인 */
+            /* 탭 목록 */
+            .tab-container{
+                width: 100%;
+                display: flex;
+                line-height: 100px;
+                height: 10%;
+                background-color: white;
+                padding: 5% 0 0 0;
+                /* (양수값은 오른쪽, 음수는 왼쪽), (양수값은 아래쪽, 음수는 위쪽), (흐림정도), (모든방향 번짐정도), (색상), (안쪽으로 그림자) */
+                box-shadow: 0 2px 5px 0 rgb(176, 175, 175);
+                justify-content: space-around;
+            }
+
+            /* 탭 한개 */
+            .tab{
+                color: rgb(135, 134, 134);
+            }
+
+            /* 왼쪽, 오른쪽 화살표 */
+            .left, .right{
+                margin-top: 11%;
+            }
+
+            /* 메뉴 컨테이너 */
+            .menu-container{
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            /* 메뉴 한개 */
+            .menu-list{
+                border: solid 1px rgb(208, 200, 200);
+                border-radius: 10px;
+                margin: 5% 0 0 3%;
+                width: 45%;
+                height: 150px;
+            }
+
+            /* 메뉴 이미지 컨테이너 */
+            .menu-img{
+                height: 65%;
+            }
+
+            /* 메뉴 이미지 */
+            .menu-img > img{
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            /* 상품명, 가격 컨테이너 */
+            .menu-info{
+                display: flex;
+                height: 35%;
+                flex-direction: column;
+                border-top: solid 1px rgb(208, 200, 200);
+                border-radius: 5px;
+            }
+
+            /* 상품 가격 */
+            .menu-price{
+                font-size: 25px;
+                height: 50%;
+                width: 100%;
+                color: #3634c9;
+                text-align: center;
+            }
+
+            /* 상품명 */
+            .menu-name{
+                font-size: 25px;
+                height: 50%;
+                width: 100%;
+                text-align: center;
+            }
+            /* 메인 */
+
+            /* 풋터 */
+            footer{
+                display: flex;
+                flex-direction: column;
+                margin-top: 10%;
+                background-color: #a4b8f3;
+                height: 10%;
+            }
+
+            .company-info{
+                width: 100%;
+                height: 70%;
+            }
+
+            .icon-container{
+                display: flex;
+                justify-content: space-around;
+                width: 50%;
+                margin: 0 auto;
+            }
+            /* 풋터 */
+
+            /* 바텀 */
+            /* 내가 구매한 목록 컨테이너 */
+            .my-container{
+                border: solid 1px #9595c3;
+                background-color: rgb(204, 204, 236);
+                display: flex;
+            }
+            .my-info, .my-list{
+                border: solid 1px #9595c3;
+                width: 50%;
+                text-align: center;
+                position: relative;
+            }
+
+            .my-pay{
+                font-size: 25px;
+            }
+
+            .my-select{
+                position: absolute;
+                right: 50px;
+                background-color: rgba(135, 134, 134, .5); /* 배경색 설정 */
+                color: white; /* 글자색 설정 */
+                padding: 5px 8px; /* 여백 설정 */
+                border-radius: 50%; /* 원형 모양 만들기 */
+            }
+            /* 바텀 */
+        }
+
+        @media (min-width: 1200px) {
+            /* 데스크탑 */
+        }
+
+    </style>
+</head>
+
+<th:block th:replace="~{/customer/customerLayout :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+
+    <body>
+    <nav class="tab-container">
+
+        <!-- 왼쪽 아이콘 -->
+        <div class="left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+            </svg>
+        </div>
+
+        <div class="tab tab-one"><a href="">탭1</a></div>
+        <div class="tab tab-two"><a href="">탭2</a></div>
+        <div class="tab tab-three"><a href="">탭3</a></div>
+        <div class="tab tab-four"><a href="">탭4</a></div>
+
+        <!-- 오른쪽 아이콘 -->
+        <div class="right">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+            </svg>
+        </div>
+
+    </nav>
+
+    <!-- 상품 목록 -->
+    <article class="menu-container">
+
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+
+    </article>
+    </body>
+
+    <footer>
+
+        <div class="company-info">
+            <!-- 회사 소개 -->
+
+        </div>
+
+        <div class="icon-container">
+
+            <!-- 인스타그램 -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg>
+
+            <!-- 페이스북 -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+            </svg>
+
+            <!-- 유튜브 -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+            </svg>
+
+        </div>
+
+    </footer>
+
+    <!-- 현재 금액 및 장바구니 -->
+    <div class="my-container">
+
+        <div class="my-info">
+            <div class="my-pay">
+                <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(135, 134, 134);" width="30" height="30" fill="currentColor" class="bi bi-database" viewBox="0 0 16 16">
+                    <path d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313ZM13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 5.698ZM14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13V4Zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 8.698Zm0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525Z"/>
+                </svg>
+            </div>
+            <div class="my-price">
+                현재 금액 넣기
+            </div>
+        </div>
+
+        <a href="" class="my-list">
+            <span class="my-select">갯수</span>
+            <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(135, 134, 134);" width="50" height="50" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
+                <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
+                <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6H2.163z"/>
+            </svg>
+        </a>
+
+    </div>
+
+    <!-- 모달 창 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <div class="closeBtn">
+                <span onclick="closeModal()" class="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="margin: 3% 0 3% 3%;" width="30" height="30" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+                        <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
+                        <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"/>
+                    </svg>
+                </span>
+            </div>
+
+            <div class="modal-menu-list">
+                <div class="modal-menu-img">
+                    <img src="" alt="메뉴 사진">
+                </div>
+                <div class="modal-menu-info">
+                    <div class="modal-menu-name">품명</div>
+                    <div class="modal-menu-price">가격</div>
+                </div>
+            </div>
+
+            <div class="request">
+                <input type="text" name="request-bar" class="request-bar" maxlength="30" placeholder="요청 사항을 적어주세요..." >
+                <div class="request-limit">(0/30)</div>
+            </div>
+
+            <div class="modal-amount">
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dash-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                    </svg>
+                </div>
+
+
+                <div class="amount">수량</div>
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
+                </div>
+
+            </div>
+            <div class="modal-order">
+                <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(135, 134, 134);" width="50" height="50" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
+                    <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
+                    <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6H2.163z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+        </th:block>
+    </th:block>
+    <script>
+        // 모달 열기 함수
+        function openModal() {
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        // 모달 닫기 함수
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // 모달 바깥 클릭 시 닫기
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+</html>

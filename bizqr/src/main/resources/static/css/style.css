@@ -87,10 +87,10 @@ header .left a{
 
 }
 header .left a i{
- background-color: #fff;
- font-size : 24px;
- border-radius:  50%;
- padding: 9px;
+    background-color: #fff;
+    font-size : 24px;
+    border-radius:  50%;
+    padding: 9px;
 }
 
 header .left a span{
@@ -124,7 +124,7 @@ h2.separator{
 }
 
 .forwards
- .item,
+.item,
 .stores .store-list .item{
     padding: 20px;
     background: #fff;
@@ -134,37 +134,37 @@ h2.separator{
 }
 
 .forwards
- .item:hover,
+.item:hover,
 .stores .store-list .item:hover,
 .sellers .item:hover{
     box-shadow: none;
 }
 
 .forwards
- .item .header{
+.item .header{
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 .forwards
- .item .header i{
+.item .header i{
     font-size: 40px;
 }
 
 .forwards
- .item .header h5{
+.item .header h5{
     font-size: 17px;
 }
 
 .forwards
- .item p{
+.item p{
     margin-top: 10px;
     padding: 0 4px;
 }.stores{
-    padding: 0 80px;
-    margin-top: 30px;
-}
+     padding: 0 80px;
+     margin-top: 30px;
+ }
 
 .stores .category{
     display: flex;
@@ -365,7 +365,7 @@ footer .right p{
 }
 
 @media screen and (max-width: 1400px) {
-    
+
     nav,
     header,
     h2.separator,
@@ -400,7 +400,7 @@ footer .right p{
 }
 
 @media screen and (max-width: 1200px) {
-    
+
     header .left h1{
         font-size: 48px;
     }
@@ -414,17 +414,17 @@ footer .right p{
     }
 
     .forwards
-     .item .header i{
+    .item .header i{
         font-size: 36px;
     }
 
     .forwards
-     .item .header h5{
+    .item .header h5{
         font-size: 15px;
     }
 
     .forwards
-     .item p{
+    .item p{
         font-size: 13px;
     }
 
@@ -457,7 +457,7 @@ footer .right p{
 }
 
 @media screen and (max-width: 992px) {
-    
+
     nav a.logo{
         font-size: 28px;
     }
@@ -487,7 +487,7 @@ footer .right p{
     }
 
     .forwards
-     .item{
+    .item{
         width: 48%;
     }
 
@@ -513,7 +513,7 @@ footer .right p{
 }
 
 @media screen and (max-width: 768px) {
-    
+
     nav,
     header,
     h2.separator,
@@ -566,13 +566,13 @@ footer .right p{
 }
 
 @media screen and (max-width: 576px) {
-    
+
     header .left h1{
         font-size: 30px;
     }
 
     .forwards
-     .item{
+    .item{
         width: 100%;
     }
 

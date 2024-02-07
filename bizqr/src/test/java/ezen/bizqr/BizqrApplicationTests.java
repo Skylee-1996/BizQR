@@ -1,13 +1,15 @@
 package ezen.bizqr;
 
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class BizqrApplicationTests {
+@ExtendWith(SpringExtension.class)
+public class BizqrApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }
