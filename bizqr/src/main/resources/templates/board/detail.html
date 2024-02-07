@@ -1,0 +1,124 @@
+<meta charset="UTF-8">
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{layout :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <link rel="stylesheet" href="/css/boardDetail.css" />
+        <body>
+        <section class="container">
+            <header>notice detail page....</header>
+            <form action="/ezen/bizqr/board/modify" method="post" id="modForm" enctype="multipart/form-data">
+                <div class="input-box">
+                    <label for="bno"># </label>
+                    <input type="text" class="form-control" id="bno"
+                           name="bno" th:value="${bdto.bvo.bno}" />
+                </div>
+                <div class="input-box">
+                    <label for="modAt">Date </label>
+                    <input type="text" class="form-control" id="modAt"
+                           name="modAt" th:value="${bdto.bvo.modAt}" />
+                </div>
+                <div class="input-box">
+                    <label for="title">Title : </label>
+                    <input type="text" class="form-control" id="title"
+                           name="title" th:value="${bdto.bvo.title}" />
+                </div>
+
+                <div class="input-box">
+                    <label for="email">Writer : </label>
+                    <input type="text" class="form-control" id="email"
+                           name="email" th:value="${bdto.bvo.email}" />
+                </div>
+
+                <div class="input-box address">
+                    <label for="content">content</label>
+                    <textarea name="content" id="content"
+                              cols="100" rows="5" class="form-control" th:utext="${bdto.bvo.content}">
+				</textarea>
+
+                    <!-- file zone -->
+                    <div>
+                        <ul id="fileList">
+                            <li th:each="fvo:${bdto.flist}" style="list-style: none" class="fileItem" th:data-uuid="${fvo.uuid}" >
+                                <div th:if="${fvo.fileType > 0}">
+                                    <!-- 이미지일 경우 썸네일 표시 -->
+                                    <img th:src="@{|/upload/${fvo.saveDir}/${fvo.uuid}_th_${fvo.fileName}|}">
+                                </div>
+
+                                <div th:unless="${fvo.fileType > 0}">
+                                    <!-- 파일모양 아이콘 -->
+                           <!--         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
+                                        <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                                        <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                                        <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                                    </svg>-->
+                                </div>
+                                <div>
+                                    <div  class="file-name">[[${fvo.fileName}]]</div>
+                                    [[${fvo.regAt}]]
+                                </div>
+                                <span>[[${fvo.fileSize}]]Byte</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 새파일 등록 -->
+                    <div class="mb-3">
+                        <label for="files">File : </label>
+                        <input type="file" class="form-control" id="files" name="files" multiple style="display: none;">
+                    </div>
+                    <button type="button" id="trigger">Files Upload</button>
+                    <div class="col-12" id="fileZone"></div>
+                    <input type="hidden" id="regBtn">
+                </div>
+
+                    <!-- comment line -->
+                    <!-- 댓글 등록라인 -->
+                    <div class="container-sm">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="cmtWriter">Anonymous</span>
+                            <input type="text" class="form-control" id="cmtText" placeholder="Test add Comment.." aria-label="Username" aria-describedby="basic-addon1">
+                            <button class="btn btn-success" id="cmtPostBtn" type="button">Post</button>
+                        </div>
+
+                        <!-- 댓글 표시라인 -->
+                        <ul class="list-group list-group-flush" id="cmtListArea">
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Writer</div>
+                                    Content for Comment
+                                </div>
+                                <span class="badge bg-dark rounded-pill">modAt</span>
+                            </li>
+                        </ul>
+
+                        <!-- 댓글 더보기 버튼 -->
+                        <div>
+                            <button type="button" id="moreBtn" data-page="1" class="btn btn-success" style="visibility: hidden">More+</button>
+                        </div>
+                </div>
+                <button type="button" id="listBtn">List</button>
+                <button type="button" id="modBtn">Modify</button>
+                <button type="button" id="delBtn">Remove</button>
+            </form>
+
+            <form action="/ezen/bizqr/board/remove" method="post" id="delForm" style="display:none;">
+                <input type="hidden" name="bno" th:value="${bdto.bvo.bno}">
+            </form>
+        </section>
+
+        <script src="/js/boardRegister.js"></script>
+        <script src="/js/boardDetail.js"></script>
+        <script src="/js/boardComment.js"></script>
+        <script th:inline="javascript">
+            const bnoVal=[[${bdto.bvo.bno}]];
+            console.log(bnoVal);
+        </script>
+        <script type="text/javascript">
+            spreadCommentList(bnoVal);
+        </script>
+        </body>
+    </th:block>
+</th:block>
+
+</html>

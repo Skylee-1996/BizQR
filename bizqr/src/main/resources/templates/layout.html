@@ -9,13 +9,12 @@
 <link rel="stylesheet" th:href="@{/css/style.css}">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
 <nav>
   <a href="#" class="logo">BizQR</a>
   <div class="links">
-    <a href="/">Home</a>
-    <a href="/store/register">가입하기</a>
+    <a href="#">Home</a>
+    <a href="#">Features</a>
     <a href="#">Blog</a>
     <a href="#">About Us</a>
   </div>
@@ -28,24 +27,18 @@
 <div class="container-fluid">
 	<th:block th:replace="${content}"></th:block>
 </div>
-<footer>
-  <h3>내 손 안의 메뉴판! BizQR</h3>
-  <div class="right">
-      <div class="links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Cooperation</a>
-          <a href="#">Sponsorship</a>
-          <a href="#">Contact Us</a>
-      </div>
-      <div class="social">
-          <i class='bx bxl-instagram'></i>
-          <i class='bx bxl-facebook-square'></i>
-          <i class='bx bxl-github'></i>
-      </div>
-      <p>Copyright © 2024 BizQR, All Rights Reserved.</p>
-  </div>
-</footer>
-	
+
+<div class="mt-4 p-5 bg-light text-black rounded text-center text-center" style="margin-bottom:0">
+  <p>Copyright 2021 by Company or Your Name. All Rights Reserved.</p>
+</div>
+<!--	<script>
+	console.log("hi");
+    document.getElementById("logoutLink").addEventListener('click', (e)=>{
+        e.preventDefault();
+        document.getElementById('logoutForm').submit(); 
+    });
+		
+	</script>-->
 </body>
 </th:block>
 

@@ -1,0 +1,158 @@
+/* register */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/*body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+
+.wrapper{
+    width: 450px;
+    background: #fff;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.wrapper .input-data{
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper .input-data input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #4158d0;
+}
+
+/* 0206 추가 */
+.wrapper .input-data input:focus {
+    outline: none;
+}
+
+.wrapper .input-data label{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-data .underline{
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+}
+
+.in put-data .underline:before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #4158d0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before{
+    transform: scaleX(1);
+}
+
+/* fileUpload */
+.fileContainer {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 34.37em;
+    position: relative;
+    margin: 3.12em auto;
+    padding: 3.12em 1.25em;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label[for="file-input"]{
+    display: block;
+    position: relative;
+    background-color: rgb(130, 106, 251);
+    color: #ffffff;
+    font-size: 1.12em;
+    font-weight: 500;
+    text-align: center;
+    width: 18.75em;
+    padding: 1.12em 0;
+    margin: auto;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#num-of-files {
+    font-weight: 400;
+    text-align: center;
+    margin: 1.25em 0 1.87em 0;
+}
+ul [id="files-list"]{
+    list-style-type: none;
+}
+.fileContainer li {
+    font-weight: 500;
+    background-color: #eff5ff;
+    color: #025bee;
+    margin-bottom: 1em;
+    padding: 1.1em 1em;
+    border-radius: 0.3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-gradient-2 {
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, darkblue, darkorchid) border-box;
+    border-radius: 50em;
+    border: 4px solid transparent;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    color: darkblue;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.parentBtn{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* text edit */
+
+
+
+
+
+
+
+
+
+
+

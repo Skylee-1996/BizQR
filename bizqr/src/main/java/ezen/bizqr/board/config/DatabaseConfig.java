@@ -1,4 +1,4 @@
-package ezen.bizqr.config;
+package ezen.bizqr.board.config;
 
 
 import javax.sql.DataSource;

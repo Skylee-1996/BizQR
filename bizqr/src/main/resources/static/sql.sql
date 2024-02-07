@@ -8,6 +8,7 @@ grant all privileges on bizqrdb.* to 'bizqrUser'@'localhost' with grant option;
 flush privileges;
 
 
+
 ------2024--02-07------
 -- user 테이블 생성
 CREATE TABLE IF NOT EXISTS `user` (
@@ -199,3 +200,4 @@ CREATE TABLE IF NOT EXISTS `transaction` (
     FOREIGN KEY (`store_id`) REFERENCES `store`(`store_id`),
     FOREIGN KEY (`user_email`) REFERENCES `user`(`email`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
