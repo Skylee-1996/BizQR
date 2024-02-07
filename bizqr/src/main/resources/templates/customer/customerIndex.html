@@ -1,29 +1,134 @@
-<html lang="en">
+<html lang="kor" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scaleable=no, viewport-fit=cover">
-    <meta name="format-detection" content="telephone=no">
-    <title>main</title>
+    <title>index</title>
     <style>
-        @import url(/static/css/customer/reset.css);
-
         @media (max-width: 767px){
             /* 모달 설정 */
-            .modal{
-                display: none;
-                position: absolute;
-
-                justify-content: center;
-                width: 80%;
-                height: 80%;
-
-                background-color: rgba(0, 0, 0, .4);
+            /* 모달 스타일 */
+            .modal {
+                display: none; /* 초기에는 숨겨진 상태 */
+                position: fixed; /* 화면 기준으로 고정 위치 */
+                top: 0; /* 화면 위에서부터 시작 */
+                left: 0; /* 화면 왼쪽에서부터 시작 */
+                width: 100%; /* 화면 전체 너비 */
+                height: 100%; /* 화면 전체 높이 */
+                background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+                z-index: 9999; /* 다른 요소보다 위에 표시 */
+                overflow: auto; /* 내용이 넘칠 경우 스크롤 가능하도록 설정 */
             }
 
-            .modalBody{
-                font-size: 100px;
-                width: 50%;
+            /* 모달 내용 스타일 */
+            .modal-content {
+                background-color: #fefefe;
+                margin: 20% auto; /* 화면 상단에서부터 20% 떨어진 위치에 정렬 */
+                border-radius: 5px;
+                width: 80%;
+                height: 80%;
+                max-width: 80%; /* 최대 너비 설정 */
+                max-height: 80%; /* 최대 높이 설정 */
+            }
+
+            /* 모달 내용 */
+            .modal-menu-list{
+                margin: 0 auto;
+                margin-top: 10%;
+                display: flex;
                 height: 50%;
+                width: 90%;
+                border: solid 1px black;
+                border-radius: 5px;
+                flex-wrap: wrap;
+            }
+
+            .closeBtn{
+                width: 100%;
+                border-bottom: solid 3px rgb(135, 134, 134);
+                border-radius: 0 0 5px 5px;
+            }
+
+            .modal-menu-img{
+                width: 100%;
+                height: 80%;
+            }
+
+            .modal-menu-img > img{
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            /* 모달 상품명, 가격 컨테이너 */
+            .modal-menu-info{
+                display: flex;
+                height: 20%;
+                width: 100%;
+                flex-direction: row;
+                border-top: solid 1px black;
+                border-radius: 5px;
+            }
+
+            /* 모달 상품 가격 */
+            .modal-menu-price{
+                font-size: 25px;
+                height: 100%;
+                width: 100%;
+                color: #3634c9;
+                text-align: center;
+                line-height: 250%;
+            }
+
+            /* 모달 상품명 */
+            .modal-menu-name{
+                font-size: 25px;
+                height: 100%;
+                width: 100%;
+                text-align: center;
+                line-height: 250%;
+                border-right: solid 1px black;
+            }
+
+            /* 요청사항 */
+            .request{
+                width: 100%;
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .request-bar{
+                width: 80%;
+                height: 40%;
+            }
+
+            .request-limit{
+                color: rgb(135, 134, 134);
+                margin-left: 3%;
+            }
+
+            .modal-amount{
+                display: flex;
+                flex-direction: row;
+                margin: 5% 0 10% 55%;
+                height: 5%;
+                width: auto;
+            }
+
+            .amount{
+                margin: 0 10% 0 10%;
+            }
+
+            .modal-order{
+                border: solid 1px #9595c3;
+                background-color: rgb(204, 204, 236);
+                height: 10%;
+                border-radius: 0 0 5px 5px;
+                display: flex;
+                width: auto;
+                text-align: center;
+                position: relative;
+                justify-content: center;
+                align-items: center;
             }
             /* 모달 설정 */
 
@@ -31,43 +136,20 @@
             /* 기타 초기화 설정 */
             a{
                 text-decoration-line: none;
-                color: rgb(135, 134, 134);;
+                color: rgb(135, 134, 134);
             }
 
-            header{
-                background-color: #6666FF;
-                background: linear-gradient(to right, #6666FF, #9999FF);
-                display: flex;
-                justify-content: space-between;
-                position: fixed;
-            }
-
-            header, .menu-container, footer{
+            .menu-container, footer{
                 width: 100%;
                 height: auto;
             }
 
             /* 헤더 */
-            /* 상호명 */
-            .company-name{
-                font-size: 40px;
-                width: 70%;
-                text-align: center;
-                color: white;
-                margin-left: 30%;
-                margin-right: 20%;
-            }
-
-            /* 호출 버튼 및 리스트 컨테이너 */
-            .tool-container{
-                width: 30%;
-                display: flex;
-            }
-            /* 헤더 */
 
             /* 메인 */
             /* 탭 목록 */
             .tab-container{
+                width: 100%;
                 display: flex;
                 line-height: 100px;
                 height: 10%;
@@ -85,7 +167,7 @@
 
             /* 왼쪽, 오른쪽 화살표 */
             .left, .right{
-                margin-top: 10%;
+                margin-top: 11%;
             }
 
             /* 메뉴 컨테이너 */
@@ -149,7 +231,6 @@
                 margin-top: 10%;
                 background-color: #a4b8f3;
                 height: 10%;
-
             }
 
             .company-info{
@@ -201,31 +282,8 @@
     </style>
 </head>
 
-<div class="main-container">
-
-    <header>
-
-        <!-- 상호 -->
-        <div class="company-name">BizQR</div>
-
-        <nav class="tool-container">
-            <!-- 호출 아이콘 -->
-            <div>
-                <a href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" style="color: white; margin: 20% 10px 0 0;" width="30" height="30" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
-                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
-                    </svg>
-                </a>
-            </div>
-            <div>
-                <!-- 리스트 아이콘 -->
-                <svg xmlns="http://www.w3.org/2000/svg" style="color: white; margin: 5% 5px 0 0;" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                </svg>
-            </div>
-        </nav>
-
-    </header>
+<th:block th:replace="~{/customer/customerLayout :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
 
     <body>
     <nav class="tab-container">
@@ -251,9 +309,10 @@
 
     </nav>
 
+    <!-- 상품 목록 -->
     <article class="menu-container">
 
-        <div class="menu-list">
+        <div class="menu-list" onclick="openModal()">
             <div class="menu-img">
                 <img src="" alt="메뉴 사진">
             </div>
@@ -262,8 +321,7 @@
                 <div class="menu-price">가격</div>
             </div>
         </div>
-
-        <div class="menu-list">
+        <div class="menu-list" onclick="openModal()">
             <div class="menu-img">
                 <img src="" alt="메뉴 사진">
             </div>
@@ -272,8 +330,7 @@
                 <div class="menu-price">가격</div>
             </div>
         </div>
-
-        <div class="menu-list">
+        <div class="menu-list" onclick="openModal()">
             <div class="menu-img">
                 <img src="" alt="메뉴 사진">
             </div>
@@ -282,8 +339,7 @@
                 <div class="menu-price">가격</div>
             </div>
         </div>
-
-        <div class="menu-list">
+        <div class="menu-list" onclick="openModal()">
             <div class="menu-img">
                 <img src="" alt="메뉴 사진">
             </div>
@@ -292,8 +348,7 @@
                 <div class="menu-price">가격</div>
             </div>
         </div>
-
-        <div class="menu-list">
+        <div class="menu-list" onclick="openModal()">
             <div class="menu-img">
                 <img src="" alt="메뉴 사진">
             </div>
@@ -302,8 +357,7 @@
                 <div class="menu-price">가격</div>
             </div>
         </div>
-
-        <div class="menu-list">
+        <div class="menu-list" onclick="openModal()">
             <div class="menu-img">
                 <img src="" alt="메뉴 사진">
             </div>
@@ -312,8 +366,7 @@
                 <div class="menu-price">가격</div>
             </div>
         </div>
-
-        <div class="menu-list">
+        <div class="menu-list" onclick="openModal()">
             <div class="menu-img">
                 <img src="" alt="메뉴 사진">
             </div>
@@ -322,8 +375,7 @@
                 <div class="menu-price">가격</div>
             </div>
         </div>
-
-        <div class="menu-list">
+        <div class="menu-list" onclick="openModal()">
             <div class="menu-img">
                 <img src="" alt="메뉴 사진">
             </div>
@@ -332,8 +384,7 @@
                 <div class="menu-price">가격</div>
             </div>
         </div>
-
-        <div class="menu-list">
+        <div class="menu-list" onclick="openModal()">
             <div class="menu-img">
                 <img src="" alt="메뉴 사진">
             </div>
@@ -342,8 +393,7 @@
                 <div class="menu-price">가격</div>
             </div>
         </div>
-
-        <div class="menu-list">
+        <div class="menu-list" onclick="openModal()">
             <div class="menu-img">
                 <img src="" alt="메뉴 사진">
             </div>
@@ -352,8 +402,61 @@
                 <div class="menu-price">가격</div>
             </div>
         </div>
-
-        <div class="menu-list">
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
+            <div class="menu-img">
+                <img src="" alt="메뉴 사진">
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">품명</div>
+                <div class="menu-price">가격</div>
+            </div>
+        </div>
+        <div class="menu-list" onclick="openModal()">
             <div class="menu-img">
                 <img src="" alt="메뉴 사진">
             </div>
@@ -394,16 +497,19 @@
 
     </footer>
 
+    <!-- 현재 금액 및 장바구니 -->
     <div class="my-container">
 
-        <a href="" class="my-info">
+        <div class="my-info">
             <div class="my-pay">
-                현재 금액
+                <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(135, 134, 134);" width="30" height="30" fill="currentColor" class="bi bi-database" viewBox="0 0 16 16">
+                    <path d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313ZM13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 5.698ZM14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13V4Zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 8.698Zm0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525Z"/>
+                </svg>
             </div>
             <div class="my-price">
-                숫자
+                현재 금액 넣기
             </div>
-        </a>
+        </div>
 
         <a href="" class="my-list">
             <span class="my-select">갯수</span>
@@ -415,27 +521,84 @@
 
     </div>
 
-    <button type="button" class="modalOpen">모달창 열기</button>
+    <!-- 모달 창 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
 
-    <div class="modal-body">
-        <h2>모달</h2>
-        <p>뿌우</p>
-        <button class="modalClose">모달창 닫기</button>
+            <div class="closeBtn">
+                <span onclick="closeModal()" class="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="margin: 3% 0 3% 3%;" width="30" height="30" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+                        <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
+                        <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"/>
+                    </svg>
+                </span>
+            </div>
+
+            <div class="modal-menu-list">
+                <div class="modal-menu-img">
+                    <img src="" alt="메뉴 사진">
+                </div>
+                <div class="modal-menu-info">
+                    <div class="modal-menu-name">품명</div>
+                    <div class="modal-menu-price">가격</div>
+                </div>
+            </div>
+
+            <div class="request">
+                <input type="text" name="request-bar" class="request-bar" maxlength="30" placeholder="요청 사항을 적어주세요..." >
+                <div class="request-limit">(0/30)</div>
+            </div>
+
+            <div class="modal-amount">
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dash-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                    </svg>
+                </div>
+
+
+                <div class="amount">수량</div>
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
+                </div>
+
+            </div>
+            <div class="modal-order">
+                <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(135, 134, 134);" width="50" height="50" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
+                    <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
+                    <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6H2.163z"/>
+                </svg>
+            </div>
+        </div>
     </div>
 
+        </th:block>
+    </th:block>
     <script>
-        const modal = document.querySelector('.modal');
-        const openModal = document.querySelector('.modalOpen');
-        const closeModal = document.querySelector('.modalClose');
+        // 모달 열기 함수
+        function openModal() {
+            document.getElementById('modal').style.display = 'block';
+        }
 
-        openModal.addEventListener('click', ()=>{
-            modal.style.display = "flex";
-        })
+        // 모달 닫기 함수
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
 
-        closeModal.addEventListener('click', ()=>{
-            modal.style.display = "none";
-        })
+        // 모달 바깥 클릭 시 닫기
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
 
     </script>
-</div>
 </html>
