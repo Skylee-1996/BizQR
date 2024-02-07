@@ -12,5 +12,5 @@ public interface CommentService {
 
     int edit(CommentVO cvo);
 
-    int deleteComment(long cno, String writer);
+    int deleteComment(long cno, String userEmail);
 }

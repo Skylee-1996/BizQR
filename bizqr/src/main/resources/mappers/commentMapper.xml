@@ -5,8 +5,8 @@
 <mapper namespace="ezen.bizqr.board.repository.CommentMapper">
 
     <insert id="post">
-        insert into comment(bno, writer, content)
-        values(#{bno},#{writer},#{content})
+        insert into comment(bno, user_email, content)
+        values(#{bno},#{userEmail},#{content})
     </insert>
 
     <select id="getList" resultType="ezen.bizqr.board.domain.CommentVO">
