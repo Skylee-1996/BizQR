@@ -5,8 +5,8 @@
 <mapper namespace="ezen.bizqr.board.repository.BoardMapper">
 
     <insert id="insert">
-        insert into board(title, email, user_name, content)
-        values(#{title},#{email}, #{userName}, #{content})
+        insert into board(title, user_email, content)
+        values(#{title}, #{userEmail}, #{content})
     </insert>
 
     <select id="getList" resultType="ezen.bizqr.board.domain.BoardVO">
@@ -50,7 +50,7 @@
                                 content like concat('%',#{keyword},'%')
                             </when>
                             <when test="type=='e'.toString()">
-                                email like concat('%',#{keyword},'%')
+                                user_email like concat('%',#{keyword},'%')
                             </when>
                         </choose>
                     </trim>

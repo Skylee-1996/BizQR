@@ -25,9 +25,9 @@
                 </div>
 
                 <div class="input-box">
-                    <label for="email">Writer : </label>
-                    <input type="text" class="form-control" id="email"
-                           name="email" th:value="${bdto.bvo.email}" />
+                    <label for="userEmail">Writer : </label>
+                    <input type="text" class="form-control" id="userEmail"
+                           name="userEmail" th:value="${bdto.bvo.userEmail}" />
                 </div>
 
                 <div class="input-box address">
@@ -42,7 +42,7 @@
                             <li th:each="fvo:${bdto.flist}" style="list-style: none" class="fileItem" th:data-uuid="${fvo.uuid}" >
                                 <div th:if="${fvo.fileType > 0}">
                                     <!-- 이미지일 경우 썸네일 표시 -->
-                                    <img th:src="@{|/upload/${fvo.saveDir}/${fvo.uuid}_th_${fvo.fileName}|}">
+                                    <img th:src="@{|/upload/${fvo.storeId}/${fvo.uuid}_th_${fvo.fileName}|}">
                                 </div>
 
                                 <div th:unless="${fvo.fileType > 0}">
@@ -102,7 +102,7 @@
                 <button type="button" id="delBtn">Remove</button>
             </form>
 
-            <form action="/ezen/bizqr/board/remove" method="post" id="delForm" style="display:none;">
+            <form action="/board/remove" method="post" id="delForm" style="display:none;">
                 <input type="hidden" name="bno" th:value="${bdto.bvo.bno}">
             </form>
         </section>

@@ -56,17 +56,20 @@ nav  .login button.signup{
 
 header{
     padding: 0 80px;
-    height: calc(30vh - 80px); /* 헤더와의 간격 조절*/
+    height: calc(30vh - 80px);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 header .left{
     width: 700px;
 }
+
 header .left h1{
     font-size: 80px;
 }
+
 
 header .left h1 span{
     color: #0f2182;
