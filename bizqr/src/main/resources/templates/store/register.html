@@ -10,64 +10,67 @@
             <div class="register">
                 <div class="container">
                     <div class="title">Registeration</div>
-    
-            <form action="">
-                <div class="user-details">
-                    <div class="input-box">
-                        <span class="details">이름</span>
-                        <input type="text" name="name" id="name" placeholder="이름을 입력해주세요.." required>
-                    </div>
-                    <div class="input-box">
-                        <label class="details">이메일</label>
-                        <input type="email" name="email" id="email" placeholder="이메일을 입력해주세요.." required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">회사명</span>
-                        <input type="text" name="companyName" id="companyName" placeholder="회사명을 입력해주세요.." required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">점포명</span>
-                        <input type="text" name="storeName" id="storeName" placeholder="점포명을 입력해주세요.." required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">주소</span>
-                        <input type="text" name="storeName" id="address" placeholder="점포명을 입력해주세요.." required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">전화번호</span>
-                        <input type="text" name="phone" id="phone" placeholder="전화번호을 입력해주세요.." required>
-                    </div>
-                </div>
-                    <div class="store-details">
-                        <input type="radio" name="store" id="dot-1">
-                        <input type="radio" name="store" id="dot-2">
-                        <input type="radio" name="store" id="dot-3">
-                        <input type="radio" name="store" id="dot-4">
-                        <span class="store-title">업종선택</span>
-                        <div class="category">
-                            <label for="dot-1">
-                                <span class="dot one"></span>
-                                <span class="store" th:name="cafe" id="cafe">Cafe</span>
-                            </label>
-                            <label for="dot-2">
-                                <span class="dot two"></span>
-                                <span class="store" th:name="restaurant" id="restaurant">Restaurant</span>
-                            </label>
-                            <label for="dot-3">
-                                <span class="dot three"></span>
-                                <span class="store" th:name="hotel" id="hotel">Hotel</span>
-                            </label>
-                            <label for="dot-4">
-                                <span class="dot four"></span>
-                                <span class="store" th:name="etc" id="etc">Etc.</span>
-                            </label>
+                    <br>
+                    <form action="/store/register" method="post">
+                        <div class="user-details">
+                            <div class="input-box">
+                                <span class="details">이름</span>
+                                <input type="text" name="name" id="name" placeholder="이름을 입력해주세요.." required>
+                            </div>
+                            <div class="input-box">
+                                <label class="details">이메일</label>
+                                <input type="email" name="email" id="email" placeholder="이메일을 입력해주세요.." required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">회사명</span>
+                                <input type="text" name="company" id="company" placeholder="회사명을 입력해주세요.." required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">점포명</span>
+                                <input type="text" name="storeName" id="storeName" placeholder="점포명을 입력해주세요.." required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">점포전화번호</span>
+                                <input type="text" name="storeNum" id="storeNum" placeholder="점포번호를 입력해주세요.." required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">개인전화번호</span>
+                                <input type="text" name="ownerNum" id="ownerNum" placeholder="전화번호을 입력해주세요.." required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">주소</span>
+                                <input type="text" name="storeAddress" id="storeAddress" placeholder="주소를 입력해주세요.." required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="button">
-                        <input type="submit" value="Register">
-                    </div>
-                </form>
-                    </div>
+                        <div class="store-details">
+                            <input type="radio" name="storeType" id="dot-1">
+                            <input type="radio" name="storeType" id="dot-2">
+                            <input type="radio" name="storeType" id="dot-3">
+                            <input type="radio" name="storeType" id="dot-4">
+                            <span class="store-title">업종선택</span>
+                            <div class="category">
+                                <label for="dot-1">
+                                    <span class="dot one"></span>
+                                    <span class="storeType" th:name="cafe" id="cafe">Cafe</span>
+                                </label>
+                                <label for="dot-2">
+                                    <span class="dot two"></span>
+                                    <span class="storeType" th:name="restaurant" id="restaurant">Restaurant</span>
+                                </label>
+                                <label for="dot-3">
+                                    <span class="dot three"></span>
+                                    <span class="storeType" th:name="hotel" id="hotel">Hotel</span>
+                                </label>
+                                <label for="dot-4">
+                                    <span class="dot four"></span>
+                                    <span class="storeType" th:name="etc" id="etc">Etc.</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <input type="submit" value="Register">
+                        </div>
+                    </form>
                 </div>
             </div>
         </body>

@@ -15,9 +15,6 @@ public class AdminController {
 //    private final AdminService asv;
 
     @GetMapping("/index")
-    public String index() {
-
-        return "/admin/index";
-    }
+    public void index() {}
 
 }
