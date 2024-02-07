@@ -2,11 +2,11 @@
 <head>
     <title>basket</title>
     <style>
-
+        @import url(/css/customer/customerBasket.css);
     </style>
 </head>
 
-<th:block th:replace="~{/customerLayout :: setFragment(~{this::content})}">
+<th:block th:replace="~{/customer/customerLayout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
 
 <body>
@@ -15,4 +15,5 @@
 
     </th:block>
 </th:block>
+<script src="/js/customer/customerBasket.js"></script>
 </html>
