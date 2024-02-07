@@ -119,7 +119,7 @@ body {
 
 .login-form > a > button {
     cursor:pointer;
-    width: 100%;
+    width: 185px;
     height: 50px;
     padding: 0 16px;
     border-radius: 1.25rem;
@@ -155,13 +155,6 @@ body {
         width: 400px;
     }
 }
-
-
-
-
-
-
-
 
 
 
