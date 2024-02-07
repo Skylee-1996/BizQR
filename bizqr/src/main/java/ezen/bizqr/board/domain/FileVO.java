@@ -9,7 +9,7 @@ import lombok.*;
 @Getter
 public class FileVO {
     private String uuid;
-    private String saveDir;
+    private String storeId; //saveDir
     private String fileName;
     private int fileType;
     private long bno;

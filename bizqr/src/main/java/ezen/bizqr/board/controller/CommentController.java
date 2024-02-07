@@ -50,9 +50,9 @@ public class CommentController {
     @DeleteMapping(value="/del/{cno}/{writer}", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody
     public ResponseEntity<String> delete(@PathVariable("cno") long cno
-            , @PathVariable("writer") String writer){
-        log.info(">> cno >>> writer >>> {} "+cno+" / "+writer);
-        int isOk = csv.deleteComment(cno, writer);
+            , @PathVariable("userEmail") String userEmail){
+        log.info(">> cno >>> writer >>> {} "+cno+" / "+userEmail);
+        int isOk = csv.deleteComment(cno, userEmail);
         return isOk > 0 ? new ResponseEntity<String>("1", HttpStatus.OK)
                 : new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);
     }
