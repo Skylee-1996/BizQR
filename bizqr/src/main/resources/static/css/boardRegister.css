@@ -145,6 +145,18 @@ ul [id="files-list"]{
 }
 
 /* text edit */
+.texteditorAll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#smartEditor {
+    width: 100%;
+    height: auto;
+}
+
 
 
 
