@@ -1,9 +1,10 @@
 package ezen.bizqr.user.controller;
 
 import ezen.bizqr.user.service.OAuthService;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 @RequestMapping(value = "/login/oauth2", produces = "application/json")
 public class OAuthController {
 
@@ -14,8 +15,10 @@ public class OAuthController {
     }
 
     @GetMapping("/code/{registrationId}")
-    public void googleLogin(@RequestParam String code, @PathVariable String registrationId ){
+    public String googleLogin(@RequestParam String code, @PathVariable String registrationId ){
         oAuthService.socialLogin(code, registrationId);
+
+        return "/index";
     }
 
 }
