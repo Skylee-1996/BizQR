@@ -1,13 +1,11 @@
 ------------2024-02-02-------------
 
-create database bizqrdb;
-
 create user 'bizqrUser'@'localhost' identified by 'mysql';
 
 grant all privileges on bizqrdb.* to 'bizqrUser'@'localhost' with grant option;
 flush privileges;
 
-
+create database bizqrdb;
 
 ------2024--02-07------
 -- user 테이블 생성
@@ -90,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `auth_user` (
 
 -- register 테이블 생성
 CREATE TABLE IF NOT EXISTS `register` (
-                                          `register_num` VARCHAR(255) NOT NULL,
+    `register_num` bigint auto_increment,
     `email`	 VARCHAR(255) NOT NULL,
     `name` VARCHAR(255) NOT NULL,
     `company` VARCHAR(255) NOT NULL,

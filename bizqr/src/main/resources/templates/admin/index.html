@@ -177,21 +177,30 @@
 
             <!-- Recent Orders Table -->
             <div class="recent-orders">
-                <h2>Application List</h2>
+                <h2>Admin Register List</h2>
                 <table>
                     <thead>
-                        <tr>
-                            <th>Coures Name</th>
-                            <th>Coures Number</th>
-                            <th>Payment</th>
-                            <th>Status</th>
-                            <th></th>
-                        </tr>
+                    <tr>
+                        <th scope="col">이름</th>
+                        <th scope="col">이메일</th>
+                        <th scope="col">점포명</th>
+                        <th scope="col">개인 전화번호</th>
+                        <th scope="col">업종</th>
+                    </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody>
+                    <tr th:each="rvo : ${list}">
+                        <td th:text="${rvo.name}">Name</td>
+                        <td th:text="${rvo.email}">Email</td>
+                        <td th:text="${rvo.storeName}">Store Name</td>
+                        <td th:text="${rvo.ownerNum}">Owner Number</td>
+                        <td th:class="${rvo.storeType == 'Cafe'} ? 'warning' : (${rvo.storeType == 'Restaurant'} ? 'success' : (${rvo.storeType == 'Hotel'} ? 'primary' : 'danger'))" th:text="${rvo.storeType}">Store Type</td>
+                    </tr>
+                    </tbody>
                 </table>
                 <a href="#">Show ALL</a>
             </div>
+
             <!-- End of Recent Orders -->
 
         </main>
