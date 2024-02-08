@@ -1,9 +1,14 @@
 @media (max-width: 767px){
 
+    body{
+        background-color: #e7e7e7;
+    }
+
     /* 헤더 */
+
     header{
         width: 100%;
-        height: auto;
+        height: 8%;
         background-color: #6666FF;
         background: linear-gradient(to right, #6666FF, #9999FF);
         display: flex;
@@ -11,6 +16,13 @@
         position: fixed;
         top: 0;
         left: 0;
+        align-items: center;
+        z-index: 50;
+    }
+
+    /* 뒤로가기 버튼 */
+    .backBtn{
+        margin: 2% 0 0 3%;
     }
 
     /* 상호명 */

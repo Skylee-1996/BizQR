@@ -1,4 +1,5 @@
 @media (max-width: 767px){
+
     /* 모달 설정 */
     /* 모달 스타일 */
     .modal {
@@ -141,32 +142,14 @@
     }
 
     /* 헤더 */
+    /* 헤더 fixed로 인한 채우기용 박스 */
+    .fill-box{
+        height: 10%;
+    }
 
     /* 메인 */
-    /* 탭 목록 */
-    .tab-container{
-        width: 100%;
-        display: flex;
-        line-height: 100px;
-        height: 10%;
-        background-color: white;
-        padding: 5% 0 0 0;
-        /* (양수값은 오른쪽, 음수는 왼쪽), (양수값은 아래쪽, 음수는 위쪽), (흐림정도), (모든방향 번짐정도), (색상), (안쪽으로 그림자) */
-        box-shadow: 0 2px 5px 0 rgb(176, 175, 175);
-        justify-content: space-around;
-    }
-
-    /* 탭 한개 */
-    .tab{
-        color: rgb(135, 134, 134);
-    }
-
-    /* 왼쪽, 오른쪽 화살표 */
-    .left, .right{
-        margin-top: 11%;
-    }
-
     /* 메뉴 컨테이너 */
+
     .menu-container{
         display: flex;
         flex-wrap: wrap;
@@ -274,4 +257,83 @@
 
 @media (min-width: 1200px) {
     /* 데스크탑 */
+}
+
+/* 탭 */
+.wrapper {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: #fff;
+    border-radius: 13px;
+    height: 8%;
+    width: 80%;
+    margin-left: 10%;
+}
+.wrapper .icon {
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    width: 10%;
+    height: 6%;
+    position: absolute;
+    top: 10%;
+}
+
+.icon:first-child {
+    left: 0;
+    display: none;
+    background: linear-gradient(90deg, #fff 70%, transparent);
+}
+.icon:last-child {
+    right: 0;
+    justify-content: flex-end;
+    background: linear-gradient(-90deg, #fff 70%, transparent);
+}
+.icon i {
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 50%;
+    width: 80%;
+    height: 50%;
+}
+.icon i:hover {
+    background: #efedfb;
+}
+
+.wrapper .tabs-box {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.tabs-box.dragging {
+    scroll-behavior: auto;
+    cursor: grab;
+}
+.tabs-box .tab {
+    cursor: pointer;
+    font-size: 1.18rem;
+    white-space: nowrap;
+    background: #f5f4fd;
+    padding: 13px 20px;
+    border-radius: 30px;
+    border: 1px solid #d8d5f2;
+}
+.tabs-box .tab:hover{
+    background: #efedfb;
+}
+.tabs-box.dragging .tab {
+    user-select: none;
+    pointer-events: none;
+}
+.tabs-box .tab.active{
+    color: #fff;
+    background: #5372F0;
+    border-color: transparent;
+    width: 50%;
 }

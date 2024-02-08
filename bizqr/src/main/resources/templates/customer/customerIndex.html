@@ -3,35 +3,36 @@
     <title>index</title>
     <style>
         @import url(/css/customer/customerIndex.css);
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
+        @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap);
     </style>
+    <!-- Font Awesome CDN Link for Icons -->
+<!--    <link rel="stylesheet" th:href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">-->
+
 </head>
 
 <th:block th:replace="~{/customer/customerLayout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
 
     <body>
-    <nav class="tab-container">
+    <div class="wrapper">
+        <div class="icon"><i id="left" class="fa-solid fa-angle-left"></i></div>
+        <ul class="tabs-box">
+            <li class="tab">Coding</li>
+            <li class="tab active">JavaScript</li>
+            <li class="tab">Podcasts</li>
+            <li class="tab">Databases</li>
+            <li class="tab">Web Development</li>
+            <li class="tab">Unboxing</li>
+            <li class="tab">History</li>
+        </ul>
+        <div class="icon"><i id="right" class="fa-solid fa-angle-right"></i></div>
+    </div>
 
-        <!-- 왼쪽 아이콘 -->
-        <div class="left">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
-                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
-            </svg>
-        </div>
+    <!-- 공지사항 -->
+    <div class="announcement">
 
-        <div class="tab tab-one"><a href="">탭1</a></div>
-        <div class="tab tab-two"><a href="">탭2</a></div>
-        <div class="tab tab-three"><a href="">탭3</a></div>
-        <div class="tab tab-four"><a href="">탭4</a></div>
-
-        <!-- 오른쪽 아이콘 -->
-        <div class="right">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-            </svg>
-        </div>
-
-    </nav>
+    </div>
 
     <!-- 상품 목록 -->
     <article class="menu-container">
@@ -235,7 +236,7 @@
             </div>
         </div>
 
-        <a href="" class="my-list">
+        <a href="/customer/customerBasket" class="my-list">
             <span class="my-select">갯수</span>
             <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(135, 134, 134);" width="50" height="50" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
                 <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
@@ -269,7 +270,7 @@
             </div>
 
             <div class="request">
-                <input type="text" name="request-bar" class="request-bar" maxlength="30" placeholder="요청 사항을 적어주세요..." >
+                <input type="text" name="request-bar" class="request-bar" maxlength="30" placeholder="주문 요청 사항(선택)" >
                 <div class="request-limit">(0/30)</div>
             </div>
 

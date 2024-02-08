@@ -23,10 +23,14 @@ public class CustomerController {
     @GetMapping("/customerIndex")
     public void index(){}
 
-    @PostMapping("/basket")
-    public ResponseEntity<OrderVO> basket (){
+    @PostMapping("/customerIndex")
+    public ResponseEntity<OrderVO> basket (int i){
 
 
         return new ResponseEntity<OrderVO>(HttpStatus.OK);
     }
+
+    @GetMapping("/customerBasket")
+    public void basket(){}
+
 }
