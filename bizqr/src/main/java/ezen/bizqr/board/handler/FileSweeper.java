@@ -25,7 +25,7 @@ public class FileSweeper {
     private final FileMapper mapper;
 
     //매 시간 매번 작동되도록 설정
-    @Scheduled(cron="0 * * * * *")
+    //@Scheduled(cron="0 * * * * *")
     public void fileSweeper() {
         log.info(">>> FileSweeper Running start~! >> : {} ", LocalDateTime.now()); //시작 시간 체크
 

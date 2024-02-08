@@ -1,7 +1,9 @@
 package ezen.bizqr.user.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import ezen.bizqr.user.repository.UserMapper;
 import ezen.bizqr.user.security.UserVO;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.env.Environment;
 import org.springframework.http.*;
@@ -13,13 +15,16 @@ import org.springframework.web.client.RestTemplate;
 
 @Slf4j
 @Service
-public class OAuthService {
+public class OAuthServiceImpl {
 
     private final Environment env;
     private final RestTemplate restTemplate = new RestTemplate();
 
-    public OAuthService(Environment env){
+    private final UserMapper userMapper;
+
+    public OAuthServiceImpl(Environment env, UserMapper userMapper){
         this.env = env;
+        this.userMapper = userMapper;
     }
 
     public void socialLogin(String code, String registrationId){
@@ -29,11 +34,13 @@ public class OAuthService {
 
         UserVO uvo = new UserVO();
         log.info(">>> UserVO >>> ", uvo);
+        //isSocial google : 1, naver : 2
         switch (registrationId){
             case "google":{
                 uvo.setEmail(userResourceNode.get("email").asText());
                 uvo.setNickName(userResourceNode.get("name").asText());
                 uvo.setPwd(userResourceNode.get("id").asText());
+                uvo.setIsSocial(1);
                 break;
             }
             case "kakao":{
@@ -44,6 +51,7 @@ public class OAuthService {
                 uvo.setEmail(userResourceNode.get("response").get("email").asText());
                 uvo.setNickName(userResourceNode.get("response").get("nickname").asText());
                 uvo.setPwd(userResourceNode.get("response").get("id").asText());
+                uvo.setIsSocial(2);
                 break;
             }
             default:{
@@ -53,6 +61,15 @@ public class OAuthService {
             log.info("email = " + uvo.getEmail());
             log.info("pwd = " + uvo.getPwd());
             log.info("nickName = " + uvo.getNickName());
+            log.info("isSocial = " + uvo.getIsSocial());
+            log.info(">>> uvo >>> {}", uvo);
+
+            UserVO checkSocialUser = userMapper.checkEmail(uvo.getEmail());
+            if(checkSocialUser == null){
+                int isOk = userMapper.userRegister(uvo);
+                isOk = userMapper.authUserRegister(uvo.getEmail());
+            }
+
     }
 
     private String getAccessToken(String authorizationCode, String registrationId) {
