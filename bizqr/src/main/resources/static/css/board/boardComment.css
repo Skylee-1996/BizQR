@@ -1,0 +1,70 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+li{
+    list-style: none;
+}
+
+.mod{
+    height: 50px;
+    width: 100px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgb(130, 106, 251);
+}
+
+.del{
+    height: 50px;
+    width: 100px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgb(130, 106, 251);
+}
+
+.custom-input {
+    appearance: none;
+    border: 1px solid rgb(213, 213, 213);
+    line-height: 0;
+    font-size: 17px;
+    width: 500px;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 60px;
+    color: rgb(72, 72, 72);
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    position: relative;
+    z-index: 1;
+}
+
+.custom-input:focus {
+    border-color: #bee2ff;
+    border: 2px solid #bee2ff;
+    outline: 0;
+}
+
+.custom-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#cmtPostBtn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

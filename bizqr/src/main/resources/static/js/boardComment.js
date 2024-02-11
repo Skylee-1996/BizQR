@@ -1,5 +1,4 @@
 console.log("boardComment.js in");
-
 document.getElementById('cmtPostBtn').addEventListener('click',()=>{
     const cmtText = document.getElementById('cmtText');
     if(cmtText.value == null || cmtText == ''){
@@ -9,10 +8,11 @@ document.getElementById('cmtPostBtn').addEventListener('click',()=>{
     } else {
         let cmtData={
             bno: bnoVal,
-            writer: document.getElementById('cmtWriter').innerText,
+            nickName: document.getElementById('cmtWriter').innerText,
             content: cmtText.value
         };
         //전송
+        console.log(nickName);
         postCommentToServer(cmtData).then(result=>{
             if(result === '1'){
                 alert("댓글 등록 성공~!");
@@ -59,17 +59,25 @@ function spreadCommentList(bno, page=1){
             if(page == 1){ //페이지가 1일때
                 ul.innerHTML = ''; //원래 있던 댓글 내용 지우도록 설정
             }
-            for(let cvo of result.cmtList){
-                let li = `<li class="list-group-item" data-cno="${cvo.cno}" data-writer="${cvo.writer}">`;
+
+            for (let cvo of result.cmtList) {
+                let li = `<li class="list-group-item" data-cno="${cvo.cno}" data-writer="${cvo.nickName}">`;
                 li += `<div class="ms-2 me-auto">`;
-                li += `<div class="fw-bold">${cvo.writer}</div>`;
-                li += `${cvo.content}</div>`;
+                li += `<div class="fw-bold">${cvo.nickName}</div>`;
+                li += `<div>${cvo.content}</div>`;
+                li += `<div class="d-flex justify-content-between align-items-center">`;
                 li += `<span class="badge bg-dark rounded-pill">${cvo.modAt}</span>`;
-                li += `<button type="button" class="btn btn-outline-warning mod">Edit</button>`; // Changed from 'e' to 'Edit'
-                li += `<button type="button" class="btn btn-outline-danger del">x</button>`;
+                li += `<div class="btn-group" role="group">`;
+                li += `<button type="button" class="mod" id="mod">Edit</button>`;
+                li += `<button type="button" class="del" id="del">Delete</button>`;
+                li += `</div>`;
+                li += `</div>`;
+                li += `</div>`;
                 li += `</li>`;
                 ul.innerHTML += li;
             }
+
+
             //댓글에 대한 페이지 처리
             let moreBtn = document.getElementById('moreBtn');
             //현재 페이지 번호가 전체 페이지 번호보다 작다면...
@@ -111,9 +119,9 @@ document.addEventListener('click',(e)=>{
         //댓글 삭제
         let li = e.target.closest('li');
         let cno = li.dataset.cno;
-        let writer = li.dataset.writer;
-        console.log(cno+' / '+writer);
-        deleteCommentToServer(cno, writer).then(result=>{
+        let nickName = li.dataset.nickName;
+        console.log(cno+' / '+nickName);
+        deleteCommentToServer(cno, nickName).then(result=>{
             if(result == '1'){
                 alert("댓글이 삭제되었습니다.");
             } else if(result == '0'){
@@ -127,9 +135,9 @@ document.addEventListener('click',(e)=>{
 });
 
 //댓글 삭제
-async function deleteCommentToServer(cno, writer){
+async function deleteCommentToServer(cno, nickName){
     try {
-        const url = "/comment/del/"+cno+"/"+writer;
+        const url = "/comment/del/"+cno+"/"+nickName;
         const config = {
             method: 'delete'
         };

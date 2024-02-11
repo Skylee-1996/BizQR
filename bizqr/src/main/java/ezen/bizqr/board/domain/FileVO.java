@@ -9,8 +9,9 @@ import lombok.*;
 @Getter
 public class FileVO {
     private String uuid;
-    private String storeId; //saveDir
+    private String saveDir;
     private String fileName;
+    private String storeId;
     private int fileType;
     private long bno;
     private long fileSize;
