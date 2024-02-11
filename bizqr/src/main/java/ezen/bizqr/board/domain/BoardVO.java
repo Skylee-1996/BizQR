@@ -9,8 +9,8 @@ import lombok.*;
 @AllArgsConstructor
 public class BoardVO {
     private long bno;
-    private String userEmail;
-    private String userName;
+    private String email;
+    private String nickName;
     private String title;
     private String content;
     private String regAt;

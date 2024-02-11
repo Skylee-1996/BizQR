@@ -27,3 +27,13 @@ window.onload = function(){
     });
 };
 
+var detailImage = document.getElementById('detailImage');
+
+detailImage.addEventListener('click', function() {
+    var bno = detailImage.getAttribute('data-bno');
+
+    if (bno) {
+        window.location.href = '/board/detail/' + bno;
+    }
+});
+

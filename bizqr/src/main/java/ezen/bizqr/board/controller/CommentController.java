@@ -47,12 +47,12 @@ public class CommentController {
     }
 
     //댓글삭제
-    @DeleteMapping(value="/del/{cno}/{writer}", produces = MediaType.TEXT_PLAIN_VALUE)
+    @DeleteMapping(value="/del/{cno}/{nickName}", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody
     public ResponseEntity<String> delete(@PathVariable("cno") long cno
-            , @PathVariable("userEmail") String userEmail){
-        log.info(">> cno >>> writer >>> {} "+cno+" / "+userEmail);
-        int isOk = csv.deleteComment(cno, userEmail);
+            , @PathVariable("nickName") String nickName){
+        log.info(">> cno >>> writer >>> {} "+cno+" / "+nickName);
+        int isOk = csv.deleteComment(cno, nickName);
         return isOk > 0 ? new ResponseEntity<String>("1", HttpStatus.OK)
                 : new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);
     }

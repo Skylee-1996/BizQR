@@ -5,7 +5,10 @@ create user 'bizqrUser'@'localhost' identified by 'mysql';
 grant all privileges on bizqrdb.* to 'bizqrUser'@'localhost' with grant option;
 flush privileges;
 
+<<<<<<< HEAD
+=======
 create database bizqrdb;
+>>>>>>> origin/main
 
 ------2024--02-07------
 -- user 테이블 생성
@@ -30,6 +33,8 @@ CREATE TABLE IF NOT EXISTS `board` (
     `content` TEXT,
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `mod_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    'cmtQty' INT DEFAULT 0,
+    'hasFile' INT DEFAULT 0;
     `read_count` BIGINT DEFAULT 0,
     PRIMARY KEY (`bno`),
     FOREIGN KEY (`email`) REFERENCES `user`(`email`)
@@ -205,4 +210,13 @@ CREATE TABLE IF NOT EXISTS `transaction` (
     FOREIGN KEY (`store_id`) REFERENCES `store`(`store_id`),
     FOREIGN KEY (`email`) REFERENCES `user`(`email`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+----------- 02/08 -----------
+/* 관리자계정 추가 */
+
+INSERT INTO user (email, pwd, nick_name, phone_num)
+VALUES ('admin@admin.com','admin','admin','010-8282-9999');
+
+INSERT INTO auth_user (email, auth)
+VALUES ('admin@admin.com', 'ROLE_ADMIN');
 

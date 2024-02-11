@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RequestMapping("/board/*")
@@ -32,44 +33,38 @@ public class BoardController {
     @GetMapping("/register")
     public void register() {}
 
-    @PostMapping("/register")
-    public String register(BoardVO bvo,
-                           @RequestParam(name="files", required = false) MultipartFile[] files) {
-        log.info(">>>>> bvo >> {}", bvo);
-        //파일 업로드에 대한 부분 추가
-        List<FileVO> flist = null;
-        if(files[0].getSize()>0 || files != null) {
-            flist = fh.uploadFiles(files);
-            log.info(">>>flist >>> {}",flist);
-        }
-        bsv.register(new BoardDTO(bvo, flist));
-        return "redirect:/board/list";
+    //서비스페이지이동
+    @GetMapping("/service")
+    public String service() {
+
+        return "/info/serviceDetails";
     }
 
+    @PostMapping(value = "/register", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> register(@RequestBody BoardVO bvo)  {
+        log.info(">>>>> bvo >> {}", bvo);
+        bsv.register(bvo);
+
+        return ResponseEntity.ok("redirect:/board/list");
+    }
     @GetMapping("/list")
     public void list(Model m, PagingVO pgvo) {
         log.info(">>> pgvo >> {}", pgvo);
         int totalCount = bsv.getTotalCount(pgvo);
         PagingHandler ph = new PagingHandler(pgvo, totalCount);
+
         m.addAttribute("list", bsv.getList(pgvo));
         m.addAttribute("ph", ph);
     }
 
-    @GetMapping("/detail")
+    @GetMapping({"/detail","/modify"})
     public void detail(Model m, @RequestParam("bno")long bno) {
-
         m.addAttribute("bdto", bsv.getDetail(bno));
     }
 
-    @PostMapping("/modify")
-    public String modify(RedirectAttributes re, BoardVO bvo
-            , @RequestParam(name="files", required = false) MultipartFile[] files) {
-        log.info(">> files >> {} ",files);
-        List<FileVO> flist = null;
-        if(files[0].getSize()>0 && files != null){
-            flist = fh.uploadFiles(files);
-        }
-        bsv.modify(new BoardDTO(bvo, flist));
+    @PostMapping(value="/modify", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public String modify(RedirectAttributes re, @RequestBody BoardVO bvo) {
+        bsv.modify(bvo);
         return "redirect:/board/detail?bno="+bvo.getBno();
     }
 

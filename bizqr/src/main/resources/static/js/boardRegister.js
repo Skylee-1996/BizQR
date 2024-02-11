@@ -1,65 +1,79 @@
+/*
 document.addEventListener("DOMContentLoaded", function() {
-    let fileInput = document.getElementById("files"); // 파일 입력 요소 가져오기
-    let fileList = document.getElementById("files-list"); // 파일 목록 요소 가져오기
-    let numOfFiles = document.getElementById("num-of-files"); // 선택된 파일 개수 요소 가져오기
+    let fileInput = document.getElementById("file-input");
+    let fileList = document.getElementById("files-list");
+    let numOfFiles = document.getElementById("num-of-files");
 
     fileInput.addEventListener("change", () => {
         fileList.innerHTML = "";
-        numOfFiles.textContent = `${fileInput.files.length} Files Selected`; // 선택된 파일 개수 업데이트
+        numOfFiles.textContent = `${fileInput.files.length}개의 파일 선택되었습니다.`;
 
         for (let i of fileInput.files) {
             let reader = new FileReader();
-            let listItem = document.createElement("li"); // 새로운 목록 항목 생성
-            let fileName = i.name; // 파일 이름
-            let fileSize = (i.size / 1024).toFixed(1); // 파일 크기 (KB 단위)
+            let listItem = document.createElement("li");
+            let fileName = i.name;
+            let fileSize = (i.size / 1024).toFixed(1);
 
-            // 파일 크기가 1024KB(1MB) 이상인 경우 MB 단위로 변환하여 표시
             if (fileSize >= 1024) {
-                fileSize = (fileSize / 1024).toFixed(1); // 파일 크기 (MB 단위)
-                listItem.innerHTML = `<p>${fileName}</p><p>${fileSize}MB</p>`; // 파일 정보 설정
+                fileSize = (fileSize / 1024).toFixed(1);
+                listItem.innerHTML = `<p>${fileName}</p><p>${fileSize}MB</p>`;
             } else {
-                listItem.innerHTML = `<p>${fileName}</p><p>${fileSize}KB</p>`; // 파일 정보 설정
+                listItem.innerHTML = `<p>${fileName}</p><p>${fileSize}KB</p>`;
             }
 
-            fileList.appendChild(listItem); // 목록에 항목 추가
+            fileList.appendChild(listItem);
         }
     });
+});*/
 
-    document.getElementById('trigger').addEventListener('click', ()=>{
-        document.getElementById('files').click(); // 파일 업로드 버튼 클릭 시 파일 입력란 클릭 이벤트 발생
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js" />
+
+document.addEventListener("DOMContentLoaded", function() {
+    let fileInput = document.getElementById("file-input");
+    fileInput.addEventListener("change", () => {
+        for (let file of fileInput.files) {
+            uploadImage(file);
+        }
     });
+});
 
-    const regExp = /\.(exe|sh|bat|js|dll|msi)$/; // 실행파일 막기
-    const maxSize = 1024*1024*20; // 최대 파일 크기 (20MB)
+const uploadImage = (file) => {
+    let reader = new FileReader();
+    reader.onload = function(e) {
+        let imageData = e.target.result;
 
-    function fileValidation(fileName, fileSize){
-        if(regExp.test(fileName) || fileSize > maxSize){
-            return 0; // 업로드 불가능
+        editor.insertText(`![${file.name}](${imageData})\n`);
+    };
+    reader.readAsDataURL(file);
+};
+
+const handleEditorChange = async () => {
+    const content = editor.getMarkdown();
+    try {
+        const response = await fetch('/save', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ content }),
+        });
+        if (response.ok) {
+            console.log('에디터 내용이 저장되었습니다.');
         } else {
-            return 1; // 업로드 가능
+            console.error('에디터 내용 저장에 실패했습니다.');
         }
+    } catch (error) {
+        console.error('에디터 내용 저장 중 오류가 발생했습니다:', error);
     }
+};
 
-    document.addEventListener('change',(e)=>{
-        if(e.target.id == 'files'){
-            const fileObject = document.getElementById('files').files; // 선택된 파일 객체 가져오기
-            document.getElementById('regBtn').disabled = false; // 등록 버튼 활성화
+const editor = new toastui.Editor({
+    el: document.querySelector('#editor'),
+    height: '600px',
+    initialEditType: 'markdown',
+    previewStyle: 'vertical',
+});
 
-            const div = document.getElementById('fileZone'); // 파일 목록을 표시할 요소
-            div.innerHTML = ''; // 파일 목록 비우기
+editor.on('change', handleEditorChange);
 
-            let ul = `<ul>`; // 목록 생성 시작
-
-            let isOk = 1;
-            for(let file of fileObject){
-                let validResult = fileValidation(file.name, file.size);
-                isOk *= validResult;
-                ul += `<li>`;
-                ul += `${file.name}`;
-                ul += `<span>${file.size}Byte</span>`;
-                ul += `</li>`;
-            }
-            ul += `</ul>`;
-            div.innerHTML = ul;
-
-            if(isOk == 0){ document.getElementById('regBtn').disabled = true; } } }); });
+/* button */

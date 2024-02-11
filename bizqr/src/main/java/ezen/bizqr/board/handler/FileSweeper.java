@@ -35,7 +35,7 @@ public class FileSweeper {
         //2.저장소를 검색할 때 필요한 파일의 경로 => 리스트(실제 존재해야 할 리스트 값)
         List<String> currentFiles = new ArrayList<String>();
         for(FileVO fvo : dbList) {
-            String filePath = fvo.getStoreId()+ File.separator+fvo.getUuid();
+            String filePath = fvo.getSaveDir()+ File.separator+fvo.getUuid();
             String fileName = fvo.getFileName();
             currentFiles.add(BASE_PATH+filePath+"_"+fileName);
 
