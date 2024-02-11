@@ -1,7 +1,6 @@
 package ezen.bizqr.customer.controller;
 
 
-import ezen.bizqr.customer.domain.ItemVO;
 import ezen.bizqr.customer.domain.OrderVO;
 import ezen.bizqr.customer.service.CustomerService;
 import lombok.RequiredArgsConstructor;
@@ -28,8 +27,8 @@ public class CustomerController {
     public void index(){}
 
     @PostMapping("/customerIndex")
-    public String basket (ItemVO ivo){
-        log.info("ivo >>> {}", ivo);
+    public String basket (OrderVO ovo, MultipartFile file){
+
 
         return "/customer/customerIndex";
     }

@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `register` (
 
 -- menu items 테이블 생성
 CREATE TABLE IF NOT EXISTS `menu_item` (
-    `menu_id` VARCHAR(255) NOT NULL,
+                                           `menu_id` VARCHAR(255) NOT NULL,
     `store_id` VARCHAR(255) NOT NULL,
     `tab_name` VARCHAR(255),
     `item_name` VARCHAR(255) NOT NULL,

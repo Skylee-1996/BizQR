@@ -84,6 +84,25 @@
         border-right: solid 1px black;
     }
 
+    /* 요청사항 */
+    .request{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .request-bar{
+        width: 80%;
+        height: 40%;
+    }
+
+    .request-limit{
+        color: rgb(135, 134, 134);
+        margin-left: 3%;
+    }
+
     .modal-amount{
         display: flex;
         flex-direction: row;
