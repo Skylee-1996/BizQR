@@ -1,0 +1,340 @@
+@media (max-width: 767px){
+
+    /* 모달 설정 */
+    /* 모달 스타일 */
+    .modal {
+        display: none; /* 초기에는 숨겨진 상태 */
+        position: fixed; /* 화면 기준으로 고정 위치 */
+        top: 0; /* 화면 위에서부터 시작 */
+        left: 0; /* 화면 왼쪽에서부터 시작 */
+        width: 100%; /* 화면 전체 너비 */
+        height: 100%; /* 화면 전체 높이 */
+        background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+        z-index: 9999; /* 다른 요소보다 위에 표시 */
+        overflow: auto; /* 내용이 넘칠 경우 스크롤 가능하도록 설정 */
+    }
+
+    /* 모달 내용 스타일 */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 20% auto; /* 화면 상단에서부터 20% 떨어진 위치에 정렬 */
+        border-radius: 5px;
+        width: 80%;
+        height: 80%;
+        max-width: 80%; /* 최대 너비 설정 */
+        max-height: 80%; /* 최대 높이 설정 */
+    }
+
+    /* 모달 내용 */
+    .modal-menu-list{
+        margin: 0 auto;
+        margin-top: 10%;
+        display: flex;
+        height: 50%;
+        width: 90%;
+        border: solid 1px black;
+        border-radius: 5px;
+        flex-wrap: wrap;
+    }
+
+    .closeBtn{
+        width: 100%;
+        border-bottom: solid 3px rgb(135, 134, 134);
+        border-radius: 0 0 5px 5px;
+    }
+
+    .modal-menu-img{
+        width: 100%;
+        height: 80%;
+    }
+
+    .modal-menu-img > img{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* 모달 상품명, 가격 컨테이너 */
+    .modal-menu-info{
+        display: flex;
+        height: 20%;
+        width: 100%;
+        flex-direction: row;
+        border-top: solid 1px black;
+        border-radius: 5px;
+    }
+
+    /* 모달 상품 가격 */
+    .modal-menu-price{
+        font-size: 25px;
+        height: 100%;
+        width: 100%;
+        color: #3634c9;
+        text-align: center;
+        line-height: 250%;
+    }
+
+    /* 모달 상품명 */
+    .modal-menu-name{
+        font-size: 25px;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        line-height: 250%;
+        border-right: solid 1px black;
+    }
+
+    /* 요청사항 */
+    .request{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .request-bar{
+        width: 80%;
+        height: 40%;
+    }
+
+    .request-limit{
+        color: rgb(135, 134, 134);
+        margin-left: 3%;
+    }
+
+    .modal-amount{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: 5% 0 10% 55%;
+        height: 5%;
+        width: auto;
+    }
+
+    .amount{
+        margin: 0 10% 0 10%;
+    }
+
+    .modal-order{
+        border: solid 1px #9595c3;
+        background-color: rgb(204, 204, 236);
+        height: 10%;
+        border-radius: 0 0 5px 5px;
+        display: flex;
+        width: auto;
+        text-align: center;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    /* 모달 설정 */
+
+    /* 모바일 */
+    /* 기타 초기화 설정 */
+    a{
+        text-decoration-line: none;
+        color: rgb(135, 134, 134);
+    }
+
+    .menu-container, footer{
+        width: 100%;
+        height: auto;
+    }
+
+    /* 헤더 */
+    /* 헤더 fixed로 인한 채우기용 박스 */
+    .fill-box{
+        height: 10%;
+    }
+
+    /* 메인 */
+    /* 메뉴 컨테이너 */
+
+    .menu-container{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 5%;
+    }
+
+    /* 메뉴 한개 */
+    .menu-list{
+        border: solid 1px rgb(208, 200, 200);
+        border-radius: 10px;
+        margin: 5% 0 0 3%;
+        width: 45%;
+        height: 150px;
+    }
+
+    /* 메뉴 이미지 컨테이너 */
+    .menu-img{
+        height: 65%;
+    }
+
+    /* 메뉴 이미지 */
+    .menu-img > img{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* 상품명, 가격 컨테이너 */
+    .menu-info{
+        display: flex;
+        height: 35%;
+        flex-direction: column;
+        border-top: solid 1px rgb(208, 200, 200);
+        border-radius: 5px;
+    }
+
+    /* 상품 가격 */
+    .menu-price{
+        font-size: 25px;
+        height: 50%;
+        width: 100%;
+        color: #3634c9;
+        text-align: center;
+    }
+
+    /* 상품명 */
+    .menu-name{
+        font-size: 25px;
+        height: 50%;
+        width: 100%;
+        text-align: center;
+    }
+    /* 메인 */
+
+    /* 풋터 */
+    footer{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        background-color: #a4b8f3;
+        height: 10%;
+    }
+
+    .company-info{
+        width: 100%;
+        height: 70%;
+    }
+
+    .icon-container{
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin: 0 auto;
+    }
+    /* 풋터 */
+
+    /* 바텀 */
+    /* 내가 구매한 목록 컨테이너 */
+    .my-container{
+        border: solid 1px #9595c3;
+        background-color: rgb(204, 204, 236);
+        display: flex;
+    }
+    .my-info, .my-list{
+        border: solid 1px #9595c3;
+        width: 50%;
+        text-align: center;
+        position: relative;
+    }
+
+    .my-pay{
+        font-size: 25px;
+    }
+
+    .my-select{
+        position: absolute;
+        right: 50px;
+        background-color: rgba(135, 134, 134, .5); /* 배경색 설정 */
+        color: white; /* 글자색 설정 */
+        padding: 5px 8px; /* 여백 설정 */
+        border-radius: 50%; /* 원형 모양 만들기 */
+    }
+    /* 바텀 */
+}
+
+@media (min-width: 1200px) {
+    /* 데스크탑 */
+}
+
+/* 탭 */
+.wrapper {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: #fff;
+    border-radius: 13px;
+    height: 8%;
+    width: 80%;
+    margin-left: 10%;
+}
+.wrapper .icon {
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    width: 10%;
+    height: 6%;
+    position: absolute;
+    top: 10%;
+}
+
+.icon:first-child {
+    left: 0;
+    display: none;
+    background: linear-gradient(90deg, #fff 70%, transparent);
+}
+.icon:last-child {
+    right: 0;
+    justify-content: flex-end;
+    background: linear-gradient(-90deg, #fff 70%, transparent);
+}
+.icon i {
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 50%;
+    width: 80%;
+    height: 50%;
+}
+.icon i:hover {
+    background: #efedfb;
+}
+
+.wrapper .tabs-box {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.tabs-box.dragging {
+    scroll-behavior: auto;
+    cursor: grab;
+}
+.tabs-box .tab {
+    cursor: pointer;
+    font-size: 1.18rem;
+    white-space: nowrap;
+    background: #f5f4fd;
+    padding: 13px 20px;
+    border-radius: 30px;
+    border: 1px solid #d8d5f2;
+}
+.tabs-box .tab:hover{
+    background: #efedfb;
+}
+.tabs-box.dragging .tab {
+    user-select: none;
+    pointer-events: none;
+}
+.tabs-box .tab.active{
+    color: #fff;
+    background: #5372F0;
+    border-color: transparent;
+    width: 50%;
+}

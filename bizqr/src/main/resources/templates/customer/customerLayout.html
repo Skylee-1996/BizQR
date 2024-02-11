@@ -9,45 +9,22 @@
 
     <style>
         @import url(/css/customer/reset.css);
-
-        @media (max-width: 767px){
-
-            /* 헤더 */
-            header{
-                width: 100%;
-                height: auto;
-                background-color: #6666FF;
-                background: linear-gradient(to right, #6666FF, #9999FF);
-                display: flex;
-                justify-content: space-between;
-                position: fixed;
-                top: 0;
-                left: 0;
-            }
-
-            /* 상호명 */
-            .company-name{
-                font-size: 40px;
-                width: 70%;
-                text-align: center;
-                color: white;
-                margin-left: 30%;
-                margin-right: 20%;
-            }
-
-            /* 호출 버튼 및 리스트 컨테이너 */
-            .tool-container{
-                width: 30%;
-                display: flex;
-            }
-            /* 헤더 */
-        }
+        @import url(/css/customer/customerLayout.css);
     </style>
 </head>
+
     <header>
 
+        <div class="backBtn" id="backBtn">
+            <a href="/customer/customerIndex" class="backLink">
+                <svg xmlns="http://www.w3.org/2000/svg" style="color: white" width="35" height="35" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                </svg>
+            </a>
+        </div>
+
         <!-- 상호 -->
-        <div class="company-name">BizQR</div>
+        <div class="company-name" id="company-name">BizQR</div>
 
         <nav class="tool-container">
             <!-- 호출 아이콘 -->
@@ -68,10 +45,13 @@
 
     </header>
 
+    <div class="fill-box"></div>
+
     <th:block th:replace="${content}">
 
     </th:block>
-</th:block>
 
+    <script src="/js/customer/customerLayout.js"></script>
+</th:block>
 
 </html>

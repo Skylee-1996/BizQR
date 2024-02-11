@@ -14,8 +14,8 @@ public class UserServiceImpl implements UserService {
     private final UserMapper userMapper;
 
     @Override
-    public UserVO checkEmail(String email) {
-        return userMapper.checkEmail(email);
+    public UserVO selectEmail(String email) {
+        return userMapper.selectEmail(email);
     }
 
     @Override
