@@ -66,3 +66,40 @@
     background-color: rgb(204, 204, 236);
     z-index: 30;
 }
+
+.order-packing, .order-deliver{
+    display: none;
+}
+
+.basket-list{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.basket{
+    width: 80%;
+    height: 150px;
+    border: 1px solid #9595c3;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.basket-img{
+    height: 100%;
+    width: 40%;
+}
+
+.basket-info{
+    height: 100%;
+    width: 30%;
+}
+
+.basket-amount{
+    height: 100%;
+    width: 30%;
+}

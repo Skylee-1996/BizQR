@@ -264,13 +264,13 @@
                     <img src="" alt="메뉴 사진">
                 </div>
                 <div class="modal-menu-info">
-                    <div class="modal-menu-name">품명</div>
-                    <div class="modal-menu-price">가격</div>
+                    <div class="modal-menu-name" th:name="menuId">품명</div>
+                    <div class="modal-menu-price" th:name="menuAmount">가격</div>
                 </div>
             </div>
 
             <div class="request">
-                <input type="text" name="request-bar" class="request-bar" maxlength="30" placeholder="주문 요청 사항(선택)" >
+                <input type="text" name="userRequest" class="request-bar" maxlength="30" placeholder="주문 요청 사항(선택)" >
                 <div class="request-limit">(0/30)</div>
             </div>
 

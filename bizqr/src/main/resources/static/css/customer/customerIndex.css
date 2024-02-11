@@ -106,6 +106,7 @@
     .modal-amount{
         display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
         margin: 5% 0 10% 55%;
         height: 5%;
         width: auto;

@@ -124,7 +124,7 @@ CREATE TABLE IF NOT EXISTS `tables` (
 
 -- order_items 테이블 생성
 CREATE TABLE IF NOT EXISTS `order_items` (
-                                             `menu_id` VARCHAR(255) NOT NULL,
+    `menu_id` VARCHAR(255) NOT NULL,
     `store_id` VARCHAR(255) NOT NULL,
     `table_id` VARCHAR(255) NOT NULL,
     `menu_price` BIGINT,
@@ -138,7 +138,7 @@ CREATE TABLE IF NOT EXISTS `order_items` (
 
 -- order 테이블 생성
 CREATE TABLE IF NOT EXISTS `order` (
-                                       `order_id` VARCHAR(255) NOT NULL,
+    `order_id` VARCHAR(255) NOT NULL,
     `table_id` VARCHAR(255) NOT NULL,
     `store_id` VARCHAR(255) NOT NULL,
     `order_status` tinyint default 0,
@@ -152,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `order` (
 
 -- payment 테이블 생성
 CREATE TABLE IF NOT EXISTS `payment` (
-                                         `payment_id` VARCHAR(255) NOT NULL,
+    `payment_id` VARCHAR(255) NOT NULL,
     `order_id` VARCHAR(255) NOT NULL,
     `payment_method` VARCHAR(255),
     `payment_status` tinyint default 0,
@@ -163,8 +163,8 @@ CREATE TABLE IF NOT EXISTS `payment` (
 
 -- order_history 테이블 생성
 CREATE TABLE IF NOT EXISTS `order_history` (
-                                               `order_history_id` bigint NOT NULL auto_increment,
-                                               `order_id` VARCHAR(255) NOT NULL,
+    `order_history_id` bigint NOT NULL auto_increment,
+    `order_id` VARCHAR(255) NOT NULL,
     `total_amount` BIGINT,
     `order_date` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `order_status` tinyint default 0,
@@ -174,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `order_history` (
 
 -- Inventory 테이블 생성
 CREATE TABLE IF NOT EXISTS inventory (
-                                         `menu_id` VARCHAR(255) NOT NULL,
+    `menu_id` VARCHAR(255) NOT NULL,
     `current_stock` INT(20) NOT NULL,
     `supplier_id` VARCHAR(255),
     `last_restock_date` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -183,9 +183,9 @@ CREATE TABLE IF NOT EXISTS inventory (
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 -- comment 테이블 생성
 CREATE TABLE IF NOT EXISTS `comment` (
-                                         `cno` BIGINT NOT NULL AUTO_INCREMENT,
-                                         `bno` BIGINT NOT NULL,
-                                         `nick_name` VARCHAR(255) NOT NULL,
+    `cno` BIGINT NOT NULL AUTO_INCREMENT,
+    `bno` BIGINT NOT NULL,
+    `nick_name` VARCHAR(255) NOT NULL,
     `content` TEXT NOT NULL,
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `mod_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
