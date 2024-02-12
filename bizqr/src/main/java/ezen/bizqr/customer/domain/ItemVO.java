@@ -10,9 +10,7 @@ import lombok.*;
 public class ItemVO {
     private String menuId;
     private String storeId;
-    private String tableId;
-    private long menuPrice;
-    private long menuAmount;
-    private String regAt;
-    private String modAt;
+    private String tabName;
+    private String itemName;
+    private long itemPrice;
 }
