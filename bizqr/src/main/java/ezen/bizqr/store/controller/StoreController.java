@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class StoreController {
     @GetMapping("/register")
     public void storeRegister(){}
+    @GetMapping("/create")
+    public void storeCreate(){}
 
 
 }
