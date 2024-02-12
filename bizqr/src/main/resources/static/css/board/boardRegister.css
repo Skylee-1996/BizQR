@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'Orbit-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.toastui-editor-defaultUI{
+    width: 66%;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+
+.form-control {
+    padding: 10px 15px;
+    border-radius: 2px;
+    border-width: 1px;
+    background-color: rgba(235,235,235,0.18);
+    border-color: rgba(171,171,171,0.18);
+    font-size: 14px;
+}
+
+.form-control:focus{
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #86b7fe;
+    outline: 0;
+}
+
+.form-group {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    display: inline-block;
+}
+
+.container {
+    margin-top: 200px;
+}
+
+#headers{
+    margin-top: -400px;
+    margin-left: 177px;
+    font-size: 30px;
+}
+
+#ps{
+    margin-left: 260px;
+    margin-top: -160px;
+    font-size: 13px;
+    line-height: 2.0;
+    margin-bottom: 40px;
+}
+
+#ps a {
+    color: #1989ff;
+}
+
+#np{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 260px;
+    margin-bottom: 20px;
+}
+
+#np2{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 260px;
+    margin-top: 50px;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: #e4e4e4;
+    margin: 0 auto;
+    width: 1000px;
+    margin-bottom: 30px;
+}
+
+.hr2{
+  margin-top: 25px;
+}
+
+.wrapper{
+    text-align: center;
+
+}
+
+.form-control::placeholder {
+    font-size: 12px;
+}
+
+.form-control option{
+    font-size: 12px;
+}
+
+.wrapper input, select{
+    width: 483px;
+    margin: 15px;
+}
+
+.wrapper .row2 {
+    margin-top: 20px;
+}
+
+.titleLabel {
+    font-size: 14.7px;
+    font-weight: bold;
+    position: relative;
+    left: -450px;
+}
+
+.emailLabel {
+    font-size: 14.7px;
+    font-weight: bold;
+    position: relative;
+    left: 15px;
+}
+
+.nickLabel{
+    font-size: 14.7px;
+    font-weight: bold;
+    position: relative;
+    left: -450px;
+}
+
+.headLabel{
+    font-size: 14.7px;
+    font-weight: bold;
+    position: relative;
+    left: 20px;
+}
+
+
+/* button */
+.parentBtn {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+.parentBtn button {
+    margin: 10px;
+}
+
+
+.submit_btn{
+    padding: 10px 15px;
+    width: 100px;
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+    background-color: #2c87e8;
+}
+
+.btn-gradient-2{
+    padding: 10px 15px;
+    width: 100px;
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+    background-color: #e4e4e4;
+}
+
+
+
+
+
+
+

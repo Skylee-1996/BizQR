@@ -8,17 +8,18 @@ import java.util.List;
 
 public interface BoardService {
 
-    void register(BoardDTO boardDTO);
+    void register(BoardVO bvo);
 
     List<BoardVO> getList(PagingVO pgvo);
 
     BoardDTO getDetail(long bno);
 
-    void modify(BoardDTO boardDTO);
+    void modify(BoardVO bvo);
 
     void remove(long bno);
 
     int getTotalCount(PagingVO pgvo);
 
     int removeToFile(String uuid);
+
 }

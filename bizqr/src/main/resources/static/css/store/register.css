@@ -50,14 +50,13 @@ form .user-details .input-box{
     width: calc(100% / 2 - 20px);
 }
 
-.user-details .input-box .details{
-    display:block;
-    font-weight: 500;
-    margin-bottom: 5px;
+form .user-details .input-box:last-child{
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 .user-details .input-box .details{
-    display: block;
+    display:block;
     font-weight: 500;
     margin-bottom: 5px;
 }

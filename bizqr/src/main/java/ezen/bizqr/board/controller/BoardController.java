@@ -7,6 +7,7 @@ import ezen.bizqr.board.domain.PagingVO;
 import ezen.bizqr.board.handler.FileHandler;
 import ezen.bizqr.board.handler.PagingHandler;
 import ezen.bizqr.board.service.BoardService;
+import ezen.bizqr.board.service.CommentService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RequestMapping("/board/*")
@@ -27,64 +29,56 @@ import java.util.List;
 public class BoardController {
     private final Logger log = LoggerFactory.getLogger(BoardController.class);
     private final BoardService bsv;
+    private final CommentService csv;
     private final FileHandler fh;
 
     @GetMapping("/register")
     public void register() {}
 
-    @PostMapping("/register")
-    public String register(BoardVO bvo,
-                           @RequestParam(name="files", required = false) MultipartFile[] files) {
-        log.info(">>>>> bvo >> {}", bvo);
-        //파일 업로드에 대한 부분 추가
-        List<FileVO> flist = null;
-        if(files[0].getSize()>0 || files != null) {
-            flist = fh.uploadFiles(files);
-            log.info(">>>flist >>> {}",flist);
-        }
-        bsv.register(new BoardDTO(bvo, flist));
-        return "redirect:/board/list";
+    //서비스페이지이동
+    @GetMapping("/service")
+    public String service() {
+
+        return "/info/serviceDetails";
     }
 
+    @PostMapping(value = "/register", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> register(@RequestBody BoardVO bvo)  {
+        log.info(">>>>> bvo >> {}", bvo);
+        bsv.register(bvo);
+
+        return ResponseEntity.ok("redirect:/board/list");
+    }
     @GetMapping("/list")
     public void list(Model m, PagingVO pgvo) {
         log.info(">>> pgvo >> {}", pgvo);
         int totalCount = bsv.getTotalCount(pgvo);
         PagingHandler ph = new PagingHandler(pgvo, totalCount);
-        m.addAttribute("list", bsv.getList(pgvo));
+
+        List<BoardVO> boardList = bsv.getList(pgvo);
+        for (BoardVO boardVO : boardList) {
+            String bracketClass = "";
+            boardVO.setBracketClass(bracketClass);
+        }
+        m.addAttribute("list", boardList);
         m.addAttribute("ph", ph);
     }
 
-    @GetMapping("/detail")
-    public void detail(Model m, @RequestParam("bno")long bno) {
 
+    @GetMapping({"/detail","/modify"})
+    public void detail(Model m, @RequestParam("bno")long bno) {
         m.addAttribute("bdto", bsv.getDetail(bno));
     }
 
-    @PostMapping("/modify")
-    public String modify(RedirectAttributes re, BoardVO bvo
-            , @RequestParam(name="files", required = false) MultipartFile[] files) {
-        log.info(">> files >> {} ",files);
-        List<FileVO> flist = null;
-        if(files[0].getSize()>0 && files != null){
-            flist = fh.uploadFiles(files);
-        }
-        bsv.modify(new BoardDTO(bvo, flist));
+    @PostMapping(value="/modify", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public String modify(RedirectAttributes re, @RequestBody BoardVO bvo) {
+        bsv.modify(bvo);
         return "redirect:/board/detail?bno="+bvo.getBno();
     }
 
-    @PostMapping("/remove")
+    @GetMapping("/remove")
     public String remove(@RequestParam("bno")long bno) {
         bsv.remove(bno);
         return "redirect:/board/list";
-    }
-
-    //첨부파일 삭제
-    @DeleteMapping(value="/file/{uuid}", produces = MediaType.TEXT_PLAIN_VALUE)
-    public ResponseEntity<String> delete(@PathVariable("uuid") String uuid) {
-        log.info("delete file id >>> {} ", uuid);
-        int isOk = bsv.removeToFile(uuid);
-        return isOk > 0 ? new ResponseEntity<String>("1", HttpStatus.OK) :
-                new ResponseEntity<String>("0", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

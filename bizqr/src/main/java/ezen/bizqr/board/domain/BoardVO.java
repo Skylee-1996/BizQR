@@ -9,8 +9,8 @@ import lombok.*;
 @AllArgsConstructor
 public class BoardVO {
     private long bno;
-    private String userEmail;
-    private String userName;
+    private String email;
+    private String nickName;
     private String title;
     private String content;
     private String regAt;
@@ -18,4 +18,6 @@ public class BoardVO {
     private long readCount;
     private int cmtQty;
     private int hasFile;
+    /* 말머리 추가 */
+    private String bracketClass;
 }

@@ -3,12 +3,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <th:block th:replace="~{layout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
-        <link rel="stylesheet" th:href="@{/css/searchBar.css}">
+        <link rel="stylesheet" th:href="@{/css/board/noticeList.css}">
+        <link rel="stylesheet" th:href="@{/css/board/searchBar.css}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="/js/boardList.js"></script>
-        <link rel="stylesheet" th:href="@{/css/noticeList.css}">
+        <script src="/js/board/boardList.js"></script>
+
 
         <!-- search bar -->
         <div class="container">
@@ -18,14 +19,12 @@
                         <input class="prompt-input" type="text" placeholder="검색어를 입력해주세요." name="keyword" required>
                         <div class="controls">
                             <select class="img-quantity" name="type" aria-label="Small select example">
-                                <option th:selected="${ph.pgvo.type == null? true:false}" st>Choose</option>
+                                <option th:selected="${ph.pgvo.type == null? true:false}" st>선택</option>
+                                <option th:value="tecn" th:selected="${ph.pgvo.type == 'tecn'? true:false}">all</option>
                                 <option th:value="t" th:selected="${ph.pgvo.type == 't'? true:false}">제목</option>
                                 <option th:value="e" th:selected="${ph.pgvo.type == 'e'? true:false}">작성자</option>
                                 <option th:value="c" th:selected="${ph.pgvo.type == 'c'? true:false}">게시글</option>
-                                <option th:value="tc" th:selected="${ph.pgvo.type == 'tc'? true:false}">제목&게시글</option>
-                                <option th:value="ec" th:selected="${ph.pgvo.type == 'ec'? true:false}">작성자&게시글</option>
-                                <option th:value="te" th:selected="${ph.pgvo.type == 'te'? true:false}">제목&작성자</option>
-                                <option th:value="tec" th:selected="${ph.pgvo.type == 'tec'? true:false}">all</option>
+                                <option th:value="n" th:selected="${ph.pgvo.type == 'n'? true:false}">닉네임</option>
                             </select>
                             <button type="submit" class="generate-btn">search</button>
                         </div>
@@ -35,7 +34,7 @@
 
 
             <!-- menu btn -->
-            <div class="fab-wrapper">
+           <div class="fab-wrapper">
                 <input id="fabCheckbox" type="checkbox" class="fab-checkbox" />
                 <label class="fab" for="fabCheckbox">
                     <span class="fab-dots fab-dots-1"></span>
@@ -46,7 +45,7 @@
                     <a class="fab-action fab-action-1" href="/board/register">
                         <i class="fas fa-question"></i>
                     </a>
-                    <a class="fab-action fab-action-2">
+                    <a class="fab-action fab-action-2" href="/board/service">
                         <i class="fas fa-book"></i>
                     </a>
                     <a class="fab-action fab-action-3">
@@ -59,72 +58,33 @@
             </div>
 
 
-            <!-- board list -->
+
+            <!-- board -->
             <div class="listContainer">
-            <div class="image-container" th:each="bvo:${list}">
-                <div class="card">
-                    <div class="card-header">
-                        <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
-                    </div>
-                    <div class="card-body">
-                        <span class="tag tag-teal">Technology</span>
-                        <h4 th:text="${bvo.title}">
-                        </h4>
-                        <p th:text="${bvo.content}">
-
-                        </p>
-                        <div class="user">
-                            <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
-                            <div class="user-info">
-                                <h5 th:text="${bvo.userEmail}"></h5>
-                                <small th:text="${bvo.modAt}"></small>
+                <div class="image-container" th:each="bvo:${list}">
+                    <div class="card">
+                        <a th:if="${bvo.bno != null}" th:href="@{'/board/detail?bno=' + ${bvo.bno}}">
+                            <div class="card-header">
+                                <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <img src="https://www.newsbtc.com/wp-content/uploads/2020/06/mesut-kaya-LcCdl__-kO0-unsplash-scaled.jpg" alt="ballons" />
-                    </div>
-                    <div class="card-body">
-                        <span class="tag tag-purple">Popular</span>
-                        <h4 th:text="${bvo.title}">
-                        </h4>
-                        <p th:text="${bvo.content}">
-
-                        </p>
-                        <div class="user">
-                            <img src="https://lh3.googleusercontent.com/ogw/ADGmqu8sn9zF15pW59JIYiLgx3PQ3EyZLFp5Zqao906l=s32-c-mo" alt="user" />
-                            <div class="user-info">
-                                <h5 th:text="${bvo.userEmail}"></h5>
-                                <small th:text="${bvo.modAt}"l></small>
+                            <div class="card-body">
+                                <span th:class="'tag'+${bvo.bracketClass}"></span>
+                                <h4 th:text="${bvo.title}">
+                                </h4>
+                                <div class="user">
+                                    <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+                                    <div class="user-info">
+                                        <h5 th:text="${bvo.email}"></h5>
+                                        <small th:text="${bvo.modAt}"></small>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <img src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg" alt="city" />
-                    </div>
-                    <div class="card-body">
-                        <span class="tag tag-pink">Design</span>
-                        <h4 th:text="${bvo.title}">
-
-                        </h4>
-                        <p th:text="${bvo.content}">
-
-                        </p>
-                        <div class="user">
-                            <img src="" alt="user" />
-                            <div class="user-info">
-                                <h5 th:text="${bvo.userEmail}"></h5>
-                                <small th:text="${bvo.modAt}"></small>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
-            </div>
+
+
 
             <!-- Pagination line -->
             <br>

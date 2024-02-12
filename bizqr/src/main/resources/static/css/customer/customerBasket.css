@@ -1,0 +1,124 @@
+
+
+.order-success{
+    border: solid 1px #9595c3;
+    background-color: rgb(204, 204, 236);
+    height: 10%;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    width: auto;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-menu{
+
+}
+
+.order-amount{
+    height: 15%;
+}
+
+.tab-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 10%;
+    background-color: white;
+}
+
+.shop-tab, .packing-tab, .deliver-tab{
+    width: 100%;
+    text-align: center;
+    height: 45%;
+    line-height: 200%;
+}
+
+.shop-tab{
+    border-top: solid 2px #9595c3;
+    border-right: solid 2px #9595c3;
+}
+
+.packing-tab{
+    border-bottom: solid 2px #9595c3;
+    background-color: #e7e7e7;
+    border-top: solid 2px #8a8a8c;
+}
+
+.deliver-tab{
+    border-bottom: solid 2px #9595c3;
+    background-color: #e7e7e7;
+    border-top: solid 2px #8a8a8c;
+    border-left: solid 2px #c3c3c5;
+}
+
+.order-deliver, .order-packing, .order-shop{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 7%;
+    text-align: center;
+    line-height: 400%;
+    border-top: solid 1px #9595c3;
+    border-radius: 5px;
+    background-color: rgb(204, 204, 236);
+    z-index: 30;
+}
+
+.order-packing, .order-deliver{
+    display: none;
+}
+
+.basket-list{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.basket{
+    width: 80%;
+    height: 150px;
+    border: 1px solid #9595c3;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.basket-img{
+    height: 100%;
+    width: 40%;
+}
+
+.basket-info{
+    height: 100%;
+    width: 30%;
+}
+
+.basket-amount{
+    height: 100%;
+    width: 30%;
+}
+
+/* 요청사항 */
+.request{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.request-bar{
+    width: 80%;
+    height: 40%;
+}
+
+.request-limit{
+    color: rgb(135, 134, 134);
+    margin-left: 3%;
+}

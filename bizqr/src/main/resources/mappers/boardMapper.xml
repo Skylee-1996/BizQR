@@ -5,8 +5,8 @@
 <mapper namespace="ezen.bizqr.board.repository.BoardMapper">
 
     <insert id="insert">
-        insert into board(title, user_email, content)
-        values(#{title}, #{userEmail}, #{content})
+        insert into board(title, email, nick_name, content)
+        values(#{title}, #{email}, #{nickName},#{content})
     </insert>
 
     <select id="getList" resultType="ezen.bizqr.board.domain.BoardVO">
@@ -25,12 +25,11 @@
     </select>
 
     <update id="update">
-        update board set title = #{title}, content=#{content}, mod_at= now()
-        where bno=#{bno}
+        update board set title = #{title}, content = #{content}, mod_at= now() where bno=#{bno}
     </update>
 
     <delete id="delete">
-        delete from board where bno=#{bno}
+        delete from board where bno = #{bno}
     </delete>
 
     <select id="getTotalCount" resultType="int">
@@ -50,7 +49,10 @@
                                 content like concat('%',#{keyword},'%')
                             </when>
                             <when test="type=='e'.toString()">
-                                user_email like concat('%',#{keyword},'%')
+                                email like concat('%',#{keyword},'%')
+                            </when>
+                            <when test="type=='n'.toString()">
+                                nick_name like concat('%',#{keyword},'%')
                             </when>
                         </choose>
                     </trim>

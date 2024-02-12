@@ -5,11 +5,13 @@ import ezen.bizqr.board.domain.BoardVO;
 import ezen.bizqr.board.domain.FileVO;
 import ezen.bizqr.board.domain.PagingVO;
 import ezen.bizqr.board.repository.BoardMapper;
+import ezen.bizqr.board.repository.CommentMapper;
 import ezen.bizqr.board.repository.FileMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 
 import java.util.List;
 
@@ -19,25 +21,20 @@ import java.util.List;
 public class BoardServiceImpl implements BoardService{
     private final BoardMapper mapper;
     private final FileMapper fileMapper;
+    private final CommentMapper cmapper;
 
     @Transactional
     @Override
-    public void register(BoardDTO bdto) {
-        int isOk = mapper.insert(bdto.getBvo());
-        if(isOk > 0 && bdto.getFlist().size() > 0) {
-            //파일이 존재한다면...
-            long bno = mapper.getBno();
-            for(FileVO fvo : bdto.getFlist()) {
-                fvo.setBno(bno);
-                isOk *= fileMapper.insertFile(fvo);
-            }
+    public void register(BoardVO bvo) {
+        int isOk = mapper.insert(bvo);
+
         }
-    }
 
     @Override
     public List<BoardVO> getList(PagingVO pgvo) {
-
-        return mapper.getList(pgvo);
+        List<BoardVO> list = mapper.getList(pgvo);
+        log.info("board list {}",list);
+        return list;
     }
 
     @Transactional
@@ -51,37 +48,25 @@ public class BoardServiceImpl implements BoardService{
 
     @Transactional
     @Override
-    public void modify(BoardDTO boardDTO) {
-        int isOk = mapper.update(boardDTO.getBvo());
-        try {
-            if(isOk > 0 && boardDTO.getFlist().size()>0) {
-                long bno = boardDTO.getBvo().getBno();
-                for(FileVO fvo: boardDTO.getFlist()) {
-                    fvo.setBno(bno);
-                    isOk *= fileMapper.insertFile(fvo);
-                }
-            }
-        } catch (Exception e){
-            e.printStackTrace();
-            log.info("file null");
-        };
-
+    public void modify(BoardVO bvo) {
+           mapper.update(bvo);
     }
 
+    @Transactional
     @Override
     public void remove(long bno) {
-        // TODO Auto-generated method stub
+        cmapper.delete(bno);
         mapper.delete(bno);
     }
 
     @Override
     public int getTotalCount(PagingVO pgvo) {
-        // TODO Auto-generated method stub
         return mapper.getTotalCount(pgvo);
     }
 
     @Override
-    public int removeToFile( String uuid) {
+    public int removeToFile(String uuid) {
         return fileMapper.deleteFile(uuid);
     }
 }
+

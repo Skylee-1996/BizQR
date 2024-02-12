@@ -30,7 +30,7 @@ public class FileHandler {
         }
         for(MultipartFile file : files) {
             FileVO fvo = new FileVO();
-            fvo.setStoreId(today);
+            fvo.setSaveDir(today);
             fvo.setFileSize(file.getSize());
 
             String originalFileName = file.getOriginalFilename();

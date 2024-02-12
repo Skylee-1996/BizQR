@@ -1,0 +1,23 @@
+#submitBtn{
+    padding: 10px 15px;
+    width: 100px;
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+    background-color: #2c87e8;
+}
+
+#cancelBtn{
+    padding: 10px 15px;
+    width: 100px;
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+    background-color: #e4e4e4;
+}
+
+.btnAll{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}

@@ -1,0 +1,48 @@
+<html lang="kor" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="~{/layout :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <link rel="stylesheet" th:href="@{/css/loginstyle.css}">
+
+
+        <body>
+
+        <div class="login-card">
+            <h2>Register</h2>
+            <h3>Enter your credentials</h3>
+
+            <form action="/user/register" method="post" class="login-form" >
+                <div>
+                    <h5>이메일</h5>
+                    <h5 id="emailText"></h5>
+                </div>
+                <input type="text" name="email" id="e" placeholder="UserEmail" readonly="readonly">
+
+                <div>
+                    <h5>비밀번호</h5>
+                    <h5 id="pwdText"></h5>
+                </div>
+                <input type="password" name="pwd" id="p1" placeholder="Password">
+
+                <div>
+                    <h5>비밀번호 확인</h5>
+                    <h5></h5>
+                </div>
+
+                <input type="password" name="pwdCheck2" id="p2" placeholder="Password">
+                <h5>닉네임</h5>
+                <input type="text" name="nickName" id="n" placeholder="UserNickName">
+
+                <h5>전화번호</h5>
+                <input type="text" name="phoneNum" id="pn" placeholder="PhoneNumber">
+
+                <button type="submit" id="modify">Modify</button>
+            </form>
+        </div>
+
+
+
+        </body>
+        <script th:src="@{/js/userRegister.js}"></script>
+    </th:block>
+</th:block>
