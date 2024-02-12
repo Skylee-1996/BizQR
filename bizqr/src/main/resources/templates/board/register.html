@@ -3,9 +3,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <th:block th:replace="~{layout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
+        <head>
         <link rel="stylesheet" href="/css/board/boardRegister.css" />
-        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css" />
         <link rel="stylesheet" href="http://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+            <style>
+                #editor{
+
+                }
+            </style>
+        </head>
 <body>
         <section class="container">
             <form class="form" method="post" onsubmit="savePost(event)">

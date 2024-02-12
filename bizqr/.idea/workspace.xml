@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/asset/google_login_btn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/asset/naver_login_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/store/create.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/store/create.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/customerMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/loginstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/loginstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/boardRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/boardRegister.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/textEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/textEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +286,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.bizqr [dependencies]" />
-        <item itemvalue="JavaScript Debug.register.html" />
         <item itemvalue="Gradle.BizqrApplicationTests" />
         <item itemvalue="Gradle.BoardMapperTest" />
         <item itemvalue="Gradle.BizqrApplicationTests.contextLoads" />
@@ -339,6 +342,7 @@
       <workItem from="1707614742674" duration="7881000" />
       <workItem from="1707649758455" duration="10090000" />
       <workItem from="1707709520427" duration="7204000" />
+      <workItem from="1707716848231" duration="13392000" />
     </task>
     <servers />
   </component>
@@ -363,6 +367,11 @@
           <properties class="java.io.FileNotFoundException" package="java.io" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ezen/bizqr/BizqrApplication.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

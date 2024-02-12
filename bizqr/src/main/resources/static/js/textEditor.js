@@ -7,7 +7,6 @@ const editor = new Editor({
     initialEditType:"wysiwyg",
     hideModeSwitch: true,
     initialValue: content,
-    previewStyle: 'vertical',
     placeholder: '내용을 입력해주세요.',
     language:"ko-KR",
     hooks: {
