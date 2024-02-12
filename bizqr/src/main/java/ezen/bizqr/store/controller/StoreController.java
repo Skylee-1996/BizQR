@@ -19,8 +19,6 @@ public class StoreController {
 
     @GetMapping("/register")
     public void storeRegister(){}
-    @GetMapping("/create")
-    public void storeCreate(){}
 
     @PostMapping("/register")
     public String storeRegister(RegisterVO rvo) {
