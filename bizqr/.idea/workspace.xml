@@ -155,11 +155,11 @@
       <recent name="C:\_final\bizqr\src\main\java\ezen\bizqr" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\_final\bizqr\src\main\resources\static\js\board" />
       <recent name="C:\_final\bizqr\src\main\resources\static\css\board" />
       <recent name="C:\_final_project\bizqr\src\main\resources\static\asset" />
       <recent name="C:\_final_project\bizqr\src\main\resources\static\css" />
       <recent name="C:\_final_project\bizqr\src\main\resources\static\css\store" />
-      <recent name="C:\_final\bizqr\src\main\resources\static\css\smarteditor2-master\workspace" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -342,7 +342,12 @@
       <workItem from="1707614742674" duration="7881000" />
       <workItem from="1707649758455" duration="10090000" />
       <workItem from="1707709520427" duration="7204000" />
+<<<<<<< HEAD
       <workItem from="1707716848231" duration="13392000" />
+=======
+      <workItem from="1707716954976" duration="19816000" />
+      <workItem from="1707740610136" duration="3375000" />
+>>>>>>> origin/main
     </task>
     <servers />
   </component>

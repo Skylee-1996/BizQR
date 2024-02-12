@@ -64,12 +64,12 @@ function spreadCommentList(bno, page=1){
                 let li = `<li class="list-group-item" data-cno="${cvo.cno}" data-writer="${cvo.nickName}">`;
                 li += `<div class="ms-2 me-auto">`;
                 li += `<div class="fw-bold">${cvo.nickName}</div>`;
-                li += `<div>${cvo.content}</div>`;
+                li += `<span class="modAtSp">${cvo.modAt}</span>`;
+                li += `<div class="ctt">${cvo.content}</div>`;
                 li += `<div class="d-flex justify-content-between align-items-center">`;
-                li += `<span class="badge bg-dark rounded-pill">${cvo.modAt}</span>`;
                 li += `<div class="btn-group" role="group">`;
-                li += `<button type="button" class="mod" id="mod">Edit</button>`;
-                li += `<button type="button" class="del" id="del">Delete</button>`;
+                li += `<button type="button" class="mod" id="mod">수정</button>`;
+                li += `<button type="button" class="del" id="del">삭제</button>`;
                 li += `</div>`;
                 li += `</div>`;
                 li += `</div>`;

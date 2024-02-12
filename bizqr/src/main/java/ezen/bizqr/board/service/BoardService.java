@@ -21,4 +21,5 @@ public interface BoardService {
     int getTotalCount(PagingVO pgvo);
 
     int removeToFile(String uuid);
+
 }

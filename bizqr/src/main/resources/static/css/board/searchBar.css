@@ -30,11 +30,9 @@
     height: 56px;
     padding: 6px;
     display: flex;
-    margin-bottom: 15px;
     background: #fff;
     align-items: center;
     border-radius: 30px;
-    margin-top: 45px;
     justify-content: space-between;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

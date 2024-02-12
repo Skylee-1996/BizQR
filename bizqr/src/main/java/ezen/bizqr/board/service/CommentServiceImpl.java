@@ -49,4 +49,5 @@ public class CommentServiceImpl implements CommentService{
         // TODO Auto-generated method stub
         return mapper.deleteComment(cno, nickName);
     }
+
 }
