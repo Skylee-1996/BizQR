@@ -1,3 +1,4 @@
+console.log("hi editor js")
 const Editor = toastui.Editor;
 
 const editor = new Editor({

@@ -3,41 +3,38 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <th:block th:replace="~{layout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
-            <link rel="stylesheet" href="/css/board/boardRegister.css" />
+        <link rel="stylesheet" href="/css/board/boardRegister.css" />
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css" />
         <link rel="stylesheet" href="http://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+<body>
         <section class="container">
             <form class="form" method="post" onsubmit="savePost(event)">
 
-            <div class="registerContainer">
-                  <div class="div1">
+                <header class="headerReg">Register page</header>
+                <p class="ptagReg">sub</p>
+
+                <div class="registerContainer">
+
                 <div class="wrapper">
-                    <div class="input-data">
-                        <input type="text" class="form-control" id="title" name="title" required>
-                            <div class="underline"></div>
-                        <label>title</label>
+
+                    <div class="form-group_mt-3">
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>
+
+                        <input type="text" class="form-control" id="email" name="email" placeholder="E-mail" required>
+
+                        <input type="text" class="form-control" id="nickName" name="nickName" placeholder="NickName" required>
                     </div>
 
-                    <div class="input-data">
-                        <input type="text" class="form-control" id="email" name="email" required>
-                        <div class="underline"></div>
-                        <label>email</label>
-                    </div>
-
-                    <div class="input-data">
-                        <input type="text" class="form-control" id="nickName" name="nickName" required>
-                        <div class="underline"></div>
-                        <label>nickName</label>
-                    </div>
-                </div>
               </div>
 
                   <!-- text edit: content -->
+                    <script th:inline="javascript">
+                        let content="";
+                    </script>
             <div class="form-group">
                 <div id="editor" name="editor"></div>
                 <input type="hidden" id="toastdata" name="content" />
             </div>
-
                 </div>
 
                 <div class="parentBtn">
@@ -46,7 +43,6 @@
                 </button>
                 <a th:href="@{/board/list}"><button type="button" class="btn-gradient-2">Cancel</button></a>
                 </div>
-
             </form>
         </section>
         </body>
