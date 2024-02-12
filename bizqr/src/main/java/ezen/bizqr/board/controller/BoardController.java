@@ -7,6 +7,7 @@ import ezen.bizqr.board.domain.PagingVO;
 import ezen.bizqr.board.handler.FileHandler;
 import ezen.bizqr.board.handler.PagingHandler;
 import ezen.bizqr.board.service.BoardService;
+import ezen.bizqr.board.service.CommentService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +29,7 @@ import java.util.List;
 public class BoardController {
     private final Logger log = LoggerFactory.getLogger(BoardController.class);
     private final BoardService bsv;
+    private final CommentService csv;
     private final FileHandler fh;
 
     @GetMapping("/register")
@@ -53,9 +55,15 @@ public class BoardController {
         int totalCount = bsv.getTotalCount(pgvo);
         PagingHandler ph = new PagingHandler(pgvo, totalCount);
 
-        m.addAttribute("list", bsv.getList(pgvo));
+        List<BoardVO> boardList = bsv.getList(pgvo);
+        for (BoardVO boardVO : boardList) {
+            String bracketClass = "";
+            boardVO.setBracketClass(bracketClass);
+        }
+        m.addAttribute("list", boardList);
         m.addAttribute("ph", ph);
     }
+
 
     @GetMapping({"/detail","/modify"})
     public void detail(Model m, @RequestParam("bno")long bno) {
@@ -68,18 +76,9 @@ public class BoardController {
         return "redirect:/board/detail?bno="+bvo.getBno();
     }
 
-    @PostMapping("/remove")
+    @GetMapping("/remove")
     public String remove(@RequestParam("bno")long bno) {
         bsv.remove(bno);
         return "redirect:/board/list";
-    }
-
-    //첨부파일 삭제
-    @DeleteMapping(value="/file/{uuid}", produces = MediaType.TEXT_PLAIN_VALUE)
-    public ResponseEntity<String> delete(@PathVariable("uuid") String uuid) {
-        log.info("delete file id >>> {} ", uuid);
-        int isOk = bsv.removeToFile(uuid);
-        return isOk > 0 ? new ResponseEntity<String>("1", HttpStatus.OK) :
-                new ResponseEntity<String>("0", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

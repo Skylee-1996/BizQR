@@ -5,6 +5,7 @@ import ezen.bizqr.board.domain.BoardVO;
 import ezen.bizqr.board.domain.FileVO;
 import ezen.bizqr.board.domain.PagingVO;
 import ezen.bizqr.board.repository.BoardMapper;
+import ezen.bizqr.board.repository.CommentMapper;
 import ezen.bizqr.board.repository.FileMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +21,7 @@ import java.util.List;
 public class BoardServiceImpl implements BoardService{
     private final BoardMapper mapper;
     private final FileMapper fileMapper;
+    private final CommentMapper cmapper;
 
     @Transactional
     @Override
@@ -50,8 +52,10 @@ public class BoardServiceImpl implements BoardService{
            mapper.update(bvo);
     }
 
+    @Transactional
     @Override
     public void remove(long bno) {
+        cmapper.delete(bno);
         mapper.delete(bno);
     }
 

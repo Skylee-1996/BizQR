@@ -4,28 +4,39 @@
 <th:block th:replace="~{layout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
         <link rel="stylesheet" href="/css/board/boardRegister.css" />
-        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css" />
         <link rel="stylesheet" href="http://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
 <body>
         <section class="container">
             <form class="form" method="post" onsubmit="savePost(event)">
-
-                <header class="headerReg">Register page</header>
-                <p class="ptagReg">sub</p>
-
-                <div class="registerContainer">
-
+                <header id="headers"><b>BizQR을 도입해 <br> 업무 문화를 바꿔보세요!</b></header>
+                <p id="ps">BizQR 사용법 및 기능에 대한 문의는 <a href="">도움말</a>이나 <a href="">고객센터</a>를 통해 구체적인 답변을 빠르게 확인하실 수 있습니다.
+                <br>도입 및 계약과 관련한 안내가 필요하신 경우 아래 양식에 맞춰 문의를 남겨주세요.</p>
+                <p id="np">제목 작성</p>
+                <hr>
                 <div class="wrapper">
+                            <div class="row">
+                                <label class="titleLabel">글제목</label>
+                                <label class="emailLabel">이메일</label><br>
+                                    <input type="text" name="title" class="form-control" id="title" placeholder="제목을 입력해주세요." required>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="이메일을 입력해주세요." required>
+                                </div>
+                        <div class="row2">
+                            <label class="nickLabel">닉네임</label><label class="headLabel">말머리</label><br>
+                            <input type="text" class="form-control" name="nickName" id="nickName" placeholder="닉네임을 입력해주세요." required>
 
-                    <div class="form-group_mt-3">
-                        <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>
+                            <select class="form-control" name="Brackets" id="Brackets" onchange="changeColor()" required>
+                                <option value="head">[말머리]</option>
+                                <option value="head1" class="tag-teal">말머리1</option>
+                                <option value="head2" class="tag-purple">말머리2</option>
+                                <option value="head3" class="tag-green">말머리3</option>
+                                <option value="head4" class="tag-yellow">말머리4</option>
+                                <option value="head5" class="tag-blue">말머리5</option>
+                            </select>
+                        </div>
+                </div>
 
-                        <input type="text" class="form-control" id="email" name="email" placeholder="E-mail" required>
-
-                        <input type="text" class="form-control" id="nickName" name="nickName" placeholder="NickName" required>
-                    </div>
-
-              </div>
+                <p id="np2">본문 작성</p>
+                <hr class="hr2">
 
                   <!-- text edit: content -->
                     <script th:inline="javascript">
@@ -38,17 +49,17 @@
                 </div>
 
                 <div class="parentBtn">
-                <button type="submit" class="submit_btn" id="submitPost">Submit
+                <button type="submit" class="submit_btn" id="submitPost">등록
                     <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
                 </button>
-                <a th:href="@{/board/list}"><button type="button" class="btn-gradient-2">Cancel</button></a>
+                <a th:href="@{/board/list}"><button type="button" class="btn-gradient-2">취소</button></a>
                 </div>
             </form>
         </section>
         </body>
-        <script type="text/javascript" src="/js/boardRegister.js"></script>
+        <script type="text/javascript" src="/js/board/boardRegister.js"></script>
         <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
-        <script type="text/javascript" src = "/js/textEditor.js"></script>
+        <script type="text/javascript" src = "/js/board/textEditor.js"></script>
     </th:block>
 </th:block>
 </html>

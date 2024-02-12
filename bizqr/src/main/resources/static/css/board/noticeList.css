@@ -17,9 +17,9 @@
 
 .image-container {
     display: flex;
-    width: 1040px;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin: 50px
 }
 
 .card {
@@ -29,6 +29,7 @@
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     width: 300px;
+    height: 400px;
 }
 
 .card-header img {
@@ -57,16 +58,24 @@
     cursor: pointer;
 }
 
-.tag-teal {
-    background-color: #47bcd4;
+.tag-orange {
+    background-color: #e47a5a;
 }
 
-.tag-purple {
-    background-color: #5e76bf;
+.tag-sky {
+    background-color: rgba(131, 198, 255, 0.4);
 }
 
 .tag-pink {
-    background-color: #cd5b9f;
+    background-color: #ffc8e3;
+}
+
+.tag-purple {
+    background-color: #a851af;
+}
+
+.tag-yellow {
+    background-color: #fffd6e;
 }
 
 .card-body p {
@@ -75,7 +84,6 @@
 }
 .user {
     display: flex;
-    margin-top: auto;
 }
 
 .user img {
@@ -90,6 +98,27 @@
 .user-info small {
     color: #545d7a;
 }
+
+.card-body h4,
+.card-body p {
+    margin-top: 5px;
+}
+
+.card-body h4 {
+    margin-top: 10px
+
+
+
+
+;
+}
+
+
+
+
+
+
+
 
 /* pageNation */
 * {

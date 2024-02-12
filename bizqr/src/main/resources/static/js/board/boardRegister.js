@@ -1,31 +1,3 @@
-/*
-document.addEventListener("DOMContentLoaded", function() {
-    let fileInput = document.getElementById("file-input");
-    let fileList = document.getElementById("files-list");
-    let numOfFiles = document.getElementById("num-of-files");
-
-    fileInput.addEventListener("change", () => {
-        fileList.innerHTML = "";
-        numOfFiles.textContent = `${fileInput.files.length}개의 파일 선택되었습니다.`;
-
-        for (let i of fileInput.files) {
-            let reader = new FileReader();
-            let listItem = document.createElement("li");
-            let fileName = i.name;
-            let fileSize = (i.size / 1024).toFixed(1);
-
-            if (fileSize >= 1024) {
-                fileSize = (fileSize / 1024).toFixed(1);
-                listItem.innerHTML = `<p>${fileName}</p><p>${fileSize}MB</p>`;
-            } else {
-                listItem.innerHTML = `<p>${fileName}</p><p>${fileSize}KB</p>`;
-            }
-
-            fileList.appendChild(listItem);
-        }
-    });
-});*/
-
 <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js" />
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -76,4 +48,6 @@ const editor = new toastui.Editor({
 
 editor.on('change', handleEditorChange);
 
-/* button */
+
+
+
