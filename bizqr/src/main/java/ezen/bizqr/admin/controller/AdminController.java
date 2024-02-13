@@ -11,10 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-
+@RequiredArgsConstructor
 @RequestMapping("/admin/*")
 @Controller
-@RequiredArgsConstructor
 @Slf4j
 public class AdminController {
 

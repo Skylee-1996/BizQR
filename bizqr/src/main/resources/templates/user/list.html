@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/adminStyle.css}">
+    <title>Responsive Dashboard Design</title></head>
+
+<body>
+
+<div class="container">
+    <!-- Sidebar Section -->
+    <aside>
+        <div class="toggle">
+            <div class="logo">
+                <img class="order" src="/asset/큐오더_원형.png">
+                <h2>Phon <span class="BizQR">BizQR</span></h2>
+            </div>
+            <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                <h3>Dashboard</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                <h3>Users</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                <h3>History</h3>
+            </a>
+            <a href="#" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                <h3>Analytics</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        mail_outline
+                    </span>
+                <h3>Tickets</h3>
+                <span class="message-count">27</span>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                <h3>Sale List</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                <h3>Reports</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                <h3>Settings</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                <h3>New Login</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+    </aside>
+    <!-- End of Sidebar Section -->
+
+    <!-- Main Content -->
+    <main>
+        <h1>Admin Register List</h1>
+
+
+        <!-- Recent Orders Table -->
+        <div class="recent-orders">
+            <h2>Admin Register List</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th scope="col">이메일</th>
+                    <th scope="col">닉네임</th>
+                    <th scope="col">전화번호</th>
+                    <th scope="col">가입일</th>
+                    <th scope="col">최종로그인</th>
+                    <th scope="col">소셜여부</th>
+                    <th scope="col">권한</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="uvo:${list }">
+                    <th scope="row">[[${uvo.email }]]</th>
+                    <td>[[${uvo.nickName }]]</td>
+                    <td>[[${uvo.phoneNum }]]</td>
+                    <td>[[${uvo.regDate }]]</td>
+                    <td>[[${uvo.lastLogin }]]</td>
+                    <td>[[${uvo.isSocial }]]</td>
+                    <td th:each="auths:${uvo.authList}">[[${auths.auth}]]</td>
+
+
+                </tr>
+                </tbody>
+            </table>
+            <a href="#">Show ALL</a>
+        </div>
+        <!-- End of Recent Orders -->
+
+    </main>
+    <!-- End of Main Content -->
+
+    <!-- Right Section -->
+    <div class="right-section">
+        <div class="nav">
+            <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+            </button>
+            <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+            </div>
+
+            <div class="profile">
+                <div class="info">
+                    <p>Hey, <b>Reza</b></p>
+                    <small class="text-muted">Admin</small>
+                </div>
+                <div class="profile-photo">
+                    <img src="/asset/관리자로고.png">
+                </div>
+            </div>
+
+        </div>
+        <!-- End of Nav -->
+
+        <div class="user-profile">
+            <div class="logo">
+                <img src="/asset/큐오더_원형.png">
+                <h2>BizQR</h2>
+                <p>내 핸드폰의 메뉴판</p>
+            </div>
+        </div>
+
+        <div class="reminders">
+            <div class="header">
+                <h2>Reminders</h2>
+                <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+            </div>
+
+            <div class="notification">
+                <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                </div>
+                <div class="content">
+                    <div class="info">
+                        <h3>Workshop</h3>
+                        <small class="text_muted">
+                            08:00 AM - 12:00 PM
+                        </small>
+                    </div>
+                    <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                </div>
+            </div>
+
+            <div class="notification deactive">
+                <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                </div>
+                <div class="content">
+                    <div class="info">
+                        <h3>Workshop</h3>
+                        <small class="text_muted">
+                            08:00 AM - 12:00 PM
+                        </small>
+                    </div>
+                    <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                </div>
+            </div>
+
+            <div class="notification add-reminder">
+                <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                    <h3>Add Reminder</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script th:src="@{/js/adminOrders.js}"></script>
+<script th:src="@{/js/adminIndex.js}"></script>
+</body>
+
+</html>
