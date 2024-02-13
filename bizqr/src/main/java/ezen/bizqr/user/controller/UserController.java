@@ -1,5 +1,6 @@
 package ezen.bizqr.user.controller;
 
+import ezen.bizqr.board.domain.PagingVO;
 import ezen.bizqr.user.security.UserVO;
 import ezen.bizqr.user.service.UserService;
 import jakarta.servlet.http.HttpServlet;
@@ -15,6 +16,8 @@ import org.springframework.security.web.authentication.logout.SecurityContextLog
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -51,6 +54,15 @@ public class UserController {
     public String modify(){
 
         return "/user/modify";
+    }
+
+    @GetMapping("/list")
+    public String list(Model m, PagingVO pgvo){
+
+        List<UserVO> list = usv.getUserList();
+        m.addAttribute("list", list);
+
+        return "/user/list";
     }
 
     @GetMapping(value="/checkEmail/{email}", produces = MediaType.TEXT_PLAIN_VALUE)

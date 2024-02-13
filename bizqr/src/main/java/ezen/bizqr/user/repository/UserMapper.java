@@ -17,4 +17,8 @@ public interface UserMapper {
     UserVO selectEmail(String username);
 
     List<AuthVO> selectAuth(String username);
+
+    List<UserVO> getUserList();
+
+    boolean updateLastLogin(String username);
 }
