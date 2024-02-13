@@ -1,41 +1,45 @@
-async function addList() {
-    try {
-        // 서버로부터 메뉴 데이터를 비동기적으로 가져옵니다.
-        const response = await fetch('/customer/customerIndex');
-        const menus = await response.text();
-
-        // 메뉴 데이터를 기반으로 HTML을 생성합니다.
-        const div = document.getElementById("menu-container");
-        const menuHtml = `
-                <div class="menu-list" onclick="openModal()">
-                    <div class="menu-img">
-                        <img src="" alt="메뉴 사진">
-                    </div>
-                    <div class="menu-info">
-                        <div class="menu-name">돼지갈비찜</div>
-                        <input type="hidden" name="itemName" value="돼지갈비찜">
-                        <div class="menu-price">25000</div>
-                        <input type="hidden" name="itemPrice" value="25000">
-                    </div>
-                </div>
-            `;
-        div.innerHTML += menuHtml;
-    } catch (error) {
-        console.error('메뉴를 불러오는데 실패했습니다.', error);
-    }
-}
-
-
+// async function addList() {
+//     try {
+//         // 서버로부터 메뉴 데이터를 비동기적으로 가져옵니다.
+//         const response = await fetch('/customer/customerIndex');
+//         const menus = await response.text();
+//
+//         // 메뉴 데이터를 기반으로 HTML을 생성합니다.
+//         const div = document.getElementById("menu-container");
+//         const menuHtml = `
+//             <div class="menu-list" id="menu-list">
+//                 <div class="menu-img">
+//                     <img src="" alt="메뉴 사진">
+//                 </div>
+//                 <div class="menu-info">
+//                     <div class="menu-name">돼지갈비찜</div>
+//                     <input type="hidden" class="itemName" name="itemName" value="1">
+//                     <div class="menu-price">25000</div>
+//                     <input type="hidden" class="itemPrice" name="itemPrice" value="1">
+//                 </div>
+//             </div>
+//             `;
+//         div.innerHTML += menuHtml;
+//
+//     } catch (error) {
+//         console.error('메뉴를 불러오는데 실패했습니다.', error);
+//     }
+// }
 
 
 // 리스트 추가 버튼에 이벤트 리스너 추가
-document.getElementById("listAdd").addEventListener('click', () => {
-    addList();
-});
+// document.getElementById("listAdd").addEventListener('click', () => {
+//     addList();
+// });
 
 // 모달 열기 함수
-function openModal() {
+function openModal(itemName, itemPrice) {
     document.getElementById('modal').style.display = 'block';
+
+    document.getElementById("modal-menu-name").innerText = itemName;
+    document.getElementById("modal-menu-price").innerText = itemPrice;
+    document.getElementById("modalItemName").value = itemName;
+    document.getElementById("modalItemPrice").value = itemPrice;
 }
 
 // 모달 닫기 함수
@@ -52,24 +56,20 @@ window.onclick = function (event) {
     }
 }
 
-document.getElementById("menu-list").addEventListener('click', (event) => {
-    let div = event.target.closest('input');
-    console.log(div);
+document.addEventListener('click', (event) => {
+    let menuList = event.target.closest('.menu-list');
 
-    let itemName = div.querySelector('.menu-name');
-    console.log(itemName);
+    if(menuList){
+        let itemName = menuList.querySelector('.itemName').value;
+        let itemPrice = menuList.querySelector('.itemPrice').value;
 
-    // <div className="modal-menu-img">
-    //     <img src="" alt="메뉴 사진"/>
-    // </div>
-    // <div className="modal-menu-info">
-    //     <div className="modal-menu-name">품명</div>
-    //     <input type="hidden" name="itemName" value="hi"/>
-    //
-    //     <div className="modal-menu-price">가격</div>
-    //     <input type="hidden" name="itemPrice" value="25000"/>
-    // </div>
+        console.log(itemName);
+        console.log(itemPrice);
+
+        document.getElementsByClassName('.menu-list').onclick = openModal(itemName, itemPrice);
+    }
 })
+
 
 document.getElementById("submitDiv").addEventListener("click", () => {
     console.log("submitDiv");

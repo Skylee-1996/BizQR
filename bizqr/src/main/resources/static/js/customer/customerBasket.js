@@ -1,5 +1,9 @@
 console.log("customerBasket.js in");
 
+document.getElementById("add-menu").addEventListener('click', ()=> {
+    location.href = "/customer/customerIndex";
+})
+
 document.addEventListener('click', (e)=>{
     console.log(e.target.id);
     const shopTab = document.getElementById("shop-tab");
