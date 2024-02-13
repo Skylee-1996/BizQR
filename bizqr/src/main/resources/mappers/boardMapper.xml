@@ -29,7 +29,7 @@
     </update>
 
     <delete id="delete">
-        delete from board where bno=#{bno}
+        delete from board where bno = #{bno}
     </delete>
 
     <select id="getTotalCount" resultType="int">

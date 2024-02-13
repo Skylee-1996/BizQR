@@ -29,4 +29,7 @@ public class StoreController {
         return "index";
     }
 
+    @GetMapping("/create")
+    public void storeCreate(){}
+
 }

@@ -1,0 +1,68 @@
+<html lang="kor" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{/layout :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <head>
+            <link rel="stylesheet" th:href="@{/css/store/create.css}">
+
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+            <style>
+                @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
+                @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap);
+            </style>
+        </head>
+
+        <body>
+        <div class="container">
+            <aside>
+                <div class="toggle">
+                    <div class="logo">
+                        <img class="order" src="/asset/큐오더_원형.png">
+                        <h2><span class="BizQR">Store</span></h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="addTab" id="addTab">
+                     <span class="material-icons-sharp">
+                        add
+                    </span>
+                        <h3>Add Tab</h3>
+                    </div>
+                </div>
+            </aside>
+        <div class="storeEditor">
+            <div id="addItem" class="addItem">
+                <span class="material-icons-sharp">
+                        add
+                </span>
+                <h3>Add Item</h3>
+            </div>
+                <div class="listProduct"></div>
+            </div>
+        </div>
+
+        <!-- 모달 창 -->
+        <div id="modal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">Close</span>
+                <label for="modal-item-name">품명:</label>
+                <input type="text" id="modal-item-name">
+                <label for="modal-item-price">가격:</label>
+                <input type="text" id="modal-item-price">
+                <label for="modal-item-image">이미지 URL:</label>
+                <input type="text" id="modal-item-image">
+                
+                <button id="modal-save">Save</button>
+            </div>
+        </div>
+
+
+
+        <script src="/js/store/create.js"></script>
+        </body>
+    </th:block>
+</th:block>

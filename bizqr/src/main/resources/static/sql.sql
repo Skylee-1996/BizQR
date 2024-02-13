@@ -5,10 +5,7 @@ create user 'bizqrUser'@'localhost' identified by 'mysql';
 grant all privileges on bizqrdb.* to 'bizqrUser'@'localhost' with grant option;
 flush privileges;
 
-<<<<<<< HEAD
-=======
 create database bizqrdb;
->>>>>>> origin/main
 
 ------2024--02-07------
 -- user 테이블 생성
@@ -26,15 +23,14 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 -- board 테이블 생성
 CREATE TABLE IF NOT EXISTS `board` (
-                                       `bno` BIGINT NOT NULL AUTO_INCREMENT,
-                                       `email` VARCHAR(255) NOT NULL,
+    `bno` BIGINT NOT NULL AUTO_INCREMENT,
+    `email` VARCHAR(255) NOT NULL,
     `nick_name` VARCHAR(255) NOT NULL,
     `title` VARCHAR(255) NOT NULL,
     `content` TEXT,
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `mod_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    'cmtQty' INT DEFAULT 0,
-    'hasFile' INT DEFAULT 0;
+    `cmtQty` INT DEFAULT 0,
     `read_count` BIGINT DEFAULT 0,
     PRIMARY KEY (`bno`),
     FOREIGN KEY (`email`) REFERENCES `user`(`email`)

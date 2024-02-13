@@ -1,114 +1,32 @@
-/* register */
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-
-@font-face {
-    font-family: 'Orbit-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-*{
-    font-family: 'Orbit-Regular', sans-serif;
-
-}
-
-#detailHeader{
-    font-size: 40px;
-    font-weight: bold;
-    justify-content: center;
-    margin-top: -200px;
-}
-
-.detailPtag{
-    justify-content: center;
-    margin-top: -270px;
-    margin-bottom: 50px;
-}
-
-.input-box input[type="text"] {
-    border-radius: 10px;
-    width: 500px;
-    height: 30px;
-    margin-top: 20px;
-}
-
-#inputBoxAll{
-    margin-left: -400px;
-}
-
-#inputBoxAll .input-box input[type="text"] {
-    text-align: left;
-    padding-left: 15px;
-}
-
-.input-label{
-    position: absolute;
-    left: 325px;
-}
-
-.input-box{
-    margin-bottom: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* button */
-.btnAll{
-    margin-left: 900px;
-    margin-bottom: 90px;
-}
-
 #listBtn{
-    height: 50px;
+    padding: 10px 15px;
     width: 100px;
     color: #fff;
-    font-size: 1rem;
-    font-weight: 400;
-    margin-top: 30px;
-    border-radius: 50px;
+    border-radius: 2px;
     border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    background: #bee2ff
+    background-color: #e4e4e4;
 }
 
 #modBtn{
-    height: 50px;
+    padding: 10px 15px;
     width: 100px;
     color: #fff;
-    font-size: 1rem;
-    font-weight: 400;
-    margin-top: 30px;
-    border-radius: 50px;
+    border-radius: 2px;
     border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    background:  #d5d5d5;
+    background-color: #2c87e8;
 }
 
 #delBtn{
-    height: 50px;
+    padding: 10px 15px;
     width: 100px;
     color: #fff;
-    font-size: 1rem;
-    font-weight: 400;
-    margin-top: 30px;
-    border-radius: 50px;
+    border-radius: 2px;
     border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    background: #fff59d;
+    background-color: #fff80c;
 }
 
-
+.btnAll{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 150px;
+}

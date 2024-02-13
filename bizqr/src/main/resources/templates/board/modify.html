@@ -4,42 +4,45 @@
 <th:block th:replace="~{layout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
         <link rel="stylesheet" href="/css/board/boardModify.css" />
+        <link rel="stylesheet" href="/css/board/boardRegister.css" />
         <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
         <section class="container">
-            <header id="detailHeader">BIZQR NOTICE PAGE.[[${bdto.bvo.bno}]]</header>
-            <p class="detailPtag">BizQR 어쩌고 저쩌고 이러쿵 저러쿵 </p>
             <form action="/board/modify" method="post" id="modForm" onsubmit="updatePost(event)">
+                <section class="container">
+                    <form class="form" method="post" onsubmit="savePost(event)">
+                        <header id="headers"><b>BizQR을 도입해 <br> 업무 문화를 바꿔보세요!</b></header>
+                        <p id="ps">BizQR 사용법 및 기능에 대한 문의는 <a href="">도움말</a>이나 <a href="">고객센터</a>를 통해 구체적인 답변을 빠르게 확인하실 수 있습니다.
+                            <br>도입 및 계약과 관련한 안내가 필요하신 경우 아래 양식에 맞춰 문의를 남겨주세요.</p>
+                        <p id="np">제목 작성</p>
+                        <hr>
+                        <div class="wrapper">
+                            <div class="row">
+                                <label class="titleLabel">글제목</label>
+                                <label class="emailLabel">이메일</label><br>
+                                <input type="text" name="title" class="form-control" id="title" th:value="${bdto.bvo.title}">
+                                <input type="email" class="form-control" name="email" id="email" th:value="${bdto.bvo.email}" readonly>
+                            </div>
+                            <div class="row2">
+                                <label class="nickLabel">닉네임</label><label class="headLabel">말머리</label><br>
+                                <input type="text" class="form-control" name="nickName" id="nickName" th:value="${bdto.bvo.nickName}" readonly>
 
-                <div id="inputBoxAll">
-                    <div class="input-box">
-                        <label for="bno" class="input-label">BNO</label>
-                        <input type="text" class="input1221" id="bno" name="bno" th:value="${bdto.bvo.bno}" readonly/>
-                    </div>
+                                <select class="form-control" name="Brackets" id="Brackets" onchange="changeColor()" >
+                                    <option value="head">[말머리]</option>
+                                    <option value="head1" class="tag-teal">말머리1</option>
+                                    <option value="head2" class="tag-purple">말머리2</option>
+                                    <option value="head3" class="tag-green">말머리3</option>
+                                    <option value="head4" class="tag-yellow">말머리4</option>
+                                    <option value="head5" class="tag-blue">말머리5</option>
+                                </select>
+                            </div>
+                        </div>
 
-                    <div class="input-box">
-                        <label for="bno" class="input-label">DATE</label>
-                        <input type="text" class="input1221" id="modAt" name="modAt" th:value="${bdto.bvo.modAt}" readonly/>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="bno" class="input-label">TITLE</label>
-                        <input type="text" class="input1221" id="title" name="title" th:value="${bdto.bvo.title}"/>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="bno" class="input-label">E-MAIL</label>
-                        <input type="text" class="input1221" id="email" name="email" th:value="${bdto.bvo.email}" readonly/>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="bno" class="input-label">NICKNAME</label>
-                        <input type="text" class="input1221" id="nickName" name="nickName" th:value="${bdto.bvo.nickName}" readonly/>
-                    </div>
-                </div>
+                        <p id="np2">본문 작성</p>
+                        <hr class="hr2">
 
                 <script src="https://uicdn.toast.com/editor/3.0.2/toastui-editor-all.min.js"></script>
                 <script th:inline="javascript">
-                    const content=[[${bdto.bvo.content}]];
+                    let content=[[${bdto.bvo.content}]];
                 </script>
 
                 <div class="form-group">
@@ -49,18 +52,19 @@
 
                 <div class="btnAll">
                    <button type="submit" id="submitBtn">등록</button>
-
-            </form>
-
+                    <a th:href="@{/board/detail(bno=${bdto.bvo.bno})}">
+                        <button type="button" id="cancelBtn">취소</button>
+                    </a>
             <form action="/board/remove" method="post" id="delForm" style="display:none;">
                 <input type="hidden" name="bno" th:value="${bdto.bvo.bno}">
             </form>
        </div>
-        </section>
 
-        <script type="text/javascript" src = "/js/boardModify.js"></script>
-        <script type="text/javascript" src = "/js/textEditor.js"></script>
+            </form>
+        <script type="text/javascript" src = "/js/board/boardModify.js"></script>
+        <script type="text/javascript" src = "/js/board/textEditor.js"></script>
         </body>
+                </section>
     </th:block>
 </th:block>
 </html>

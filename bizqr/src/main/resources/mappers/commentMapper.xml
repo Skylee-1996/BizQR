@@ -26,4 +26,8 @@
         delete from comment where cno=#{cno}
     </delete>
 
+    <delete id="delete">
+        delete from comment where bno = #{bno}
+    </delete>
+
 </mapper>

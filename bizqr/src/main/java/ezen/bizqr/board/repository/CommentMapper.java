@@ -16,4 +16,6 @@ public interface CommentMapper {
     int edit(CommentVO cvo);
     int bnoTotalCount(long bno);
     int deleteComment(@Param("cno") long cno,@Param("writer") String writer);
+
+    void delete(long bno);
 }
