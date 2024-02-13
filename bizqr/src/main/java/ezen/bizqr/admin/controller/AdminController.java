@@ -20,17 +20,16 @@ public class AdminController {
 
     private final AdminService asv;
 
-    @GetMapping("/index")
-    public void index() {}
-
-    @GetMapping("/adminRegisterList")
-    public void adminRegisterList() {}
-
-    @GetMapping("/list")
-    public void list(RegisterVO rvo, Model m){
+    @GetMapping({"/index", "/adminRegisterList"})
+    public void index(RegisterVO rvo, Model m) {
         List<RegisterVO> list;
         list = asv.getList();
 
         m.addAttribute("list", list);
     }
+
+//    @GetMapping("/adminRegisterList")
+//    public void adminRegisterList() {}
+
+
 }
