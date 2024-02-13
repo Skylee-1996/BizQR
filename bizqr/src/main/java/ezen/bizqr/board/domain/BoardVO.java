@@ -18,6 +18,4 @@ public class BoardVO {
     private long readCount;
     private int cmtQty;
     private int hasFile;
-    /* 말머리 추가 */
-    private String bracketClass;
 }

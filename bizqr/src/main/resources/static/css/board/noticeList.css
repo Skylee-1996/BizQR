@@ -1,143 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-* {
-    box-sizing: border-box;
-}
-
-.listContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 200px;
-    margin-bottom: -10px;
-    font-family: "Roboto", sans-serif;
-    color: #10182f;
-}
-
-.image-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin: 50px
-}
-
-.card {
-    margin: 10px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    width: 300px;
-    height: 400px;
-}
-
-.card-header img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-    min-height: 250px;
-}
-
-.tag {
-    background: #cccccc;
-    border-radius: 50px;
-    font-size: 12px;
-    margin: 0;
-    color: #fff;
-    padding: 2px 10px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.tag-orange {
-    background-color: #e47a5a;
-}
-
-.tag-sky {
-    background-color: rgba(131, 198, 255, 0.4);
-}
-
-.tag-pink {
-    background-color: #ffc8e3;
-}
-
-.tag-purple {
-    background-color: #a851af;
-}
-
-.tag-yellow {
-    background-color: #fffd6e;
-}
-
-.card-body p {
-    font-size: 13px;
-    margin: 0 0 40px;
-}
-.user {
-    display: flex;
-}
-
-.user img {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-.user-info h5 {
-    margin: 0;
-}
-.user-info small {
-    color: #545d7a;
-}
-
-.card-body h4,
-.card-body p {
-    margin-top: 5px;
-}
-
-.card-body h4 {
-    margin-top: 10px
-
-
-
-
-;
-}
-
-
-
-
-
-
-
-
 /* pageNation */
-* {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    font-family: arial;
-}
-
-body {
-    text-align: center;
-    font-family: arial;
-}
-
 .pagination {
+    text-align: center;
     list-style: none;
     display: inline-block;
     padding: 100px 0px;
 }
+
 .pagination li {
     display: inline;
     text-align: center;
@@ -184,4 +52,84 @@ body {
     background: #545d7a;
     color: #fff;
 }
+
+.container {
+    text-align: center;
+}
+
+/* card section */
+.listContainer {
+    margin: 170px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: -20px;
+}
+
+.card {
+    border: 1px solid #d3d3d3;
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 400px;
+    height: 300px;
+}
+
+.card-header img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+}
+
+.h4_title{
+    font-size: 22px;
+    font-weight: normal;
+    margin-top: 18px;
+    margin-bottom: 15px;
+}
+
+small{
+    font-size: 13px;
+    color: rgb(192, 189, 189);
+    font-style: normal;
+}
+
+.tag {
+    background: #cccccc;
+    border-radius: 50px;
+    font-size: 12px;
+    margin: 0;
+    color: #fff;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.tag-teal {
+    background-color: #47bcd4;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.tag-purple {
+    background-color: #5e76bf;
+}
+.tag-pink {
+    background-color: #cd5b9f;
+}
+
+
+
+
+
+
+
 

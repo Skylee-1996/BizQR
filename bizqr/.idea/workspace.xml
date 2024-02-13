@@ -61,7 +61,10 @@
         <option value="HTTP Request" />
         <option value="JavaScript File" />
         <option value="Kotlin Class" />
+<<<<<<< HEAD
+=======
         <option value="Class" />
+>>>>>>> origin/main
         <option value="HTML File" />
       </list>
     </option>
