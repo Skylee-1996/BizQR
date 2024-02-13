@@ -102,47 +102,30 @@
             <table>
                 <thead>
                 <tr>
-                    <th scope="col">글번호</th>
-                    <th scope="col">이름</th>
                     <th scope="col">이메일</th>
-                    <th scope="col">회사명</th>
-                    <th scope="col">점포명</th>
-                    <th scope="col">점포 전화번호</th>
-                    <th scope="col">개인 전화번호</th>
-                    <th scope="col">주소</th>
-                    <th scope="col">업종</th>
-                    <th scope="col">상태</th>
+                    <th scope="col">닉네임</th>
+                    <th scope="col">전화번호</th>
+                    <th scope="col">가입일</th>
+                    <th scope="col">최종로그인</th>
+                    <th scope="col">소셜여부</th>
+                    <th scope="col">권한</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="rvo:${list }">
-                    <td th:text="${rvo.registerNum}">Register Num</td>
-                    <td th:text="${rvo.name}">Name</td>
-                    <td th:text="${rvo.email}">Email</td>
-                    <td th:text="${rvo.company}">Company</td>
-                    <td th:text="${rvo.storeName}">Store Name</td>
-                    <td th:text="${rvo.storeAddress}">Store Address</td>
-                    <td th:text="${rvo.ownerNum}">Owner Number</td>
-                    <td th:text="${rvo.storeNum}">Store Number</td>
-                    <td th:class="${rvo.storeType == 'Cafe'} ? 'warning' : (${rvo.storeType == 'Restaurant'} ? 'success' : (${rvo.storeType == 'Hotel'} ? 'primary' : 'danger'))" th:text="${rvo.storeType}">Store Type</td>
-                    <th:block th:switch="${rvo.registered}">
-                        <th:block th:case="0">
-                            <td>
-                                <button th:attr="data-registered=${rvo.registered}" class="btn app" type="button" value="승인">승인</button>
-                                <button th:attr="data-registered=${rvo.registered}" class="btn ref" type="button" value="거부">거부</button>
-                            </td>
-                        </th:block>
-                        <th:block th:case="1">
-                            <td>승인완료</td>
-                        </th:block>
-                        <th:block th:case="2">
-                            <td>승인거절</td>
-                        </th:block>
-                    </th:block>
+                <tr th:each="uvo:${list }">
+                    <th scope="row">[[${uvo.email }]]</th>
+                    <td>[[${uvo.nickName }]]</td>
+                    <td>[[${uvo.phoneNum }]]</td>
+                    <td>[[${uvo.regDate }]]</td>
+                    <td>[[${uvo.lastLogin }]]</td>
+                    <td>[[${uvo.isSocial }]]</td>
+                    <td th:each="auths:${uvo.authList}">[[${auths.auth}]]</td>
+
 
                 </tr>
                 </tbody>
             </table>
+            <a href="#">Show ALL</a>
         </div>
         <!-- End of Recent Orders -->
 
@@ -248,7 +231,7 @@
 
 </div>
 
-
+<script th:src="@{/js/adminOrders.js}"></script>
 <script th:src="@{/js/adminIndex.js}"></script>
 </body>
 

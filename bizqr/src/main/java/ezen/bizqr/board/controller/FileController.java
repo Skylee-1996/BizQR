@@ -3,6 +3,7 @@ package ezen.bizqr.board.controller;
 import org.apache.ibatis.logging.Log;
 import org.slf4j.Logger;
 import org.springframework.http.MediaType;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -24,7 +25,10 @@ public class FileController {
      * @return 업로드된 파일명
      */
     @PostMapping("/image-upload")
-    public String uploadEditorImage(@RequestParam("image") final MultipartFile image) {
+    public String uploadEditorImage(@RequestParam("image") final MultipartFile image, Model m) {
+
+
+
         if (image.isEmpty()) {
             return "";
         }
@@ -33,7 +37,9 @@ public class FileController {
         String uuid = UUID.randomUUID().toString().replaceAll("-", "");           // 32자리 랜덤 문자열
         String extension = orgFilename.substring(orgFilename.lastIndexOf(".") + 1);  // 확장자
         String saveFilename = uuid + "." + extension;                                             // 디스크에 저장할 파일명
-        String fileFullPath = Paths.get(UP_DIR, saveFilename).toString();                      // 디스크에 저장할 파일의 전체 경로
+        String fileFullPath = Paths.get(UP_DIR, saveFilename).toString();
+
+
 
         // uploadDir에 해당되는 디렉터리가 없으면, uploadDir에 포함되는 전체 디렉터리 생성
         File dir = new File(UP_DIR);
@@ -51,6 +57,8 @@ public class FileController {
             // 예외 처리는 따로 해주는 게 좋습니다.
             throw new RuntimeException(e);
         }
+
+
     }
 
     /**

@@ -1,7 +1,4 @@
-<<<<<<< HEAD:bizqr/src/main/resources/static/js/boardRegister.js
 
-=======
->>>>>>> origin/main:bizqr/src/main/resources/static/js/board/boardRegister.js
 <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js" />
 
 document.addEventListener("DOMContentLoaded", function() {

@@ -38,6 +38,7 @@ public class SecurityConfig {
                         .logoutUrl("/user/logout")
                         .deleteCookies("JSESSIONID")
                         .logoutSuccessUrl("/")).build();
+//                .oauth2Login().userInfoEndpoint().userService(CustomOAuth2UserService).build();
 
     }
 
@@ -51,4 +52,6 @@ public class SecurityConfig {
     UserDetailsService userDetailsService(){
         return new CustomUserService();
     }
+
+
 }
