@@ -48,15 +48,15 @@
         <!-- 모달 창 -->
         <div id="modal" class="modal" style="display:none;">
             <div class="modal-content">
-                <span class="close" onclick="closeModal()">Close</span>
+                <img id="image-preview" src="" alt="Image preview" style="display: none; max-width: 100%; height: auto;">
+                <label for="modal-item-image-upload">이미지 업로드:</label>
+                <input type="file" id="modal-item-image-upload"><br>
                 <label for="modal-item-name">품명:</label>
                 <input type="text" id="modal-item-name">
                 <label for="modal-item-price">가격:</label>
                 <input type="text" id="modal-item-price">
-                <label for="modal-item-image">이미지 URL:</label>
-                <input type="text" id="modal-item-image">
-                
-                <button id="modal-save">Save</button>
+                <button id="modal-save" class="modal-button">Save</button>
+                <button id="modal-close" class="modal-button">Close</button>
             </div>
         </div>
 

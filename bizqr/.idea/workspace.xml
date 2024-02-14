@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="" />
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="" />
+=======
+>>>>>>> e969c596569380eefadb51b2d090c567a2477b2e
+    <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/store/create.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/store/create.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/store/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/store/create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/store/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/store/create.html" afterDir="false" />
+    </list>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> e969c596569380eefadb51b2d090c567a2477b2e
+>>>>>>> origin/main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
