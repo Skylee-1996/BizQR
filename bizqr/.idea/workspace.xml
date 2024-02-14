@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="" />
-=======
-    <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/controller/OAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/controller/OAuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/repository/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/repository/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/security/CustomUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/security/CustomUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/service/OAuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/service/OAuthServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/userMapper.xml" afterDir="false" />
-    </list>
->>>>>>> origin/main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,10 +44,6 @@
         <option value="HTTP Request" />
         <option value="JavaScript File" />
         <option value="Kotlin Class" />
-<<<<<<< HEAD
-=======
-        <option value="Class" />
->>>>>>> origin/main
         <option value="HTML File" />
       </list>
     </option>
@@ -287,10 +266,6 @@
       <item itemvalue="Gradle.BizqrApplicationTests" />
       <item itemvalue="Gradle.BizqrApplicationTests.contextLoads" />
       <item itemvalue="Gradle.BoardMapperTest" />
-<<<<<<< HEAD
-      <item itemvalue="JavaScript 디버그.register.html" />
-=======
->>>>>>> origin/main
       <item itemvalue="Spring Boot.BizqrApplication" />
     </list>
     <recent_temporary>

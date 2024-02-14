@@ -4,4 +4,6 @@ import ezen.bizqr.store.domain.RegisterVO;
 
 public interface AdminService {
     List<RegisterVO> getList();
+
+    int post(RegisterVO rvo);
 }

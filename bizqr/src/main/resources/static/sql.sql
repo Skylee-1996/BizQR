@@ -10,7 +10,7 @@ create database bizqrdb;
 ------2024--02-07------
 -- user 테이블 생성
 CREATE TABLE IF NOT EXISTS `user` (
-                                      `email` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
     `name` VARCHAR(255),
     `pwd` VARCHAR(255) NOT NULL,
     `nick_name` VARCHAR(255) NOT NULL,
@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS `user` (
     `is_social` TINYINT(1) NOT NULL DEFAULT 0,
     PRIMARY KEY (`email`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 -- board 테이블 생성
 CREATE TABLE IF NOT EXISTS `board` (
@@ -37,14 +38,11 @@ CREATE TABLE IF NOT EXISTS `board` (
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
-
-
-
 -- store 테이블 생성
 CREATE TABLE IF NOT EXISTS `store` (
     `store_id` VARCHAR(255) NOT NULL,
     `email` VARCHAR(255) NOT NULL,
-    `register_num` VARCHAR(255) NOT NULL,
+    `register_num` BIGINT NOT NULL,
     `store_name` VARCHAR(255) NOT NULL,
     `store_address` VARCHAR(255) NOT NULL,
     `store_number` VARCHAR(255) NOT NULL,
@@ -54,14 +52,10 @@ CREATE TABLE IF NOT EXISTS `store` (
     PRIMARY KEY (`store_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- 컬럼변경 2024.02.13 --
-ALTER TABLE `bizqrdb`.`store`
-    CHANGE COLUMN `register_num` `register_num` BIGINT NOT NULL ;
 
 -- file 테이블 생성
-
 CREATE TABLE IF NOT EXISTS `file` (
-                                      `uuid` VARCHAR(255) NOT NULL,
+    `uuid` VARCHAR(255) NOT NULL,
     `bno` BIGINT,
     `store_id` VARCHAR(255),
     `save_dir` VARCHAR(255),
@@ -75,22 +69,23 @@ CREATE TABLE IF NOT EXISTS `file` (
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
-
 -- social_user 테이블 생성
 CREATE TABLE IF NOT EXISTS `social_user` (
-                                             `email` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
     `pwd` VARCHAR(255) NOT NULL,
     `nick_name` VARCHAR(255) NOT NULL,
     PRIMARY KEY (`email`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
 -- auth_user 테이블 생성
 CREATE TABLE IF NOT EXISTS `auth_user` (
-                                           `email` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
     `auth` VARCHAR(255) NOT NULL,
     PRIMARY KEY (`email`),
     FOREIGN KEY (`email`) REFERENCES `user`(`email`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 -- register 테이블 생성
 CREATE TABLE IF NOT EXISTS `register` (
@@ -108,7 +103,8 @@ CREATE TABLE IF NOT EXISTS `register` (
 
 -- 컬럼추가 2024.02.13 --
 ALTER TABLE `bizqrdb`.`register`
-    ADD COLUMN `registered` TINYINT NULL DEFAULT 0 AFTER `store_num`;
+    ADD COLUMN `isRegistered` TINYINT NULL DEFAULT 0 AFTER `store_num`;
+
 
 -- menu items 테이블 생성
 CREATE TABLE IF NOT EXISTS `menu_item` (
@@ -121,9 +117,10 @@ CREATE TABLE IF NOT EXISTS `menu_item` (
     FOREIGN KEY (`store_id`) REFERENCES `store`(`store_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
 -- table 테이블 생성
 CREATE TABLE IF NOT EXISTS `tables` (
-                                        `table_id` VARCHAR(255) NOT NULL,
+    `table_id` VARCHAR(255) NOT NULL,
     `store_id` VARCHAR(255) NOT NULL,
     `table_qr` VARCHAR(255),
     `total_price` BIGINT,
@@ -131,6 +128,7 @@ CREATE TABLE IF NOT EXISTS `tables` (
     PRIMARY KEY (`table_id`),
     FOREIGN KEY (`store_id`) REFERENCES `store`(`store_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 -- order_items 테이블 생성
 CREATE TABLE IF NOT EXISTS `order_items` (
@@ -146,6 +144,7 @@ CREATE TABLE IF NOT EXISTS `order_items` (
     FOREIGN KEY (`table_id`) REFERENCES `tables`(`table_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
 -- order 테이블 생성
 CREATE TABLE IF NOT EXISTS `order` (
     `order_id` VARCHAR(255) NOT NULL,
@@ -160,6 +159,7 @@ CREATE TABLE IF NOT EXISTS `order` (
     FOREIGN KEY (`store_id`) REFERENCES `store`(`store_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
 -- payment 테이블 생성
 CREATE TABLE IF NOT EXISTS `payment` (
     `payment_id` VARCHAR(255) NOT NULL,
@@ -170,6 +170,7 @@ CREATE TABLE IF NOT EXISTS `payment` (
     PRIMARY KEY (`payment_id`),
     FOREIGN KEY (`order_id`) REFERENCES `order`(`order_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 -- order_history 테이블 생성
 CREATE TABLE IF NOT EXISTS `order_history` (
@@ -182,6 +183,7 @@ CREATE TABLE IF NOT EXISTS `order_history` (
     FOREIGN KEY (`order_id`) REFERENCES `order`(`order_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
 -- Inventory 테이블 생성
 CREATE TABLE IF NOT EXISTS inventory (
     `menu_id` VARCHAR(255) NOT NULL,
@@ -191,6 +193,8 @@ CREATE TABLE IF NOT EXISTS inventory (
     PRIMARY KEY (menu_id),
     FOREIGN KEY (menu_id) REFERENCES `menu_item`(menu_id)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
 -- comment 테이블 생성
 CREATE TABLE IF NOT EXISTS `comment` (
     `cno` BIGINT NOT NULL AUTO_INCREMENT,
@@ -203,10 +207,11 @@ CREATE TABLE IF NOT EXISTS `comment` (
     FOREIGN KEY (`bno`) REFERENCES `board`(`bno`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
 -- transaction 테이블 생성
 CREATE TABLE IF NOT EXISTS `transaction` (
-                                             `transaction_id` BIGINT NOT NULL AUTO_INCREMENT,
-                                             `store_id` VARCHAR(255) NOT NULL,
+    `transaction_id` BIGINT NOT NULL AUTO_INCREMENT,
+    `store_id` VARCHAR(255) NOT NULL,
     `email` VARCHAR(255) NOT NULL,
     `type` VARCHAR(50) NOT NULL,
     `amount` DECIMAL(10, 2) NOT NULL,
