@@ -61,9 +61,10 @@ ALTER TABLE `bizqrdb`.`store`
 -- file 테이블 생성
 
 CREATE TABLE IF NOT EXISTS `file` (
-                                      `uuid` VARCHAR(255) NOT NULL,
+    `uuid` VARCHAR(255) NOT NULL,
     `bno` BIGINT,
     `store_id` VARCHAR(255),
+    `menu_id` VARCHAR(255),
     `save_dir` VARCHAR(255),
     `file_name` VARCHAR(255) NOT NULL,
     `file_type` TINYINT,
@@ -71,14 +72,15 @@ CREATE TABLE IF NOT EXISTS `file` (
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`uuid`),
     FOREIGN KEY (`bno`) REFERENCES `board`(`bno`),
-    FOREIGN KEY (`store_id`) REFERENCES `store`(`store_id`)
+    FOREIGN KEY (`store_id`) REFERENCES `store`(`store_id`),
+    FOREIGN KEY (`menu_id`) REFERENCES `menu_item`(`menu_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
 
 -- social_user 테이블 생성
 CREATE TABLE IF NOT EXISTS `social_user` (
-                                             `email` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
     `pwd` VARCHAR(255) NOT NULL,
     `nick_name` VARCHAR(255) NOT NULL,
     PRIMARY KEY (`email`)
@@ -86,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `social_user` (
 
 -- auth_user 테이블 생성
 CREATE TABLE IF NOT EXISTS `auth_user` (
-                                           `email` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
     `auth` VARCHAR(255) NOT NULL,
     PRIMARY KEY (`email`),
     FOREIGN KEY (`email`) REFERENCES `user`(`email`)
@@ -115,8 +117,8 @@ CREATE TABLE IF NOT EXISTS `menu_item` (
     `menu_id` VARCHAR(255) NOT NULL,
     `store_id` VARCHAR(255) NOT NULL,
     `tab_name` VARCHAR(255),
-    `item_name` VARCHAR(255) NOT NULL,
-    `item_price` BIGINT,
+    `menu_name` VARCHAR(255) NOT NULL,
+    `menu_price` BIGINT,
     PRIMARY KEY (`menu_id`),
     FOREIGN KEY (`store_id`) REFERENCES `store`(`store_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -137,6 +139,7 @@ CREATE TABLE IF NOT EXISTS `order_items` (
     `menu_id` VARCHAR(255) NOT NULL,
     `store_id` VARCHAR(255) NOT NULL,
     `table_id` VARCHAR(255) NOT NULL,
+    `menu_name` VARCHAR(255) NOT NULL,
     `menu_price` BIGINT,
     `menu_amount` BIGINT,
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,

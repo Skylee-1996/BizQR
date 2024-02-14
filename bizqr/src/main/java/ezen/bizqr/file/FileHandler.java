@@ -1,6 +1,6 @@
-package ezen.bizqr.board.handler;
+package ezen.bizqr.file;
 
-import ezen.bizqr.board.domain.FileVO;
+import ezen.bizqr.file.FileVO;
 import lombok.extern.slf4j.Slf4j;
 import net.coobird.thumbnailator.Thumbnails;
 import org.apache.tika.Tika;
@@ -61,7 +61,7 @@ public class FileHandler {
 
     private boolean isImageFile(File file) throws IOException {
         String mimeType = new Tika().detect(file);
-        return mimeType.startsWith("image") ? true : false;
+        return mimeType.startsWith("image");
     }
 
 }
