@@ -1,4 +1,4 @@
-package ezen.bizqr.board.controller;
+package ezen.bizqr.file;
 
 import org.apache.ibatis.logging.Log;
 import org.slf4j.Logger;
@@ -14,10 +14,12 @@ import java.nio.file.Paths;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/tui-editor")
+@RequestMapping("/file")
 public class FileController {
     // 파일을 업로드할 디렉터리 경로 C:\_bizqr_fileUpload\tui-editor
     private final String UP_DIR = "C:\\_bizqr_fileUpload\\tui-editor\\"; //경로
+
+    private FileHandler fh = new FileHandler();
 
     /**
      * 에디터 이미지 업로드
@@ -26,8 +28,6 @@ public class FileController {
      */
     @PostMapping("/image-upload")
     public String uploadEditorImage(@RequestParam("image") final MultipartFile image, Model m) {
-
-
 
         if (image.isEmpty()) {
             return "";
