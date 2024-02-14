@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="" />
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="" />
+=======
+>>>>>>> e969c596569380eefadb51b2d090c567a2477b2e
     <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/controller/OAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/controller/OAuthController.java" afterDir="false" />
@@ -16,7 +29,18 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/register.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/store/create.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/store/create.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/store/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/store/create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/store/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/store/create.html" afterDir="false" />
+>>>>>>> 2d9a41bc33a20ee7d816cfffa78a4d4a18d5a842
     </list>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> e969c596569380eefadb51b2d090c567a2477b2e
+>>>>>>> origin/main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +143,11 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+<<<<<<< HEAD
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+=======
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+>>>>>>> 2d9a41bc33a20ee7d816cfffa78a4d4a18d5a842
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>

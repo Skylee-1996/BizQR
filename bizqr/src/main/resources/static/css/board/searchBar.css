@@ -1,6 +1,21 @@
 /* search bar */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: 'SUIT-Regular';
+}
+
+option{
+    font-size: 13px;
+}
+
 .image-generator{
     margin-top: 100px;
     margin-bottom: -100px;
@@ -72,7 +87,7 @@
     height: 100%;
     padding: 0 25px;
     border-radius: 30px;
-    background: #4949E7;
+    background: #1989ff;
 }
 
 .generate-form .generate-btn[disabled] {
@@ -219,7 +234,7 @@
     right: -1rem;
     width: 4rem;
     height: 4rem;
-    background: blue;
+    background: #2eaaff;
     border-radius: 50%;
     background: #126ee2;
     box-shadow: 0px 5px 20px #81a4f1;

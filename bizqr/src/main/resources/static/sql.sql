@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `board` (
 
 -- store 테이블 생성
 CREATE TABLE IF NOT EXISTS `store` (
-                                       `store_id` VARCHAR(255) NOT NULL,
+    `store_id` VARCHAR(255) NOT NULL,
     `email` VARCHAR(255) NOT NULL,
     `register_num` VARCHAR(255) NOT NULL,
     `store_name` VARCHAR(255) NOT NULL,
@@ -53,6 +53,11 @@ CREATE TABLE IF NOT EXISTS `store` (
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`store_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- 컬럼변경 2024.02.13 --
+ALTER TABLE `bizqrdb`.`store`
+    CHANGE COLUMN `register_num` `register_num` BIGINT NOT NULL ;
+
 -- file 테이블 생성
 
 CREATE TABLE IF NOT EXISTS `file` (
@@ -100,6 +105,10 @@ CREATE TABLE IF NOT EXISTS `register` (
     `store_num` VARCHAR(255),
     PRIMARY KEY (`register_num`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- 컬럼추가 2024.02.13 --
+ALTER TABLE `bizqrdb`.`register`
+    ADD COLUMN `registered` TINYINT NULL DEFAULT 0 AFTER `store_num`;
 
 -- menu items 테이블 생성
 CREATE TABLE IF NOT EXISTS `menu_item` (

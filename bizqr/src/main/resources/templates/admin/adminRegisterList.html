@@ -111,24 +111,38 @@
                     <th scope="col">개인 전화번호</th>
                     <th scope="col">주소</th>
                     <th scope="col">업종</th>
+                    <th scope="col">상태</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr th:each="rvo:${list }">
-                    <th scope="row">[[${rvo.registerNum }]]</th>
-                    <td>[[${rvo.name }]]</td>
-                    <td>[[${rvo.email }]]</td>
-                    <td>[[${rvo.company }]]</td>
-                    <td>[[${rvo.storeName }]]</td>
-                    <td>[[${rvo.storeAddress }]]</td>
-                    <td>[[${rvo.ownerNum }]]</td>
-                    <td>[[${rvo.storeNum }]]</td>
-                    <td th:class="${rvo.storeType == 'Cafe'} ? 'warning' : ${rvo.storeType == 'Restaurant'} ? 'success' : ${rvo.storeType == 'Hotel'} ? 'primary' : 'danger'">[[${rvo.storeType}]]</td>
+                    <td th:text="${rvo.registerNum}">Register Num</td>
+                    <td th:text="${rvo.name}">Name</td>
+                    <td th:text="${rvo.email}">Email</td>
+                    <td th:text="${rvo.company}">Company</td>
+                    <td th:text="${rvo.storeName}">Store Name</td>
+                    <td th:text="${rvo.storeAddress}">Store Address</td>
+                    <td th:text="${rvo.ownerNum}">Owner Number</td>
+                    <td th:text="${rvo.storeNum}">Store Number</td>
+                    <td th:class="${rvo.storeType == 'Cafe'} ? 'warning' : (${rvo.storeType == 'Restaurant'} ? 'success' : (${rvo.storeType == 'Hotel'} ? 'primary' : 'danger'))" th:text="${rvo.storeType}">Store Type</td>
+                    <th:block th:switch="${rvo.registered}">
+                        <th:block th:case="0">
+                            <td>
+                                <button th:attr="data-registered=${rvo.registered}" class="btn app" type="button" value="승인">승인</button>
+                                <button th:attr="data-registered=${rvo.registered}" class="btn ref" type="button" value="거부">거부</button>
+                            </td>
+                        </th:block>
+                        <th:block th:case="1">
+                            <td>승인완료</td>
+                        </th:block>
+                        <th:block th:case="2">
+                            <td>승인거절</td>
+                        </th:block>
+                    </th:block>
 
                 </tr>
                 </tbody>
             </table>
-            <a href="#">Show ALL</a>
         </div>
         <!-- End of Recent Orders -->
 
@@ -234,7 +248,7 @@
 
 </div>
 
-<script th:src="@{/js/adminOrders.js}"></script>
+
 <script th:src="@{/js/adminIndex.js}"></script>
 </body>
 

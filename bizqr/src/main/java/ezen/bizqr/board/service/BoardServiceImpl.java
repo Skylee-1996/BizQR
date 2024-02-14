@@ -18,7 +18,7 @@ import java.util.List;
 @Slf4j
 @RequiredArgsConstructor
 @Service
-public class BoardServiceImpl implements BoardService{
+public class BoardServiceImpl implements BoardService {
     private final BoardMapper mapper;
     private final FileMapper fileMapper;
     private final CommentMapper cmapper;
@@ -28,12 +28,12 @@ public class BoardServiceImpl implements BoardService{
     public void register(BoardVO bvo) {
         int isOk = mapper.insert(bvo);
 
-        }
+    }
 
     @Override
     public List<BoardVO> getList(PagingVO pgvo) {
         List<BoardVO> list = mapper.getList(pgvo);
-        log.info("board list {}",list);
+        log.info("board list {}", list);
         return list;
     }
 
@@ -49,7 +49,7 @@ public class BoardServiceImpl implements BoardService{
     @Transactional
     @Override
     public void modify(BoardVO bvo) {
-           mapper.update(bvo);
+        mapper.update(bvo);
     }
 
     @Transactional
@@ -61,12 +61,10 @@ public class BoardServiceImpl implements BoardService{
 
     @Override
     public int getTotalCount(PagingVO pgvo) {
+
         return mapper.getTotalCount(pgvo);
     }
 
-    @Override
-    public int removeToFile(String uuid) {
-        return fileMapper.deleteFile(uuid);
-    }
 }
+
 

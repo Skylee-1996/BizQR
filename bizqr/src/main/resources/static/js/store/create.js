@@ -5,7 +5,6 @@ function openModal(item) {
     // 항목 데이터를 입력 필드에 채워넣기
     document.getElementById('modal-item-name').value = item.querySelector('h2').textContent;
     document.getElementById('modal-item-price').value = item.querySelector('.price').textContent;
-    document.getElementById('modal-item-image').value = item.querySelector('img').src;
 
     // 모달 보이기
     document.getElementById('modal').style.display = 'block';
@@ -21,10 +20,18 @@ function openModal(item) {
     }, { once: true }); // 이 리스너가 한 번 실행된 후 제거되도록 설정
 }
 
+document.getElementById('modal-close').addEventListener('click', function() {
+    closeModal(); // 모달 닫기 함수 호출
+});
+
+
 // 모달 닫기 함수
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
+
+
+
 
 // 모달 바깥 클릭 시 닫기
 window.onclick = function (event) {
@@ -33,6 +40,24 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+
+document.getElementById('modal-item-image-upload').addEventListener('change', function(event) {
+    const reader = new FileReader(); // FileReader 인스턴스 생성
+    reader.onload = function(e) {
+        const preview = document.getElementById('image-preview');
+        preview.src = e.target.result; // 이미지 미리보기에 파일 내용을 src로 설정
+        preview.style.display = 'block'; // 이미지 미리보기 보이기
+    };
+    // 선택된 파일이 있는 경우, FileReader로 읽기
+    if (event.target.files[0]) {
+        reader.readAsDataURL(event.target.files[0]);
+    }
+});
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const addItem = document.getElementById("addItem");
