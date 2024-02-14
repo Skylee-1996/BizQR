@@ -18,7 +18,14 @@
     </insert>
 
     <select id="selectAuth" resultType="ezen.bizqr.user.security.AuthVO">
-        select * from auth_user where email
+        select * from auth_user where email = #{email}
     </select>
 
+    <select id="getUserList" resultType="ezen.bizqr.user.security.UserVO">
+        select * from user
+    </select>
+
+    <update id="updateLastLogin">
+        update user set last_login = now() where email = #{email}
+    </update>
 </mapper>

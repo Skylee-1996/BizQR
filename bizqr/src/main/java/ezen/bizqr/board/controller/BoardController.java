@@ -46,7 +46,6 @@ public class BoardController {
     public ResponseEntity<String> register(@RequestBody BoardVO bvo)  {
         log.info(">>>>> bvo >> {}", bvo);
         bsv.register(bvo);
-
         return ResponseEntity.ok("redirect:/board/list");
     }
     @GetMapping("/list")
@@ -54,16 +53,10 @@ public class BoardController {
         log.info(">>> pgvo >> {}", pgvo);
         int totalCount = bsv.getTotalCount(pgvo);
         PagingHandler ph = new PagingHandler(pgvo, totalCount);
-
         List<BoardVO> boardList = bsv.getList(pgvo);
-        for (BoardVO boardVO : boardList) {
-            String bracketClass = "";
-            boardVO.setBracketClass(bracketClass);
-        }
         m.addAttribute("list", boardList);
         m.addAttribute("ph", ph);
     }
-
 
     @GetMapping({"/detail","/modify"})
     public void detail(Model m, @RequestParam("bno")long bno) {

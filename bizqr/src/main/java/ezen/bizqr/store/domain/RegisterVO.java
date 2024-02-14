@@ -19,5 +19,6 @@ public class RegisterVO {
     private String storeType;
     private String ownerNum;
     private String storeNum;
+    private int registered;
 
 }
