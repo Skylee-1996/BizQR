@@ -96,6 +96,9 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
         }
 
+        boolean isOk = userMapper.updateLastLogin(email);
+        log.info("lastLogin update >>> " + (isOk ? "OK" : "Fail"));
+
         List<GrantedAuthority> authorities = new ArrayList<>();
         List<AuthVO> authList = userMapper.selectAuth(email);
 

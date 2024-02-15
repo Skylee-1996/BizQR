@@ -29,4 +29,10 @@ public interface UserMapper {
     int registerSocialUser(OAuthVO oAuthVO);
 
     int userRegisterForSocial(UserVO uvo);
+
+    int userModify(UserVO uvo);
+
+    OAuthVO selectSocialUserDomain(String email);
+
+    int socialUserModify(OAuthVO oAuthVO);
 }

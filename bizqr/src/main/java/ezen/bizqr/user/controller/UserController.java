@@ -1,6 +1,7 @@
 package ezen.bizqr.user.controller;
 
 import ezen.bizqr.board.domain.PagingVO;
+import ezen.bizqr.user.security.OAuthVO;
 import ezen.bizqr.user.security.UserVO;
 import ezen.bizqr.user.service.CustomOAuth2UserService;
 import ezen.bizqr.user.service.UserService;
@@ -71,9 +72,41 @@ public class UserController {
     }
 
     @GetMapping("/modify")
-    public String modify(){
+    public String modify(Model m){
+        //현재 인증된 사용자 정보 가져오기
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String userEmail = authentication.getName();
+        log.info(">>> userEmail >>> : " + userEmail);
+
+        UserVO uvo = usv.selectEmail(userEmail);
+        log.info(">>> uvo >>> {}", uvo);
+
+        m.addAttribute("UserVO", uvo);
 
         return "/user/modify";
+    }
+
+    @PostMapping("/modify")
+    public String modify(UserVO uvo){
+
+        log.info(">>> uvo >>> {}", uvo);
+        uvo.setPwd(passwordEncoder.encode(uvo.getPwd()));
+
+        int isOk = usv.userModify(uvo);
+        log.info(">>> user Modify >>> " + ((isOk == 1) ? "OK" : "Fail"));
+
+        UserVO socialUserVO = usv.selectEmail(uvo.getEmail());
+        log.info(">>> socialUserVO >>> {}", socialUserVO);
+        if(socialUserVO.getIsSocial() == 1){
+            OAuthVO oAuthVO = usv.selectSocialUserDomain(socialUserVO.getEmail());
+            oAuthVO.setNickName(uvo.getNickName());
+            log.info(">>> oAuthVO >>> {}", oAuthVO);
+            isOk = usv.socialUserModify(oAuthVO);
+            log.info(">>> Social User Modify >>> " + ((isOk == 1) ? "OK" : "Fail"));
+        }
+
+
+        return  "/index";
     }
 
     @GetMapping("/list")
