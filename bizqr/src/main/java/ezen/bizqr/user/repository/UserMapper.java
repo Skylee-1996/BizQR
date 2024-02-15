@@ -1,6 +1,7 @@
 package ezen.bizqr.user.repository;
 
 import ezen.bizqr.user.security.AuthVO;
+import ezen.bizqr.user.security.OAuthVO;
 import ezen.bizqr.user.security.UserVO;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -21,4 +22,11 @@ public interface UserMapper {
     List<UserVO> getUserList();
 
     boolean updateLastLogin(String username);
+    
+    //소셜 계정 db 조회 확인용
+    String selectSocialUser(String email);
+
+    int registerSocialUser(OAuthVO oAuthVO);
+
+    int userRegisterForSocial(UserVO uvo);
 }

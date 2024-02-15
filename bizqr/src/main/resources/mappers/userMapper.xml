@@ -28,4 +28,22 @@
     <update id="updateLastLogin">
         update user set last_login = now() where email = #{email}
     </update>
+
+
+
+
+
+
+    <select id="selectSocialUser" resultType="String">
+        select email from social_user where email = #{email}
+    </select>
+
+    <insert id="registerSocialUser">
+        insert into social_user values(#{email}, #{provider}, #{nickName})
+    </insert>
+
+    <insert id="userRegisterForSocial">
+        insert into user(email, pwd, nick_name, is_social)
+            values(#{email}, #{pwd}, #{nickName}, #{isSocial})
+    </insert>
 </mapper>

@@ -8,23 +8,39 @@
         <body>
 
         <div class="login-card">
-            <h2>Login</h2>
+            <h2>Register</h2>
             <h3>Enter your credentials</h3>
 
-            <form action="/user/login" method="post" class="login-form" >
-                <input type="text" name="email" placeholder="UserEmail">
-                <input type="password" name="pwd" placeholder="Password">
-                <a href="#">Forgot your password?</a>
-                <button type="submit">LOGIN</button>
-                <div class="image-row">
-                    <a href="/oauth2/authorization/google"><img src="/asset/google_login_btn.png" height="40" width="185"/></a>
-                    <a href="/oauth2/authorization/naver"><img src="/asset/naver_login_btn.png" height="40" width="185"/></a>
+            <form class="login-form" >
+                <div>
+                    <h5>이메일</h5>
+                    <h5 id="emailText"></h5>
                 </div>
+                <input type="text" name="email" id="e" placeholder="UserEmail">
+                <button type="button" id="checkEmail">중복 확인</button>
+
+                <div>
+                    <h5>비밀번호</h5>
+                    <h5 id="pwdText"></h5>
+                </div>
+                <input type="password" name="pwdCheck1" id="p1" placeholder="Password">
+
+                <div>
+                    <h5>비밀번호 확인</h5>
+                    <h5></h5>
+                </div>
+
+                <input type="password" name="pwdCheck2" id="p2" placeholder="Password">
+                <h5>닉네임</h5>
+                <input type="text" name="nickName" id="n" placeholder="UserNickName">
+                <a href="#">Forgot your password?</a>
+                <button type="submit" id="signUp">SignUp</button>
             </form>
         </div>
 
 
 
         </body>
+        <script th:src="@{/js/userRegister.js}"></script>
     </th:block>
 </th:block>
