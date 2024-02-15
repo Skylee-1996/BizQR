@@ -1,4 +1,4 @@
-package ezen.bizqr.board.domain;
+package ezen.bizqr.file;
 
 import lombok.*;
 
@@ -9,11 +9,14 @@ import lombok.*;
 @Getter
 public class FileVO {
     private String uuid;
+    private long bno;
+    private String storeId;
+    private String menuId;
     private String saveDir;
     private String fileName;
-    private String storeId;
     private int fileType;
-    private long bno;
     private long fileSize;
     private String regAt;
 }
+
+

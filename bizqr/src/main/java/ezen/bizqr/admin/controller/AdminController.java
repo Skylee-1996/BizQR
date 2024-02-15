@@ -1,13 +1,13 @@
 package ezen.bizqr.admin.controller;
 
 import ezen.bizqr.admin.service.AdminService;
+import ezen.bizqr.board.domain.CommentVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,8 +27,13 @@ public class AdminController {
         m.addAttribute("list", list);
     }
 
-//    @GetMapping("/adminRegisterList")
-//    public void adminRegisterList() {}
+    @PostMapping("/approve")
+    @ResponseBody
+    public String post(@RequestBody RegisterVO rvo) {
+        log.info(">>>>> RegisterVO >>> {}", rvo);
+        int isOk = asv.post(rvo);
+        return isOk > 0? "1" : "0";
+    }
 
 
 }

@@ -20,10 +20,44 @@ darkMode.addEventListener('click', () => {
     darkMode.querySelector('span:nth-child(2)').classList.toggle('active');
 })
 
-document.querySelectorAll('.app').forEach(button => {
-    button.addEventListener('click', function() {
-        const registerSituation = this.getAttribute('data-registered');
-        console.log(registerSituation);
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.app, .ref').forEach(button => {
+        button.addEventListener('click', async function() {
+            const registerNum = button.dataset.id;
+            const action = button.value;
 
+            try {
+                const response = await fetch('/admin/approve', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ registerNum, action })
+                });
+
+                if (!response.ok) {
+                    throw new Error('서버 응답이 실패했습니다.');
+                }
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // 성공적으로 처리된 경우
+                    const row = button.closest('tr').querySelector('td:last-child');
+                    row.textContent = action === '승인' ? '승인완료' : '승인거절';
+                } else {
+                    // 처리에 실패한 경우
+                    alert('처리에 실패했습니다.');
+                }
+            } catch (error) {
+                console.error(error);
+                alert('오류가 발생했습니다.');
+            }
+        });
     });
 });
+
+
+
+
+
