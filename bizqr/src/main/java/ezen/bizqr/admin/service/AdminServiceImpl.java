@@ -19,4 +19,9 @@ public class AdminServiceImpl implements AdminService{
     public List<RegisterVO> getList() {
         return adminMapper.selectAdimRegisterList();
     }
+
+    @Override
+    public int post(RegisterVO rvo) {
+        return adminMapper.registeredUpdate();
+    }
 }

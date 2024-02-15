@@ -11,12 +11,12 @@
             <h2>Register</h2>
             <h3>Enter your credentials</h3>
 
-            <form action="/user/register" method="post" class="login-form" >
+            <form action="/user/modify" method="post" class="login-form" >
                 <div>
                     <h5>이메일</h5>
                     <h5 id="emailText"></h5>
                 </div>
-                <input type="text" name="email" id="e" placeholder="UserEmail" readonly="readonly">
+                <input type="text" name="email" id="e" placeholder="UserEmail" readonly="readonly" th:value="${UserVO.email}">
 
                 <div>
                     <h5>비밀번호</h5>
@@ -31,7 +31,7 @@
 
                 <input type="password" name="pwdCheck2" id="p2" placeholder="Password">
                 <h5>닉네임</h5>
-                <input type="text" name="nickName" id="n" placeholder="UserNickName">
+                <input type="text" name="nickName" id="n" placeholder="UserNickName" th:value="${UserVO.nickName}">
 
                 <h5>전화번호</h5>
                 <input type="text" name="phoneNum" id="pn" placeholder="PhoneNumber">

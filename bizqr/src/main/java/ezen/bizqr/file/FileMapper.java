@@ -1,6 +1,6 @@
-package ezen.bizqr.board.repository;
+package ezen.bizqr.file;
 
-import ezen.bizqr.board.domain.FileVO;
+import ezen.bizqr.file.FileVO;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

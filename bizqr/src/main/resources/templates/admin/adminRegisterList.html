@@ -125,11 +125,11 @@
                     <td th:text="${rvo.ownerNum}">Owner Number</td>
                     <td th:text="${rvo.storeNum}">Store Number</td>
                     <td th:class="${rvo.storeType == 'Cafe'} ? 'warning' : (${rvo.storeType == 'Restaurant'} ? 'success' : (${rvo.storeType == 'Hotel'} ? 'primary' : 'danger'))" th:text="${rvo.storeType}">Store Type</td>
-                    <th:block th:switch="${rvo.registered}">
+                    <th:block th:switch="${rvo.isRegistered}">
                         <th:block th:case="0">
                             <td>
-                                <button th:attr="data-registered=${rvo.registered}" class="btn app" type="button" value="승인">승인</button>
-                                <button th:attr="data-registered=${rvo.registered}" class="btn ref" type="button" value="거부">거부</button>
+                                <button th:attr="data-registered=${rvo.isRegistered}" class="btn app" type="button" value="승인">승인</button>
+                                <button th:attr="data-registered=${rvo.isRegistered}" class="btn ref" type="button" value="거절">거절</button>
                             </td>
                         </th:block>
                         <th:block th:case="1">
@@ -139,7 +139,6 @@
                             <td>승인거절</td>
                         </th:block>
                     </th:block>
-
                 </tr>
                 </tbody>
             </table>

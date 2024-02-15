@@ -9,5 +9,11 @@
         (name, email, company, store_name, store_address, store_type, owner_num, store_num)
         values(#{name}, #{email}, #{company}, #{storeName}, #{storeAddress}, #{storeType}, #{ownerNum}, #{storeNum})
     </insert>
+    <insert id="menuInsert">
+        insert into menu_item
+        (menu_id, store_id, tab_name, item_name, item_price)
+        values(#{menuId}, #{storeId}, #{tabName}, #{menuName}, #{menuPrice})
+    </insert>
+
 
 </mapper>

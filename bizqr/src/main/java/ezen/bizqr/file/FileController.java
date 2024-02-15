@@ -1,5 +1,6 @@
-package ezen.bizqr.board.controller;
+package ezen.bizqr.file;
 
+import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.logging.Log;
 import org.slf4j.Logger;
 import org.springframework.http.MediaType;
@@ -11,13 +12,17 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
+@RequiredArgsConstructor
 @RestController
-@RequestMapping("/tui-editor")
+@RequestMapping("/file")
 public class FileController {
     // 파일을 업로드할 디렉터리 경로 C:\_bizqr_fileUpload\tui-editor
     private final String UP_DIR = "C:\\_bizqr_fileUpload\\tui-editor\\"; //경로
+    private final  FileMapper mapper;
 
     /**
      * 에디터 이미지 업로드
@@ -27,17 +32,31 @@ public class FileController {
     @PostMapping("/image-upload")
     public String uploadEditorImage(@RequestParam("image") final MultipartFile image, Model m) {
 
-
-
         if (image.isEmpty()) {
             return "";
         }
 
-        String orgFilename = image.getOriginalFilename();                                         // 원본 파일명
+        String orgFilename = image.getOriginalFilename();
+        String onlyFileName = orgFilename.substring(
+                orgFilename.lastIndexOf(File.separator)+1);// 원본 파일명
         String uuid = UUID.randomUUID().toString().replaceAll("-", "");           // 32자리 랜덤 문자열
         String extension = orgFilename.substring(orgFilename.lastIndexOf(".") + 1);  // 확장자
         String saveFilename = uuid + "." + extension;                                             // 디스크에 저장할 파일명
         String fileFullPath = Paths.get(UP_DIR, saveFilename).toString();
+
+
+        //DB 저장하기
+        FileVO fvo = new FileVO();
+
+        fvo.setUuid(uuid);
+        fvo.setSaveDir("/board");
+        fvo.setFileSize(image.getSize());
+        fvo.setFileName(saveFilename);
+        fvo.setFileType(1);
+
+        mapper.insertFile(fvo);
+
+
 
 
 

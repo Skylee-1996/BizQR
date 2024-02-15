@@ -118,8 +118,17 @@
                     <td>[[${uvo.phoneNum }]]</td>
                     <td>[[${uvo.regDate }]]</td>
                     <td>[[${uvo.lastLogin }]]</td>
-                    <td>[[${uvo.isSocial }]]</td>
-                    <td th:each="auths:${uvo.authList}">[[${auths.auth}]]</td>
+                    <td>
+                        <span th:if="${uvo.isSocial == 0}">X</span>
+                        <span th:if="${uvo.isSocial == 1}">Google</span>
+                        <span th:if="${uvo.isSocial == 2}">Naver</span>
+                    </td>
+                    <td>
+                        <span th:each="auths, iterStat:${uvo.authList}">
+                            <span th:text="${auths.auth}" th:style="${auths.auth == 'ROLE_USER'} ? 'color: green;' : (${auths.auth == 'ROLE_ADMIN'} ? 'color: red;' : '')"></span>
+                            <span th:unless="${iterStat.last}">,</span>
+                        </span>
+                    </td>
 
 
                 </tr>

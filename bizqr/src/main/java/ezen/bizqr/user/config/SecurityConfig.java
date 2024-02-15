@@ -1,7 +1,8 @@
 package ezen.bizqr.user.config;
 
 import ezen.bizqr.user.security.CustomUserService;
-import ezen.bizqr.user.service.OAuthServiceImpl;
+import ezen.bizqr.user.service.CustomOAuth2UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -17,6 +18,9 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfig {
 
+    @Autowired
+    private CustomOAuth2UserService customOAuth2UserService;
+
     @Bean
     PasswordEncoder passwordEncoder(){
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
@@ -24,21 +28,32 @@ public class SecurityConfig {
 
     @Bean
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        return http.csrf(csrf -> csrf.disable())
+
+        http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/**").permitAll()
                         .requestMatchers("/user/list").hasAnyRole("ADMIN")
                         .anyRequest().authenticated())
+
                 .formLogin(login -> login
                         .usernameParameter("email")
                         .passwordParameter("pwd")
                         .loginPage("/user/login")
                         .defaultSuccessUrl("/").permitAll())
+
+                .oauth2Login(oauth2 -> oauth2
+                        .loginPage("/user/login")
+                        .userInfoEndpoint(userInfo -> userInfo
+                                .userService(customOAuth2UserService)))
+
                 .logout(logout -> logout
                         .logoutUrl("/user/logout")
                         .deleteCookies("JSESSIONID")
-                        .logoutSuccessUrl("/")).build();
-//                .oauth2Login().userInfoEndpoint().userService(CustomOAuth2UserService).build();
+                        .logoutSuccessUrl("/"));
+
+
+
+        return http.build();
 
     }
 
@@ -55,3 +70,4 @@ public class SecurityConfig {
 
 
 }
+

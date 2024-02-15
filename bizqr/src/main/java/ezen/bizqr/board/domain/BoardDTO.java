@@ -1,5 +1,6 @@
 package ezen.bizqr.board.domain;
 
+import ezen.bizqr.file.FileVO;
 import lombok.*;
 
 import java.util.List;
