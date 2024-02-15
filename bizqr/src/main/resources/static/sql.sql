@@ -82,8 +82,13 @@ CREATE TABLE IF NOT EXISTS `file` (
 
 -- social_user 테이블 생성
 CREATE TABLE IF NOT EXISTS `social_user` (
+<<<<<<< HEAD
+                                             `email` VARCHAR(255) NOT NULL,
+    `provider` VARCHAR(255) NOT NULL,
+=======
     `email` VARCHAR(255) NOT NULL,
     `pwd` VARCHAR(255) NOT NULL,
+>>>>>>> 41ec2c77677c728739a717ac50f7914fc2c45734
     `nick_name` VARCHAR(255) NOT NULL,
     PRIMARY KEY (`email`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
