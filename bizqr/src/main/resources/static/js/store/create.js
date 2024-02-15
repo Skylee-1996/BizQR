@@ -118,31 +118,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-function collectAndSendItemsData() {
+function addMenu() {
     const formData = new FormData();
     const storeName = document.getElementById("storeName").value;
     const storeId = document.getElementById("storeId").value;
-    const imageFile = document.getElementById('modal-item-image-upload').files[0]; // 이미지 파일 선택
+    const tabName = document.getElementById("tabName").value;
+    const menuName = document.getElementById("modal-item-name").value; // 메뉴 이름
+    const menuPrice = document.getElementById("modal-item-price").value; // 메뉴 가격
+    const imageFile = document.getElementById("modal-item-image-upload").files[0]; // 이미지 파일 가져오기
 
-    // 상점 이름과 ID를 formData에 추가
+    // 상점 이름, ID, 탭 이름, 메뉴 이름, 메뉴 가격, 이미지 파일을 formData에 추가
     formData.append('storeName', storeName);
     formData.append('storeId', storeId);
-
-    // 이미지 파일을 formData에 추가
-    if(imageFile) {
-        formData.append('image', imageFile);
+    formData.append('tabName', tabName);
+    formData.append('menuName', menuName); // 메뉴 이름 추가
+    formData.append('menuPrice', menuPrice); // 메뉴 가격 추가
+    if (imageFile) {
+        formData.append('image', imageFile); // 이미지 파일이 있을 경우만 추가
     }
 
-    // 항목 데이터를 formData에 추가
-    const items = document.querySelectorAll('.item');
-    Array.from(items).forEach((item, index) => {
-        formData.append(`items[${index}][menuName]`, item.querySelector('h2').textContent);
-        formData.append(`items[${index}][price]`, item.querySelector('.price').textContent);
-        // 이미지 URL은 직접 서버로 전송하지 않고, 대신 이미지 파일을 전송
-    });
+
 
     // 서버로 formData 전송
-    fetch('/store/create', {
+    fetch('/store/addMenu', {
         method: 'POST',
         body: formData // Content-Type은 multipart/form-data로 자동 설정됩니다.
     })
@@ -156,11 +154,11 @@ function collectAndSendItemsData() {
 }
 
 // '데이터 전송' 버튼 클릭 이벤트에 연결
-document.getElementById('submitBtn').addEventListener('click', function() {
-    collectAndSendItemsData();
+document.getElementById('modal-save').addEventListener('click', function() {
+    addMenu();
+});
+document.getElementById('modal-close').addEventListener('click', function() {
+    closeModal();
 });
 
-// 예시용으로 '데이터 전송' 버튼 클릭 이벤트에 연결
-document.getElementById('submitBtn').addEventListener('click', function() {
-    collectAndSendItemsData();
-});
+

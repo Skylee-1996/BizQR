@@ -5,8 +5,8 @@
 <mapper namespace="ezen.bizqr.file.FileMapper">
 
     <insert id="insertFile">
-        insert into file(uuid, store_id, file_name, file_type, bno, file_size, save_dir)
-        values(#{uuid},#{storeId},#{fileName},#{fileType},#{bno},#{fileSize}, #{saveDir})
+        insert into file(uuid, file_name, file_type,  file_size, save_dir)
+        values(#{uuid},#{fileName},#{fileType},#{fileSize}, #{saveDir})
     </insert>
 
     <select id="getFileList" resultType="ezen.bizqr.file.FileVO">

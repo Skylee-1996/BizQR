@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
-    String uploadPath = "C:\\_my_spinrg_file\\_java\\_fileUpload\\";
+    String uploadPath = "C:\\_bizqr_fileUpload\\";
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {

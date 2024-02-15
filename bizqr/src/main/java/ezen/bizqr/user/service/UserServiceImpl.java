@@ -1,6 +1,7 @@
 package ezen.bizqr.user.service;
 
 import ezen.bizqr.user.repository.UserMapper;
+import ezen.bizqr.user.security.OAuthVO;
 import ezen.bizqr.user.security.UserVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -35,4 +36,21 @@ public class UserServiceImpl implements UserService {
         }
         return list;
     }
+
+    @Override
+    public int userModify(UserVO uvo) {
+        return userMapper.userModify(uvo);
+    }
+
+    @Override
+    public OAuthVO selectSocialUserDomain(String email) {
+        return userMapper.selectSocialUserDomain(email);
+    }
+
+    @Override
+    public int socialUserModify(OAuthVO oAuthVO) {
+        return userMapper.socialUserModify(oAuthVO);
+    }
+
+
 }
