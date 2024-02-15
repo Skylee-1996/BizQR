@@ -4,49 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="" />
-=======
-    <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="" />
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="" />
-=======
-<<<<<<< HEAD
-    <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="" />
-=======
->>>>>>> e969c596569380eefadb51b2d090c567a2477b2e
-    <list default="true" id="34af4c0e-5322-4be7-8a04-551dc6ceaf61" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/controller/OAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/controller/OAuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/service/CustomOAuth2UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/service/CustomOAuth2UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/service/OAuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/service/OAuthServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/register.html" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/store/create.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/store/create.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/store/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/store/create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/store/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/store/create.html" afterDir="false" />
->>>>>>> 2d9a41bc33a20ee7d816cfffa78a4d4a18d5a842
-    </list>
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> e969c596569380eefadb51b2d090c567a2477b2e
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
+    <list default="true" id="5fd9d9d5-e975-4ac5-8788-99e4e65714da" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,51 +70,46 @@
     <option name="autoscrollFromSource" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Gradle.BizqrApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BizqrApplicationTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BoardMapperTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build bizqr.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build board.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.bizqr [:BizqrApplication.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.bizqr [dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.bizqr.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BizqrApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/김수진/Downloads/H2-Database&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-<<<<<<< HEAD
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-=======
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
->>>>>>> 2d9a41bc33a20ee7d816cfffa78a4d4a18d5a842
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.BizqrApplicationTests.contextLoads.executor": "Run",
+    "Gradle.BizqrApplicationTests.executor": "Run",
+    "Gradle.BoardMapperTest.executor": "Run",
+    "Gradle.Build bizqr.executor": "Run",
+    "Gradle.Build board.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.bizqr [:BizqrApplication.main()].executor": "Run",
+    "Gradle.bizqr [dependencies].executor": "Run",
+    "Gradle.bizqr.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.BizqrApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/김수진/Downloads/H2-Database",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ezen.bizqr.user.config" />
@@ -377,9 +330,6 @@
       <workItem from="1707709520427" duration="7204000" />
       <workItem from="1707716954976" duration="19816000" />
       <workItem from="1707740610136" duration="3375000" />
-<<<<<<< HEAD
-      <workItem from="1707878621784" duration="10959000" />
-=======
       <workItem from="1707835884951" duration="6746000" />
       <workItem from="1707844925044" duration="356000" />
       <workItem from="1707845289258" duration="260000" />
@@ -388,7 +338,6 @@
       <workItem from="1707846678135" duration="101000" />
       <workItem from="1707846788854" duration="1950000" />
       <workItem from="1707868312604" duration="8073000" />
->>>>>>> origin/main
     </task>
     <servers />
   </component>
@@ -413,17 +362,14 @@
           <properties class="java.io.FileNotFoundException" package="java.io" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/resources/static/js/store/create.js</url>
-          <line>120</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/bizqr$BizqrApplication.ic" NAME="BizqrApplication Coverage Results" MODIFIED="1707957137469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -51,14 +51,23 @@ CREATE TABLE IF NOT EXISTS `store` (
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`store_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
+-- menu items 테이블 생성
+CREATE TABLE IF NOT EXISTS `menu_item` (
+    `menu_id` bigint NOT NULL auto_increment,
+    `store_id` VARCHAR(255),
+    `tab_name` VARCHAR(255),
+    `menu_name` VARCHAR(255),
+    `menu_price` BIGINT,
+    PRIMARY KEY (`menu_id`),
+    FOREIGN KEY (`store_id`) REFERENCES `store`(`store_id`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- file 테이블 생성
 CREATE TABLE IF NOT EXISTS `file` (
     `uuid` VARCHAR(255) NOT NULL,
     `bno` BIGINT,
     `store_id` VARCHAR(255),
-    `menu_id` VARCHAR(255),
+    `menu_id` BIGINT,
     `save_dir` VARCHAR(255),
     `file_name` VARCHAR(255) NOT NULL,
     `file_type` TINYINT,
@@ -108,16 +117,7 @@ ALTER TABLE `bizqrdb`.`register`
     ADD COLUMN `isRegistered` TINYINT NULL DEFAULT 0 AFTER `store_num`;
 
 
--- menu items 테이블 생성
-CREATE TABLE IF NOT EXISTS `menu_item` (
-    `menu_id` VARCHAR(255) NOT NULL,
-    `store_id` VARCHAR(255) NOT NULL,
-    `tab_name` VARCHAR(255),
-    `menu_name` VARCHAR(255) NOT NULL,
-    `menu_price` BIGINT,
-    PRIMARY KEY (`menu_id`),
-    FOREIGN KEY (`store_id`) REFERENCES `store`(`store_id`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 
 -- table 테이블 생성
@@ -134,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `tables` (
 
 -- order_items 테이블 생성
 CREATE TABLE IF NOT EXISTS `order_items` (
-    `menu_id` VARCHAR(255) NOT NULL,
+    `menu_id` bigint NOT NULL,
     `store_id` VARCHAR(255) NOT NULL,
     `table_id` VARCHAR(255) NOT NULL,
     `menu_name` VARCHAR(255) NOT NULL,
@@ -189,7 +189,7 @@ CREATE TABLE IF NOT EXISTS `order_history` (
 
 -- Inventory 테이블 생성
 CREATE TABLE IF NOT EXISTS inventory (
-    `menu_id` VARCHAR(255) NOT NULL,
+    `menu_id` bigint NOT NULL,
     `current_stock` INT(20) NOT NULL,
     `supplier_id` VARCHAR(255),
     `last_restock_date` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
