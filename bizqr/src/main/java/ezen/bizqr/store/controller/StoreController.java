@@ -32,4 +32,11 @@ public class StoreController {
     @GetMapping("/create")
     public void storeCreate(){}
 
+    @GetMapping("/posPage")
+    public String posPage() {
+        return "/store/posPage";
+    }
+
 }
+
+
