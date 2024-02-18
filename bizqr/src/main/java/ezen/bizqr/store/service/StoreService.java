@@ -7,4 +7,6 @@ public interface StoreService {
     void storeRegister(RegisterVO rvo);
 
     void insertMenu(MenuItemVO mvo);
+
+    RegisterVO getDetail(long registerNum);
 }
