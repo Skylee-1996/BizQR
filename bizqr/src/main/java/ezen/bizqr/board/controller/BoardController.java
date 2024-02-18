@@ -1,26 +1,21 @@
 package ezen.bizqr.board.controller;
 
-import ezen.bizqr.board.domain.BoardDTO;
 import ezen.bizqr.board.domain.BoardVO;
-import ezen.bizqr.board.domain.FileVO;
 import ezen.bizqr.board.domain.PagingVO;
-import ezen.bizqr.board.handler.FileHandler;
+import ezen.bizqr.file.FileHandler;
 import ezen.bizqr.board.handler.PagingHandler;
 import ezen.bizqr.board.service.BoardService;
 import ezen.bizqr.board.service.CommentService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RequestMapping("/board/*")
@@ -46,7 +41,6 @@ public class BoardController {
     public ResponseEntity<String> register(@RequestBody BoardVO bvo)  {
         log.info(">>>>> bvo >> {}", bvo);
         bsv.register(bvo);
-
         return ResponseEntity.ok("redirect:/board/list");
     }
     @GetMapping("/list")
@@ -54,16 +48,10 @@ public class BoardController {
         log.info(">>> pgvo >> {}", pgvo);
         int totalCount = bsv.getTotalCount(pgvo);
         PagingHandler ph = new PagingHandler(pgvo, totalCount);
-
         List<BoardVO> boardList = bsv.getList(pgvo);
-        for (BoardVO boardVO : boardList) {
-            String bracketClass = "";
-            boardVO.setBracketClass(bracketClass);
-        }
         m.addAttribute("list", boardList);
         m.addAttribute("ph", ph);
     }
-
 
     @GetMapping({"/detail","/modify"})
     public void detail(Model m, @RequestParam("bno")long bno) {

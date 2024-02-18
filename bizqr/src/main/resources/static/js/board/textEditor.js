@@ -15,14 +15,14 @@ const editor = new Editor({
                 const formData = new FormData();
                 formData.append('image', blob);
 
-                const response = await fetch('/tui-editor/image-upload', {
+                const response = await fetch('/file/image-upload', {
                     method: 'POST',
                     body: formData
                 });
                 const filename = await response.text();
                 console.log('서버에 저장된 파일명: ', filename);
 
-                const imageUrl = `/tui-editor/image-print?filename=${filename}`;
+                const imageUrl = `/file/image-print?filename=${filename}`;
                 callback(imageUrl, 'image alt attribute');
             } catch (error) {
                 console.log('업로드 실패...', error);

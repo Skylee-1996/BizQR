@@ -18,7 +18,49 @@
     </insert>
 
     <select id="selectAuth" resultType="ezen.bizqr.user.security.AuthVO">
-        select * from auth_user where email
+        select * from auth_user where email = #{email}
     </select>
+
+    <select id="getUserList" resultType="ezen.bizqr.user.security.UserVO">
+        select * from user order by email limit #{pageStart}, #{qty}
+    </select>
+
+    <update id="updateLastLogin">
+        update user set last_login = now() where email = #{email}
+    </update>
+
+    <update id="userModify">
+        update user set pwd = #{pwd}, nick_name = #{nickName}, phone_num = #{phoneNum} where email = #{email}
+    </update>
+
+    <select id="getTotalUserCount" resultType="int">
+        select count(email) from user
+    </select>
+
+
+
+
+
+
+    <select id="selectSocialUser" resultType="String">
+        select email from social_user where email = #{email}
+    </select>
+
+    <select id="selectSocialUserDomain" resultType="ezen.bizqr.user.security.OAuthVO">
+        select * from social_user where email = #{email}
+    </select>
+
+    <insert id="registerSocialUser">
+        insert into social_user values(#{email}, #{provider}, #{nickName})
+    </insert>
+
+    <insert id="userRegisterForSocial">
+        insert into user(email, pwd, nick_name, is_social)
+            values(#{email}, #{pwd}, #{nickName}, #{isSocial})
+    </insert>
+
+    <update id="socialUserModify">
+        update social_user set nick_name = #{nickName} where email = #{email}
+    </update>
 
 </mapper>

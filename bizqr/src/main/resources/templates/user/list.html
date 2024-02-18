@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/board/noticeList.css}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/css/adminStyle.css}">
+
     <title>Responsive Dashboard Design</title></head>
 
 <body>
@@ -102,46 +104,55 @@
             <table>
                 <thead>
                 <tr>
-                    <th scope="col">가입번호</th>
-                    <th scope="col">이름</th>
                     <th scope="col">이메일</th>
-                    <th scope="col">회사명</th>
-                    <th scope="col">점포명</th>
-                    <th scope="col">점포 전화번호</th>
-                    <th scope="col">개인 전화번호</th>
-                    <th scope="col">주소</th>
-                    <th scope="col">업종</th>
-                    <th scope="col">상태</th>
+                    <th scope="col">닉네임</th>
+                    <th scope="col">전화번호</th>
+                    <th scope="col">가입일</th>
+                    <th scope="col">최종로그인</th>
+                    <th scope="col">소셜여부</th>
+                    <th scope="col">권한</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="rvo:${list }">
-                    <td th:text="${rvo.registerNum}">Register Num</td>
-                    <td th:text="${rvo.name}">Name</td>
-                    <td th:text="${rvo.email}">Email</td>
-                    <td th:text="${rvo.company}">Company</td>
-                    <td th:text="${rvo.storeName}">Store Name</td>
-                    <td th:text="${rvo.storeAddress}">Store Address</td>
-                    <td th:text="${rvo.ownerNum}">Owner Number</td>
-                    <td th:text="${rvo.storeNum}">Store Number</td>
-                    <td th:class="${rvo.storeType == 'Cafe'} ? 'warning' : (${rvo.storeType == 'Restaurant'} ? 'success' : (${rvo.storeType == 'Hotel'} ? 'primary' : 'danger'))" th:text="${rvo.storeType}">Store Type</td>
-                    <th:block th:switch="${rvo.isRegistered}">
-                        <th:block th:case="0">
-                            <td>
-                                <button th:attr="data-rnum=${rvo.registerNum}" class="btn app" type="button" value="1">승인</button>
-                                <button th:attr="data-rnum=${rvo.registerNum}" class="btn ref" type="button" value="2">거절</button>
-                            </td>
-                        </th:block>
-                        <th:block th:case="1">
-                            <td>승인완료</td>
-                        </th:block>
-                        <th:block th:case="2">
-                            <td>승인거절</td>
-                        </th:block>
-                    </th:block>
+                <tr th:each="uvo:${list }">
+                    <th scope="row">[[${uvo.email }]]</th>
+                    <td>[[${uvo.nickName }]]</td>
+                    <td>[[${uvo.phoneNum }]]</td>
+                    <td>[[${uvo.regDate }]]</td>
+                    <td>[[${uvo.lastLogin }]]</td>
+                    <td>
+                        <span th:if="${uvo.isSocial == 0}">X</span>
+                        <span th:if="${uvo.isSocial == 1}">Google</span>
+                        <span th:if="${uvo.isSocial == 2}">Naver</span>
+                    </td>
+                    <td>
+                        <span th:each="auths, iterStat:${uvo.authList}">
+                            <span th:text="${auths.auth}" th:style="${auths.auth == 'ROLE_USER'} ? 'color: green;' : (${auths.auth == 'ROLE_ADMIN'} ? 'color: red;' : '')"></span>
+                            <span th:unless="${iterStat.last}">,</span>
+                        </span>
+                    </td>
+
                 </tr>
                 </tbody>
             </table>
+            <ul class="pagination modal-2">
+                <li th:if="${ph.prev}" class="page-item">
+                    <a class="page-link" th:href="@{/user/list(pageNo=${ph.startPage-1},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" aria-label="Previous">
+                        <span aria-hidden="true">prev</span>
+                    </a>
+                </li>
+                <th:block th:each="i: ${#numbers.sequence(ph.startPage,ph.endPage)}">
+                    <li class="page-item" th:classappend="${ph.pgvo.pageNo == i ? 'active' : ''}" aria-current="page">
+                        <a class="page-link" th:href="@{/user/list(pageNo=${i},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" th:text="${i}"></a>
+                    </li>
+                </th:block>
+                <li th:if="${ph.next}" class="page-item">
+                    <a class="page-link" th:href="@{/user/list(pageNo=${ph.endPage+1},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" aria-label="Next">
+                        <span aria-hidden="true">Next</span>
+                    </a>
+                </li>
+            </ul>
+            <a href="#">Show ALL</a>
         </div>
         <!-- End of Recent Orders -->
 
@@ -247,7 +258,7 @@
 
 </div>
 
-
+<script th:src="@{/js/adminOrders.js}"></script>
 <script th:src="@{/js/admin/adminIndex.js}"></script>
 </body>
 

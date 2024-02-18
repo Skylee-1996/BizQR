@@ -2,11 +2,10 @@ package ezen.bizqr.board.service;
 
 import ezen.bizqr.board.domain.BoardDTO;
 import ezen.bizqr.board.domain.BoardVO;
-import ezen.bizqr.board.domain.FileVO;
 import ezen.bizqr.board.domain.PagingVO;
 import ezen.bizqr.board.repository.BoardMapper;
 import ezen.bizqr.board.repository.CommentMapper;
-import ezen.bizqr.board.repository.FileMapper;
+import ezen.bizqr.file.FileMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -18,22 +17,22 @@ import java.util.List;
 @Slf4j
 @RequiredArgsConstructor
 @Service
-public class BoardServiceImpl implements BoardService{
+public class BoardServiceImpl implements BoardService {
     private final BoardMapper mapper;
     private final FileMapper fileMapper;
-    private final CommentMapper cmapper;
+    private final CommentMapper commentMapper;
 
     @Transactional
     @Override
     public void register(BoardVO bvo) {
         int isOk = mapper.insert(bvo);
 
-        }
+    }
 
     @Override
     public List<BoardVO> getList(PagingVO pgvo) {
         List<BoardVO> list = mapper.getList(pgvo);
-        log.info("board list {}",list);
+        log.info("board list {}", list);
         return list;
     }
 
@@ -49,24 +48,22 @@ public class BoardServiceImpl implements BoardService{
     @Transactional
     @Override
     public void modify(BoardVO bvo) {
-           mapper.update(bvo);
+        mapper.update(bvo);
     }
 
     @Transactional
     @Override
     public void remove(long bno) {
-        cmapper.delete(bno);
+        commentMapper.delete(bno);
         mapper.delete(bno);
     }
 
     @Override
     public int getTotalCount(PagingVO pgvo) {
+
         return mapper.getTotalCount(pgvo);
     }
 
-    @Override
-    public int removeToFile(String uuid) {
-        return fileMapper.deleteFile(uuid);
-    }
 }
+
 

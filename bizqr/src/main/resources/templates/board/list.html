@@ -20,7 +20,7 @@
                         <div class="controls">
                             <select class="img-quantity" name="type" aria-label="Small select example">
                                 <option th:selected="${ph.pgvo.type == null? true:false}" st>선택</option>
-                                <option th:value="tecn" th:selected="${ph.pgvo.type == 'tecn'? true:false}">all</option>
+                                <option th:value="tecn" th:selected="${ph.pgvo.type == 'tecn'? true:false}">전체</option>
                                 <option th:value="t" th:selected="${ph.pgvo.type == 't'? true:false}">제목</option>
                                 <option th:value="e" th:selected="${ph.pgvo.type == 'e'? true:false}">작성자</option>
                                 <option th:value="c" th:selected="${ph.pgvo.type == 'c'? true:false}">게시글</option>
@@ -34,7 +34,7 @@
 
 
             <!-- menu btn -->
-           <div class="fab-wrapper">
+            <div class="fab-wrapper">
                 <input id="fabCheckbox" type="checkbox" class="fab-checkbox" />
                 <label class="fab" for="fabCheckbox">
                     <span class="fab-dots fab-dots-1"></span>
@@ -42,39 +42,36 @@
                     <span class="fab-dots fab-dots-3"></span>
                 </label>
                 <div class="fab-wheel">
-                    <a class="fab-action fab-action-1" href="/board/register">
+                    <a class="fab-action fab-action-1" >
                         <i class="fas fa-question"></i>
                     </a>
-                    <a class="fab-action fab-action-2" href="/board/service">
+                    <a class="fab-action fab-action-2" >
                         <i class="fas fa-book"></i>
                     </a>
-                    <a class="fab-action fab-action-3">
+                    <a class="fab-action fab-action-3" href="/board/register">
                         <i class="fas fa-address-book"></i>
                     </a>
-                    <a class="fab-action fab-action-4">
+                    <a class="fab-action fab-action-4" href="/board/service">
                         <i class="fas fa-info"></i>
                     </a>
                 </div>
             </div>
 
 
-
-            <!-- board -->
+            <!-- card section -->
             <div class="listContainer">
                 <div class="image-container" th:each="bvo:${list}">
                     <div class="card">
                         <a th:if="${bvo.bno != null}" th:href="@{'/board/detail?bno=' + ${bvo.bno}}">
                             <div class="card-header">
-                                <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
+                                <img url="C:\_bizqr_fileUpload\tui-editor\" alt="image" />
                             </div>
                             <div class="card-body">
-                                <span th:class="'tag'+${bvo.bracketClass}"></span>
-                                <h4 th:text="${bvo.title}">
+                                <span class="tag tag-teal">진행</span>
+                                <h4 class="h4_title" th:text="${bvo.title}">
                                 </h4>
                                 <div class="user">
-                                    <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
                                     <div class="user-info">
-                                        <h5 th:text="${bvo.email}"></h5>
                                         <small th:text="${bvo.modAt}"></small>
                                     </div>
                                 </div>
@@ -83,7 +80,6 @@
                     </div>
                 </div>
             </div>
-
 
 
             <!-- Pagination line -->

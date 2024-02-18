@@ -2,23 +2,22 @@ package ezen.bizqr.store.domain;
 
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class RegisterVO {
-
-    private long registerNum;
-    private String name;
+public class StoreVO {
+    private Long storeId;
     private String email;
-    private String company;
+    private Long registerNum;
     private String storeName;
     private String storeAddress;
+    private String storeNumber;
+    private String storeHours;
     private String storeType;
-    private String ownerNum;
-    private String storeNum;
-    private int isRegistered;
-
+    private String company;
+    private String regAt;
 }

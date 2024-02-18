@@ -7,4 +7,6 @@ import java.util.List;
 @Mapper
 public interface AdminMapper {
     List<RegisterVO> selectAdimRegisterList();
+
+    int registeredUpdate(RegisterVO rvo);
 }

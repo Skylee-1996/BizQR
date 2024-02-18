@@ -7,5 +7,10 @@
     <select id="selectAdimRegisterList" resultType="ezen.bizqr.store.domain.RegisterVO">
         select * from register
     </select>
+    
+    <update id="registeredUpdate">
+        update register set isRegistered=#{isRegistered}
+        where register_num = #{registerNum}
+    </update>
 
 </mapper>

@@ -9,5 +9,15 @@
         (name, email, company, store_name, store_address, store_type, owner_num, store_num)
         values(#{name}, #{email}, #{company}, #{storeName}, #{storeAddress}, #{storeType}, #{ownerNum}, #{storeNum})
     </insert>
+    <insert id="menuInsert">
+        insert into menu_item
+        (store_id, tab_name, menu_name, menu_price)
+        values(#{storeId}, #{tabName}, #{menuName}, #{menuPrice})
+    </insert>
+
+    <select id="getDetail" resultType="ezen.bizqr.store.domain.RegisterVO">
+        select * from register where registerNum = #{registerNum}
+    </select>
+
 
 </mapper>
