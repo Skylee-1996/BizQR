@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac62688-27a4-4c4f-9861-d1c6f229bcdb" name="변경" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/repository/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/repository/AdminMapper.java" afterDir="false" />
@@ -20,6 +21,12 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminRegisterList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/adminRegisterList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
+>>>>>>> ed15dac66ad9d4438c2199d9430195a3e39fa3e9
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +86,8 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
+    &quot;associatedIndex&quot;: 6
+    }</component>
   <component name="ProjectId" id="2bq1RC6A1uQB0czhNKO7faLKVMt" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -102,7 +109,11 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+<<<<<<< HEAD
     "settings.editor.selected.configurable": "configurable.group.tools",
+=======
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+>>>>>>> ed15dac66ad9d4438c2199d9430195a3e39fa3e9
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -335,7 +346,12 @@
       <workItem from="1707846788854" duration="1950000" />
       <workItem from="1707868312604" duration="8073000" />
       <workItem from="1707976469754" duration="5000" />
+<<<<<<< HEAD
       <workItem from="1708176894935" duration="17983000" />
+=======
+      <workItem from="1708176894935" duration="17382000" />
+      <workItem from="1708259433273" duration="829000" />
+>>>>>>> ed15dac66ad9d4438c2199d9430195a3e39fa3e9
     </task>
     <servers />
   </component>
