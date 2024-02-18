@@ -128,10 +128,10 @@ CREATE TABLE IF NOT EXISTS `order_items` (
     `menu_id` VARCHAR(255) NOT NULL,
     `store_id` VARCHAR(255) NOT NULL,
     `table_id` VARCHAR(255) NOT NULL,
+    `menu_name` VARCHAR(255) NOT NULL,
     `menu_price` BIGINT,
     `menu_amount` BIGINT,
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    `mod_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (`menu_id`) REFERENCES `menu_item`(`menu_id`),
     FOREIGN KEY (`store_id`) REFERENCES `store`(`store_id`),
     FOREIGN KEY (`table_id`) REFERENCES `tables`(`table_id`)
