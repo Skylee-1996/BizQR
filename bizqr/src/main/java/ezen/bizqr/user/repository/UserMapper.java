@@ -1,5 +1,6 @@
 package ezen.bizqr.user.repository;
 
+import ezen.bizqr.board.domain.PagingVO;
 import ezen.bizqr.user.security.AuthVO;
 import ezen.bizqr.user.security.OAuthVO;
 import ezen.bizqr.user.security.UserVO;
@@ -19,7 +20,7 @@ public interface UserMapper {
 
     List<AuthVO> selectAuth(String username);
 
-    List<UserVO> getUserList();
+    List<UserVO> getUserList(PagingVO pgvo);
 
     boolean updateLastLogin(String username);
     
@@ -35,4 +36,6 @@ public interface UserMapper {
     OAuthVO selectSocialUserDomain(String email);
 
     int socialUserModify(OAuthVO oAuthVO);
+
+    int getTotalUserCount(PagingVO pgvo);
 }

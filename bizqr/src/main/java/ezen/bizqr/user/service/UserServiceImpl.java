@@ -1,5 +1,6 @@
 package ezen.bizqr.user.service;
 
+import ezen.bizqr.board.domain.PagingVO;
 import ezen.bizqr.user.repository.UserMapper;
 import ezen.bizqr.user.security.OAuthVO;
 import ezen.bizqr.user.security.UserVO;
@@ -28,9 +29,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<UserVO> getUserList() {
+    public List<UserVO> getUserList(PagingVO pgvo) {
 
-        List<UserVO> list = userMapper.getUserList();
+        List<UserVO> list = userMapper.getUserList(pgvo);
         for (UserVO uvo : list){
             uvo.setAuthList(userMapper.selectAuth(uvo.getEmail()));
         }
@@ -50,6 +51,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public int socialUserModify(OAuthVO oAuthVO) {
         return userMapper.socialUserModify(oAuthVO);
+    }
+
+    @Override
+    public int getTotalUserCount(PagingVO pgvo) {
+        return userMapper.getTotalUserCount(pgvo);
     }
 
 
