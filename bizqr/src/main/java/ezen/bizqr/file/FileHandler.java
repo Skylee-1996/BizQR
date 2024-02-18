@@ -17,7 +17,48 @@ import java.util.UUID;
 @Slf4j
 @Component
 public class FileHandler {
-    private final String UP_DIR = "C:\\_my_spinrg_file\\_java\\_fileUpload\\"; //경로
+    private final String UP_DIR = "C:\\_bizqr_fileUpload\\"; //경로
+
+
+    public FileVO uploadFile(MultipartFile file){
+        LocalDate date = LocalDate.now();
+        String today = date.toString();
+        today = today.replace("-", File.separator);
+        File folders = new File(UP_DIR, today);
+        if(!folders.exists()) {
+            folders.mkdirs();
+        }
+
+        FileVO fvo = new FileVO();
+        fvo.setSaveDir(today);
+        fvo.setFileSize(file.getSize());
+
+        String orgFilename = file.getOriginalFilename();
+        String onlyFileName = orgFilename.substring(
+                orgFilename.lastIndexOf(File.separator)+1);
+        String extension = orgFilename.substring(orgFilename.lastIndexOf(".") + 1);  // 확장자
+        fvo.setFileName(onlyFileName);
+
+        String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+        fvo.setUuid(uuid);
+        String saveFilename = uuid + "." + extension;
+        File storeFile = new File(folders, saveFilename);
+        try {
+            file.transferTo(storeFile);
+            if(isImageFile(storeFile)) {
+                fvo.setFileType(1);
+                File thumbnail = new File
+                        (folders, uuid.toString()+"_th_"+onlyFileName);
+                Thumbnails.of(storeFile).size(75, 75).toFile(thumbnail);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            log.info("파일 저장 오류.......");
+        }
+
+        return fvo;
+    }
+
 
     public List<FileVO> uploadFiles(MultipartFile[] files){
         List<FileVO> flist = new ArrayList<>();
@@ -33,15 +74,16 @@ public class FileHandler {
             fvo.setSaveDir(today);
             fvo.setFileSize(file.getSize());
 
-            String originalFileName = file.getOriginalFilename();
-            String onlyFileName = originalFileName.substring(
-                    originalFileName.lastIndexOf(File.separator)+1);
+            String orgFilename = file.getOriginalFilename();
+            String onlyFileName = orgFilename.substring(
+                    orgFilename.lastIndexOf(File.separator)+1);
+            String extension = orgFilename.substring(orgFilename.lastIndexOf(".") + 1);  // 확장자
             fvo.setFileName(onlyFileName);
 
-            UUID uuid = UUID.randomUUID();
-            fvo.setUuid(uuid.toString());
-            String fullFileName = uuid.toString()+"_"+onlyFileName;
-            File storeFile = new File(folders, fullFileName);
+            String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+            fvo.setUuid(uuid);
+            String saveFilename = uuid + "." + extension;
+            File storeFile = new File(folders, saveFilename);
             try {
                 file.transferTo(storeFile);
                 if(isImageFile(storeFile)) {

@@ -1,5 +1,6 @@
 package ezen.bizqr.store.service;
 
+import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.repository.StoreMapper;
 import lombok.RequiredArgsConstructor;
@@ -16,5 +17,10 @@ public class StoreServiceImpl implements StoreService{
     @Override
     public void storeRegister(RegisterVO rvo) {
         storeMapper.storeRegister(rvo);
+    }
+
+    @Override
+    public void insertMenu(MenuItemVO mvo) {
+        storeMapper.menuInsert(mvo);
     }
 }
