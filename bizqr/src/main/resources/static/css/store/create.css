@@ -159,16 +159,41 @@ aside .sidebar .message-count{
     border-radius: var(--border-radius-1);
 }
 
+aside .sidebar .active{
+    border: black 1px solid;
+    border-radius: 3px;
+    border-color: gray;
+}
+
+
+.storeEditor{
+    border: black 1px solid;
+    width: 95%;
+    margin-left: 0;
+}
+
+
+.storeInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.storeInfo input{
+    width: 100px;
+    height: 25px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-}
-.storeEditor{
-    margin-top: 100px;
-    margin-left: 300px;
-    margin-right: 300px;
 }
 
 .listProduct .item img{
@@ -226,19 +251,21 @@ header{
 }
 
 .modal-content {
+    display: flex;
+    flex-wrap: wrap;
     background-color: #fefefe;
     margin: 15% auto; /* 상단 여백 및 가운데 정렬 */
     padding: 20px;
     border: 1px solid #888;
     width: 50%; /* 모달 너비 */
-    max-width: 600px; /* 최대 너비 */
+    max-width: 400px; /* 최대 너비 */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px; /* 모달 테두리 둥글게 */
 }
 
 /* 버튼 공통 스타일 */
-.modal-button {
-    background-color: #4CAF50; /* 녹색 배경 */
+.modal-button, .btn-upload {
+    background-color: #3b5bff; /* 녹색 배경 */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -252,33 +279,49 @@ header{
 .modal-button:hover {
     background-color: #45a049; /* 호버 시 색상 변경 */
 }
-.modal-menu-list, .modal-menu-info, .modal-amount {
-    display: flex;
-    flex-direction: column;
+
+
+.modal img {
+    width:  150px;
+    height: 150px;
     margin-bottom: 15px;
 }
 
-.modal-menu-img > img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-label {
+.modal label {
+    float: left;
+    width: 100%;
     margin-bottom: 5px;
     font-weight: bold;
+    margin-left: 10px;
 }
 
-input[type="text"] {
+.btn-upload{
+    float: left;
+}
+
+.modal .modal-content .imageBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+}
+
+.modal input[type="text"] {
+    width: 320px;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+#modal-item-image-upload{
+    display: none;
+}
 
-
+.modal h3{
+    margin-top: 5px;
+    margin-left: 5px;
+}
 
 
 @media only screen and (max-width: 992px) {

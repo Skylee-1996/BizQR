@@ -13,8 +13,8 @@ import java.util.Locale;
 @NoArgsConstructor
 @ToString
 public class OrderItemVO {
-    private String menuId;
-    private String storeId;
+    private long menuId;
+    private long storeId;
     private String tableId;
     private String menuName;
     private long menuPrice;
