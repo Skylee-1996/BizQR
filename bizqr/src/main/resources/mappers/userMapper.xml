@@ -78,6 +78,9 @@
                             <when test="type == 's'.toString()">
                                 is_social like concat('%', #{keyword}, '%')
                             </when>
+                            <when test="type == 'a'.toString()">
+                                email in (select email from auth_user where auth like concat('%', #{keyword}, '%'))
+                            </when>
                         </choose>
                     </trim>
                 </foreach>

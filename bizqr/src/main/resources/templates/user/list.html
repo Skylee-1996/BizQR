@@ -150,10 +150,11 @@
                         <div class="controls">
                             <select class="img-quantity" name="type" aria-label="Small select example">
                                 <option th:selected="${ph.pgvo.type == null? true:false}">선택</option>
-                                <option th:value="ens" th:selected="${ph.pgvo.type == 'ens'? true:false}">전체</option>
+                                <option th:value="ensa" th:selected="${ph.pgvo.type == 'ens'? true:false}">전체</option>
                                 <option th:value="e" th:selected="${ph.pgvo.type == 'e'? true:false}">이메일</option>
                                 <option th:value="n" th:selected="${ph.pgvo.type == 'n'? true:false}">닉네임</option>
                                 <option th:value="s" th:selected="${ph.pgvo.type == 's'? true:false}">소셜여부</option>
+                                <option th:value="a" th:selected="${ph.pgvo.type == 'a'? true:false}">권한</option>
                             </select>
                             <button type="submit" class="generate-btn">search</button>
                         </div>
