@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="aac62688-27a4-4c4f-9861-d1c6f229bcdb" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/userMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" afterDir="false" />
+    </list>
+=======
     <list default="true" id="aac62688-27a4-4c4f-9861-d1c6f229bcdb" name="변경" comment="" />
+>>>>>>> origin/main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +78,7 @@
     <option name="autoscrollFromSource" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
@@ -89,6 +98,30 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "configurable.group.tools",
     "vue.rearranger.settings.migration": "true"
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BizqrApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+<<<<<<< HEAD
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+=======
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
+>>>>>>> origin/main
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+>>>>>>> origin/main
   }
 }]]></component>
   <component name="RecentsManager">
@@ -321,7 +354,15 @@
       <workItem from="1707868312604" duration="8073000" />
       <workItem from="1707976469754" duration="5000" />
       <workItem from="1708176894935" duration="17382000" />
+<<<<<<< HEAD
       <workItem from="1708301623407" duration="5414000" />
+=======
+<<<<<<< HEAD
+      <workItem from="1708259433273" duration="829000" />
+      <workItem from="1708300877064" duration="2734000" />
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
     </task>
     <servers />
   </component>
