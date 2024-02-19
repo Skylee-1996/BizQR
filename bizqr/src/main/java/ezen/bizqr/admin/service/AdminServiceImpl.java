@@ -21,7 +21,10 @@ public class AdminServiceImpl implements AdminService{
     }
 
     @Override
-    public int post(RegisterVO rvo) {
-        return adminMapper.registeredUpdate();
+    public int update(RegisterVO rvo) {
+        return adminMapper.registeredUpdate(rvo);
     }
+
+
+
 }

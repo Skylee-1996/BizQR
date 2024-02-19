@@ -9,4 +9,6 @@ public interface StoreMapper {
     void storeRegister(RegisterVO rvo);
 
     void menuInsert(MenuItemVO mvo);
+
+    RegisterVO getDetail(long registerNum);
 }

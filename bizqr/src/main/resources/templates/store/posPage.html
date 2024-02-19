@@ -1,0 +1,70 @@
+<meta charset="UTF-8">
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{layout :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <link rel="stylesheet" href="/css/store/posPage.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <body>
+<form action="/store/posPage">
+
+    <!-- header -->
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">POS for BizQR</a></span>
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">CodingLab</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">BizQR</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                    <li><a href="#">menu4</a></li>
+                    <li><a href="#">menu5</a></li>
+                </ul>
+            </div>
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="dark-light">
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-search search'></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- header end -->
+
+    <!-- content -->
+    <div class="tb-card-wrapper">
+        <div class="tb-card-inner">
+            <div class="tb-card-front">
+                <div class="tb-card-content">
+                    <h1>테이블1</h1>
+                </div>
+            </div>
+            <div class="tb-card-rear">
+                <h1>TABLE1</h1>
+                <p>카드를 뒤집으면 내용이 나오도록 설정</p>
+            </div>
+        </div>
+    </div>
+    <!-- content end -->
+
+</form>
+<script src="/js/store/posPage.js"></script>
+</body>
+    </th:block>
+</th:block>
+</html>

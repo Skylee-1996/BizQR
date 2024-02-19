@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/board/noticeList.css}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/css/adminStyle.css}">
+
     <title>Responsive Dashboard Design</title></head>
 
 <body>
@@ -130,10 +132,26 @@
                         </span>
                     </td>
 
-
                 </tr>
                 </tbody>
             </table>
+            <ul class="pagination modal-2">
+                <li th:if="${ph.prev}" class="page-item">
+                    <a class="page-link" th:href="@{/user/list(pageNo=${ph.startPage-1},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" aria-label="Previous">
+                        <span aria-hidden="true">prev</span>
+                    </a>
+                </li>
+                <th:block th:each="i: ${#numbers.sequence(ph.startPage,ph.endPage)}">
+                    <li class="page-item" th:classappend="${ph.pgvo.pageNo == i ? 'active' : ''}" aria-current="page">
+                        <a class="page-link" th:href="@{/user/list(pageNo=${i},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" th:text="${i}"></a>
+                    </li>
+                </th:block>
+                <li th:if="${ph.next}" class="page-item">
+                    <a class="page-link" th:href="@{/user/list(pageNo=${ph.endPage+1},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" aria-label="Next">
+                        <span aria-hidden="true">Next</span>
+                    </a>
+                </li>
+            </ul>
             <a href="#">Show ALL</a>
         </div>
         <!-- End of Recent Orders -->
@@ -241,7 +259,7 @@
 </div>
 
 <script th:src="@{/js/adminOrders.js}"></script>
-<script th:src="@{/js/adminIndex.js}"></script>
+<script th:src="@{/js/admin/adminIndex.js}"></script>
 </body>
 
 </html>
