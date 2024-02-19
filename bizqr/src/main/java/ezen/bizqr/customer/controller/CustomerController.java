@@ -2,6 +2,7 @@ package ezen.bizqr.customer.controller;
 
 
 import ezen.bizqr.customer.domain.ItemVO;
+import ezen.bizqr.customer.domain.OrderItemVO;
 import ezen.bizqr.customer.domain.OrderVO;
 import ezen.bizqr.customer.service.CustomerService;
 import lombok.RequiredArgsConstructor;
@@ -10,11 +11,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RequiredArgsConstructor
 @Controller
@@ -28,13 +30,44 @@ public class CustomerController {
     public void index(){}
 
     @PostMapping("/customerIndex")
-    public String basket (ItemVO ivo){
-        log.info("ivo >>> {}", ivo);
+    public String index(OrderItemVO oivo){
+        log.info("oivo >>> {}", oivo);
+
+        int isOk = csv.basket(oivo);
 
         return "/customer/customerIndex";
     }
 
     @GetMapping("/customerBasket")
-    public void basket(){}
+    public void basket(Model m, @RequestParam("tableId") String tableId){
+        long menuMainTotal = 0;
+
+        log.info(tableId);
+
+        List<OrderItemVO> oilist = new ArrayList<OrderItemVO>(csv.basketList(tableId));
+        log.info("oilist >>> {}", oilist.toString());
+
+        OrderItemVO oivo = new OrderItemVO();
+
+        for (OrderItemVO orderItemVO : oilist) {
+            menuMainTotal += orderItemVO.getMenuMainTotal();
+
+            oivo.setTableId(orderItemVO.getTableId());
+        }
+
+        String menuMainTotalComma = oivo.getMenuMainTotalComma(menuMainTotal);  //mainTotal의 comma를 추가하는 메서드
+
+        m.addAttribute("menuMainTotal", menuMainTotal);
+        m.addAttribute("menuMainTotalComma", menuMainTotalComma);
+        m.addAttribute("oivo", oivo);
+        m.addAttribute("oilist", oilist);   //상품 목록
+    }
+
+    @PostMapping("/customerBasket")
+    public String basket(OrderVO ovo){
+        log.info("ovo >>> {}", ovo);
+
+        return "/customer/customerOrderHistory";
+    }
 
 }

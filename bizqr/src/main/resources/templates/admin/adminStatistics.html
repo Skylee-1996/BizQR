@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/css/board/noticeList.css}">
-    <link rel="stylesheet" th:href="@{/css/board/searchBar.css}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
     <link rel="stylesheet" th:href="@{/css/adminStyle.css}">
-
     <title>Responsive Dashboard Design</title></head>
 
 <body>
@@ -35,7 +34,7 @@
                     </span>
                 <h3>Dashboard</h3>
             </a>
-            <a href="#" class="active">
+            <a href="#">
                     <span class="material-icons-sharp">
                         person_outline
                     </span>
@@ -47,7 +46,7 @@
                     </span>
                 <h3>History</h3>
             </a>
-            <a href="#">
+            <a href="#" class="active">
                     <span class="material-icons-sharp">
                         insights
                     </span>
@@ -96,90 +95,83 @@
 
     <!-- Main Content -->
     <main>
-        <h1>Admin Register List</h1>
+        <h1>통계페이지</h1>
+        <div class="analyse">
+            <div class="sales">
+                <div class="status">
+                    <div class="info">
+                        <h3>서버스이용자수</h3>
+                        <h1>$65,024</h1>
+                    </div>
+                    <div class="progresss">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>+81%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="visits">
+                <div class="status">
+                    <div class="info">
+                        <h3>Site Visit</h3>
+                        <h1>24,981</h1>
+                    </div>
+                    <div class="progresss">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>-48%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="searches">
+                <div class="status">
+                    <div class="info">
+                        <h3>Searches</h3>
+                        <h1>14,147</h1>
+                    </div>
+                    <div class="progresss">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>+21%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
 
 
         <!-- Recent Orders Table -->
-        <div class="recent-orders">
-            <h2>Admin Register List</h2>
-            <table>
-                <thead>
-                <tr>
-                    <th scope="col">이메일</th>
-                    <th scope="col">닉네임</th>
-                    <th scope="col">전화번호</th>
-                    <th scope="col">가입일</th>
-                    <th scope="col">최종로그인</th>
-                    <th scope="col">소셜여부</th>
-                    <th scope="col">권한</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr th:each="uvo:${list }">
-                    <th scope="row">[[${uvo.email }]]</th>
-                    <td>[[${uvo.nickName }]]</td>
-                    <td>[[${uvo.phoneNum }]]</td>
-                    <td>[[${uvo.regDate }]]</td>
-                    <td>[[${uvo.lastLogin }]]</td>
-                    <td>
-                        <span th:if="${uvo.isSocial == 0}">X</span>
-                        <span th:if="${uvo.isSocial == 1}">Google</span>
-                        <span th:if="${uvo.isSocial == 2}">Naver</span>
-                    </td>
-                    <td>
-                        <span th:each="auths, iterStat:${uvo.authList}">
-                            <span th:text="${auths.auth}" th:style="${auths.auth == 'ROLE_USER'} ? 'color: green;' : (${auths.auth == 'ROLE_ADMIN'} ? 'color: red;' : '')"></span>
-                            <span th:unless="${iterStat.last}">,</span>
-                        </span>
-                    </td>
-
-                </tr>
-                </tbody>
-            </table>
-
-
-            <!-- search bar -->
-
-
-            <section class="image-generator">
-                <div class="content">
-                    <form action="/user/list" class="generate-form">
-                        <input type="hidden" name="pageNo" th:value="1">
-                        <input type="hidden" name="qty" th:value="${ph.pgvo.qty}">
-                        <input class="prompt-input" type="text" placeholder="검색어를 입력해주세요." name="keyword" th:value="${ph.pgvo.keyword}" required>
-                        <div class="controls">
-                            <select class="img-quantity" name="type" aria-label="Small select example">
-                                <option th:selected="${ph.pgvo.type == null? true:false}">선택</option>
-                                <option th:value="ens" th:selected="${ph.pgvo.type == 'ens'? true:false}">전체</option>
-                                <option th:value="e" th:selected="${ph.pgvo.type == 'e'? true:false}">이메일</option>
-                                <option th:value="n" th:selected="${ph.pgvo.type == 'n'? true:false}">닉네임</option>
-                                <option th:value="s" th:selected="${ph.pgvo.type == 's'? true:false}">소셜여부</option>
-                            </select>
-                            <button type="submit" class="generate-btn">search</button>
-                        </div>
-                    </form>
+        <h2>업종별 분포도</h2>
+        <div class="chart-div">
+            <div class="sales">
+                <div class="status">
+                    <div class="info">
+                <canvas id="pieChartCanvas" width="500px" height="500px"></canvas>
+                    </div>
                 </div>
-            </section>
-
-            <br>
-            <ul class="pagination modal-2">
-                <li th:if="${ph.prev}" class="page-item">
-                    <a class="page-link" th:href="@{/user/list(pageNo=${ph.startPage-1},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" aria-label="Previous">
-                        <span aria-hidden="true">prev</span>
-                    </a>
-                </li>
-                <th:block th:each="i: ${#numbers.sequence(ph.startPage,ph.endPage)}">
-                    <li class="page-item" th:classappend="${ph.pgvo.pageNo == i ? 'active' : ''}" aria-current="page">
-                        <a class="page-link" th:href="@{/user/list(pageNo=${i},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" th:text="${i}"></a>
-                    </li>
-                </th:block>
-                <li th:if="${ph.next}" class="page-item">
-                    <a class="page-link" th:href="@{/user/list(pageNo=${ph.endPage+1},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" aria-label="Next">
-                        <span aria-hidden="true">Next</span>
-                    </a>
-                </li>
-            </ul>
+            </div>
         </div>
+
+        <h2>업종별 분포도</h2>
+        <div class="chart-div">
+            <div class="sales">
+                <div class="status">
+                    <div class="info">
+                        <canvas id="line-chart" width="10" height="10"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- End of Recent Orders -->
 
     </main>
@@ -284,8 +276,9 @@
 
 </div>
 
-<script th:src="@{/js/adminOrders.js}"></script>
+
 <script th:src="@{/js/admin/adminIndex.js}"></script>
+<script th:src="@{/js/admin/adminStatistics.js}"></script>
 </body>
 
 </html>

@@ -11,51 +11,63 @@
 
 <body>
 
-<div class="basket-list">
+<form action="/customer/customerBasket" method="post">
+    <input type="hidden" name="tableId" th:value="${oivo.tableId}">
+
+<!--/*@thymesVar id="oilist" type="list"*/-->
+<div class="basket-list" th:each="basket:${oilist}">
+
     <div class="basket">
+        <button type="button" class="basket-del" style="border: none; background: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+            </svg>
+        </button>
+
         <div class="basket-info">
             <div class="basket-img">
                 <img src="" alt="이미지">
             </div>
 
-            <div id="basket-del">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                    <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
-                </svg>
-            </div>
+            <div class="basket-name">[[${basket.menuName}]]</div>
 
-            <div class="basket-name"></div>
-
-            <div class="basket-amount"></div>
+            <div class="basket-price">[[${basket.menuPrice}]]</div>
 
             </div>
                 <div class="amount-info">
 
                 <div>수량</div>
 
-                <div class="minus">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-dash-square" viewBox="0 0 16 16">
+                <button type="button" class="minus" style="border: none; background: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-dash-square" viewBox="0 0 16 16">
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
                         <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
                     </svg>
-                </div>
+                </button>
 
-                <div class="total-amount"></div>
+                <input type="number" class="menu-amount" id="menuAmount" name="menuAmount" readonly="readonly" value="1"/>
 
-                <div class="plus">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                <button type="button" class="plus" style="border: none; background: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
                         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                     </svg>
-                </div>
+                </button>
+
             </div>
-        <div>
+        <div class="sub-total">
             <div>소계</div>
-            <div></div>
+            <div class="item-price" id="item-price">
+                [[${basket.getMenuSubTotalComma()}]]
+            </div>
+            <!--/*@thymesVar id="getMenuSubTotal" type="method"*/-->
+            <input type="hidden" class="itemPrice" id="itemPrice" th:value="${basket.getMenuSubTotal()}" />
         </div>
+
     </div>
 
 </div>
+
 
 <div class="btn-zone">
     <button type="button" class="add-menu" id="add-menu">메뉴 추가</button>
@@ -63,14 +75,20 @@
 
 <div class="order-amount">
     <div>결제금액</div>
-    <div class="total-pay"></div>
+    <!--/*@thymesVar id="menuMainTotalComma" type="String"*/-->
+    <div class="total-price" id="total-price" th:text="${menuMainTotalComma}">
+    </div>
+    <!--/*@thymesVar id="menuMainTotal" type="long"*/-->
+    <input type="hidden" class="totalPrice" id="totalPrice" name="totalPrice" th:value="${menuMainTotal}">
 </div>
 
 <div class="request">
-    <input type="text" name="userRequest" class="request-bar" maxlength="30" placeholder="주문 요청 사항(선택)" >
-    <div class="request-limit">(0/30)</div>
+    <input type="text" id="request-bar" name="userRequest" class="request-bar" maxlength="30" placeholder="주문 요청 사항(선택)" >
+    <div class="request-limit" id="request-limit">(0/30)</div>
 </div>
 
+    <button type="submit" style="display: none" id="submitBtn"></button>
+</form>
 <div class="tab-list">
 
     <div class="shop-tab" id="shop-tab">
@@ -113,5 +131,9 @@
 
     </th:block>
 </th:block>
-<script src="/js/customer/customerBasket.js"></script>
+<script th:inline="javascript">
+</script>
+<script src="/js/customer/customerBasket.js">
+
+</script>
 </html>

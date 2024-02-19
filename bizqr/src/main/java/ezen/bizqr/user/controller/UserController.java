@@ -1,6 +1,7 @@
 package ezen.bizqr.user.controller;
 
 import ezen.bizqr.board.domain.PagingVO;
+import ezen.bizqr.board.handler.PagingHandler;
 import ezen.bizqr.user.security.OAuthVO;
 import ezen.bizqr.user.security.UserVO;
 import ezen.bizqr.user.service.CustomOAuth2UserService;
@@ -112,8 +113,15 @@ public class UserController {
     @GetMapping("/list")
     public String list(Model m, PagingVO pgvo){
 
-        List<UserVO> list = usv.getUserList();
+        List<UserVO> list = usv.getUserList(pgvo);
+
+        int totalCount = usv.getTotalUserCount(pgvo);
+
+        PagingHandler ph = new PagingHandler(pgvo, totalCount);
+
         m.addAttribute("list", list);
+        m.addAttribute("ph", ph);
+
 
         return "/user/list";
     }

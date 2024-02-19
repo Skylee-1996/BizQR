@@ -22,7 +22,7 @@
     </select>
 
     <select id="getUserList" resultType="ezen.bizqr.user.security.UserVO">
-        select * from user
+        select * from user <include refid="search"></include> order by email limit #{pageStart}, #{qty}
     </select>
 
     <update id="updateLastLogin">
@@ -33,7 +33,9 @@
         update user set pwd = #{pwd}, nick_name = #{nickName}, phone_num = #{phoneNum} where email = #{email}
     </update>
 
-
+    <select id="getTotalUserCount" resultType="int">
+        select count(email) from user <include refid="search"></include>
+    </select>
 
 
 
@@ -58,5 +60,56 @@
     <update id="socialUserModify">
         update social_user set nick_name = #{nickName} where email = #{email}
     </update>
+
+
+
+    <sql id="search">
+        <if test="type != null">
+            <trim prefix="where(" suffix=")" prefixOverrides="or">
+                <foreach collection="typeToArray" item="type">
+                    <trim prefix="or">
+                        <choose>
+                            <when test="type == 'e'.toString()">
+                                email like concat('%', #{keyword}, '%')
+                            </when>
+                            <when test="type == 'n'.toString()">
+                                nick_name like concat('%', #{keyword}, '%')
+                            </when>
+                            <when test="type == 's'.toString()">
+                                is_social like concat('%', #{keyword}, '%')
+                            </when>
+                        </choose>
+                    </trim>
+                </foreach>
+            </trim>
+
+        </if>
+
+
+    </sql>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </mapper>

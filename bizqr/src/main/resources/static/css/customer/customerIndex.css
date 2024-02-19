@@ -88,9 +88,9 @@
         border: solid 1px #9595c3;
         background-color: rgb(204, 204, 236);
         height: 10%;
+        width: 100%;
         border-radius: 0 0 5px 5px;
         display: flex;
-        width: auto;
         text-align: center;
         justify-content: center;
         align-items: center;

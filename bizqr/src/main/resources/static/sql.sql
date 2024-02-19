@@ -39,22 +39,24 @@ CREATE TABLE IF NOT EXISTS `board` (
 
 
 -- store 테이블 생성
-CREATE TABLE IF NOT EXISTS `store` (
-    `store_id` VARCHAR(255) NOT NULL,
+    CREATE TABLE IF NOT EXISTS `store` (
+    `store_id` BIGINT NOT NULL AUTO_INCREMENT,
     `email` VARCHAR(255) NOT NULL,
     `register_num` BIGINT NOT NULL,
     `store_name` VARCHAR(255) NOT NULL,
     `store_address` VARCHAR(255) NOT NULL,
     `store_number` VARCHAR(255) NOT NULL,
+    `store_type` VARCHAR(255) NOT NULL,
     `store_hours` VARCHAR(255),
     `company` VARCHAR(255),
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`store_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 -- menu items 테이블 생성
 CREATE TABLE IF NOT EXISTS `menu_item` (
     `menu_id` bigint NOT NULL auto_increment,
-    `store_id` VARCHAR(255),
+    `store_id` BIGINT,
     `tab_name` VARCHAR(255),
     `menu_name` VARCHAR(255),
     `menu_price` BIGINT,
@@ -66,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `menu_item` (
 CREATE TABLE IF NOT EXISTS `file` (
     `uuid` VARCHAR(255) NOT NULL,
     `bno` BIGINT,
-    `store_id` VARCHAR(255),
+    `store_id` BIGINT,
     `menu_id` BIGINT,
     `save_dir` VARCHAR(255),
     `file_name` VARCHAR(255) NOT NULL,
@@ -82,13 +84,8 @@ CREATE TABLE IF NOT EXISTS `file` (
 
 -- social_user 테이블 생성
 CREATE TABLE IF NOT EXISTS `social_user` (
-<<<<<<< HEAD
-                                             `email` VARCHAR(255) NOT NULL,
+     `email` VARCHAR(255) NOT NULL,
     `provider` VARCHAR(255) NOT NULL,
-=======
-    `email` VARCHAR(255) NOT NULL,
-    `pwd` VARCHAR(255) NOT NULL,
->>>>>>> 41ec2c77677c728739a717ac50f7914fc2c45734
     `nick_name` VARCHAR(255) NOT NULL,
     PRIMARY KEY (`email`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -128,7 +125,7 @@ ALTER TABLE `bizqrdb`.`register`
 -- table 테이블 생성
 CREATE TABLE IF NOT EXISTS `tables` (
     `table_id` VARCHAR(255) NOT NULL,
-    `store_id` VARCHAR(255) NOT NULL,
+    `store_id` BIGINT,
     `table_qr` VARCHAR(255),
     `total_price` BIGINT,
     `is_using` INT(1) DEFAULT 0,
@@ -140,13 +137,12 @@ CREATE TABLE IF NOT EXISTS `tables` (
 -- order_items 테이블 생성
 CREATE TABLE IF NOT EXISTS `order_items` (
     `menu_id` bigint NOT NULL,
-    `store_id` VARCHAR(255) NOT NULL,
+    `store_id` BIGINT,
     `table_id` VARCHAR(255) NOT NULL,
     `menu_name` VARCHAR(255) NOT NULL,
     `menu_price` BIGINT,
     `menu_amount` BIGINT,
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
-    `mod_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (`menu_id`) REFERENCES `menu_item`(`menu_id`),
     FOREIGN KEY (`store_id`) REFERENCES `store`(`store_id`),
     FOREIGN KEY (`table_id`) REFERENCES `tables`(`table_id`)
@@ -157,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `order_items` (
 CREATE TABLE IF NOT EXISTS `order` (
     `order_id` VARCHAR(255) NOT NULL,
     `table_id` VARCHAR(255) NOT NULL,
-    `store_id` VARCHAR(255) NOT NULL,
+    `store_id` BIGINT NOT NULL,
     `order_status` tinyint default 0,
     `total_price` BIGINT,
     `user_request` VARCHAR(255),
@@ -219,7 +215,7 @@ CREATE TABLE IF NOT EXISTS `comment` (
 -- transaction 테이블 생성
 CREATE TABLE IF NOT EXISTS `transaction` (
     `transaction_id` BIGINT NOT NULL AUTO_INCREMENT,
-    `store_id` VARCHAR(255) NOT NULL,
+    `store_id` BIGINT NOT NULL,
     `email` VARCHAR(255) NOT NULL,
     `type` VARCHAR(50) NOT NULL,
     `amount` DECIMAL(10, 2) NOT NULL,
@@ -237,4 +233,8 @@ VALUES ('admin@admin.com','admin','admin','010-8282-9999');
 
 INSERT INTO auth_user (email, auth)
 VALUES ('admin@admin.com', 'ROLE_ADMIN');
+
+-----임시 점포---
+INSERT INTO `store` (`store_id`, `email`, `register_num`, `store_name`, `store_address`, `store_number`, `store_hours`, `company`, `reg_at`) VALUES
+    ('123', 'test@example.com', 1234567890, 'Test Store', '123 Test Address, Test City', '123-456-7890', '09:00-18:00', 'Test Company', CURRENT_TIMESTAMP);
 

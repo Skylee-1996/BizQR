@@ -1,5 +1,6 @@
 package ezen.bizqr.user.service;
 
+import ezen.bizqr.board.domain.PagingVO;
 import ezen.bizqr.user.security.OAuthVO;
 import ezen.bizqr.user.security.UserVO;
 
@@ -10,11 +11,13 @@ public interface UserService {
 
     int userRegister(UserVO uvo);
 
-    List<UserVO> getUserList();
+    List<UserVO> getUserList(PagingVO pgvo);
 
     int userModify(UserVO uvo);
 
     OAuthVO selectSocialUserDomain(String email);
 
     int socialUserModify(OAuthVO oAuthVO);
+
+    int getTotalUserCount(PagingVO pgvo);
 }

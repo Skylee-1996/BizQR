@@ -102,7 +102,7 @@
             <table>
                 <thead>
                 <tr>
-                    <th scope="col">글번호</th>
+                    <th scope="col">가입번호</th>
                     <th scope="col">이름</th>
                     <th scope="col">이메일</th>
                     <th scope="col">회사명</th>
@@ -128,8 +128,8 @@
                     <th:block th:switch="${rvo.isRegistered}">
                         <th:block th:case="0">
                             <td>
-                                <button th:attr="data-registered=${rvo.isRegistered}" class="btn app" type="button" value="승인">승인</button>
-                                <button th:attr="data-registered=${rvo.isRegistered}" class="btn ref" type="button" value="거절">거절</button>
+                                <button th:attr="data-rnum=${rvo.registerNum}" class="btn app" type="button" value="1">승인</button>
+                                <button th:attr="data-rnum=${rvo.registerNum}" class="btn ref" type="button" value="2">거절</button>
                             </td>
                         </th:block>
                         <th:block th:case="1">
@@ -248,7 +248,7 @@
 </div>
 
 
-<script th:src="@{/js/adminIndex.js}"></script>
+<script th:src="@{/js/admin/adminIndex.js}"></script>
 </body>
 
 </html>
