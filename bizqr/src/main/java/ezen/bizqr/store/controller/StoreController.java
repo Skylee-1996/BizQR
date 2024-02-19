@@ -5,15 +5,12 @@ import ezen.bizqr.file.FileVO;
 import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.service.StoreService;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.util.List;
 
 @RequestMapping("/store/*")
 @Slf4j
@@ -31,7 +28,7 @@ public class StoreController {
     public String storeRegister(RegisterVO rvo) {
         log.info(">>>>> svo 들어온지 확인하자 >>>>> {} " , rvo);
 
-        ssv.storeRegister(rvo);
+        ssv.insertRegister(rvo);
 
         return "index";
     }
@@ -52,10 +49,11 @@ public class StoreController {
 
 
 
-            ssv.insertMenu(mvo);
+        long MenuId = ssv.insertMenu(mvo);
 
 
-            fh.uploadFile(imageFile);
+           FileVO fvo = fh.uploadFile(imageFile);
+           fvo.setMenuId(MenuId);
 
             if (!imageFile.isEmpty()) {
 
@@ -66,8 +64,11 @@ public class StoreController {
             return ResponseEntity.ok("menu add success");
         }
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/main
 }
 
 

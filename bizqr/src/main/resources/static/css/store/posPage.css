@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-/* nav bar */
-/* ===== Google Font Import - Poppins ===== */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 *{
@@ -208,70 +207,70 @@ nav .nav-bar .logo a{
 
 
 /* content */
-.tb-card-wrapper {
-    background-color: transparent;
-    width: 350px;
-    height: 350px;
-    perspective: 1000px;
-    cursor: pointer;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 90px;
+    margin-bottom: 13px;
 }
 
-.tb-card-inner {
+.card {
+    width: 300px;
+    height: 180px;
+    background: #fff;
+    bordr-radius: 5px;
+    padding: 1.5rem;
+    overflow: hidden;
     position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    border-radius: 16px;
+    margin: 0.5rem;
+    border: 1px solid rgba(131, 131, 131, 0.18);
 }
 
-.tb-card-wrapper:hover .tb-card-inner {
-    transform: rotateY(180deg);
+.blog-title{
+    color: #22215B;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    margin-top: -30px;
 }
 
-.tb-card-front,
-.tb-card-rear {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+.description{
+    padding: 1rem 0;
+    color: #22215B80;
+    font-size: 15px;
+    margin-top: -20px;
 }
 
-.tb-card-front {
-    background-color: #f4f4f4;
-    color: #2f2f2f;
-    border-radius: 16px;
+.blog-time{
+    font-size: .8rem;
+    color: #22215B;
+}
+
+.options{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding-top: 10px;
 }
 
-.tb-card-rear {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #f4f4f4;
-    transform: rotateY(180deg);
-    color: #2f2f2f;
-    border-radius: 16px;
-}
-
-.tb-card-content > p {
+.options span{
     font-weight: 600;
+    color: #22215B;
 }
 
-.tb-card-content > h1 {
-    font-size: 36px;
-    font-weight: 600;
-    margin: 0;
+.btn{
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-weight: 400;
+    background: #21a7ff;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
 }
 
-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 1em;
-}
+
+
+
+
