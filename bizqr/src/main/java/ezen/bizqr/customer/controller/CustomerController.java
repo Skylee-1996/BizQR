@@ -35,6 +35,8 @@ public class CustomerController {
 
         int isOk = csv.basket(oivo);
 
+        log.info("basket 실행 결과 >>> {}", isOk>0?"성공":"실패");
+
         return "/customer/customerIndex";
     }
 
@@ -66,6 +68,9 @@ public class CustomerController {
     @PostMapping("/customerBasket")
     public String basket(OrderVO ovo){
         log.info("ovo >>> {}", ovo);
+
+        int isOk = csv.order(ovo);
+        log.info("order 실행 결과 >>> {}", isOk>0?"성공":"실패");
 
         return "/customer/customerOrderHistory";
     }

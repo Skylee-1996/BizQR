@@ -11,7 +11,7 @@
 
 <body>
 
-<form action="/customer/customerBasket" method="post">
+<form action="/customer/customerBasket" method="post" id="orderForm">
     <input type="hidden" name="tableId" th:value="${oivo.tableId}">
 
 <!--/*@thymesVar id="oilist" type="list"*/-->
@@ -45,7 +45,7 @@
                     </svg>
                 </button>
 
-                <input type="number" class="menu-amount" id="menuAmount" name="menuAmount" readonly="readonly" value="1"/>
+                <input type="number" class="menu-amount" id="menuAmount" name="menuAmount" readonly="readonly" th:value="${basket.menuAmount}"/>
 
                 <button type="button" class="plus" style="border: none; background: none;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
@@ -86,9 +86,8 @@
     <input type="text" id="request-bar" name="userRequest" class="request-bar" maxlength="30" placeholder="주문 요청 사항(선택)" >
     <div class="request-limit" id="request-limit">(0/30)</div>
 </div>
-
-    <button type="submit" style="display: none" id="submitBtn"></button>
 </form>
+
 <div class="tab-list">
 
     <div class="shop-tab" id="shop-tab">
