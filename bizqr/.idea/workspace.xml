@@ -261,7 +261,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-107bc6b7" />
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
       </set>
     </attachedChunks>
   </component>
@@ -320,6 +320,7 @@
       <workItem from="1707868312604" duration="8073000" />
       <workItem from="1707976469754" duration="5000" />
       <workItem from="1708176894935" duration="17382000" />
+      <workItem from="1708301622249" duration="18956000" />
     </task>
     <servers />
   </component>
@@ -344,11 +345,6 @@
           <properties class="java.io.FileNotFoundException" package="java.io" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/resources/static/js/store/create.js</url>
-          <line>120</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

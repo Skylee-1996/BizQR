@@ -13,11 +13,11 @@
 
   <body>
   <nav>
-    <a href="#" class="logo">BizQR</a>
+    <a href="/" class="logo">BizQR</a>
     <div class="links">
       <a href="/">Home</a>
       <a href="/store/register">가입하기</a>
-      <a href="#">Blog</a>
+      <a href="/store/storeList">점포관리</a>
       <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
         <a href="/user/list"><button type="button">유저관리</button></a>
       </li>
