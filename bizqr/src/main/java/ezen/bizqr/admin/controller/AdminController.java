@@ -22,7 +22,7 @@ public class AdminController {
     private final AdminService asv;
     private final StoreService ssv;
 
-    @GetMapping({"/index", "/adminRegisterList"})
+    @GetMapping({"/index", "/adminRegisterList", "/adminStatistics"})
     public void index(RegisterVO rvo, Model m) {
         List<RegisterVO> list;
         list = asv.getList();
