@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/css/board/noticeList.css}">
+    <link rel="stylesheet" th:href="@{/css/board/searchBar.css}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/css/adminStyle.css}">
 
@@ -34,7 +35,7 @@
                     </span>
                 <h3>Dashboard</h3>
             </a>
-            <a href="#">
+            <a href="#" class="active">
                     <span class="material-icons-sharp">
                         person_outline
                     </span>
@@ -46,7 +47,7 @@
                     </span>
                 <h3>History</h3>
             </a>
-            <a href="#" class="active">
+            <a href="#">
                     <span class="material-icons-sharp">
                         insights
                     </span>
@@ -135,6 +136,32 @@
                 </tr>
                 </tbody>
             </table>
+
+
+            <!-- search bar -->
+
+
+            <section class="image-generator">
+                <div class="content">
+                    <form action="/user/list" class="generate-form">
+                        <input type="hidden" name="pageNo" th:value="1">
+                        <input type="hidden" name="qty" th:value="${ph.pgvo.qty}">
+                        <input class="prompt-input" type="text" placeholder="검색어를 입력해주세요." name="keyword" th:value="${ph.pgvo.keyword}" required>
+                        <div class="controls">
+                            <select class="img-quantity" name="type" aria-label="Small select example">
+                                <option th:selected="${ph.pgvo.type == null? true:false}">선택</option>
+                                <option th:value="ens" th:selected="${ph.pgvo.type == 'ens'? true:false}">전체</option>
+                                <option th:value="e" th:selected="${ph.pgvo.type == 'e'? true:false}">이메일</option>
+                                <option th:value="n" th:selected="${ph.pgvo.type == 'n'? true:false}">닉네임</option>
+                                <option th:value="s" th:selected="${ph.pgvo.type == 's'? true:false}">소셜여부</option>
+                            </select>
+                            <button type="submit" class="generate-btn">search</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <br>
             <ul class="pagination modal-2">
                 <li th:if="${ph.prev}" class="page-item">
                     <a class="page-link" th:href="@{/user/list(pageNo=${ph.startPage-1},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" aria-label="Previous">
@@ -152,7 +179,6 @@
                     </a>
                 </li>
             </ul>
-            <a href="#">Show ALL</a>
         </div>
         <!-- End of Recent Orders -->
 
