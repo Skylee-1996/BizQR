@@ -666,8 +666,8 @@ section {
 #textDiv {
     display: flex;
     justify-content: space-between;
-    margin-right: 280px;
-    margin-left: 280px;
+    margin-right:200px;
+    margin-left: 200px;
     margin-bottom: 100px;
 }
 

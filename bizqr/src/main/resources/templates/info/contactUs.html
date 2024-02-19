@@ -1,0 +1,139 @@
+<meta charset="UTF-8">
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{layout :: setFragment(~{this::content})}">
+  <th:block th:fragment="content">
+    <link rel="stylesheet" href="/css/info/contactUs.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <body>
+
+    <div id="wrap">
+
+
+  <div class="font-wrap">
+    <h3>서비스 문의하기</h3>
+  <small>무엇이든 문의하세요.<br> BizQR 담당자가 빠른 시간 내에 연락드리겠습니다.</small>
+  </div>
+
+
+  <div class="box-wrap">
+
+    <div class="btn-wrap">
+    <button type="button" class="btn1">제휴 및 견적문의</button>
+    <button type="button" class="btn2">기술문의</button>
+    </div>
+
+    <p class="qp">문의 유형</p>
+    <div class="question-wrap">
+    <div class="tile">
+      <input type="checkbox" name="questions" id="question1">
+      <label for="question1">
+        <h6>어쩌고</h6>
+      </label>
+    </div>
+    <div class="tile">
+      <input type="checkbox" name="questions" id="question2">
+      <label for="question2">
+        <h6>어쩌고</h6>
+      </label>
+    </div>
+    </div>
+
+
+    <p class="yp">연동 방식</p>
+    <div class="y-wrap">
+      <div class="tile">
+        <input type="checkbox" name="y" id="y1">
+        <label for="y1">
+          <h6>어쩌고</h6>
+        </label>
+      </div>
+      <div class="tile">
+        <input type="checkbox" name="y" id="y2">
+        <label for="y2">
+          <h6>어쩌고</h6>
+        </label>
+      </div>
+    <div class="tile">
+      <input type="checkbox" name="y" id="y3">
+      <label for="y3">
+        <h6>어쩌고</h6>
+      </label>
+    </div>
+  </div>
+
+
+
+    <p>API 선택</p>
+  <div id="section-wrap">
+
+    <section>
+      <div class="tile">
+        <input type="checkbox" name="sports" id="sport1">
+        <label for="sport1">
+          <h6>어쩌고</h6>
+        </label>
+      </div>
+      <div class="tile">
+        <input type="checkbox" name="sports" id="sport2">
+        <label for="sport2">
+          <h6>저쩌고</h6>
+        </label>
+      </div>
+      <div class="tile">
+        <input type="checkbox" name="sports" id="sport3">
+        <label for="sport3">
+          <h6>샬라샬라</h6>
+        </label>
+      </div>
+    </section>
+<br>
+    <section>
+      <div class="tile">
+        <input type="checkbox" name="sports" id="sport4">
+        <label for="sport4">
+          <h6>어쩌고</h6>
+        </label>
+      </div>
+      <div class="tile">
+        <input type="checkbox" name="sports" id="sport5">
+        <label for="sport5">
+          <h6>저쩌고</h6>
+        </label>
+      </div>
+      <div class="tile">
+        <input type="checkbox" name="sports" id="sport6">
+        <label for="sport6">
+          <h6>샬라샬라</h6>
+        </label>
+      </div>
+    </section>
+
+  </div>
+
+    <p>담당자 정보</p>
+    <div class="dam-div">
+    <div></div>
+    <div></div>
+    </div>
+
+    <div class="dam-div">
+    <div></div>
+    <div></div>
+    </div>
+
+    <p>문의 내용</p>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+
+
+  </div>
+</div>
+    </div>
+
+</body>
+  </th:block>
+</th:block>
+</html>

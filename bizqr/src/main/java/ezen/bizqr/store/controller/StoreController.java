@@ -39,12 +39,11 @@ public class StoreController {
     @GetMapping("/create")
     public void storeCreate(){}
 
-<<<<<<< HEAD
     @GetMapping("/posPage")
     public String posPage() {
         return "/store/posPage";
     }
-=======
+
 
     @PostMapping("/addMenu")
     public ResponseEntity<String> addMenu(@ModelAttribute MenuItemVO mvo, @RequestParam(name="image", required = false) MultipartFile imageFile) {
@@ -66,8 +65,6 @@ public class StoreController {
 
             return ResponseEntity.ok("menu add success");
         }
-
->>>>>>> origin/main
 
 }
 
