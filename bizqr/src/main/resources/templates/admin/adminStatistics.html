@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+    <link rel="stylesheet" th:href="@{/css/adminStyle.css}">
+    <title>Responsive Dashboard Design</title></head>
+
+<body>
+
+<div class="container">
+    <!-- Sidebar Section -->
+    <aside>
+        <div class="toggle">
+            <div class="logo">
+                <img class="order" src="/asset/큐오더_원형.png">
+                <h2>Phon <span class="BizQR">BizQR</span></h2>
+            </div>
+            <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                <h3>Dashboard</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                <h3>Users</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                <h3>History</h3>
+            </a>
+            <a href="#" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                <h3>Analytics</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        mail_outline
+                    </span>
+                <h3>Tickets</h3>
+                <span class="message-count">27</span>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                <h3>Sale List</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                <h3>Reports</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                <h3>Settings</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                <h3>New Login</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+    </aside>
+    <!-- End of Sidebar Section -->
+
+    <!-- Main Content -->
+    <main>
+        <h1>통계페이지</h1>
+        <div class="analyse">
+            <div class="sales">
+                <div class="status">
+                    <div class="info">
+                        <h3>서버스이용자수</h3>
+                        <h1>$65,024</h1>
+                    </div>
+                    <div class="progresss">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>+81%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="visits">
+                <div class="status">
+                    <div class="info">
+                        <h3>Site Visit</h3>
+                        <h1>24,981</h1>
+                    </div>
+                    <div class="progresss">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>-48%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="searches">
+                <div class="status">
+                    <div class="info">
+                        <h3>Searches</h3>
+                        <h1>14,147</h1>
+                    </div>
+                    <div class="progresss">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>+21%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+        <!-- Recent Orders Table -->
+        <h2>업종별 분포도</h2>
+        <div class="chart-div">
+            <div class="sales">
+                <div class="status">
+                    <div class="info">
+                <canvas id="pieChartCanvas" width="500px" height="500px"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>업종별 분포도</h2>
+        <div class="chart-div">
+            <div class="sales">
+                <div class="status">
+                    <div class="info">
+                        <canvas id="line-chart" width="10" height="10"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Recent Orders -->
+
+    </main>
+    <!-- End of Main Content -->
+
+    <!-- Right Section -->
+    <div class="right-section">
+        <div class="nav">
+            <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+            </button>
+            <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+            </div>
+
+            <div class="profile">
+                <div class="info">
+                    <p>Hey, <b>Reza</b></p>
+                    <small class="text-muted">Admin</small>
+                </div>
+                <div class="profile-photo">
+                    <img src="/asset/관리자로고.png">
+                </div>
+            </div>
+
+        </div>
+        <!-- End of Nav -->
+
+        <div class="user-profile">
+            <div class="logo">
+                <img src="/asset/큐오더_원형.png">
+                <h2>BizQR</h2>
+                <p>내 핸드폰의 메뉴판</p>
+            </div>
+        </div>
+
+        <div class="reminders">
+            <div class="header">
+                <h2>Reminders</h2>
+                <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+            </div>
+
+            <div class="notification">
+                <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                </div>
+                <div class="content">
+                    <div class="info">
+                        <h3>Workshop</h3>
+                        <small class="text_muted">
+                            08:00 AM - 12:00 PM
+                        </small>
+                    </div>
+                    <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                </div>
+            </div>
+
+            <div class="notification deactive">
+                <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                </div>
+                <div class="content">
+                    <div class="info">
+                        <h3>Workshop</h3>
+                        <small class="text_muted">
+                            08:00 AM - 12:00 PM
+                        </small>
+                    </div>
+                    <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                </div>
+            </div>
+
+            <div class="notification add-reminder">
+                <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                    <h3>Add Reminder</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script th:src="@{/js/admin/adminIndex.js}"></script>
+<script th:src="@{/js/admin/adminStatistics.js}"></script>
+</body>
+
+</html>

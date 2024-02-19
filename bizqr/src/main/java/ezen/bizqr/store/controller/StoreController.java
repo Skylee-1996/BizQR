@@ -64,8 +64,11 @@ public class StoreController {
             return ResponseEntity.ok("menu add success");
         }
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/main
 }
 
 
