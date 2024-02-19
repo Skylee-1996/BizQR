@@ -45,9 +45,9 @@
             </div>
             <div class="menu-info">
                 <div class="menu-name">돼지갈비찜</div>
-                <input type="hidden" class="itemName" value="돼지갈비찜">
+                <input type="hidden" class="menuName" value="돼지갈비찜">
                 <div class="menu-price">25000</div>
-                <input type="hidden" class="itemPrice" value="25000">
+                <input type="hidden" class="menuPrice" value="25000">
             </div>
         </div>
 
@@ -57,9 +57,9 @@
             </div>
             <div class="menu-info">
                 <div class="menu-name">미역줄거리</div>
-                <input type="hidden" class="itemName" value="미역줄거리">
+                <input type="hidden" class="menuName" value="미역줄거리">
                 <div class="menu-price">20000</div>
-                <input type="hidden" class="itemPrice" value="20000">
+                <input type="hidden" class="menuPrice" value="20000">
             </div>
         </div>
 
@@ -69,9 +69,9 @@
             </div>
             <div class="menu-info">
                 <div class="menu-name">김치</div>
-                <input type="hidden" class="itemName" value="김치">
+                <input type="hidden" class="menuName" value="김치">
                 <div class="menu-price">200</div>
-                <input type="hidden" class="itemPrice" value="200">
+                <input type="hidden" class="menuPrice" value="200">
             </div>
         </div>
 
@@ -81,9 +81,9 @@
             </div>
             <div class="menu-info">
                 <div class="menu-name">양고기</div>
-                <input type="hidden" class="itemName" value="양고기">
+                <input type="hidden" class="menuName" value="양고기">
                 <div class="menu-price">2300</div>
-                <input type="hidden" class="itemPrice" value="2300">
+                <input type="hidden" class="menuPrice" value="2300">
             </div>
         </div>
 
@@ -131,7 +131,7 @@
                 </div>
             </div>
 
-            <a href="/customer/customerBasket" class="my-list">
+            <a href="/customer/customerBasket?tableId=dd" class="my-list">
                 <span class="my-select">갯수</span>
                 <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(135, 134, 134);" width="50" height="50" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
                     <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
@@ -157,20 +157,42 @@
 
             <form action="/customer/customerIndex" method="post">
 
+                <input type="hidden" name="tableId" value="dd">
+
             <div class="modal-menu-list" id="modal-menu-list">
                 <div class="modal-menu-img">
                     <img src="" alt="메뉴 사진">
                 </div>
                 <div class="modal-menu-info">
                     <div class="modal-menu-name" id="modal-menu-name">품명</div>
-                    <input type="hidden" name="itemName" id="modalItemName">
+                    <input type="hidden" name="menuName" id="modalItemName">
 
                     <div class="modal-menu-price" id="modal-menu-price">가격</div>
-                    <input type="hidden" name="itemPrice" id="modalItemPrice">
+                    <input type="hidden" name="menuPrice" id="modalItemPrice">
+                </div>
+
+                <div class="amount-info">
+
+                    <div>수량</div>
+
+                    <button type="button" class="minus" style="border: none; background: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-dash-square plus" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                        </svg>
+                    </button>
+
+                    <input type="number" class="menu-amount" id="menuAmount" name="menuAmount" readonly="readonly" style="width: 10%;" value="1"/>
+
+                    <button type="button" class="plus" style="border: none; background: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                    </button>
+
                 </div>
             </div>
-
-
 
             <div class="modal-order" id="submitDiv">
                 <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(135, 134, 134);" width="50" height="50" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
@@ -183,6 +205,7 @@
                     <button type="submit" id="submitBtn"></button>
                 </div>
             </form>
+
         </div>
     </div>
 

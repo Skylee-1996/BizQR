@@ -8,5 +8,5 @@ import java.util.List;
 public interface AdminMapper {
     List<RegisterVO> selectAdimRegisterList();
 
-    int registeredUpdate();
+    int registeredUpdate(RegisterVO rvo);
 }

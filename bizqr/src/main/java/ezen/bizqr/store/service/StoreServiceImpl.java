@@ -23,4 +23,9 @@ public class StoreServiceImpl implements StoreService{
     public void insertMenu(MenuItemVO mvo) {
         storeMapper.menuInsert(mvo);
     }
+
+    @Override
+    public RegisterVO getDetail(long registerNum) {
+        return storeMapper.getDetail(registerNum);
+    }
 }

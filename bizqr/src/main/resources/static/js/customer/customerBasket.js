@@ -5,7 +5,6 @@ document.getElementById("add-menu").addEventListener('click', ()=> {
 })
 
 document.addEventListener('click', (e)=>{
-    console.log(e.target.id);
     const shopTab = document.getElementById("shop-tab");
     const packingTab = document.getElementById("packing-tab");
     const deliverTab = document.getElementById("deliver-tab");
@@ -77,4 +76,79 @@ document.addEventListener('click', (e)=>{
         orderPacking.style.display = "none";
         orderShop.style.display = "none";
     }
+
+    if(e.target.closest("button").classList.contains("minus")){
+        let menuAmount = e.target.closest(".amount-info").querySelector(".menu-amount").value
+
+        const basket = e.target.closest("button").parentElement.parentElement;    //바구니 하나
+        const subTotal = basket.querySelector(".sub-total");    //소계
+        const basketPrice = basket.querySelector(".basket-info").querySelector(".basket-price");    //메뉴 가격
+
+        const mainTotal = document.querySelector(".order-amount");    //합계가격
+        let totalPrice = 0;
+
+        if(menuAmount > 1){
+            menuAmount--;
+        }
+
+        console.log(menuAmount);
+
+        e.target.closest(".amount-info").querySelector(".menu-amount").value = menuAmount;  //수량 조정
+
+        //.toLocalString은 1000단위로 콤마(,)를 붙혀서 String 형태로 변환해준다
+        subTotal.querySelector(".item-price").innerText = (menuAmount * parseInt(basketPrice.innerText)).toLocaleString(); //소계 div의 innerText
+        subTotal.querySelector(".itemPrice").value = menuAmount * parseInt(basketPrice.innerText);      //소계 input의 value
+
+        document.querySelectorAll(".itemPrice").forEach(value => {
+            console.log(value);
+            totalPrice += parseInt(value.value);
+        });
+
+        mainTotal.querySelector(".total-price").innerText = totalPrice.toLocaleString();
+        mainTotal.querySelector(".totalPrice").value = totalPrice;
+    }else if(e.target.closest("button").classList.contains("plus")){
+        let menuAmount = e.target.closest(".amount-info").querySelector(".menu-amount").value
+
+        const basket = e.target.closest("button").parentElement.parentElement;    //basket
+        const subTotal = basket.querySelector(".sub-total");
+        const basketPrice = basket.querySelector(".basket-info").querySelector(".basket-price");
+
+        const mainTotal = document.querySelector(".order-amount");    //합계가격
+        let totalPrice = 0;
+
+        menuAmount++;
+
+        console.log(menuAmount);
+
+        e.target.closest(".amount-info").querySelector(".menu-amount").value = menuAmount;
+
+        subTotal.querySelector(".item-price").innerText = (menuAmount * parseInt(basketPrice.innerText)).toLocaleString(); //소계 div의 innerText
+        subTotal.querySelector(".itemPrice").value = menuAmount * parseInt(basketPrice.innerText);      //소계 input의 value
+
+        document.querySelectorAll(".itemPrice").forEach(value => {
+            console.log(value);
+            totalPrice += parseInt(value.value);
+        });
+
+        mainTotal.querySelector(".total-price").innerText = totalPrice.toLocaleString();
+        mainTotal.querySelector(".totalPrice").value = totalPrice;
+    }
+
+    if(e.target.closest("button").classList.contains("basket-del")){
+        console.log("basket del");
+    }
+
+    if(e.target.classList.contains("order-shop")){
+        document.getElementById("submitBtn").click();
+    }
 })
+
+document.getElementById("request-bar").addEventListener("input", ()=>{
+    let limit = document.getElementById("request-bar").value.length;
+
+    if(limit <= 30){
+        document.getElementById("request-limit").innerText = `(${limit}/30)`;
+    }
+})
+
+

@@ -9,7 +9,7 @@
     </select>
     
     <update id="registeredUpdate">
-        update register set registered=#{registered}
+        update register set isRegistered=#{isRegistered}
         where register_num = #{registerNum}
     </update>
 

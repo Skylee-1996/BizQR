@@ -33,13 +33,16 @@
 // });
 
 // 모달 열기 함수
-function openModal(itemName, itemPrice) {
+function openModal(menuName, menuPrice) {
     document.getElementById('modal').style.display = 'block';
 
-    document.getElementById("modal-menu-name").innerText = itemName;
-    document.getElementById("modal-menu-price").innerText = itemPrice;
-    document.getElementById("modalItemName").value = itemName;
-    document.getElementById("modalItemPrice").value = itemPrice;
+    console.log(menuName);
+    console.log(menuPrice);
+
+    document.getElementById("modal-menu-name").innerText = menuName;
+    document.getElementById("modal-menu-price").innerText = menuPrice;
+    document.getElementById("modalItemName").value = menuName;
+    document.getElementById("modalItemPrice").value = menuPrice;
 }
 
 // 모달 닫기 함수
@@ -60,13 +63,13 @@ document.addEventListener('click', (event) => {
     let menuList = event.target.closest('.menu-list');
 
     if(menuList){
-        let itemName = menuList.querySelector('.itemName').value;
-        let itemPrice = menuList.querySelector('.itemPrice').value;
+        let menuName = menuList.querySelector('.menuName').value;
+        let menuPrice = menuList.querySelector('.menuPrice').value;
 
-        console.log(itemName);
-        console.log(itemPrice);
+        console.log(menuName);
+        console.log(menuPrice);
 
-        document.getElementsByClassName('.menu-list').onclick = openModal(itemName, itemPrice);
+        document.getElementsByClassName('.menu-list').onclick = openModal(menuName, menuPrice);
     }
 })
 
