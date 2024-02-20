@@ -10,8 +10,8 @@ import lombok.*;
 public class FileVO {
     private String uuid;
     private long bno;
-    private String storeId;
-    private String menuId;
+    private long storeId;
+    private long menuId;
     private String saveDir;
     private String fileName;
     private int fileType;

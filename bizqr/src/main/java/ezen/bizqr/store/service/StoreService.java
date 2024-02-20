@@ -5,16 +5,23 @@ import ezen.bizqr.board.domain.PagingVO;
 import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.domain.StoreVO;
+<<<<<<< HEAD
 import ezen.bizqr.user.security.UserVO;
 
 import java.util.List;
+=======
+>>>>>>> origin/main
 
 public interface StoreService {
-    void storeRegister(RegisterVO rvo);
+    void insertRegister(RegisterVO rvo);
 
-    void insertMenu(MenuItemVO mvo);
+    long insertMenu(MenuItemVO mvo);
 
     RegisterVO getDetail(long registerNum);
 
+<<<<<<< HEAD
     List<StoreVO> selectEmail(String userEmail);
+=======
+    int insertStore(StoreVO svo);
+>>>>>>> origin/main
 }

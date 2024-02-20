@@ -20,13 +20,16 @@ public class StoreServiceImpl implements StoreService{
     private final StoreMapper storeMapper;
 
     @Override
-    public void storeRegister(RegisterVO rvo) {
+    public void insertRegister(RegisterVO rvo) {
         storeMapper.storeRegister(rvo);
     }
 
     @Override
-    public void insertMenu(MenuItemVO mvo) {
+    public long insertMenu(MenuItemVO mvo) {
+
         storeMapper.menuInsert(mvo);
+        long menuid = storeMapper.getMenuId();
+        return menuid;
     }
 
     @Override
@@ -35,9 +38,15 @@ public class StoreServiceImpl implements StoreService{
     }
 
     @Override
+<<<<<<< HEAD
     public  List<StoreVO> selectEmail(String userEmail) {
         return storeMapper.selectEmail(userEmail);
     }
 
 
+=======
+    public int insertStore(StoreVO svo) {
+        return storeMapper.insertStore(svo);
+    }
+>>>>>>> origin/main
 }

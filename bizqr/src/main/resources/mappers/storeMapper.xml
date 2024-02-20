@@ -16,11 +16,24 @@
     </insert>
 
     <select id="getDetail" resultType="ezen.bizqr.store.domain.RegisterVO">
+<<<<<<< HEAD
         select * from register where register_num = #{registerNum}
     </select>
 
     <select id="selectEmail" resultType="ezen.bizqr.store.domain.StoreVO">
         select * from store where email = #{userEmail}
+=======
+        select * from register where register_Num = #{registerNum}
+    </select>
+    <insert id="insertStore">
+        insert into store
+        (email, register_num, store_name, store_address, store_number, store_type, company)
+        values(#{email}, #{registerNum}, #{storeName}, #{storeAddress}, #{storeNumber}, #{storeType}, #{company})
+    </insert>
+
+    <select id="getMenuId" resultType="long">
+        select max(menu_id) from menu_item
+>>>>>>> origin/main
     </select>
 
 

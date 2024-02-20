@@ -132,15 +132,14 @@ document.addEventListener('click', (e)=>{
 
         mainTotal.querySelector(".total-price").innerText = totalPrice.toLocaleString();
         mainTotal.querySelector(".totalPrice").value = totalPrice;
-    }
-
-    if(e.target.closest("button").classList.contains("basket-del")){
+    }else if(e.target.closest("button").classList.contains("basket-del")){
         console.log("basket del");
     }
 
-    if(e.target.classList.contains("order-shop")){
-        document.getElementById("submitBtn").click();
-    }
+})
+
+document.getElementById("order-shop").addEventListener('click', ()=>{
+    document.getElementById("orderForm").submit();
 })
 
 document.getElementById("request-bar").addEventListener("input", ()=>{

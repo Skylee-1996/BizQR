@@ -1,7 +1,6 @@
 package ezen.bizqr.admin.controller;
 
 import ezen.bizqr.admin.service.AdminService;
-import ezen.bizqr.board.domain.CommentVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.domain.StoreVO;
 import ezen.bizqr.store.service.StoreService;
@@ -43,10 +42,16 @@ public class AdminController {
            svo.setEmail(registeredRvo.getEmail());
            svo.setRegisterNum(registeredRvo.getRegisterNum());
            svo.setStoreName(registeredRvo.getStoreName());
-           svo.setStoreAddress(rvo.getStoreAddress());
+           svo.setStoreAddress(registeredRvo.getStoreAddress());
            svo.setStoreNumber(registeredRvo.getStoreNum());
            svo.setStoreType(registeredRvo.getStoreType());
            svo.setCompany(registeredRvo.getCompany());
+
+           log.info(">>>>>> svo >>>>  {}", svo);
+           int isRegistered =  ssv.insertStore(svo);
+
+           log.info(">>> store insert >>> {}", (isRegistered > 0) ? "success" : "failed");
+
 
 
 

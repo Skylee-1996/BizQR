@@ -1,0 +1,28 @@
+<html lang="kor" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{/layout :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <head>
+            <link rel="stylesheet" th:href="@{/css/store/table.css}">
+        </head>
+        <body>
+        <div class="container">
+            <div class="storeInfo">
+                <label for="storeName">점포명:</label>
+                <input type="text" name="storeName" id="storeName">
+                <label for="storeId">스토어 아이디:</label>
+                <input type="text" name="storeId" id="storeId" >
+                <label for="tableNum">테이블 번호:</label>
+                <input type="text" name="tableNum" id="tableNum">
+            </div>
+            <div class="form">
+                <input type="text" spellcheck="false" placeholder="Enter text or url">
+                <button>Generate QR Code</button>
+            </div>
+            <div class="qr-code">
+                <img src="" alt="qr-code">
+            </div>
+        </div>
+        <script src="/js/store/table.js"></script>
+        </body>
+    </th:block>
+</th:block>

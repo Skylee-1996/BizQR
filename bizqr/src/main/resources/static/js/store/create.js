@@ -3,9 +3,11 @@ console.log("hi");
 // 모달 열기 함수
 function openModal(item) {
     // 항목 데이터를 입력 필드에 채워넣기
-    document.getElementById('modal-item-name').value = item.querySelector('h2').textContent;
-    document.getElementById('modal-item-price').value = item.querySelector('.price').textContent;
+    const itemNameInput = document.getElementById('modal-item-name');
+    const itemPriceInput = document.getElementById('modal-item-price');
 
+    itemNameInput.placeholder = "메뉴 이름을 입력해주세요.."; // h2 요소의 텍스트를 placeholder로 설정
+    itemPriceInput.placeholder = "메뉴 가격을 입력해주세요..";
 
     const imagePreview = document.getElementById('image-preview');
     if (imagePreview) {
@@ -67,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const addItem = document.getElementById("addItem");
     const addTab = document.querySelector(".addTab");
     const listProduct = document.querySelector(".listProduct");
+    let activeTab = document.querySelector(".Tab"); // Track the active tab
     let itemId = 0; // 항목 ID를 추적하기 위한 변수
 
     // addItem 이벤트 리스너
@@ -76,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
         item.setAttribute('data-id', itemId++); // 각 항목에 고유 ID 부여
         item.innerHTML = `
             <img src="/image/pig.png" alt="">
-            <h2>NAME PRODUCT</h2>
-            <div class="price">000원</div>
+            <h2>메뉴 이름</h2>
+            <div class="price">메뉴 가격</div>
             <button class="modifyItem">수정하기</button>
             <button class="removeItem">삭제</button>
         `;
@@ -99,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
     addTab.addEventListener('click', () => {
         const tab = document.createElement("div");
         const sidebar = document.querySelector(".sidebar");
+
         tab.className = "tab";
         tab.innerHTML = `
             <div class="Tab">
@@ -112,8 +116,38 @@ document.addEventListener('DOMContentLoaded', function () {
             sidebar.removeChild(tab);
         });
 
+        tab.addEventListener('click', ()=>{
+            if (activeTab) {
+                activeTab.classList.remove('active');
+            }
+            tab.classList.add('active');
+            activeTab = tab;
+        })
+
+
         sidebar.appendChild(tab);
+
+        if (activeTab) {
+            activeTab.classList.remove('active');
+        }
+        tab.classList.add('active');
+        activeTab = tab;
+        document.getElementById('tabName').value = '';
     });
+
+    document.getElementById('tabName').addEventListener('keyup', function() {
+        const tabNameValue = this.value; // 입력 필드의 현재 값
+        const activeTab = document.querySelector('.tab.active'); // 활성화된 탭 찾기
+
+        if (activeTab) {
+            const tabTitle = activeTab.querySelector('h3'); // 활성화된 탭의 h3 요소 찾기
+            if (tabTitle) {
+                tabTitle.textContent = tabNameValue; // h3 요소의 텍스트를 입력 필드의 값으로 설정
+            }
+        }
+    });
+
+
 });
 
 

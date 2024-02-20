@@ -17,7 +17,7 @@
     <div class="links">
       <a href="/">Home</a>
       <a href="/store/register">가입하기</a>
-      <a href="#">Blog</a>
+      <a href="/store/storeList">점포관리</a>
       <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
         <a href="/user/list"><button type="button">유저관리</button></a>
       </li>
@@ -27,6 +27,7 @@
       <button class="signup">Get Started</button>
       <li class="nav-item" sec:authorize="isAnonymous()">
         <a href="/user/login"><button type="button">Login</button></a>
+        <a href="/user/register"><button type="button">Register</button></a>
       </li>
 
       <li class="nav-item" sec:authorize="isAuthenticated()">
