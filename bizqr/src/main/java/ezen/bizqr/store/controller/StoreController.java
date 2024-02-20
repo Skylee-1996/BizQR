@@ -36,6 +36,9 @@ public class StoreController {
     @GetMapping("/create")
     public void storeCreate(){}
 
+    @GetMapping("/table")
+    public void table(){}
+
     @GetMapping("/posPage")
     public String posPage() {
         return "/store/posPage";
@@ -64,11 +67,6 @@ public class StoreController {
             return ResponseEntity.ok("menu add success");
         }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/main
 }
 
 
