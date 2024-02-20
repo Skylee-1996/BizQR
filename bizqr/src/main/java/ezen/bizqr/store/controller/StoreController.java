@@ -4,18 +4,18 @@ import ezen.bizqr.board.domain.BoardVO;
 import ezen.bizqr.board.domain.PagingVO;
 import ezen.bizqr.board.handler.PagingHandler;
 import ezen.bizqr.board.service.BoardService;
+
 import ezen.bizqr.file.FileHandler;
 import ezen.bizqr.file.FileVO;
 import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.domain.StoreVO;
 import ezen.bizqr.store.service.StoreService;
-<<<<<<< HEAD
+
 import ezen.bizqr.user.security.UserVO;
 import ezen.bizqr.user.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
-=======
->>>>>>> origin/main
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +25,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 @RequestMapping("/store/*")
 @Slf4j
@@ -81,7 +83,6 @@ public class StoreController {
             return ResponseEntity.ok("menu add success");
         }
 
-<<<<<<< HEAD
     @GetMapping("/store/myStoreList")
     public String myStoreList(Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -93,9 +94,6 @@ public class StoreController {
         return "/store/myStoreList";
     }
 
-
-=======
->>>>>>> origin/main
 }
 
 

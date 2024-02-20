@@ -16,11 +16,8 @@ public interface StoreMapper {
 
     RegisterVO getDetail(long registerNum);
 
-<<<<<<< HEAD
     List<StoreVO> selectEmail(String userEmail);
-=======
     int insertStore(StoreVO svo);
 
     long getMenuId();
->>>>>>> origin/main
 }
