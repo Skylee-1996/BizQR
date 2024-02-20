@@ -4,10 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="0b7b9b5c-6fce-46bf-b5f9-093a30623a5a" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" afterDir="false" />
     </list>
+=======
+    <list default="true" id="aac62688-27a4-4c4f-9861-d1c6f229bcdb" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/config/SecurityConfig.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/repository/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/repository/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/service/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/service/AdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/repository/StoreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/repository/StoreMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/adminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/adminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/adminIndex.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/admin/adminIndex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminRegisterList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/adminRegisterList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" afterDir="false" />
+    </list>
+=======
+<<<<<<< HEAD
+    <list default="true" id="aac62688-27a4-4c4f-9861-d1c6f229bcdb" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 581b051f1a8975f42077b38798d704f10da56f2c
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/userMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" afterDir="false" />
+    </list>
+<<<<<<< HEAD
+=======
+=======
+    <list default="true" id="aac62688-27a4-4c4f-9861-d1c6f229bcdb" name="변경" comment="" />
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> 581b051f1a8975f42077b38798d704f10da56f2c
+>>>>>>> origin/main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,8 +107,86 @@
       <created>1708403803763</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
       <updated>1708403803763</updated>
       <workItem from="1708403806221" duration="7281000" />
+=======
+      <updated>1706927784972</updated>
+      <workItem from="1706927786011" duration="3792000" />
+      <workItem from="1706931790427" duration="7000" />
+      <workItem from="1706931804908" duration="13777000" />
+      <workItem from="1707014723750" duration="12652000" />
+      <workItem from="1707028426925" duration="2797000" />
+      <workItem from="1707031353588" duration="17541000" />
+      <workItem from="1707050810925" duration="2098000" />
+      <workItem from="1707091377336" duration="9157000" />
+      <workItem from="1707123102132" duration="8665000" />
+      <workItem from="1707178445507" duration="18772000" />
+      <workItem from="1707211338419" duration="1002000" />
+      <workItem from="1707212355988" duration="1249000" />
+      <workItem from="1707213621750" duration="397000" />
+      <workItem from="1707214037303" duration="6499000" />
+      <workItem from="1707224800348" duration="5732000" />
+      <workItem from="1707264511892" duration="2684000" />
+      <workItem from="1707267664493" duration="7161000" />
+      <workItem from="1707277844640" duration="7320000" />
+      <workItem from="1707390126040" duration="3721000" />
+      <workItem from="1707393871279" duration="142000" />
+      <workItem from="1707394021173" duration="304000" />
+      <workItem from="1707394334834" duration="645000" />
+      <workItem from="1707394989870" duration="934000" />
+      <workItem from="1707395962324" duration="104000" />
+      <workItem from="1707396075241" duration="1398000" />
+      <workItem from="1707444620479" duration="8720000" />
+      <workItem from="1707453389119" duration="7124000" />
+      <workItem from="1707474605511" duration="14134000" />
+      <workItem from="1707523416251" duration="9058000" />
+      <workItem from="1707544460945" duration="5059000" />
+      <workItem from="1707557112988" duration="8798000" />
+      <workItem from="1707566543763" duration="2349000" />
+      <workItem from="1707614742674" duration="7881000" />
+      <workItem from="1707649758455" duration="10090000" />
+      <workItem from="1707709520427" duration="7204000" />
+      <workItem from="1707716954976" duration="19816000" />
+      <workItem from="1707878621784" duration="10959000" />
+      <workItem from="1707835884951" duration="6746000" />
+      <workItem from="1707844925044" duration="356000" />
+      <workItem from="1707845289258" duration="260000" />
+      <workItem from="1707845556622" duration="389000" />
+      <workItem from="1707845953566" duration="718000" />
+      <workItem from="1707846678135" duration="101000" />
+      <workItem from="1707846788854" duration="1950000" />
+      <workItem from="1707868312604" duration="8073000" />
+      <workItem from="1707976469754" duration="5000" />
+<<<<<<< HEAD
+      <workItem from="1708176894935" duration="10720000" />
+      <workItem from="1708301386772" duration="18354000" />
+=======
+      <workItem from="1708176894935" duration="17382000" />
+<<<<<<< HEAD
+      <workItem from="1708259433273" duration="829000" />
+      <workItem from="1708300877064" duration="2734000" />
+      <workItem from="1708340838860" duration="667000" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <workItem from="1708301622249" duration="18956000" />
+=======
+      <workItem from="1708301623407" duration="5414000" />
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+      <workItem from="1708259433273" duration="829000" />
+      <workItem from="1708300877064" duration="2734000" />
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> 581b051f1a8975f42077b38798d704f10da56f2c
+>>>>>>> origin/main
     </task>
     <servers />
   </component>
