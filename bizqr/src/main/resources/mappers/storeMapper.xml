@@ -16,7 +16,11 @@
     </insert>
 
     <select id="getDetail" resultType="ezen.bizqr.store.domain.RegisterVO">
-        select * from register where registerNum = #{registerNum}
+        select * from register where register_num = #{registerNum}
+    </select>
+
+    <select id="selectEmail" resultType="ezen.bizqr.store.domain.StoreVO">
+        select * from store where email = #{userEmail}
     </select>
 
 
