@@ -38,15 +38,14 @@ public class StoreServiceImpl implements StoreService{
     }
 
     @Override
-<<<<<<< HEAD
     public  List<StoreVO> selectEmail(String userEmail) {
         return storeMapper.selectEmail(userEmail);
     }
 
 
-=======
+
     public int insertStore(StoreVO svo) {
         return storeMapper.insertStore(svo);
     }
->>>>>>> origin/main
+
 }
