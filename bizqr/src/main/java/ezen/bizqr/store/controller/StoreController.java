@@ -1,13 +1,17 @@
 package ezen.bizqr.store.controller;
 
 import ezen.bizqr.file.FileHandler;
+import ezen.bizqr.file.FileMapper;
 import ezen.bizqr.file.FileVO;
 import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.domain.StoreVO;
 import ezen.bizqr.store.service.StoreService;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/main
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +32,7 @@ public class StoreController {
 
     private final StoreService ssv;
     private final FileHandler fh;
+    private final FileMapper fm;
 
     @GetMapping("/register")
     public void storeRegister(){}
@@ -42,8 +47,11 @@ public class StoreController {
     }
 
     @GetMapping("/create")
-    public void storeCreate(){}
-
+    public String createStoreForm(Model model, @RequestParam("storeId") String storeId, @RequestParam("storeName") String storeName) {
+        model.addAttribute("storeId", storeId);
+        model.addAttribute("storeName", storeName);
+        return "/store/create";
+    }
     @GetMapping("/table")
     public void table(){}
 
@@ -65,10 +73,10 @@ public class StoreController {
 
            FileVO fvo = fh.uploadFile(imageFile);
            fvo.setMenuId(MenuId);
-
             if (!imageFile.isEmpty()) {
 
                 log.info(">>>>>>>>>>>Received file>>>>>>>>>>>>: " + imageFile.getOriginalFilename());
+                fm.insertFile(fvo);
             }
 
 

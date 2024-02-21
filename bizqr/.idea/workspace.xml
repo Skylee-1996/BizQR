@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="e4eddc4f-23de-40f3-ae1b-649967f12892" name="Changes" comment="" />
+=======
+    <list default="true" id="4e7f4a00-df98-4005-964b-1d6e0e2c43af" name="Changes" comment="" />
+>>>>>>> origin/main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -22,10 +27,22 @@
   "associatedIndex": 6
 }]]></component>
   <component name="ProjectId" id="2cfDG4RuSOd8A2eig914gcbEk0q" />
+=======
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2cf94yQcmoYFWI3EXQFTOQUp0DQ" />
+>>>>>>> origin/main
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
@@ -86,17 +103,47 @@
         <item itemvalue="Spring Boot.BizqrApplication" />
       </list>
     </recent_temporary>
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build bizqr.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.BizqrApplication.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Sky\_final\bizqr\src\main\java\ezen\bizqr\store\controller" />
+      <recent name="D:\Sky\_final\bizqr\src\main\resources\static\js\store" />
+      <recent name="D:\Sky\_final\bizqr\src\main\resources\static\js\board" />
+      <recent name="D:\Sky\_final\bizqr\src\main\resources\static\js" />
+      <recent name="D:\Sky\_final\bizqr\src\main\resources\templates\store" />
+    </key>
+>>>>>>> origin/main
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-107bc6b7" />
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="e4eddc4f-23de-40f3-ae1b-649967f12892" name="Changes" comment="" />
       <created>1708474150041</created>
       <option name="number" value="Default" />
@@ -104,6 +151,14 @@
       <updated>1708474150041</updated>
       <workItem from="1708474157399" duration="12130000" />
       <workItem from="1708493643752" duration="2000" />
+=======
+      <changelist id="4e7f4a00-df98-4005-964b-1d6e0e2c43af" name="Changes" comment="" />
+      <created>1708491578261</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708491578261</updated>
+      <workItem from="1708491579310" duration="1106000" />
+>>>>>>> origin/main
     </task>
     <servers />
   </component>

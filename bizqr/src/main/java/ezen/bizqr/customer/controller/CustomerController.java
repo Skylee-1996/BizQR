@@ -26,8 +26,30 @@ public class CustomerController {
 
     private final CustomerService csv;
 
-    @GetMapping("/customerIndex")
-    public void index(){}
+    @GetMapping("/{storeId}/{tableId}")
+    public String index (@PathVariable("tableId") String tableId, @PathVariable("storeId") long storeId, Model m){
+        log.info("tableId >>> {}", tableId);
+        log.info("storeId >>> {}", storeId);
+
+        m.addAttribute("tableId", tableId);
+        m.addAttribute("storeId", storeId);
+
+        return "/customer/customerIndex";
+    }
+
+    @GetMapping(value="/itemList/{storeId}/{tabName}/{tableId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<List<ItemVO>> index (@PathVariable("tableId") String tableId, @PathVariable("storeId") long storeId, @PathVariable("tabName") String tabName){
+        log.info("tableId >>> {}", tableId);
+        log.info("storeId >>> {}", storeId);
+        log.info("tabName >>> {}", tabName);
+
+        List<ItemVO> ivo = new ArrayList<ItemVO>(csv.itemList(storeId, tabName));
+        log.info("ivo >>> {}", ivo);
+
+        int isOk = csv.basketCount(tableId);
+
+        return new ResponseEntity<List<ItemVO>>(ivo, HttpStatus.OK);
+    }
 
     @PostMapping("/customerIndex")
     public String index(OrderItemVO oivo){

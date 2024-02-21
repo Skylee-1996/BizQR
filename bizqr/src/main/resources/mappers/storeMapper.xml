@@ -16,7 +16,6 @@
     </insert>
 
     <select id="getDetail" resultType="ezen.bizqr.store.domain.RegisterVO">
-
         select * from register where register_num = #{registerNum}
     </select>
 
@@ -32,7 +31,6 @@
 
     <select id="getMenuId" resultType="long">
         select max(menu_id) from menu_item
-
     </select>
 
 
