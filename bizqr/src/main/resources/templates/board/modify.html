@@ -17,6 +17,7 @@
                         <hr>
                         <div class="wrapper">
                             <div class="row">
+                                <input type="hidden" id="bno" name="bno" th:value="${bdto.bvo.bno}"></input>
                                 <label class="titleLabel">글제목</label>
                                 <label class="emailLabel">이메일</label><br>
                                 <input type="text" name="title" class="form-control" id="title" th:value="${bdto.bvo.title}">
@@ -26,13 +27,10 @@
                                 <label class="nickLabel">닉네임</label><label class="headLabel">말머리</label><br>
                                 <input type="text" class="form-control" name="nickName" id="nickName" th:value="${bdto.bvo.nickName}" readonly>
 
-                                <select class="form-control" name="Brackets" id="Brackets" onchange="changeColor()" >
+                                <select class="form-control" name="Brackets" id="Brackets" required>
                                     <option value="head">[말머리]</option>
-                                    <option value="head1" class="tag-teal">말머리1</option>
-                                    <option value="head2" class="tag-purple">말머리2</option>
-                                    <option value="head3" class="tag-green">말머리3</option>
-                                    <option value="head4" class="tag-yellow">말머리4</option>
-                                    <option value="head5" class="tag-blue">말머리5</option>
+                                    <option value="head1" class="tag-teal">진행중</option>
+                                    <option value="head2" class="tag-purple">마감</option>
                                 </select>
                             </div>
                         </div>
@@ -63,8 +61,19 @@
             </form>
         <script type="text/javascript" src = "/js/board/boardModify.js"></script>
         <script type="text/javascript" src = "/js/board/textEditor.js"></script>
+                    <script>
+                        function changeColor() {
+                            let selectedOption = document.getElementById("Brackets").value;
+                            let selectedText = document.querySelector('#Brackets option:checked').text;
+                            let listItem = document.createElement('li');
+                            listItem.innerHTML = '<span class="tag tag-teal">' + selectedText + '</span>';
+                            document.getElementById('selectedOptionsList').appendChild(listItem);
+                        }
+                    </script>
         </body>
                 </section>
+            </form>
+        </section>
     </th:block>
 </th:block>
 </html>

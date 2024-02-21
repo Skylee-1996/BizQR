@@ -6,15 +6,10 @@
         <head>
         <link rel="stylesheet" href="/css/board/boardRegister.css" />
         <link rel="stylesheet" href="http://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
-            <style>
-                #editor{
-
-                }
-            </style>
         </head>
 <body>
         <section class="container">
-            <form class="form" method="post" onsubmit="savePost(event)">
+            <form id="postForm" class="form" method="post" onsubmit="savePost(event)" action="/board/register">
                 <header id="headers"><b>BizQR을 도입해 <br> 업무 문화를 바꿔보세요!</b></header>
                 <p id="ps">BizQR 사용법 및 기능에 대한 문의는 <a href="">도움말</a>이나 <a href="">고객센터</a>를 통해 구체적인 답변을 빠르게 확인하실 수 있습니다.
                 <br>도입 및 계약과 관련한 안내가 필요하신 경우 아래 양식에 맞춰 문의를 남겨주세요.</p>
@@ -27,17 +22,15 @@
                                     <input type="text" name="title" class="form-control" id="title" placeholder="제목을 입력해주세요." required>
                                     <input type="email" class="form-control" name="email" id="email" placeholder="이메일을 입력해주세요." required>
                                 </div>
-                        <div class="row2">
-                            <label class="nickLabel">닉네임</label><label class="headLabel">말머리</label><br>
-                            <input type="text" class="form-control" name="nickName" id="nickName" placeholder="닉네임을 입력해주세요." required>
+                            <div class="row2">
+                                <label class="nickLabel">닉네임</label>
+                                <label class="headLabel">말머리</label>
+                                <input type="text" class="form-control" name="nickName" id="nickName" placeholder="닉네임을 입력해주세요." required>
 
                             <select class="form-control" name="Brackets" id="Brackets" required>
-                                <option value="head">[말머리]</option>
-                                <option value="head1" class="tag-teal">말머리1</option>
-                                <option value="head2" class="tag-purple">말머리2</option>
-                                <option value="head3" class="tag-green">말머리3</option>
-                                <option value="head4" class="tag-yellow">말머리4</option>
-                                <option value="head5" class="tag-blue">말머리5</option>
+                                <option value="head" selected>[말머리]</option>
+                                <option value="head1" class="tag-teal">진행중</option>
+                                <option value="head2" class="tag-purple">마감</option>
                             </select>
                         </div>
                 </div>
@@ -55,7 +48,9 @@
             </div>
                 </div>
 
+                <input type="hidden" id="selectedBracket" name="selectedBracket">
                 <div class="parentBtn">
+                    <input type="hidden" id="selectedBracketInput" name="selectedBracket" value="head">
                 <button type="submit" class="submit_btn" id="submitPost">등록
                     <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
                 </button>
@@ -67,6 +62,14 @@
         <script type="text/javascript" src="/js/board/boardRegister.js"></script>
         <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
         <script type="text/javascript" src = "/js/board/textEditor.js"></script>
+        <script>
+            function savePost() {
+                let selectElement = document.getElementById("Brackets");
+                let selectedValue = selectElement.value;
+                document.getElementById("selectedBracketInput").value = selectedValue;
+                document.getElementById("postForm").submit();
+            }
+        </script>
     </th:block>
 </th:block>
 </html>

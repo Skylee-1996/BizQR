@@ -30,10 +30,8 @@ public class BoardController {
     @GetMapping("/register")
     public void register() {}
 
-    //서비스페이지이동
     @GetMapping("/service")
     public String service() {
-
         return "/info/serviceDetails";
     }
 
@@ -43,6 +41,7 @@ public class BoardController {
         bsv.register(bvo);
         return ResponseEntity.ok("redirect:/board/list");
     }
+
     @GetMapping("/list")
     public void list(Model m, PagingVO pgvo) {
         log.info(">>> pgvo >> {}", pgvo);

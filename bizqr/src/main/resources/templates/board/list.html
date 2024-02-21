@@ -28,7 +28,6 @@
                 </div>
             </section>
 
-
             <!-- menu btn -->
             <div class="fab-wrapper">
                 <input id="fabCheckbox" type="checkbox" class="fab-checkbox" />
@@ -53,7 +52,6 @@
                 </div>
             </div>
 
-
             <!-- card section -->
             <div class="listContainer">
                 <div class="image-container" th:each="bvo:${list}">
@@ -63,7 +61,7 @@
                                 <img url="C:\_bizqr_fileUpload\tui-editor\" alt="image" />
                             </div>
                             <div class="card-body">
-                                <span class="tag tag-teal">진행</span>
+                                <span class="tag tag-teal"></span>
                                 <h4 class="h4_title" th:text="${bvo.title}">
                                 </h4>
                                 <div class="user">
@@ -77,9 +75,7 @@
                 </div>
             </div>
 
-
             <!-- Pagination line -->
-            <br>
             <ul class="pagination modal-2">
                 <li th:if="${ph.prev}" class="page-item">
                     <a class="page-link" th:href="@{/board/list(pageNo=${ph.startPage-1},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" aria-label="Previous">
@@ -90,17 +86,19 @@
                     <li class="page-item" th:classappend="${ph.pgvo.pageNo == i ? 'active' : ''}" aria-current="page">
                         <a class="page-link" th:href="@{/board/list(pageNo=${i},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" th:text="${i}"></a>
                     </li>
-                    <li th:if="${ph.next}" class="page-item">
-                        <a class="page-link" th:href="@{/board/list(pageNo=${ph.endPage+1},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" aria-label="Next">
-                            <span aria-hidden="true">Next</span>
-                        </a>
-                    </li>
                 </th:block>
+                <li th:if="${ph.next}" class="page-item">
+                    <a class="page-link" th:href="@{/board/list(pageNo=${ph.endPage+1},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" aria-label="Next">
+                        <span aria-hidden="true">Next</span>
+                    </a>
+                </li>
             </ul>
+
         </div>
         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="/js/board/boardList.js"></script>
+
     </th:block>
 </th:block>
 </html>

@@ -7,6 +7,7 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class BoardVO {
     private long bno;
     private String email;

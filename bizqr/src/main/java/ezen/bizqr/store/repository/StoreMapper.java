@@ -17,15 +17,10 @@ public interface StoreMapper {
     RegisterVO getDetail(long registerNum);
 
     List<StoreVO> selectEmail(String userEmail);
-<<<<<<< HEAD
 
     int insertStore(StoreVO svo);
 
     long getMenuId();
 
-=======
-    int insertStore(StoreVO svo);
 
-    long getMenuId();
->>>>>>> origin/main
 }
