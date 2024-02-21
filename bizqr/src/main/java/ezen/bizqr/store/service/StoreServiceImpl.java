@@ -42,7 +42,16 @@ public class StoreServiceImpl implements StoreService{
         return storeMapper.selectEmail(userEmail);
     }
 
+<<<<<<< HEAD
+
+
     public int insertStore(StoreVO svo) {
         return storeMapper.insertStore(svo);
     }
+
+=======
+    public int insertStore(StoreVO svo) {
+        return storeMapper.insertStore(svo);
+    }
+>>>>>>> origin/main
 }

@@ -11,11 +11,6 @@ import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.domain.StoreVO;
 import ezen.bizqr.store.service.StoreService;
-
-import ezen.bizqr.user.security.UserVO;
-import ezen.bizqr.user.service.UserService;
-import jakarta.servlet.http.HttpServletRequest;
-
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -83,6 +78,10 @@ public class StoreController {
             return ResponseEntity.ok("menu add success");
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1e8712257dd73a3447ddc5499e2816b8de627ace
     @GetMapping("/store/myStoreList")
     public String myStoreList(Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
