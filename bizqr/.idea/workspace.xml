@@ -26,14 +26,31 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build bizqr.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.BizqrApplication.executor": "Run",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Sky\_final\bizqr\src\main\java\ezen\bizqr\store\controller" />
+      <recent name="D:\Sky\_final\bizqr\src\main\resources\static\js\store" />
+      <recent name="D:\Sky\_final\bizqr\src\main\resources\static\js\board" />
+      <recent name="D:\Sky\_final\bizqr\src\main\resources\static\js" />
+      <recent name="D:\Sky\_final\bizqr\src\main\resources\templates\store" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -49,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708491578261</updated>
-      <workItem from="1708491579310" duration="103000" />
+      <workItem from="1708491579310" duration="1106000" />
     </task>
     <servers />
   </component>

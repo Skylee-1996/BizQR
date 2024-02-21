@@ -6,6 +6,7 @@ import ezen.bizqr.board.handler.PagingHandler;
 import ezen.bizqr.board.service.BoardService;
 
 import ezen.bizqr.file.FileHandler;
+import ezen.bizqr.file.FileMapper;
 import ezen.bizqr.file.FileVO;
 import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
@@ -31,6 +32,7 @@ public class StoreController {
 
     private final StoreService ssv;
     private final FileHandler fh;
+    private final FileMapper fm;
 
     @GetMapping("/register")
     public void storeRegister(){}
@@ -45,8 +47,11 @@ public class StoreController {
     }
 
     @GetMapping("/create")
-    public void storeCreate(){}
-
+    public String createStoreForm(Model model, @RequestParam("storeId") String storeId, @RequestParam("storeName") String storeName) {
+        model.addAttribute("storeId", storeId);
+        model.addAttribute("storeName", storeName);
+        return "/store/create";
+    }
     @GetMapping("/table")
     public void table(){}
 
@@ -68,10 +73,10 @@ public class StoreController {
 
            FileVO fvo = fh.uploadFile(imageFile);
            fvo.setMenuId(MenuId);
-
             if (!imageFile.isEmpty()) {
 
                 log.info(">>>>>>>>>>>Received file>>>>>>>>>>>>: " + imageFile.getOriginalFilename());
+                fm.insertFile(fvo);
             }
 
 
