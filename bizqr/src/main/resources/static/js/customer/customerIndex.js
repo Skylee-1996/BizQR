@@ -1,36 +1,57 @@
-// async function addList() {
-//     try {
-//         // 서버로부터 메뉴 데이터를 비동기적으로 가져옵니다.
-//         const response = await fetch('/customer/customerIndex');
-//         const menus = await response.text();
-//
-//         // 메뉴 데이터를 기반으로 HTML을 생성합니다.
-//         const div = document.getElementById("menu-container");
-//         const menuHtml = `
-//             <div class="menu-list" id="menu-list">
-//                 <div class="menu-img">
-//                     <img src="" alt="메뉴 사진">
-//                 </div>
-//                 <div class="menu-info">
-//                     <div class="menu-name">돼지갈비찜</div>
-//                     <input type="hidden" class="itemName" name="itemName" value="1">
-//                     <div class="menu-price">25000</div>
-//                     <input type="hidden" class="itemPrice" name="itemPrice" value="1">
-//                 </div>
-//             </div>
-//             `;
-//         div.innerHTML += menuHtml;
-//
-//     } catch (error) {
-//         console.error('메뉴를 불러오는데 실패했습니다.', error);
-//     }
-// }
+const OrderStoreId = document.getElementById("storeId").value;
+const CustomerTableId = document.getElementById("tableId").value;
+console.log(OrderStoreId);
+console.log(CustomerTableId);
 
+async function getItemListFromServer(storeId, tabName, tableId){
+    try {
+        console.log("getItemList");
+        const resp = await fetch("/customer/itemList/"+storeId+"/"+tabName+"/"+tableId);
 
-// 리스트 추가 버튼에 이벤트 리스너 추가
-// document.getElementById("listAdd").addEventListener('click', () => {
-//     addList();
-// });
+        console.log(resp.json());
+
+        return await resp.json();
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+function postItemList(storeId, tabName, tableId) {
+    getItemListFromServer(storeId, tabName, tableId).then(result => {
+        console.log(result);
+        const article = document.getElementById("menu-container");
+
+        if (result.length > 0) {
+            article.innerHTML = '';
+
+            for (let i = 0; i < result.length; i++) {
+                let menu = `
+                <div class="menu-list" id="menu-list">
+                    <div class="menu-img">
+                        <img src="" alt="메뉴 사진">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-name">${result[i].menuName}</div>
+                        <input type="hidden" class="menuName" value="${result[i].menuName}">
+                            <div class="menu-price">${result[i].menuPrice}</div>
+                            <input type="hidden" class="menuPrice" value="${result[i].menuPrice}">
+                    </div>
+                </div>`;
+
+                article.innerHTML += menu;
+            }
+
+        } else {
+            article.innerHTML = `<div>목록이 비어있습니다.</div>`;
+        }
+    })
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const tabName = "집";
+
+    postItemList(OrderStoreId, tabName, CustomerTableId);
+});
 
 // 모달 열기 함수
 function openModal(menuName, menuPrice) {
@@ -62,7 +83,15 @@ window.onclick = function (event) {
 document.addEventListener('click', (event) => {
     let menuList = event.target.closest('.menu-list');
 
-    if(menuList){
+    if(event.target.classList.contains("tab")){
+        let tabName = event.target.innerText;
+        console.log(tabName);
+
+        postItemList(storeId, tabName, tableId);
+    }
+
+
+    if (menuList) {
         let menuName = menuList.querySelector('.menuName').value;
         let menuPrice = menuList.querySelector('.menuPrice').value;
 
@@ -71,6 +100,7 @@ document.addEventListener('click', (event) => {
 
         document.getElementsByClassName('.menu-list').onclick = openModal(menuName, menuPrice);
     }
+
 })
 
 
@@ -78,40 +108,3 @@ document.getElementById("submitDiv").addEventListener("click", () => {
     console.log("submitDiv");
     document.getElementById("submitBtn").click();
 })
-
-// 탭 js
-const tabsBox = document.querySelector(".tabs-box"),
-    allTabs = tabsBox.querySelectorAll(".tab"),
-    arrowIcons = document.querySelectorAll(".icon i");
-let isDragging = false;
-const handleIcons = (scrollVal) => {
-    let maxScrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth;
-    arrowIcons[0].parentElement.style.display = scrollVal <= 0 ? "none" : "flex";
-    arrowIcons[1].parentElement.style.display = maxScrollableWidth - scrollVal <= 1 ? "none" : "flex";
-}
-arrowIcons.forEach(icon => {
-    icon.addEventListener("click", () => {
-        // if clicked icon is left, reduce 350 from tabsBox scrollLeft else add
-        let scrollWidth = tabsBox.scrollLeft += icon.id === "left" ? -340 : 340;
-        handleIcons(scrollWidth);
-    });
-});
-allTabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-        tabsBox.querySelector(".active").classList.remove("active");
-        tab.classList.add("active");
-    });
-});
-const dragging = (e) => {
-    if (!isDragging) return;
-    tabsBox.classList.add("dragging");
-    tabsBox.scrollLeft -= e.movementX;
-    handleIcons(tabsBox.scrollLeft)
-}
-const dragStop = () => {
-    isDragging = false;
-    tabsBox.classList.remove("dragging");
-}
-tabsBox.addEventListener("mousedown", () => isDragging = true);
-tabsBox.addEventListener("mousemove", dragging);
-document.addEventListener("mouseup", dragStop);

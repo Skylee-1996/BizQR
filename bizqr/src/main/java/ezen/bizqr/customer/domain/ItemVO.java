@@ -8,9 +8,9 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 public class ItemVO {
-    private String menuId;
-    private String storeId;
+    private long menuId;
+    private long storeId;
     private String tabName;
-    private String itemName;
-    private long itemPrice;
+    private String menuName;
+    private long menuPrice;
 }

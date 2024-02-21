@@ -1,5 +1,6 @@
 package ezen.bizqr.customer.service;
 
+import ezen.bizqr.customer.domain.ItemVO;
 import ezen.bizqr.customer.domain.OrderItemVO;
 import ezen.bizqr.customer.domain.OrderVO;
 
@@ -13,4 +14,8 @@ public interface CustomerService{
     int order(OrderVO ovo);
 
     int basketUpdate(OrderItemVO oivo);
+
+    int basketCount(String tableId);
+
+    List<ItemVO> itemList(long storeId, String tabName);
 }
