@@ -16,19 +16,11 @@
     </insert>
 
     <select id="getDetail" resultType="ezen.bizqr.store.domain.RegisterVO">
-<<<<<<< HEAD
-=======
-
->>>>>>> 1e8712257dd73a3447ddc5499e2816b8de627ace
         select * from register where register_num = #{registerNum}
     </select>
 
     <select id="selectEmail" resultType="ezen.bizqr.store.domain.StoreVO">
         select * from store where email = #{userEmail}
-<<<<<<< HEAD
-        select * from register where register_Num = #{registerNum}
-=======
->>>>>>> 1e8712257dd73a3447ddc5499e2816b8de627ace
     </select>
 
     <insert id="insertStore">
@@ -39,10 +31,6 @@
 
     <select id="getMenuId" resultType="long">
         select max(menu_id) from menu_item
-<<<<<<< HEAD
-=======
-
->>>>>>> 1e8712257dd73a3447ddc5499e2816b8de627ace
     </select>
 
 
