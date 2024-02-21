@@ -27,6 +27,7 @@
       <button class="signup">Get Started</button>
       <li class="nav-item" sec:authorize="isAnonymous()">
         <a href="/user/login"><button type="button">Login</button></a>
+        <a href="/user/register"><button type="button">Register</button></a>
       </li>
 
       <li class="nav-item" sec:authorize="isAuthenticated()">
@@ -54,7 +55,7 @@
         <a href="/info/contactUs">고객 상담</a>
       </div>
       <div class="social">
-        <a href="/sns/instagram" target="_blank"><i class='bx bxl-instagram'></i></a>
+        <i class='bx bxl-instagram'></i>
         <i class='bx bxl-facebook-square'></i>
         <i class='bx bxl-github'></i>
       </div>

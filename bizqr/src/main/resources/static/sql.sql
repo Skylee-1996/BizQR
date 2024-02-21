@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `tables` (
 -- order_items 테이블 생성
 CREATE TABLE IF NOT EXISTS `order_items` (
     `menu_id` bigint NOT NULL,
-    `store_id` BIGINT,
+    `store_id` BIGINT NOT NULL,
     `table_id` VARCHAR(255) NOT NULL,
     `menu_name` VARCHAR(255) NOT NULL,
     `menu_price` BIGINT,
@@ -180,9 +180,12 @@ CREATE TABLE IF NOT EXISTS `payment` (
 CREATE TABLE IF NOT EXISTS `order_history` (
     `order_history_id` bigint NOT NULL auto_increment,
     `order_id` VARCHAR(255) NOT NULL,
-    `total_amount` BIGINT,
-    `order_date` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `table_id` VARCHAR(255) NOT NULL,
+    `store_id` BIGINT NOT NULL,
+    `total_price` BIGINT,
     `order_status` tinyint default 0,
+    `user_request` VARCHAR(255),
+    `order_date` DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`order_history_id`),
     FOREIGN KEY (`order_id`) REFERENCES `order`(`order_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

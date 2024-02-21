@@ -1,0 +1,61 @@
+<meta charset="UTF-8">
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{layout :: setFragment(~{this::content})}">
+  <th:block th:fragment="content">
+    <link rel="stylesheet" th:href="@{/css/board/noticeList.css}">
+    <link rel="stylesheet" th:href="@{/css/board/searchBar.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+      .listContainer{
+        margin-top: 50px;
+        margin-bottom: 100px;
+      }
+    </style>
+
+      <!-- menu btn -->
+      <div class="fab-wrapper">
+        <input id="fabCheckbox" type="checkbox" class="fab-checkbox" />
+        <label class="fab" for="fabCheckbox">
+          <span class="fab-dots fab-dots-1"></span>
+          <span class="fab-dots fab-dots-2"></span>
+          <span class="fab-dots fab-dots-3"></span>
+        </label>
+        <div class="fab-wheel">
+          <a class="fab-action fab-action-1" >
+            <i class="fas fa-question"></i>
+          </a>
+          <a class="fab-action fab-action-2" >
+            <i class="fas fa-book"></i>
+          </a>
+          <a class="fab-action fab-action-3" href="/board/register">
+            <i class="fas fa-address-book"></i>
+          </a>
+          <a class="fab-action fab-action-4" href="/board/service">
+            <i class="fas fa-info"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- card section -->
+      <div class="listContainer">
+        <div class="image-container" th:each="svo:${userStore}">
+          <div class="card">
+              <div class="card-header">
+                <img url="C:\_bizqr_fileUpload\tui-editor\" alt="image" />
+              </div>
+              <div class="card-body">
+                <span class="tag tag-teal" th:text="${svo.storeType}"></span>
+                <h4 class="h4_title" th:text="${svo.storeName}"></h4>
+                <div class="user" th:text="${svo.storeAddress}"></div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/js/board/boardList.js"></script>
+  </th:block>
+</th:block>
+</html>

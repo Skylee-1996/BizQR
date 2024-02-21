@@ -4,11 +4,29 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="ezen.bizqr.customer.repository.OrderMapper">
     <insert id="basket">
-        INSERT INTO order_items (menu_id, store_id, table_id, menu_name, menu_price, menu_amount) VALUES
-        ('ㅇㅇ', 'ㅇㅇ', #{tableId}, #{menuName}, #{menuPrice}, #{menuAmount})
+        INSERT INTO `order_items` (menu_id, store_id, table_id, menu_name, menu_price, menu_amount) VALUES
+        ('1', '1', #{tableId}, #{menuName}, #{menuPrice}, #{menuAmount})
     </insert>
 
+    <update id="basketUpdate">
+        UPDATE `order_items` SET menu_amount = #{menuAmount} WHERE menu_name = #{menuName}
+    </update>
+
     <select id="basketList" resultType="ezen.bizqr.customer.domain.OrderItemVO">
-        SELECT * FROM order_items WHERE table_id = #{tableId};
+        SELECT * FROM `order_items` WHERE table_id = #{tableId}
     </select>
+
+    <insert id="order">
+        INSERT INTO `order` (orderId, tableId, storeId, orderStatus, totalPrice, userRequest) VALUES
+        ('dd', #{tableId}, '1', '1', #{totalPrice}, #{userRequest})
+    </insert>
+
+    <insert id="insertOrderHistory">
+        INSERT INTO `order_history` (order_id, table_id, store_id, total_price, user_request, order_status) VALUES
+        ('dd', #{tableId}, '1', #{totalPrice}, #{userRequest}, '1')
+    </insert>
+
+    <delete id="deleteOrderBasket">
+        DELETE FROM `order_items` WHERE table_id = #{tableId}
+    </delete>
 </mapper>

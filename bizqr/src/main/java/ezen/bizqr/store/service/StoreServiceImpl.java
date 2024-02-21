@@ -1,12 +1,16 @@
 package ezen.bizqr.store.service;
 
+import ezen.bizqr.board.domain.PagingVO;
 import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.domain.StoreVO;
 import ezen.bizqr.store.repository.StoreMapper;
+import ezen.bizqr.user.security.UserVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @Slf4j
@@ -34,7 +38,20 @@ public class StoreServiceImpl implements StoreService{
     }
 
     @Override
+    public  List<StoreVO> selectEmail(String userEmail) {
+        return storeMapper.selectEmail(userEmail);
+    }
+
+<<<<<<< HEAD
+
+
     public int insertStore(StoreVO svo) {
         return storeMapper.insertStore(svo);
     }
+
+=======
+    public int insertStore(StoreVO svo) {
+        return storeMapper.insertStore(svo);
+    }
+>>>>>>> origin/main
 }
