@@ -83,8 +83,6 @@ public class StoreController {
             return ResponseEntity.ok("menu add success");
         }
 
-<<<<<<< HEAD
-=======
     @GetMapping("/store/myStoreList")
     public String myStoreList(Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -95,7 +93,6 @@ public class StoreController {
         model.addAttribute("userStore", userStore);
         return "/store/myStoreList";
     }
->>>>>>> ee1333c4cc976e641a85dfa8dc81a49950c81313
 
 }
 
