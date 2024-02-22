@@ -46,13 +46,8 @@ async function savePost(event) {
     const postData = {
         title: title,
         email: email,
-<<<<<<< HEAD
-        content: content
-=======
-        nickName: nickName,
         content: content,
         mainImage: mainImage
->>>>>>> origin/main
     };
 
     try {
@@ -63,7 +58,6 @@ async function savePost(event) {
             },
             body: JSON.stringify(postData)
         });
-
         if(response.ok) {
             const result = await response.text();
             alert("게시글이 저장 되었습니다.");
