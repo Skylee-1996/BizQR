@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class StoreServiceImpl implements StoreService{
+public class StoreServiceImpl implements StoreService {
 
     private final StoreMapper storeMapper;
 
@@ -38,13 +38,21 @@ public class StoreServiceImpl implements StoreService{
     }
 
     @Override
-    public  List<StoreVO> selectEmail(String userEmail) {
+    public List<StoreVO> selectEmail(String userEmail) {
         return storeMapper.selectEmail(userEmail);
     }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/main
     public int insertStore(StoreVO svo) {
+
         return storeMapper.insertStore(svo);
     }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
 }

@@ -28,14 +28,12 @@
                         <label class="nickLabel">닉네임</label><label class="headLabel">말머리</label><br>
                         <input type="text" class="form-control" name="nickName" id="nickName" th:value="${bdto.bvo.nickName}" readonly>
 
-                        <select class="form-control" name="Brackets" id="Brackets" onchange="changeColor()" readonly>
+                        <select class="form-control" name="Brackets" id="Brackets" readonly>
                             <option value="head">[말머리]</option>
-                            <option value="head1" class="tag-teal">말머리1</option>
-                            <option value="head2" class="tag-purple">말머리2</option>
-                            <option value="head3" class="tag-green">말머리3</option>
-                            <option value="head4" class="tag-yellow">말머리4</option>
-                            <option value="head5" class="tag-blue">말머리5</option>
+                            <option value="head1" class="tag-teal">진행중</option>
+                            <option value="head2" class="tag-purple">마감</option>
                         </select>
+
                     </div>
                 </div>
 

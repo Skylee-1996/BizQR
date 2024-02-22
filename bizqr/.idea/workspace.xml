@@ -4,12 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="e4eddc4f-23de-40f3-ae1b-649967f12892" name="Changes" comment="" />
+=======
     <list default="true" id="4e7f4a00-df98-4005-964b-1d6e0e2c43af" name="Changes" comment="" />
+>>>>>>> origin/main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2cfDG4RuSOd8A2eig914gcbEk0q" />
+=======
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -19,14 +37,26 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2cf94yQcmoYFWI3EXQFTOQUp0DQ" />
+>>>>>>> origin/main
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Gradle.Build bizqr.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.layout.html.executor&quot;: &quot;Run&quot;,
+=======
+<<<<<<< HEAD
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.BoardTest.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+>>>>>>> origin/main
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -34,6 +64,10 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Spring Boot.BizqrApplication.executor&quot;: &quot;Run&quot;,
+<<<<<<< HEAD
+=======
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+>>>>>>> origin/main
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -41,6 +75,65 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+<<<<<<< HEAD
+=======
+  }
+}</component>
+  <component name="RunManager" selected="JUnit.BoardTest">
+    <configuration name="BoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bizqr.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ezen.bizqr.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ezen.bizqr.test" />
+      <option name="MAIN_CLASS_NAME" value="ezen.bizqr.test.BoardTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BizqrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="bizqr.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ezen.bizqr.BizqrApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ezen.bizqr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BoardTest" />
+        <item itemvalue="Spring Boot.BizqrApplication" />
+      </list>
+    </recent_temporary>
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build bizqr.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.BizqrApplication.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> origin/main
   }
 }</component>
   <component name="RecentsManager">
@@ -51,6 +144,7 @@
       <recent name="D:\Sky\_final\bizqr\src\main\resources\static\js" />
       <recent name="D:\Sky\_final\bizqr\src\main\resources\templates\store" />
     </key>
+>>>>>>> origin/main
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -62,13 +156,27 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="e4eddc4f-23de-40f3-ae1b-649967f12892" name="Changes" comment="" />
+      <created>1708474150041</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708474150041</updated>
+      <workItem from="1708474157399" duration="12130000" />
+      <workItem from="1708493643752" duration="2000" />
+=======
       <changelist id="4e7f4a00-df98-4005-964b-1d6e0e2c43af" name="Changes" comment="" />
       <created>1708491578261</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708491578261</updated>
+<<<<<<< HEAD
       <workItem from="1708491579310" duration="2747000" />
       <workItem from="1708561348167" duration="7681000" />
+=======
+      <workItem from="1708491579310" duration="1106000" />
+>>>>>>> origin/main
+>>>>>>> origin/main
     </task>
     <servers />
   </component>

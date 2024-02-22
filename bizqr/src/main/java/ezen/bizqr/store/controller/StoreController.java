@@ -1,10 +1,5 @@
 package ezen.bizqr.store.controller;
 
-import ezen.bizqr.board.domain.BoardVO;
-import ezen.bizqr.board.domain.PagingVO;
-import ezen.bizqr.board.handler.PagingHandler;
-import ezen.bizqr.board.service.BoardService;
-
 import ezen.bizqr.file.FileHandler;
 import ezen.bizqr.file.FileMapper;
 import ezen.bizqr.file.FileVO;
@@ -12,6 +7,11 @@ import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.domain.StoreVO;
 import ezen.bizqr.store.service.StoreService;
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/main
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
