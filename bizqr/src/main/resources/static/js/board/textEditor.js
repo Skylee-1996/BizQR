@@ -58,7 +58,6 @@ async function savePost(event) {
             },
             body: JSON.stringify(postData)
         });
-
         if(response.ok) {
             const result = await response.text();
             alert("게시글이 저장 되었습니다.");

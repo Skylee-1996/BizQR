@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="eddb8dc8-1ad5-429d-a7c8-2dd1f5ef2ca2" name="Changes" comment="" />
+=======
+    <list default="true" id="410acdc8-6761-4d30-86ca-a1e7688c66ae" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/board/textEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/board/textEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/register.html" afterDir="false" />
+    </list>
+>>>>>>> origin/main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,16 +25,41 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "Gradle.Build bizqr.executor": "Run",
+=======
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2chq8b4mqZtUFtfODANjs1zt8jJ" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+>>>>>>> origin/main
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "Spring Boot.BizqrApplication.executor": "Run",
+<<<<<<< HEAD
     "node.js.selected.package.tslint": "(autodetect)"
+=======
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> origin/main
   }
 }]]></component>
   <component name="RunManager">
@@ -38,8 +71,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
+=======
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.BizqrApplication" />
+      </list>
+    </recent_temporary>
+>>>>>>> origin/main
   </component>
   <component name="TaskManager">
+<<<<<<< HEAD
     <servers />
   </component>
+=======
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="410acdc8-6761-4d30-86ca-a1e7688c66ae" name="Changes" comment="" />
+      <created>1708574001119</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708574001119</updated>
+      <workItem from="1708574003190" duration="497000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+>>>>>>> origin/main
 </project>
