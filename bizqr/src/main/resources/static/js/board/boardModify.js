@@ -3,14 +3,12 @@ async function updatePost(event) {
     const bno = document.getElementById("bno").value;
     const title = document.getElementById("title").value;
     const email = document.getElementById("email").value;
-    const nickName = document.getElementById("nickName").value;
     const content = editor.getMarkdown();
 
     const postData = {
         bno: bno,
         title: title,
         email: email,
-        nickName: nickName,
         content: content
     };
 

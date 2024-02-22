@@ -17,21 +17,16 @@
                         <hr>
                         <div class="wrapper">
                             <div class="row">
-                                <input type="hidden" id="bno" name="bno" th:value="${bdto.bvo.bno}"></input>
                                 <label class="titleLabel">글제목</label>
                                 <label class="emailLabel">이메일</label><br>
                                 <input type="text" name="title" class="form-control" id="title" th:value="${bdto.bvo.title}">
                                 <input type="email" class="form-control" name="email" id="email" th:value="${bdto.bvo.email}" readonly>
                             </div>
                             <div class="row2">
-                                <label class="nickLabel">닉네임</label><label class="headLabel">말머리</label><br>
-                                <input type="text" class="form-control" name="nickName" id="nickName" th:value="${bdto.bvo.nickName}" readonly>
-
-                                <select class="form-control" name="Brackets" id="Brackets" required>
-                                    <option value="head">[말머리]</option>
-                                    <option value="head1" class="tag-teal">진행중</option>
-                                    <option value="head2" class="tag-purple">마감</option>
-                                </select>
+                                <label class="headLabel">글번호</label>
+                                <label class="dateLabel">작성일</label><br>
+                                <input type="text" class="form-control" name="bno" id="bno" th:value="${bdto.bvo.bno}" readonly>
+                                <input type="text" class="form-control" name="regAt" id="regAt" th:value="${bdto.bvo.modAt}" readonly>
                             </div>
                         </div>
 
@@ -61,15 +56,6 @@
             </form>
         <script type="text/javascript" src = "/js/board/boardModify.js"></script>
         <script type="text/javascript" src = "/js/board/textEditor.js"></script>
-                    <script>
-                        function changeColor() {
-                            let selectedOption = document.getElementById("Brackets").value;
-                            let selectedText = document.querySelector('#Brackets option:checked').text;
-                            let listItem = document.createElement('li');
-                            listItem.innerHTML = '<span class="tag tag-teal">' + selectedText + '</span>';
-                            document.getElementById('selectedOptionsList').appendChild(listItem);
-                        }
-                    </script>
         </body>
                 </section>
             </form>

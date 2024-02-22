@@ -10,7 +10,7 @@ import lombok.*;
 public class CommentVO {
     private long cno;
     private long bno;
-    private String nickName;
+    private String email;
     private String content;
     private String regAt;
     private String modAt;

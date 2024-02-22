@@ -7,11 +7,7 @@ import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.domain.StoreVO;
 import ezen.bizqr.store.service.StoreService;
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/main
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

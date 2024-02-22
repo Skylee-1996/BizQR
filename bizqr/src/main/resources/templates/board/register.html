@@ -22,16 +22,6 @@
                                     <input type="text" name="title" class="form-control" id="title" placeholder="제목을 입력해주세요." required>
                                     <input type="email" class="form-control" name="email" id="email" th:value="${#authentication.name}" readonly>
                                 </div>
-                            <div class="row2">
-                                <label class="nickLabel">닉네임</label>
-                                <label class="headLabel">말머리</label>
-                                <input type="text" class="form-control" name="nickName" id="nickName" placeholder="닉네임을 입력해주세요." required>
-
-                            <select class="form-control" name="Brackets" id="Brackets" required>
-                                <option value="head" selected>[말머리]</option>
-                                <option value="head1" class="tag-teal">진행중</option>
-                                <option value="head2" class="tag-purple">마감</option>
-                            </select>
                         </div>
                 </div>
 
@@ -62,14 +52,6 @@
         <script type="text/javascript" src="/js/board/boardRegister.js"></script>
         <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
         <script type="text/javascript" src = "/js/board/textEditor.js"></script>
-        <script>
-            function savePost() {
-                let selectElement = document.getElementById("Brackets");
-                let selectedValue = selectElement.value;
-                document.getElementById("selectedBracketInput").value = selectedValue;
-                document.getElementById("postForm").submit();
-            }
-        </script>
     </th:block>
 </th:block>
 </html>

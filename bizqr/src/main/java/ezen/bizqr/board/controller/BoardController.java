@@ -28,7 +28,8 @@ public class BoardController {
     private final FileHandler fh;
 
     @GetMapping("/register")
-    public void register() {}
+    public void register() {
+    }
 
     @GetMapping("/service")
     public String service() {
@@ -36,7 +37,7 @@ public class BoardController {
     }
 
     @PostMapping(value = "/register", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> register(@RequestBody BoardVO bvo)  {
+    public ResponseEntity<String> register(@RequestBody BoardVO bvo, Model m)  {
         log.info(">>>>> bvo >> {}", bvo);
         bsv.register(bvo);
         return ResponseEntity.ok("redirect:/board/list");

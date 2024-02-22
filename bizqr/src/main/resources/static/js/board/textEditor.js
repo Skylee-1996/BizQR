@@ -36,13 +36,11 @@ async function savePost(event) {
 
     const title = document.getElementById("title").value;
     const email = document.getElementById("email").value;
-    const nickName = document.getElementById("nickName").value;
     const content = editor.getMarkdown();
 
     const postData = {
         title: title,
         email: email,
-        nickName: nickName,
         content: content
     };
 

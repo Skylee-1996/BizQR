@@ -23,10 +23,11 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 
 -- board 테이블 생성
+-- nickName 조건 수정 (24.02.22)
 CREATE TABLE IF NOT EXISTS `board` (
     `bno` BIGINT NOT NULL AUTO_INCREMENT,
     `email` VARCHAR(255) NOT NULL,
-    `nick_name` VARCHAR(255) NOT NULL,
+    `nick_name` VARCHAR(255),
     `title` VARCHAR(255) NOT NULL,
     `content` TEXT,
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -203,10 +204,11 @@ CREATE TABLE IF NOT EXISTS inventory (
 
 
 -- comment 테이블 생성
+-- nickName 삭제 후 email로 변경 (24.02.22)
 CREATE TABLE IF NOT EXISTS `comment` (
     `cno` BIGINT NOT NULL AUTO_INCREMENT,
     `bno` BIGINT NOT NULL,
-    `nick_name` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
     `content` TEXT NOT NULL,
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `mod_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

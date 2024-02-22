@@ -41,18 +41,9 @@ public class StoreServiceImpl implements StoreService {
     public List<StoreVO> selectEmail(String userEmail) {
         return storeMapper.selectEmail(userEmail);
     }
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
     public int insertStore(StoreVO svo) {
 
         return storeMapper.insertStore(svo);
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
 }

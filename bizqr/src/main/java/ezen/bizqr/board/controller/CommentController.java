@@ -31,8 +31,6 @@ public class CommentController {
     public PagingHandler list(@PathVariable("bno") long bno,
                               @PathVariable("page") int page){
         log.info(">> bno >>> {} "+bno+"/ page >>> {} "+page);
-        //List<CommentVO> and PagingHandler
-        //비동기는 한 객체만 전송 가능함...
         PagingVO pgvo = new PagingVO(page, 5); //1페이지에 5개씩 댓글 출력
         PagingHandler ph = csv.getList(bno, pgvo);
         return ph;
@@ -47,12 +45,12 @@ public class CommentController {
     }
 
     //댓글삭제
-    @DeleteMapping(value="/del/{cno}/{nickName}", produces = MediaType.TEXT_PLAIN_VALUE)
+    @DeleteMapping(value="/del/{cno}/{email}", produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody
     public ResponseEntity<String> delete(@PathVariable("cno") long cno
-            , @PathVariable("nickName") String nickName){
-        log.info(">> cno >>> writer >>> {} "+cno+" / "+nickName);
-        int isOk = csv.deleteComment(cno, nickName);
+            , @PathVariable("email") String email){
+        log.info(">> cno >>> writer >>> {} "+cno+" / "+email);
+        int isOk = csv.deleteComment(cno, email);
         return isOk > 0 ? new ResponseEntity<String>("1", HttpStatus.OK)
                 : new ResponseEntity<String>("0",HttpStatus.INTERNAL_SERVER_ERROR);
     }

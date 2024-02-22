@@ -45,9 +45,9 @@ public class CommentServiceImpl implements CommentService{
 
 
     @Override
-    public int deleteComment(long cno, String nickName) {
+    public int deleteComment(long cno, String email) {
         // TODO Auto-generated method stub
-        return mapper.deleteComment(cno, nickName);
+        return mapper.deleteComment(cno, email);
     }
 
 }
