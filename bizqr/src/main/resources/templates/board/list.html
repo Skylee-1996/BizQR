@@ -61,12 +61,12 @@
                                 <img th:src="@{|/upload/tui-editor/${bvo.mainImage}|}" alt="이미지">
                             </div>
                             <div class="card-body">
-                                <span class="tag tag-teal"></span>
                                 <h4 class="h4_title" th:text="${bvo.title}">
                                 </h4>
                                 <div class="user">
                                     <div class="user-info">
-                                        <small th:text="${bvo.modAt}"></small>
+                                        <small class="modSmall" th:text="${bvo.modAt}"></small>
+                                        <small class="readCountSmall">조회수: [[${bvo.readCount}]]</small>
                                     </div>
                                 </div>
                             </div>

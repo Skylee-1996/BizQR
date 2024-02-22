@@ -23,4 +23,5 @@ public interface BoardMapper {
 
     long getBno();
 
+    void readCount(long bno);
 }
