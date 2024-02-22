@@ -46,13 +46,8 @@ async function savePost(event) {
     const postData = {
         title: title,
         email: email,
-<<<<<<< HEAD
-        content: content
-=======
-        nickName: nickName,
         content: content,
         mainImage: mainImage
->>>>>>> origin/main
     };
 
     try {

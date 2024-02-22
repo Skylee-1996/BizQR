@@ -4,228 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="115d8fd4-bb6c-4b6f-a6b7-c685a5b4d37d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/domain/CommentVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/domain/CommentVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/repository/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/repository/CommentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/service/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/service/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/commentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/commentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/board/boardComment.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/board/boardComment.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/board/boardDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/board/boardDetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/board/boardModify.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/board/boardModify.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/board/boardRegister.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/board/boardRegister.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/board/boardComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/board/boardComment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/board/boardModify.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/board/boardModify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/board/textEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/board/textEditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sql.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/modify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/register.html" afterDir="false" />
-    </list>
+    <list default="true" id="eddb8dc8-1ad5-429d-a7c8-2dd1f5ef2ca2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
-<<<<<<< HEAD
-  <component name="ProjectId" id="2chOP6QSqxOu0ZedKwDcvYbMhG2" />
-=======
-  <component name="ProjectId" id="2cfDG4RuSOd8A2eig914gcbEk0q" />
-=======
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
-  <component name="ProjectId" id="2cf94yQcmoYFWI3EXQFTOQUp0DQ" />
->>>>>>> origin/main
->>>>>>> origin/main
-  <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "Gradle.Build bizqr.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.BizqrApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "vue.rearranger.settings.migration": "true"
-=======
-<<<<<<< HEAD
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build bizqr.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.layout.html.executor&quot;: &quot;Run&quot;,
-=======
-<<<<<<< HEAD
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.BoardTest.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
->>>>>>> origin/main
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BizqrApplication.executor&quot;: &quot;Run&quot;,
-<<<<<<< HEAD
-=======
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
->>>>>>> origin/main
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="BizqrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="BizqrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="bizqr.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ezen.bizqr.BizqrApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ezen.bizqr.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.BizqrApplication" />
-      </list>
-    </recent_temporary>
-<<<<<<< HEAD
-=======
-=======
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build bizqr.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.BizqrApplication.executor": "Run",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
->>>>>>> origin/main
-  }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Sky\_final\bizqr\src\main\java\ezen\bizqr\store\controller" />
-      <recent name="D:\Sky\_final\bizqr\src\main\resources\static\js\store" />
-      <recent name="D:\Sky\_final\bizqr\src\main\resources\static\js\board" />
-      <recent name="D:\Sky\_final\bizqr\src\main\resources\static\js" />
-      <recent name="D:\Sky\_final\bizqr\src\main\resources\templates\store" />
-    </key>
->>>>>>> origin/main
->>>>>>> origin/main
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-107bc6b7" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="115d8fd4-bb6c-4b6f-a6b7-c685a5b4d37d" name="Changes" comment="" />
-      <created>1708560319057</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-<<<<<<< HEAD
-      <updated>1708560319057</updated>
-      <workItem from="1708560321971" duration="10441000" />
-=======
-      <updated>1708474150041</updated>
-      <workItem from="1708474157399" duration="12130000" />
-      <workItem from="1708493643752" duration="2000" />
-=======
-      <changelist id="4e7f4a00-df98-4005-964b-1d6e0e2c43af" name="Changes" comment="" />
-      <created>1708491578261</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1708491578261</updated>
-<<<<<<< HEAD
-      <workItem from="1708491579310" duration="2747000" />
-      <workItem from="1708561348167" duration="7681000" />
-=======
-      <workItem from="1708491579310" duration="1106000" />
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
-    </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ezen/bizqr/BizqrApplication.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -18,4 +18,5 @@ public interface StoreService {
     List<StoreVO> selectEmail(String userEmail);
     int insertStore(StoreVO svo);
 
+    StoreVO getDetailFromStore(String storeId);
 }

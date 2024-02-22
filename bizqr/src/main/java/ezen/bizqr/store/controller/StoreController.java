@@ -48,6 +48,15 @@ public class StoreController {
         model.addAttribute("storeName", storeName);
         return "/store/create";
     }
+
+    @GetMapping("/modify")
+    public String modify(Model model, @RequestParam("storeId") String storeId) {
+        StoreVO svo = ssv.getDetailFromStore(storeId);
+        model.addAttribute("svo", svo);
+        return "/store/modify";
+    }
+
+
     @GetMapping("/table")
     public void table(){}
 
