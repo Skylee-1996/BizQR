@@ -56,6 +56,7 @@ public class BoardController {
     @GetMapping({"/detail","/modify"})
     public void detail(Model m, @RequestParam("bno")long bno) {
         m.addAttribute("bdto", bsv.getDetail(bno));
+        bsv.reatCount(bno);
     }
 
     @PostMapping(value="/modify", consumes = MediaType.APPLICATION_JSON_VALUE)

@@ -64,6 +64,11 @@ public class BoardServiceImpl implements BoardService {
         return mapper.getTotalCount(pgvo);
     }
 
+    @Override
+    public void reatCount(long bno) {
+        mapper.readCount(bno);
+    }
+
 }
 
 
