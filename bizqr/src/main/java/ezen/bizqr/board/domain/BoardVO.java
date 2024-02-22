@@ -13,6 +13,7 @@ public class BoardVO {
     private String nickName;
     private String title;
     private String content;
+    private String mainImage;
     private String regAt;
     private String modAt;
     private long readCount;
