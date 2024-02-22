@@ -58,7 +58,7 @@
                     <div class="card">
                         <a th:if="${bvo.bno != null}" th:href="@{'/board/detail?bno=' + ${bvo.bno}}">
                             <div class="card-header">
-                                <img url="C:\_bizqr_fileUpload\tui-editor\" alt="image" />
+                                <img th:src="@{|/upload/tui-editor/${bvo.mainImage}|}" alt="이미지">
                             </div>
                             <div class="card-body">
                                 <span class="tag tag-teal"></span>

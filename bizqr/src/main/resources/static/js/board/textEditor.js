@@ -1,6 +1,8 @@
 console.log("hi editor js")
 const Editor = toastui.Editor;
 
+let mainImage = "";
+
 const editor = new Editor({
     el: document.querySelector('#editor'),
     height: '600px',
@@ -21,6 +23,9 @@ const editor = new Editor({
                 });
                 const filename = await response.text();
                 console.log('서버에 저장된 파일명: ', filename);
+                if(mainImage === ""){
+                    mainImage = filename;
+                }
 
                 const imageUrl = `/file/image-print?filename=${filename}`;
                 callback(imageUrl, 'image alt attribute');
@@ -41,7 +46,13 @@ async function savePost(event) {
     const postData = {
         title: title,
         email: email,
+<<<<<<< HEAD
         content: content
+=======
+        nickName: nickName,
+        content: content,
+        mainImage: mainImage
+>>>>>>> origin/main
     };
 
     try {

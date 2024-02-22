@@ -5,8 +5,8 @@
 <mapper namespace="ezen.bizqr.board.repository.BoardMapper">
 
     <insert id="insert">
-        insert into board(title, email, nick_name, content)
-        values(#{title}, #{email}, #{nickName},#{content})
+        insert into board(title, email, nick_name, content, main_image)
+        values(#{title}, #{email}, #{nickName},#{content},#{mainImage})
     </insert>
 
     <select id="getList" resultType="ezen.bizqr.board.domain.BoardVO">
