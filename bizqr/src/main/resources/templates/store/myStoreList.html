@@ -40,7 +40,7 @@
       <!-- card section -->
       <div class="listContainer">
         <div class="image-container" th:each="svo:${userStore}">
-          <a th:href="@{/store/create(storeId=${svo.storeId}, storeName=${svo.storeName})}">
+          <a th:href="@{/store/modify(storeId=${svo.storeId}, storeName=${svo.storeName})}">
           <div class="card">
               <div class="card-header">
                 <img url="C:\_bizqr_fileUpload\tui-editor\" alt="image" />

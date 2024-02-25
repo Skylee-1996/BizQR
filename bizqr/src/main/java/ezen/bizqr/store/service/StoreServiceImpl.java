@@ -46,4 +46,9 @@ public class StoreServiceImpl implements StoreService {
         return storeMapper.insertStore(svo);
     }
 
+    @Override
+    public StoreVO getDetailFromStore(String storeId) {
+        return storeMapper.getDetailFromStore(storeId);
+    }
+
 }

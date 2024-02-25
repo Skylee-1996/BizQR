@@ -1,0 +1,84 @@
+<html lang="kor" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<th:block th:replace="~{/layout :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <head>
+            <link rel="stylesheet" th:href="@{/css/store/modify.css}">
+            <title>modify</title>
+        </head>
+        <body>
+        <div class="modify">
+            <div class="container">
+                <div class="title">점포 정보 수정</div>
+                <br>
+                <form action="/store/modify" method="post">
+                    <div class="imageBox">
+                        <img id="image-preview" src="" alt="Image preview" style="display: none; max-width: 100%; height: auto;">
+                    </div>
+
+                    <label for="modal-item-image-upload">
+                        <div class="btn-upload">이미지 업로드</div>
+                    </label>
+                    <input type="file" name="file" id="modal-item-image-upload">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <label for="email"><span class="details">이메일</span></label>
+                            <input type="email" name="email" id="email" th:value="${svo.getEmail()}" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="storeName"><span class="details">점포명</span></label>
+                            <input type="text" name="storeName" id="storeName" th:value="${svo.getStoreName()}" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="company"><span class="details">회사명</span></label>
+                            <input type="text" name="company" id="company" th:value="${svo.getCompany()}" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="storeNum"><span class="details">점포전화번호</span></label>
+                            <input type="text" name="storeNum" id="storeNum" th:value="${svo.getStoreNumber()}" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="storeHours"><span class="details">운영 시간</span></label>
+                            <input type="text" name="storeHours" id="storeHours" placeholder="운영 시간을 입력해주세요~">
+                        </div>
+                        <div class="input-box">
+                            <label for="storeAddress"><span class="details">주소</span></label>
+                            <input type="text" name="storeAddress" id="storeAddress" th:value="${svo.getStoreAddress()}" required>
+                        </div>
+
+                    </div>
+                    <div class="store-details">
+                        <input type="radio" name="storeType" id="dot-1" value="Cafe">
+                        <input type="radio" name="storeType" id="dot-2" value="Restaurant">
+                        <input type="radio" name="storeType" id="dot-3" value="Hotel">
+                        <input type="radio" name="storeType" id="dot-4" value="Etc.">
+                        <span class="store-title">업종선택</span>
+                        <div class="category">
+                            <label for="dot-1">
+                                <span class="dot one"></span>
+                                <span class="storeType" th:value="cafe" id="cafe">Cafe</span>
+                            </label>
+                            <label for="dot-2">
+                                <span class="dot two"></span>
+                                <span class="storeType" th:value="restaurant" id="restaurant">Restaurant</span>
+                            </label>
+                            <label for="dot-3">
+                                <span class="dot three"></span>
+                                <span class="storeType" th:value="hotel" id="hotel">Hotel</span>
+                            </label>
+                            <label for="dot-4">
+                                <span class="dot four"></span>
+                                <span class="storeType" th:value="etc" id="etc">Etc.</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="수정하기">
+                    </div>
+                </form>
+            </div>
+        </div>
+        </body>
+    </th:block>
+</th:block>

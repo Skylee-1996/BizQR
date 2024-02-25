@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `user` (
     `email` VARCHAR(255) NOT NULL,
     `name` VARCHAR(255),
     `pwd` VARCHAR(255) NOT NULL,
-    `nick_name` VARCHAR(255) NOT NULL,
+    `nick_name` VARCHAR(255),
     `phone_num` VARCHAR(255),
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `last_login` DATETIME,
@@ -97,7 +97,6 @@ CREATE TABLE IF NOT EXISTS `social_user` (
 CREATE TABLE IF NOT EXISTS `auth_user` (
     `email` VARCHAR(255) NOT NULL,
     `auth` VARCHAR(255) NOT NULL,
-    PRIMARY KEY (`email`),
     FOREIGN KEY (`email`) REFERENCES `user`(`email`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
