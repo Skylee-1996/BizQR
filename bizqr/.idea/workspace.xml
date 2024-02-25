@@ -6,15 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="410acdc8-6761-4d30-86ca-a1e7688c66ae" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/repository/BoardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/repository/BoardMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/service/BoardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/board/service/BoardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/boardMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/board/noticeList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/board/noticeList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/loginstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/loginstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +81,8 @@
       <updated>1708574001119</updated>
       <workItem from="1708574003190" duration="497000" />
       <workItem from="1708574546711" duration="7047000" />
+      <workItem from="1708659769297" duration="65000" />
+      <workItem from="1708677001265" duration="5000" />
     </task>
     <servers />
   </component>
