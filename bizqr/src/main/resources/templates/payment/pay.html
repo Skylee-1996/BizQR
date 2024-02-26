@@ -27,6 +27,7 @@
             <p>승인 여부: <span th:text="${rvo.isRegistered}"></span></p>
             <!-- 이하 필요한 정보들을 추가로 표시 -->
 
+
             <!-- 결제하기 버튼 생성 -->
             <button onclick="requestPay()">결제하기</button>
 
@@ -82,11 +83,46 @@
                 if(rsp.success){
                     alert('결제 완료. 결제 내역' + rsp.imp_uid);
 
+                    let data = {
+                        impUid: rsp.imp_uid,
+                        merchantUid: merchant_uid,
+                        buyerEmail: emailVal,
+                        buyerName: nameVal,
+                        buyerCompany: companyVal,
+                        buyerAddress: storeAddressVal,
+                        buyerOwnerTelNum: ownerNumVal,
+                        buyerStoreTelNum: storeNumVal,
+                        itemName: itemNameVal,
+                        itemAmount: amountVal
+                    };
+
+                    postStorePaySuccess(data);
+
                 }else{
                     alert('실패' + rsp.error_msg);
                 }
             }
         );
+    }
+
+    function postStorePaySuccess(data){
+        try {
+            const url = "/payment/storePay/success";
+            const config = {
+                method: 'post',
+                headers: {
+                    'content-type':'application/json; charset=utf-8'
+                },
+                body: JSON.stringify(data)
+            };
+
+            fetch(url, config)
+                .catch(error => {
+                    console.log("error");
+                })
+        }catch (error){
+            console.log(error);
+        }
     }
 
 </script>

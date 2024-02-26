@@ -59,6 +59,46 @@ public class FileHandler {
         return fvo;
     }
 
+    public FileVO uploadStoreImage(MultipartFile file, Long storeId) {
+        String dir = "storeLogo";
+        File folders = new File(UP_DIR, dir);
+        if (!folders.exists()) {
+            folders.mkdirs();
+        }
+
+        FileVO fvo = new FileVO();
+        fvo.setStoreId(storeId); // storeId를 설정
+        fvo.setSaveDir(dir);
+        fvo.setFileSize(file.getSize());
+
+        String orgFilename = file.getOriginalFilename();
+
+        String onlyFileName = orgFilename.substring(orgFilename.lastIndexOf(File.separator) + 1);
+        String extension = orgFilename.substring(orgFilename.lastIndexOf(".") + 1); // 확장자
+        String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+        fvo.setUuid(uuid);
+
+        String saveFilename = uuid + "." + extension;
+        log.info(">>>>>>>>>>saveFilename >>>>{}", saveFilename);
+
+        fvo.setFileName(saveFilename);
+        File storeFile = new File(folders, saveFilename);
+        try {
+            file.transferTo(storeFile);
+            if (isImageFile(storeFile)) {
+                fvo.setFileType(1);
+                File thumbnail = new File(folders,"_logo"+ saveFilename);
+                Thumbnails.of(storeFile).size(400, 150).toFile(thumbnail);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            log.info("파일 저장 오류.......");
+        }
+
+        return fvo;
+    }
+
+
 
     public List<FileVO> uploadFiles(MultipartFile[] files){
         List<FileVO> flist = new ArrayList<>();

@@ -1,5 +1,7 @@
 package ezen.bizqr.pay.controller;
 
+import ezen.bizqr.pay.domain.StorePaymentVO;
+import ezen.bizqr.pay.service.PayService;
 import ezen.bizqr.store.domain.RegisterVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/payment/*")
 public class PayController {
 
+    private final PayService psv;
 
     @GetMapping("/pay")
     public String pay(){
@@ -23,6 +26,9 @@ public class PayController {
         return "/payment/pay";
     }
 
+<<<<<<< HEAD
+
+=======
     @PostMapping("/pay")
     public String pay(RegisterVO rvo, Model m){
         log.info("registerVO rvo >>>>> {}", rvo);
@@ -31,5 +37,16 @@ public class PayController {
 
         return "/payment/pay";
     }
+
+    @PostMapping("/storePay/success")
+    @ResponseBody
+    public String paySuccess(@RequestBody StorePaymentVO spvo){
+        log.info("StorePaymentVO >>>>>>>>>> spvo >>> {}", spvo);
+
+        int isOk = psv.savePayment(spvo);
+
+        return "index";
+    }
+>>>>>>> origin/main
 
 }

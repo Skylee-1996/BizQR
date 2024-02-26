@@ -26,25 +26,25 @@
             </div>
 
             <div class="sidebar">
-                <a href="#">
+                <a th:href="@{/admin/index}" class="active">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="#">
+                <a th:href="@{/user/list}">
                     <span class="material-icons-sharp">
                         person_outline
                     </span>
                     <h3>Users</h3>
                 </a>
-                <a href="#">
+                <a th:href="@{/admin/adminRegisterList}">
                     <span class="material-icons-sharp">
                         receipt_long
                     </span>
-                    <h3>History</h3>
+                    <h3>RegisterList</h3>
                 </a>
-                <a href="#" class="active">
+                <a th:href="@{/admin/adminStatistics}">
                     <span class="material-icons-sharp">
                         insights
                     </span>
@@ -93,7 +93,7 @@
 
         <!-- Main Content -->
         <main>
-            <h1>Analytics</h1>
+            <h1>Dashboard</h1>
             <!-- Analyses -->
             <div class="analyse">
                 <div class="sales">

@@ -46,9 +46,7 @@ public class StoreController {
     }
 
     @GetMapping("/create")
-    public String createStoreForm(Model model, @RequestParam("storeId") String storeId, @RequestParam("storeName") String storeName) {
-        model.addAttribute("storeId", storeId);
-        model.addAttribute("storeName", storeName);
+    public String createStoreForm() {
         return "/store/create";
     }
 
@@ -73,12 +71,7 @@ public class StoreController {
     public ResponseEntity<String> addMenu(@ModelAttribute MenuItemVO mvo, @RequestParam(name="image", required = false) MultipartFile imageFile) {
 
             log.info(">>>>>>>>>>mvo >>>>>>> {}", mvo);
-
-
-
         long MenuId = ssv.insertMenu(mvo);
-
-
            FileVO fvo = fh.uploadFile(imageFile);
            fvo.setMenuId(MenuId);
             if (!imageFile.isEmpty()) {
@@ -102,6 +95,18 @@ public class StoreController {
         return "/store/myStoreList";
     }
 
+    @PostMapping("/modify")
+    public String modifyStore(StoreVO svo, @RequestParam("file") MultipartFile file, Model m) {
+
+        log.info(">>>>>>>>> svo >>>{}", svo);
+
+          FileVO fvo= fh.uploadStoreImage(file, svo.getStoreId());
+          svo.setLogoImage(fvo.getFileName());
+          ssv.updateStore(svo);
+          m.addAttribute("svo", svo);
+
+        return "/store/create";
+    }
 }
 
 
