@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kor">
+<html lang="kor" xmlns:th="http://www.thymeleaf.org">
 <head>
     <!-- PortOne SDK -->
     <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
@@ -40,6 +40,19 @@
 <body>
 <button onclick="requestPay()">결제하기</button>
 <!-- 결제하기 버튼 생성 -->
+<div class="payment">
+    <div class="container">
+        <div class="title">Payment</div>
+        <br>
+        <div class="payment-details">
+            <!-- 여기에서 rvo 객체의 속성을 사용하여 필요한 정보를 표시 -->
+            <p>대표자명: <span th:text="${rvo.name}"></span></p>
+            <p>이메일: <span th:text="${rvo.email}"></span></p>
+            <p>회사명: <span th:text="${rvo.company}"></span></p>
+            <!-- 이하 필요한 정보들을 추가로 표시 -->
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

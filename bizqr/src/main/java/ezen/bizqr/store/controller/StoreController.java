@@ -34,12 +34,14 @@ public class StoreController {
     public void storeRegister(){}
 
     @PostMapping("/register")
-    public String storeRegister(RegisterVO rvo) {
+    public String storeRegister(RegisterVO rvo, Model m) {
         log.info(">>>>> svo 들어온지 확인하자 >>>>> {} " , rvo);
 
         ssv.insertRegister(rvo);
 
-        return "index";
+        m.addAttribute("rvo", rvo);
+
+        return "/payment/pay";
     }
 
     @GetMapping("/create")
