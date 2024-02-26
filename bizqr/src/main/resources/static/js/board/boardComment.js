@@ -1,9 +1,6 @@
 console.log("boardComment.js in");
 
 
-
-
-
 document.getElementById('cmtPostBtn').addEventListener('click',()=>{
     const cmtText = document.getElementById('cmtText');
     if(cmtText.value == null || cmtText == ''){
@@ -21,6 +18,7 @@ document.getElementById('cmtPostBtn').addEventListener('click',()=>{
         postCommentToServer(cmtData).then(result=>{
             if(result === '1'){
                 alert("댓글이 등록되었습니다.");
+                cmtText.value = '';
             }
             //뿌리기
             spreadCommentList(bnoVal);
@@ -58,8 +56,8 @@ async function getCommentListFromServer(bno, page){
 
 function spreadCommentList(bno, page=1){
     getCommentListFromServer(bno, page).then(result=>{
-        console.log(result); //ph cmtList
-        const ul = document.getElementById('cmtListArea'); //전체 태그
+        console.log(result);
+        const ul = document.getElementById('cmtListArea');
         if(result.cmtList.length > 0){
             if(page == 1){
                 ul.innerHTML = '';
