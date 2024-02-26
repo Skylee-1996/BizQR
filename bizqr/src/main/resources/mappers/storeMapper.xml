@@ -6,8 +6,8 @@
 
     <insert id="storeRegister">
         insert into register
-        (name, email, company, store_name, store_address, store_type, owner_num, store_num)
-        values(#{name}, #{email}, #{company}, #{storeName}, #{storeAddress}, #{storeType}, #{ownerNum}, #{storeNum})
+        (name, email, company, store_name, store_address, store_type, owner_num, store_num, subscribe)
+        values(#{name}, #{email}, #{company}, #{storeName}, #{storeAddress}, #{storeType}, #{ownerNum}, #{storeNum}, #{subscribe})
     </insert>
     <insert id="menuInsert">
         insert into menu_item
