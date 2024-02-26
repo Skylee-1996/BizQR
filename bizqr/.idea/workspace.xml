@@ -4,48 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="aac62688-27a4-4c4f-9861-d1c6f229bcdb" name="변경" comment="" />
-=======
     <list default="true" id="aac62688-27a4-4c4f-9861-d1c6f229bcdb" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/repository/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/repository/AdminMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/service/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/service/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/service/AdminServiceImpl.java" afterDir="false" />
-=======
-<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/userRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/user/userRegister.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/modify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/register.html" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/store/myStoreList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" afterDir="false" />
->>>>>>> origin/main
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/repository/StoreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/repository/StoreMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/repository/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/user/repository/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/adminIndex.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/admin/adminIndex.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sql.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminRegisterList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/adminRegisterList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.html" afterDir="false" />
->>>>>>> ee1333c4cc976e641a85dfa8dc81a49950c81313
->>>>>>> origin/main
->>>>>>> 1e8712257dd73a3447ddc5499e2816b8de627ace
     </list>
->>>>>>> origin/main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,20 +50,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="CSS File" />
         <option value="HTTP Request" />
-<<<<<<< HEAD
-        <option value="Kotlin Class" />
-        <option value="Class" />
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-=======
         <option value="JavaScript File" />
         <option value="Kotlin Class" />
-        <option value="HTML File" />
         <option value="Class" />
->>>>>>> origin/main
+        <option value="Interface" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -111,8 +74,8 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
-    &quot;associatedIndex&quot;: 6
-    }</component>
+        &quot;associatedIndex&quot;: 6
+        }</component>
   <component name="ProjectId" id="2bq1RC6A1uQB0czhNKO7faLKVMt" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -120,10 +83,8 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-<<<<<<< HEAD
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-=======
->>>>>>> origin/main
+    &quot;Gradle.bizqr.executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -138,34 +99,8 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.BizqrApplication.executor": "Run",
-    "git-widget-placeholder": "main 병합 중",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.tools",
-    "vue.rearranger.settings.migration": "true"
->>>>>>> ee1333c4cc976e641a85dfa8dc81a49950c81313
->>>>>>> origin/main
->>>>>>> 1e8712257dd73a3447ddc5499e2816b8de627ace
   }
 }</component>
   <component name="RecentsManager">
@@ -181,34 +116,11 @@
       <recent name="C:\_final\bizqr\src\main\java\ezen\bizqr" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <recent name="C:\_final_project\bizqr\src\main\resources\static\js\user" />
-      <recent name="C:\_final_project\bizqr\src\main\resources\static\js" />
-      <recent name="D:\_programming\_finalproject\_final\bizqr\src\main\resources\static\js\admin" />
-      <recent name="C:\_final\bizqr\src\main\resources\static\js\board" />
-      <recent name="C:\_final\bizqr\src\main\resources\static\css\board" />
-=======
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> 1e8712257dd73a3447ddc5499e2816b8de627ace
       <recent name="D:\_programming\_finalproject\_final\bizqr\src\main\resources\static\js\admin" />
       <recent name="C:\_final\bizqr\src\main\resources\static\js\board" />
       <recent name="C:\_final\bizqr\src\main\resources\static\css\board" />
       <recent name="C:\_final_project\bizqr\src\main\resources\static\asset" />
       <recent name="C:\_final_project\bizqr\src\main\resources\static\css" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ee1333c4cc976e641a85dfa8dc81a49950c81313
->>>>>>> origin/main
->>>>>>> 1e8712257dd73a3447ddc5499e2816b8de627ace
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -342,11 +254,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.bizqr" />
-      <item itemvalue="Gradle.bizqr [dependencies]" />
       <item itemvalue="Gradle.BizqrApplicationTests" />
       <item itemvalue="Gradle.BizqrApplicationTests.contextLoads" />
       <item itemvalue="Gradle.BoardMapperTest" />
+      <item itemvalue="Gradle.bizqr [dependencies]" />
+      <item itemvalue="Gradle.bizqr" />
       <item itemvalue="Spring Boot.BizqrApplication" />
     </list>
     <recent_temporary>
@@ -362,7 +274,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-107bc6b7" />
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
       </set>
     </attachedChunks>
   </component>
@@ -420,11 +332,21 @@
       <workItem from="1707846788854" duration="1950000" />
       <workItem from="1707868312604" duration="8073000" />
       <workItem from="1707976469754" duration="5000" />
-<<<<<<< HEAD
-      <workItem from="1708301622249" duration="18956000" />
-=======
       <workItem from="1708176894935" duration="17382000" />
->>>>>>> origin/main
+      <workItem from="1708490418742" duration="61000" />
+      <workItem from="1708491832947" duration="1117000" />
+      <workItem from="1708560157130" duration="3004000" />
+      <workItem from="1708582493230" duration="44000" />
+      <workItem from="1708598443042" duration="5935000" />
+      <workItem from="1708604585578" duration="2529000" />
+      <workItem from="1708607126548" duration="1738000" />
+      <workItem from="1708646631873" duration="4426000" />
+      <workItem from="1708783618228" duration="17000" />
+      <workItem from="1708797828232" duration="2943000" />
+      <workItem from="1708802962961" duration="1012000" />
+      <workItem from="1708867694968" duration="1184000" />
+      <workItem from="1708876436556" duration="3000" />
+      <workItem from="1708876471620" duration="1561000" />
     </task>
     <servers />
   </component>

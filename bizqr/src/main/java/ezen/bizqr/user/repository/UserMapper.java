@@ -31,7 +31,7 @@ public interface UserMapper {
 
     int userRegisterForSocial(UserVO uvo);
 
-    int userModify(UserVO uvo);
+    int userModify(UserVO uvo) ;
 
     OAuthVO selectSocialUserDomain(String email);
 

@@ -241,3 +241,4 @@ VALUES ('admin@admin.com', 'ROLE_ADMIN');
 INSERT INTO `store` (`store_id`, `email`, `register_num`, `store_name`, `store_address`, `store_number`, `store_hours`, `company`, `reg_at`) VALUES
     ('123', 'test@example.com', 1234567890, 'Test Store', '123 Test Address, Test City', '123-456-7890', '09:00-18:00', 'Test Company', CURRENT_TIMESTAMP);
 
+-- 2024-02-26 --
