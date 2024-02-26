@@ -1,5 +1,6 @@
 package ezen.bizqr.customer.service;
 
+import ezen.bizqr.customer.domain.ItemVO;
 import ezen.bizqr.customer.domain.OrderItemVO;
 import ezen.bizqr.customer.domain.OrderVO;
 import ezen.bizqr.customer.repository.OrderMapper;
@@ -60,5 +61,19 @@ public class CustomerServiceImpl implements CustomerService{
         log.info("basket update service impl");
 
         return om.basketUpdate(oivo);
+    }
+
+    @Override
+    public int basketCount(String tableId) {
+        log.info("basketCount service impl");
+
+        return om.basketCount(tableId);
+    }
+
+    @Override
+    public List<ItemVO> itemList(long storeId, String tabName) {
+        log.info("itemList service impl");
+
+        return om.itemList(storeId, tabName);
     }
 }

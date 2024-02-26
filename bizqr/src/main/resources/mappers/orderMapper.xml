@@ -29,4 +29,12 @@
     <delete id="deleteOrderBasket">
         DELETE FROM `order_items` WHERE table_id = #{tableId}
     </delete>
+
+    <select id="basketCount" resultType="int">
+        SELECT COUNT(*) FROM `order_items` WHERE table_id = #{tableId}
+    </select>
+
+    <select id="itemList" resultType="ezen.bizqr.customer.domain.ItemVO">
+        SELECT * FROM `menu_item` WHERE store_id = #{storeId} AND tab_name = #{tabName}
+    </select>
 </mapper>

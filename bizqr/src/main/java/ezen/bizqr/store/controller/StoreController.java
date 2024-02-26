@@ -1,16 +1,13 @@
 package ezen.bizqr.store.controller;
 
-import ezen.bizqr.board.domain.BoardVO;
-import ezen.bizqr.board.domain.PagingVO;
-import ezen.bizqr.board.handler.PagingHandler;
-import ezen.bizqr.board.service.BoardService;
-
 import ezen.bizqr.file.FileHandler;
+import ezen.bizqr.file.FileMapper;
 import ezen.bizqr.file.FileVO;
 import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.domain.StoreVO;
 import ezen.bizqr.store.service.StoreService;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -31,6 +28,7 @@ public class StoreController {
 
     private final StoreService ssv;
     private final FileHandler fh;
+    private final FileMapper fm;
 
     @GetMapping("/register")
     public void storeRegister(){}
@@ -45,7 +43,19 @@ public class StoreController {
     }
 
     @GetMapping("/create")
-    public void storeCreate(){}
+    public String createStoreForm(Model model, @RequestParam("storeId") String storeId, @RequestParam("storeName") String storeName) {
+        model.addAttribute("storeId", storeId);
+        model.addAttribute("storeName", storeName);
+        return "/store/create";
+    }
+
+    @GetMapping("/modify")
+    public String modify(Model model, @RequestParam("storeId") String storeId) {
+        StoreVO svo = ssv.getDetailFromStore(storeId);
+        model.addAttribute("svo", svo);
+        return "/store/modify";
+    }
+
 
     @GetMapping("/table")
     public void table(){}
@@ -68,16 +78,20 @@ public class StoreController {
 
            FileVO fvo = fh.uploadFile(imageFile);
            fvo.setMenuId(MenuId);
-
             if (!imageFile.isEmpty()) {
 
                 log.info(">>>>>>>>>>>Received file>>>>>>>>>>>>: " + imageFile.getOriginalFilename());
+                fm.insertFile(fvo);
             }
 
 
             return ResponseEntity.ok("menu add success");
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> bcbfd3b1af554e4f03e360a1dbf507f843d214b4
     @GetMapping("/store/myStoreList")
     public String myStoreList(Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

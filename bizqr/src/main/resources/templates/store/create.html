@@ -37,9 +37,9 @@
         <div class="storeEditor">
             <div class="storeInfo">
                 <label for="storeName">점포명:</label>
-                <input type="text" name="storeName" id="storeName">
+                <input type="text" name="storeName" id="storeName" th:value="${storeName}" readonly>
                 <label for="storeId">스토어 아이디:</label>
-                <input type="text" name="storeId" id="storeId" >
+                <input type="text" name="storeId" id="storeId" th:value="${storeId}" readonly>
                 <label for="tabName">탭 이름:</label>
                 <input type="text" name="tabName" id="tabName">
             </div>
@@ -62,7 +62,7 @@
         <div id="modal" class="modal" style="display:none;">
             <div class="modal-content">
                 <div class="imageBox">
-                <img id="image-preview" src="" alt="Image preview" style="display: none; max-width: 100%; height: auto;">
+                    <img id="image-preview" src="" alt="Image preview" style="display: none; max-width: 100%; height: auto;">
                 </div>
 
                 <label for="modal-item-image-upload">

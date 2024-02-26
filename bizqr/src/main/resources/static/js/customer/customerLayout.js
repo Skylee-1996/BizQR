@@ -1,7 +1,8 @@
 console.log("customerLayout.js");
 
 const url = window.location.href;
-const checkUrl = url.substring(url.lastIndexOf("/")+1);
+
+let checkUrl = url.substring(url.indexOf("/")+1, url.indexOf("/", 2));
 
 console.log(checkUrl);
 

@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `user` (
     `email` VARCHAR(255) NOT NULL,
     `name` VARCHAR(255),
     `pwd` VARCHAR(255) NOT NULL,
-    `nick_name` VARCHAR(255) NOT NULL,
+    `nick_name` VARCHAR(255),
     `phone_num` VARCHAR(255),
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `last_login` DATETIME,
@@ -23,12 +23,14 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 
 -- board 테이블 생성
+-- nickName 조건 수정 (24.02.22)
 CREATE TABLE IF NOT EXISTS `board` (
     `bno` BIGINT NOT NULL AUTO_INCREMENT,
     `email` VARCHAR(255) NOT NULL,
-    `nick_name` VARCHAR(255) NOT NULL,
+    `nick_name` VARCHAR(255),
     `title` VARCHAR(255) NOT NULL,
     `content` TEXT,
+    `main_image` VARCHAR(255),
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `mod_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `cmtQty` INT DEFAULT 0,
@@ -95,7 +97,6 @@ CREATE TABLE IF NOT EXISTS `social_user` (
 CREATE TABLE IF NOT EXISTS `auth_user` (
     `email` VARCHAR(255) NOT NULL,
     `auth` VARCHAR(255) NOT NULL,
-    PRIMARY KEY (`email`),
     FOREIGN KEY (`email`) REFERENCES `user`(`email`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -203,10 +204,11 @@ CREATE TABLE IF NOT EXISTS inventory (
 
 
 -- comment 테이블 생성
+-- nickName 삭제 후 email로 변경 (24.02.22)
 CREATE TABLE IF NOT EXISTS `comment` (
     `cno` BIGINT NOT NULL AUTO_INCREMENT,
     `bno` BIGINT NOT NULL,
-    `nick_name` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
     `content` TEXT NOT NULL,
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `mod_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

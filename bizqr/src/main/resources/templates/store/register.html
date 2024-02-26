@@ -1,4 +1,5 @@
-<html lang="kor" xmlns:th="http://www.thymeleaf.org">
+<html lang="kor" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <th:block th:replace="~{/layout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
@@ -14,31 +15,31 @@
                     <form action="/store/register" method="post">
                         <div class="user-details">
                             <div class="input-box">
-                                <span class="details">이름</span>
+                                <label for="name"><span class="details">대표자명</span></label>
                                 <input type="text" name="name" id="name" placeholder="이름을 입력해주세요.." required>
                             </div>
                             <div class="input-box">
-                                <label class="details">이메일</label>
-                                <input type="email" name="email" id="email" placeholder="이메일을 입력해주세요.." required>
+                                <label for="email"><span class="details">이메일</span></label>
+                                <input type="email" name="email" id="email" th:value="${#authentication.name}" readonly>
                             </div>
                             <div class="input-box">
-                                <span class="details">회사명</span>
+                                <label for="company"><span class="details">회사명</span></label>
                                 <input type="text" name="company" id="company" placeholder="회사명을 입력해주세요.." required>
                             </div>
                             <div class="input-box">
-                                <span class="details">점포명</span>
+                                <label for="storeName"><span class="details">점포명</span></label>
                                 <input type="text" name="storeName" id="storeName" placeholder="점포명을 입력해주세요.." required>
                             </div>
                             <div class="input-box">
-                                <span class="details">점포전화번호</span>
+                                <label for="storeNum"><span class="details">점포전화번호</span></label>
                                 <input type="text" name="storeNum" id="storeNum" placeholder="점포번호를 입력해주세요.." required>
                             </div>
                             <div class="input-box">
-                                <span class="details">개인전화번호</span>
+                                <label for="ownerNum"><span class="details">대표자 전화번호</span></label>
                                 <input type="text" name="ownerNum" id="ownerNum" placeholder="전화번호을 입력해주세요.." required>
                             </div>
                             <div class="input-box">
-                                <span class="details">주소</span>
+                                <label for="storeAddress"><span class="details">주소</span></label>
                                 <input type="text" name="storeAddress" id="storeAddress" placeholder="주소를 입력해주세요.." required>
                             </div>
                         </div>

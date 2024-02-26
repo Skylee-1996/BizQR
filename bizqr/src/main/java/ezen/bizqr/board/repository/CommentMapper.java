@@ -15,7 +15,7 @@ public interface CommentMapper {
     List<CommentVO> getList(@Param("bno") long bno, @Param("pgvo") PagingVO pgvo);
     int edit(CommentVO cvo);
     int bnoTotalCount(long bno);
-    int deleteComment(@Param("cno") long cno,@Param("writer") String writer);
+    int deleteComment(@Param("cno") long cno,@Param("email") String email);
 
     void delete(long bno);
 }
