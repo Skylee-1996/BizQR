@@ -42,9 +42,6 @@
                 <div id="viewer"></div>
 
                 <div class="btnAll">
-                    <a th:href="@{/board/list}">
-                        <button type="button" id="listBtn">목록</button>
-                    </a>
                     <div th:if="${#authentication.name == bdto.bvo.email}">
                         <a th:href="@{/board/modify(bno=${bdto.bvo.bno})}">
                             <button type="button" id="modBtn">수정</button>
@@ -53,6 +50,9 @@
                             <button type="button" id="delBtn">삭제</button>
                         </a>
                     </div>
+                    <a th:href="@{/board/list}">
+                        <button type="button" id="listBtn">목록</button>
+                    </a>
                 </div>
                <!-- button end line -->
 

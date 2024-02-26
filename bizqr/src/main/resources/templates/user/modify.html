@@ -2,47 +2,163 @@
 
 <th:block th:replace="~{/layout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
-        <link rel="stylesheet" th:href="@{/css/loginstyle.css}">
+        <link rel="stylesheet" href="/css/user/modify.css">
+        <style>
+            input{
+                border: 1px solid #b1b1b1;
+                border-radius: 20px;
+                width: 300px;
+                height: 35px;
+                padding-left: 20px;
+                margin: 10px;
+                transform: rotateX(-20deg);
+            }
+
+            input[readonly] {
+                background-color: #f2f2f2;
+            }
+
+            #wrap-modify{
+                transform: rotateY(20deg);
+                margin-bottom: 100px;
+            }
+
+            .email-div, .nick-div, .num-div, .pwd-div, .check-div{
+                justify-content: space-between;
+                margin-left: 20px;
+            }
+
+            hr{
+                border: 0.1px solid #e3e3e3;
+                margin-bottom: 50px;
+            }
+
+            #emailText, #nickText{
+                margin-right: 100px;
+            }
+
+            .phoneNum, #pwdText{
+                margin-right: 85px;
+            }
+
+            .pwdCheck-label{
+                margin-right: 50px;
+            }
+
+            #modify{
+                border: 1px solid transparent;
+                border-radius: 50px;
+                width: 100px;
+                height: 35px;
+                background-color: #0e8bf5;
+                color: white;
+                margin-top: 50px;
+                margin-left: 10px;
+                margin-right: 15px;
+            }
+
+            .user-h3{
+                margin-top: 100px;
+            }
+
+            #cancel{
+                border: 1px solid transparent;
+                border-radius: 50px;
+                width: 100px;
+                height: 35px;
+                background-color: rgb(228, 228, 228);
+                color: white;
+                margin-top: 50px;
+            }
 
 
+
+
+
+        </style>
         <body>
 
-        <div class="login-card">
-            <h2>Register</h2>
-            <h3>Enter your credentials</h3>
+            <div id = "wrap-modify">
+                <form action="/user/modify" method="post" class="login-form" >
+                 <h3 class="user-h3">회원정보 수정</h3>
+            <hr>
 
-            <form action="/user/modify" method="post" class="login-form" >
-                <div>
-                    <h5>이메일</h5>
-                    <h5 id="emailText"></h5>
-                </div>
-                <input type="text" name="email" id="e" placeholder="UserEmail" readonly="readonly" th:value="${UserVO.email}">
+                    <div class="email-div">
+            <label id="emailText">이메일</label>
+            <input type="email" name="email" id="e" placeholder="UserEmail" readonly="readonly" th:value="${UserVO.email}"><br>
+            </div>
 
-                <div>
-                    <h5>비밀번호</h5>
-                    <h5 id="pwdText"></h5>
-                </div>
-                <input type="password" name="pwd" id="p1" placeholder="Password">
+                    <div class="nick-div">
+            <label id="nickText">닉네임</label>
+            <input type="text" name="nickName" id="n" placeholder="NickName" th:value="${UserVO.nickName}"><br>
+                    </div>
 
-                <div>
-                    <h5>비밀번호 확인</h5>
-                    <h5></h5>
-                </div>
+                    <div class="num-div">
+            <label class="phoneNum">전화번호</label>
+            <input type="text" name="phoneNum" id="pn" placeholder="PhoneNumber"><br>
+                    </div>
 
-                <input type="password" name="pwdCheck2" id="p2" placeholder="Password">
-                <h5>닉네임</h5>
-                <input type="text" name="nickName" id="n" placeholder="UserNickName" th:value="${UserVO.nickName}">
+                    <div class="pwd-div">
+            <label id="pwdText">비밀번호</label>
+            <input type="password" name="pwd" id="p1" placeholder="Password"><br>
+                    </div>
 
-                <h5>전화번호</h5>
-                <input type="text" name="phoneNum" id="pn" placeholder="PhoneNumber">
+                    <div class="check-div">
+            <label class="pwdCheck-label">비밀번호 확인</label>
+            <input type="password" name="pwdCheck2" id="p2" placeholder="Password Check"><br>
+                    </div>
 
-                <button type="submit" id="modify">Modify</button>
-            </form>
+            <button type="submit" id="modify">수정</button>
+                    <a href="/"><button type="button" id="cancel">취소</button></a>
+        </form>
         </div>
 
 
 
-        </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--                <div>-->
+<!--                    <h5>이메일</h5>-->
+<!--                    <h5 id="emailText"></h5>-->
+<!--                </div>-->
+<!--                <input type="text" name="email" id="e" placeholder="UserEmail" readonly="readonly" th:value="${UserVO.email}">-->
+
+<!--                <div>-->
+<!--                    <h5>비밀번호</h5>-->
+<!--                    <h5 id="pwdText"></h5>-->
+<!--                </div>-->
+<!--                <input type="password" name="pwd" id="p1" placeholder="Password">-->
+
+<!--                <div>-->
+<!--                    <h5>비밀번호 확인</h5>-->
+<!--                    <h5></h5>-->
+<!--                </div>-->
+
+<!--                <input type="password" name="pwdCheck2" id="p2" placeholder="Password">-->
+<!--                <h5>닉네임</h5>-->
+<!--                <input type="text" name="nickName" id="n" placeholder="UserNickName" th:value="${UserVO.nickName}">-->
+
+<!--                <h5>전화번호</h5>-->
+<!--                <input type="text" name="phoneNum" id="pn" placeholder="PhoneNumber">-->
+
+<!--                <button type="submit" id="modify">Modify</button>-->
+<!--            </form>-->
+<!--        </div>-->
+
         <script th:src="@{/js/user/userRegister.js}"></script>
+        </body>
     </th:block>
 </th:block>
