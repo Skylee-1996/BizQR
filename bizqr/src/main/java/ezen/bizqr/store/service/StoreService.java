@@ -14,7 +14,6 @@ public interface StoreService {
     RegisterVO getDetail(long registerNum);
 
 
-
     List<StoreVO> selectEmail(String userEmail);
     int insertStore(StoreVO svo);
 
