@@ -21,9 +21,16 @@ public interface StoreMapper {
     int insertStore(StoreVO svo);
 
     long getMenuId();
+<<<<<<< HEAD
 
 
 
     StoreVO getDetailFromStore(String storeId);
 
+=======
+
+    StoreVO getDetailFromStore(String storeId);
+
+    void updateStore(StoreVO svo);
+>>>>>>> origin/main
 }

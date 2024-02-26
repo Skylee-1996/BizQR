@@ -51,6 +51,7 @@ CREATE TABLE IF NOT EXISTS `board` (
     `store_type` VARCHAR(255) NOT NULL,
     `store_hours` VARCHAR(255),
     `company` VARCHAR(255),
+    `logo_Image` VARCHAR(255),
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`store_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -110,6 +111,7 @@ CREATE TABLE IF NOT EXISTS `register` (
     `store_name` VARCHAR(255) NOT NULL,
     `store_address` VARCHAR(255) NOT NULL,
     `store_type` VARCHAR(255) NOT NULL,
+    `subscribe` VARCHAR(255) NOT NULL,
     `owner_num` VARCHAR(255),
     `store_num` VARCHAR(255),
     PRIMARY KEY (`register_num`)
@@ -248,3 +250,18 @@ INSERT INTO `store` (`store_id`, `email`, `register_num`, `store_name`, `store_a
     ('123', 'test@example.com', 1234567890, 'Test Store', '123 Test Address, Test City', '123-456-7890', '09:00-18:00', 'Test Company', CURRENT_TIMESTAMP);
 
 -- 2024-02-26 --
+-- store_payment
+create table store_payment(
+    imp_uid varchar(255) not null,
+    merchant_uid varchar(255) not null,
+    buyer_email varchar(255) not null,
+    buyer_name varchar(255) not null,
+    buyer_company varchar(255) not null,
+    buyer_address varchar(255) not null,
+    buyer_ownerTelNum varchar(255) not null,
+    buyer_storeTelNum varchar(255) not null,
+    item_name varchar(255) not null,
+    item_amount int not null,
+    primary key(imp_uid)
+    );
+

@@ -12,16 +12,20 @@
             <div class="container">
                 <div class="title">점포 정보 수정</div>
                 <br>
-                <form action="/store/modify" method="post">
+                <form action="/store/modify" method="post" enctype="multipart/form-data">
                     <div class="imageBox">
-                        <img id="image-preview" src="" alt="Image preview" style="display: none; max-width: 100%; height: auto;">
+                        <img id="image-preview" src="" alt="Image preview">
                     </div>
 
-                    <label for="modal-item-image-upload">
+                    <label for="store-image-upload">
                         <div class="btn-upload">이미지 업로드</div>
                     </label>
-                    <input type="file" name="file" id="modal-item-image-upload">
+                    <input type="file" name="file" id="store-image-upload">
                     <div class="user-details">
+                        <div class="input-box">
+                            <label for="storeId"><span class="details">storeId</span></label>
+                            <input type="text" name="storeId" id="storeId" th:value="${svo.getStoreId()}" readonly>
+                        </div>
                         <div class="input-box">
                             <label for="email"><span class="details">이메일</span></label>
                             <input type="email" name="email" id="email" th:value="${svo.getEmail()}" required>
@@ -35,8 +39,8 @@
                             <input type="text" name="company" id="company" th:value="${svo.getCompany()}" required>
                         </div>
                         <div class="input-box">
-                            <label for="storeNum"><span class="details">점포전화번호</span></label>
-                            <input type="text" name="storeNum" id="storeNum" th:value="${svo.getStoreNumber()}" required>
+                            <label for="storeNumber"><span class="details">점포전화번호</span></label>
+                            <input type="text" name="storeNumber" id="storeNumber" th:value="${svo.getStoreNumber()}" required>
                         </div>
                         <div class="input-box">
                             <label for="storeHours"><span class="details">운영 시간</span></label>
@@ -79,6 +83,7 @@
                 </form>
             </div>
         </div>
+        <script src="/js/store/modify.js"></script>
         </body>
     </th:block>
 </th:block>

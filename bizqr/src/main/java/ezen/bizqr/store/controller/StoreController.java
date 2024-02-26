@@ -34,18 +34,19 @@ public class StoreController {
     public void storeRegister(){}
 
     @PostMapping("/register")
-    public String storeRegister(RegisterVO rvo) {
+    public String storeRegister(RegisterVO rvo, Model m) {
         log.info(">>>>> svo 들어온지 확인하자 >>>>> {} " , rvo);
+        
+        //결제 완료 후 db 저장해야함으로 주석처리함 2024-02-26 - cbj
+        //ssv.insertRegister(rvo);
 
-        ssv.insertRegister(rvo);
+        m.addAttribute("rvo", rvo);
 
-        return "index";
+        return "/payment/pay";
     }
 
     @GetMapping("/create")
-    public String createStoreForm(Model model, @RequestParam("storeId") String storeId, @RequestParam("storeName") String storeName) {
-        model.addAttribute("storeId", storeId);
-        model.addAttribute("storeName", storeName);
+    public String createStoreForm() {
         return "/store/create";
     }
 
@@ -70,12 +71,7 @@ public class StoreController {
     public ResponseEntity<String> addMenu(@ModelAttribute MenuItemVO mvo, @RequestParam(name="image", required = false) MultipartFile imageFile) {
 
             log.info(">>>>>>>>>>mvo >>>>>>> {}", mvo);
-
-
-
         long MenuId = ssv.insertMenu(mvo);
-
-
            FileVO fvo = fh.uploadFile(imageFile);
            fvo.setMenuId(MenuId);
             if (!imageFile.isEmpty()) {
@@ -99,6 +95,18 @@ public class StoreController {
         return "/store/myStoreList";
     }
 
+    @PostMapping("/modify")
+    public String modifyStore(StoreVO svo, @RequestParam("file") MultipartFile file, Model m) {
+
+        log.info(">>>>>>>>> svo >>>{}", svo);
+
+          FileVO fvo= fh.uploadStoreImage(file, svo.getStoreId());
+          svo.setLogoImage(fvo.getFileName());
+          ssv.updateStore(svo);
+          m.addAttribute("svo", svo);
+
+        return "/store/create";
+    }
 }
 
 
