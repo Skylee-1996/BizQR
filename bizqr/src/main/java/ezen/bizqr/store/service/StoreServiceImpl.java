@@ -41,23 +41,16 @@ public class StoreServiceImpl implements StoreService {
     public List<StoreVO> selectEmail(String userEmail) {
         return storeMapper.selectEmail(userEmail);
     }
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> bcbfd3b1af554e4f03e360a1dbf507f843d214b4
     public int insertStore(StoreVO svo) {
 
         return storeMapper.insertStore(svo);
     }
-<<<<<<< HEAD
-=======
+
 
     @Override
     public StoreVO getDetailFromStore(String storeId) {
         return storeMapper.getDetailFromStore(storeId);
     }
 
->>>>>>> bcbfd3b1af554e4f03e360a1dbf507f843d214b4
 }

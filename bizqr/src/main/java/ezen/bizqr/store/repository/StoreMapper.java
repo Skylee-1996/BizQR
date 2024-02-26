@@ -21,10 +21,9 @@ public interface StoreMapper {
     int insertStore(StoreVO svo);
 
     long getMenuId();
-<<<<<<< HEAD
-=======
+
 
 
     StoreVO getDetailFromStore(String storeId);
->>>>>>> bcbfd3b1af554e4f03e360a1dbf507f843d214b4
+
 }

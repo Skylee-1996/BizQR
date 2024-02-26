@@ -21,10 +21,6 @@ public class PayController {
         return "/payment/pay";
     }
 
-    @PostMapping("/pay")
-    public String pay(){
 
-        return "/index"
-    }
 
 }
