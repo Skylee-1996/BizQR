@@ -106,7 +106,9 @@ form .store-details .category{
 #dot-1:checked ~ .category label .one,
 #dot-2:checked ~ .category label .two,
 #dot-3:checked ~ .category label .three,
-#dot-4:checked ~ .category label .four{
+#dot-4:checked ~ .category label .four,
+#payment1:checked ~ .category label .month,
+#payment2:checked ~ .category label .year{
     border-color:#d9d9d9;
     background: #9b59b6;
 }

@@ -68,6 +68,21 @@
                                 </label>
                             </div>
                         </div>
+                        <div class="store-details">
+                            <input type="radio" name="paymentType" id="payment1" value="monthly">
+                            <input type="radio" name="paymentType" id="payment2" value="yearly">
+                            <span class="store-title">구독 선택</span>
+                            <div class="category">
+                                <label for="payment1">
+                                    <span class="dot month"></span>
+                                    <span class="paymentType" th:value="monthly" id="monthly">9900원 한달 구독</span>
+                                </label>
+                                <label for="payment2">
+                                    <span class="dot year"></span>
+                                    <span class="paymentType" th:value="yearly" id="yearly">99000원 일년 구독</span>
+                                </label>
+                            </div>
+                        </div>
                         <div class="button">
                             <input type="submit" value="Register">
                         </div>
