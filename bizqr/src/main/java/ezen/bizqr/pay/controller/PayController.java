@@ -17,7 +17,15 @@ public class PayController {
 
 
     @GetMapping("/pay")
-    public String pay(@ModelAttribute("rvo") RegisterVO rvo, Model m){
+    public String pay(){
+
+
+        return "/payment/pay";
+    }
+
+    @PostMapping("/pay")
+    public String pay(RegisterVO rvo, Model m){
+        log.info("registerVO rvo >>>>> {}", rvo);
 
         m.addAttribute("rvo", rvo);
 
