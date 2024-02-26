@@ -51,6 +51,7 @@ CREATE TABLE IF NOT EXISTS `board` (
     `store_type` VARCHAR(255) NOT NULL,
     `store_hours` VARCHAR(255),
     `company` VARCHAR(255),
+    `logo_Image` VARCHAR(255),
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`store_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

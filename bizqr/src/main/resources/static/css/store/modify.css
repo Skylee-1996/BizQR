@@ -141,7 +141,11 @@ form .button input{
 form .button input:hover{
     background: linear-gradient(-135deg, #71b7e6, #9b59b6);
 }
-
+#image-preview{
+    display: none;
+    height: 150px;
+    width: 400px;
+}
 @media(max-width: 584px){
     .container{
         max-width: 100%;

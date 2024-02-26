@@ -23,4 +23,6 @@ public interface StoreMapper {
     long getMenuId();
 
     StoreVO getDetailFromStore(String storeId);
+
+    void updateStore(StoreVO svo);
 }

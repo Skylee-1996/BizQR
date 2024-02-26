@@ -18,4 +18,6 @@ public interface StoreService {
     int insertStore(StoreVO svo);
 
     StoreVO getDetailFromStore(String storeId);
+
+    void updateStore(StoreVO svo);
 }

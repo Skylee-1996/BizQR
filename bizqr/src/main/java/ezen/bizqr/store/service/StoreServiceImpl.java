@@ -50,4 +50,9 @@ public class StoreServiceImpl implements StoreService {
         return storeMapper.getDetailFromStore(storeId);
     }
 
+    @Override
+    public void updateStore(StoreVO svo) {
+        storeMapper.updateStore(svo);
+    }
+
 }
