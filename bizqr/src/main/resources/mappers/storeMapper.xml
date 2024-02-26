@@ -32,6 +32,7 @@
     <select id="getMenuId" resultType="long">
         select max(menu_id) from menu_item
     </select>
+
     <select id="getDetailFromStore" resultType="ezen.bizqr.store.domain.StoreVO">
         select * from store where store_id = #{storeId}
     </select>

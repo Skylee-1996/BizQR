@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <th:block th:replace="~{layout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
         <link rel="stylesheet" th:href="@{/css/board/noticeList.css}">
@@ -28,6 +28,7 @@
                 </div>
             </section>
 
+            <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
             <!-- menu btn -->
             <div class="fab-wrapper">
                 <input id="fabCheckbox" type="checkbox" class="fab-checkbox" />
@@ -51,6 +52,7 @@
                     </a>
                 </div>
             </div>
+            </li>
 
             <!-- card section -->
             <div class="listContainer">
