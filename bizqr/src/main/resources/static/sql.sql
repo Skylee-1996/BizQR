@@ -253,8 +253,8 @@ create table store_payment(
     buyer_name varchar(255) not null,
     buyer_company varchar(255) not null,
     buyer_address varchar(255) not null,
-    buyer_ownerPhoneNum varchar(255) not null,
-    buyer_ownerStoreNum varchar(255) not null,
+    buyer_ownerTelNum varchar(255) not null,
+    buyer_storeTelNum varchar(255) not null,
     item_name varchar(255) not null,
     item_amount int not null,
     primary key(imp_uid)
