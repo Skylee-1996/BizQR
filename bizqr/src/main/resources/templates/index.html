@@ -66,7 +66,7 @@
 
             <div class="store-list">
                 <div class="item">
-                    <img src="/asset/근심.png">
+                    <img th:src="@{|/upload/storeLogo/${svo.logoImage}|}" alt="이미지">
                     <div class="info">
                         <div>
                             <h5>가맹점1</h5>
@@ -171,6 +171,7 @@
                 </div>
             </div>
         </div>
+        <script src="/js/index/index.js"></script>
         </body>
     </th:block>
 </th:block>

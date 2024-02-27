@@ -50,4 +50,7 @@
     WHERE
     store_id = #{storeId};
     </update>
+    <select id="getStoreList" resultType="ezen.bizqr.store.domain.StoreVO">
+        select * from store;
+    </select>
 </mapper>

@@ -55,4 +55,9 @@ public class StoreServiceImpl implements StoreService {
         storeMapper.updateStore(svo);
     }
 
+    @Override
+    public List<StoreVO> getStoreList() {
+        return storeMapper.getStoreList();
+    }
+
 }

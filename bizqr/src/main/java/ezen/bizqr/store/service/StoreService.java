@@ -20,4 +20,6 @@ public interface StoreService {
     StoreVO getDetailFromStore(String storeId);
 
     void updateStore(StoreVO svo);
+
+    List<StoreVO> getStoreList();
 }
