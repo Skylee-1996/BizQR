@@ -5,8 +5,8 @@
 <mapper namespace="ezen.bizqr.board.repository.BoardMapper">
 
     <insert id="insert">
-        insert into board(title, email, nick_name, content)
-        values(#{title}, #{email}, #{nickName},#{content})
+        insert into board(title, email, nick_name, content, main_image)
+        values(#{title}, #{email}, #{nickName},#{content},#{mainImage})
     </insert>
 
     <select id="getList" resultType="ezen.bizqr.board.domain.BoardVO">
@@ -25,7 +25,7 @@
     </select>
 
     <update id="update">
-        update board set title = #{title}, content = #{content}, mod_at= now() where bno=#{bno}
+        update board set title = #{title}, content = #{content}, mod_at= now(), read_count = read_count-2 where bno=#{bno}
     </update>
 
     <delete id="delete">
@@ -35,6 +35,10 @@
     <select id="getTotalCount" resultType="int">
         select count(bno) from board <include refid="search"></include>
     </select>
+
+    <update id="readCount">
+        update board set read_count = read_count+1 where bno = #{bno}
+    </update>
 
     <sql id="search">
         <if test="type!=null">

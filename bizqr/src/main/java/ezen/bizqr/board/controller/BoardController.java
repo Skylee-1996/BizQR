@@ -28,21 +28,21 @@ public class BoardController {
     private final FileHandler fh;
 
     @GetMapping("/register")
-    public void register() {}
+    public void register() {
+    }
 
-    //서비스페이지이동
     @GetMapping("/service")
     public String service() {
-
         return "/info/serviceDetails";
     }
 
     @PostMapping(value = "/register", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> register(@RequestBody BoardVO bvo)  {
+    public ResponseEntity<String> register(@RequestBody BoardVO bvo, Model m)  {
         log.info(">>>>> bvo >> {}", bvo);
         bsv.register(bvo);
         return ResponseEntity.ok("redirect:/board/list");
     }
+
     @GetMapping("/list")
     public void list(Model m, PagingVO pgvo) {
         log.info(">>> pgvo >> {}", pgvo);
@@ -56,6 +56,7 @@ public class BoardController {
     @GetMapping({"/detail","/modify"})
     public void detail(Model m, @RequestParam("bno")long bno) {
         m.addAttribute("bdto", bsv.getDetail(bno));
+        bsv.reatCount(bno);
     }
 
     @PostMapping(value="/modify", consumes = MediaType.APPLICATION_JSON_VALUE)

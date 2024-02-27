@@ -1,6 +1,8 @@
 console.log("hi editor js")
 const Editor = toastui.Editor;
 
+let mainImage = "";
+
 const editor = new Editor({
     el: document.querySelector('#editor'),
     height: '600px',
@@ -21,6 +23,9 @@ const editor = new Editor({
                 });
                 const filename = await response.text();
                 console.log('서버에 저장된 파일명: ', filename);
+                if(mainImage === ""){
+                    mainImage = filename;
+                }
 
                 const imageUrl = `/file/image-print?filename=${filename}`;
                 callback(imageUrl, 'image alt attribute');
@@ -36,14 +41,13 @@ async function savePost(event) {
 
     const title = document.getElementById("title").value;
     const email = document.getElementById("email").value;
-    const nickName = document.getElementById("nickName").value;
     const content = editor.getMarkdown();
 
     const postData = {
         title: title,
         email: email,
-        nickName: nickName,
-        content: content
+        content: content,
+        mainImage: mainImage
     };
 
     try {
@@ -54,7 +58,6 @@ async function savePost(event) {
             },
             body: JSON.stringify(postData)
         });
-
         if(response.ok) {
             const result = await response.text();
             alert("게시글이 저장 되었습니다.");

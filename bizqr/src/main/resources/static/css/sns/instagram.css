@@ -1,7 +1,6 @@
 /* Navigation */
 nav .logo {
     height: 29px;
-    /* border: 1px solid green; */
 }
 .search-guide .search-placeholder {
     color: hsl(0, 0%, 56%);
@@ -159,7 +158,6 @@ header {
 
 /* Story */
 .story-item {
-    /* background: green; */
     display: flex;
     flex-direction: column;
     align-items: center;

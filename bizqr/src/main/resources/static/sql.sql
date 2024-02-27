@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `user` (
     `email` VARCHAR(255) NOT NULL,
     `name` VARCHAR(255),
     `pwd` VARCHAR(255) NOT NULL,
-    `nick_name` VARCHAR(255) NOT NULL,
+    `nick_name` VARCHAR(255),
     `phone_num` VARCHAR(255),
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `last_login` DATETIME,
@@ -23,12 +23,14 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 
 -- board 테이블 생성
+-- nickName 조건 수정 (24.02.22)
 CREATE TABLE IF NOT EXISTS `board` (
     `bno` BIGINT NOT NULL AUTO_INCREMENT,
     `email` VARCHAR(255) NOT NULL,
-    `nick_name` VARCHAR(255) NOT NULL,
+    `nick_name` VARCHAR(255),
     `title` VARCHAR(255) NOT NULL,
     `content` TEXT,
+    `main_image` VARCHAR(255),
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `mod_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     `cmtQty` INT DEFAULT 0,
@@ -49,6 +51,7 @@ CREATE TABLE IF NOT EXISTS `board` (
     `store_type` VARCHAR(255) NOT NULL,
     `store_hours` VARCHAR(255),
     `company` VARCHAR(255),
+    `logo_Image` VARCHAR(255),
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`store_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -95,7 +98,6 @@ CREATE TABLE IF NOT EXISTS `social_user` (
 CREATE TABLE IF NOT EXISTS `auth_user` (
     `email` VARCHAR(255) NOT NULL,
     `auth` VARCHAR(255) NOT NULL,
-    PRIMARY KEY (`email`),
     FOREIGN KEY (`email`) REFERENCES `user`(`email`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -109,6 +111,7 @@ CREATE TABLE IF NOT EXISTS `register` (
     `store_name` VARCHAR(255) NOT NULL,
     `store_address` VARCHAR(255) NOT NULL,
     `store_type` VARCHAR(255) NOT NULL,
+    `subscribe` VARCHAR(255) NOT NULL,
     `owner_num` VARCHAR(255),
     `store_num` VARCHAR(255),
     PRIMARY KEY (`register_num`)
@@ -118,7 +121,11 @@ CREATE TABLE IF NOT EXISTS `register` (
 ALTER TABLE `bizqrdb`.`register`
     ADD COLUMN `isRegistered` TINYINT NULL DEFAULT 0 AFTER `store_num`;
 
-
+-- visit(통계)테이블 생성
+CREATE TABLE `bizqrdb`.`visit` (
+    `index` BIGINT NOT NULL DEFAULT 0,
+    `visit` DATETIME NULL DEFAULT NOW(),
+    `number` BIGINT NOT NULL DEFAULT 0);
 
 
 
@@ -203,10 +210,11 @@ CREATE TABLE IF NOT EXISTS inventory (
 
 
 -- comment 테이블 생성
+-- nickName 삭제 후 email로 변경 (24.02.22)
 CREATE TABLE IF NOT EXISTS `comment` (
     `cno` BIGINT NOT NULL AUTO_INCREMENT,
     `bno` BIGINT NOT NULL,
-    `nick_name` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
     `content` TEXT NOT NULL,
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `mod_at` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -240,4 +248,20 @@ VALUES ('admin@admin.com', 'ROLE_ADMIN');
 -----임시 점포---
 INSERT INTO `store` (`store_id`, `email`, `register_num`, `store_name`, `store_address`, `store_number`, `store_hours`, `company`, `reg_at`) VALUES
     ('123', 'test@example.com', 1234567890, 'Test Store', '123 Test Address, Test City', '123-456-7890', '09:00-18:00', 'Test Company', CURRENT_TIMESTAMP);
+
+-- 2024-02-26 --
+-- store_payment
+create table store_payment(
+    imp_uid varchar(255) not null,
+    merchant_uid varchar(255) not null,
+    buyer_email varchar(255) not null,
+    buyer_name varchar(255) not null,
+    buyer_company varchar(255) not null,
+    buyer_address varchar(255) not null,
+    buyer_ownerTelNum varchar(255) not null,
+    buyer_storeTelNum varchar(255) not null,
+    item_name varchar(255) not null,
+    item_amount int not null,
+    primary key(imp_uid)
+    );
 

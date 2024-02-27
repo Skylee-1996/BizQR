@@ -21,9 +21,7 @@
 }
 
 .form-control:focus{
-    color: var(--bs-body-color);
-    background-color: var(--bs-body-bg);
-    border-color: #86b7fe;
+    border: 1px solid #86b7fe;
     outline: 0;
 }
 
@@ -69,7 +67,7 @@
     font-weight: bold;
     font-size: 20px;
     margin-left: 260px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 hr{
@@ -121,19 +119,6 @@ hr{
     left: 15px;
 }
 
-.nickLabel{
-    font-size: 14.7px;
-    font-weight: bold;
-    position: relative;
-    left: -450px;
-}
-
-.headLabel{
-    font-size: 14.7px;
-    font-weight: bold;
-    position: relative;
-    left: 20px;
-}
 
 
 /* button */

@@ -23,17 +23,10 @@
                                 <input type="email" class="form-control" name="email" id="email" th:value="${bdto.bvo.email}" readonly>
                             </div>
                             <div class="row2">
-                                <label class="nickLabel">닉네임</label><label class="headLabel">말머리</label><br>
-                                <input type="text" class="form-control" name="nickName" id="nickName" th:value="${bdto.bvo.nickName}" readonly>
-
-                                <select class="form-control" name="Brackets" id="Brackets" onchange="changeColor()" >
-                                    <option value="head">[말머리]</option>
-                                    <option value="head1" class="tag-teal">말머리1</option>
-                                    <option value="head2" class="tag-purple">말머리2</option>
-                                    <option value="head3" class="tag-green">말머리3</option>
-                                    <option value="head4" class="tag-yellow">말머리4</option>
-                                    <option value="head5" class="tag-blue">말머리5</option>
-                                </select>
+                                <label class="headLabel">글번호</label>
+                                <label class="dateLabel">작성일</label><br>
+                                <input type="text" class="form-control" name="bno" id="bno" th:value="${bdto.bvo.bno}" readonly>
+                                <input type="text" class="form-control" name="regAt" id="regAt" th:value="${bdto.bvo.modAt}" readonly>
                             </div>
                         </div>
 
@@ -65,6 +58,8 @@
         <script type="text/javascript" src = "/js/board/textEditor.js"></script>
         </body>
                 </section>
+            </form>
+        </section>
     </th:block>
 </th:block>
 </html>

@@ -7,12 +7,14 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class BoardVO {
     private long bno;
     private String email;
     private String nickName;
     private String title;
     private String content;
+    private String mainImage;
     private String regAt;
     private String modAt;
     private long readCount;

@@ -40,10 +40,10 @@
       <!-- card section -->
       <div class="listContainer">
         <div class="image-container" th:each="svo:${userStore}">
-          <a th:href="@{/store/create(storeId=${svo.storeId}, storeName=${svo.storeName})}">
+          <a th:href="@{/store/modify(storeId=${svo.storeId})}">
           <div class="card">
               <div class="card-header">
-                <img url="C:\_bizqr_fileUpload\tui-editor\" alt="image" />
+                <img th:src="@{|/upload/storeLogo/${svo.logoImage}|}" alt="이미지">
               </div>
               <div class="card-body">
                 <span class="tag tag-teal" th:text="${svo.storeType}"></span>

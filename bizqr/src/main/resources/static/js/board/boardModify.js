@@ -1,16 +1,14 @@
 async function updatePost(event) {
-    event.preventDefault(); // 폼의 기본 제출 동작을 방지
+    event.preventDefault();
     const bno = document.getElementById("bno").value;
     const title = document.getElementById("title").value;
     const email = document.getElementById("email").value;
-    const nickName = document.getElementById("nickName").value;
     const content = editor.getMarkdown();
 
     const postData = {
         bno: bno,
         title: title,
         email: email,
-        nickName: nickName,
         content: content
     };
 
