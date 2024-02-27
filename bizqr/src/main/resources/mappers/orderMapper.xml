@@ -5,7 +5,7 @@
 <mapper namespace="ezen.bizqr.customer.repository.OrderMapper">
     <insert id="basket">
         INSERT INTO `order_items` (menu_id, store_id, table_id, menu_name, menu_price, menu_amount) VALUES
-        ('1', '1', #{tableId}, #{menuName}, #{menuPrice}, #{menuAmount})
+        ('1', #{storeId}, #{tableId}, #{menuName}, #{menuPrice}, #{menuAmount})
     </insert>
 
     <update id="basketUpdate">
@@ -13,17 +13,17 @@
     </update>
 
     <select id="basketList" resultType="ezen.bizqr.customer.domain.OrderItemVO">
-        SELECT * FROM `order_items` WHERE table_id = #{tableId}
+        SELECT * FROM `order_items` WHERE table_id = #{tableId} AND store_id = #{storeId}
     </select>
 
     <insert id="order">
-        INSERT INTO `order` (orderId, tableId, storeId, orderStatus, totalPrice, userRequest) VALUES
-        ('dd', #{tableId}, '1', '1', #{totalPrice}, #{userRequest})
+        INSERT INTO `order` (order_id, table_id, store_id, order_status, total_price, user_request) VALUES
+        ('dd', #{tableId}, #{storeId}, '1', #{totalPrice}, #{userRequest})
     </insert>
 
     <insert id="insertOrderHistory">
         INSERT INTO `order_history` (order_id, table_id, store_id, total_price, user_request, order_status) VALUES
-        ('dd', #{tableId}, '1', #{totalPrice}, #{userRequest}, '1')
+        ('dd', #{tableId}, #{storeId}, #{totalPrice}, #{userRequest}, '1')
     </insert>
 
     <delete id="deleteOrderBasket">
@@ -31,10 +31,14 @@
     </delete>
 
     <select id="basketCount" resultType="int">
-        SELECT COUNT(*) FROM `order_items` WHERE table_id = #{tableId}
+        SELECT COUNT(*) FROM `order_items` WHERE table_id = #{tableId} AND store_id = #{storeId}
     </select>
 
     <select id="itemList" resultType="ezen.bizqr.customer.domain.ItemVO">
         SELECT * FROM `menu_item` WHERE store_id = #{storeId} AND tab_name = #{tabName}
+    </select>
+
+    <select id="tabList" resultType="String">
+        SELECT DISTINCT tab_name FROM `menu_item` WHERE store_id = #{storeId}
     </select>
 </mapper>

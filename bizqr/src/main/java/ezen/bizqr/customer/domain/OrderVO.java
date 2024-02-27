@@ -10,7 +10,7 @@ import lombok.*;
 public class OrderVO {
     private String orderId;
     private String tableId;
-    private String storeId;
+    private long storeId;
     private int orderStatus;
     private long totalPrice;
     private String userRequest;
