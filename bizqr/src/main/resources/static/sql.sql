@@ -121,7 +121,11 @@ CREATE TABLE IF NOT EXISTS `register` (
 ALTER TABLE `bizqrdb`.`register`
     ADD COLUMN `isRegistered` TINYINT NULL DEFAULT 0 AFTER `store_num`;
 
-
+-- visit(통계)테이블 생성
+CREATE TABLE `bizqrdb`.`visit` (
+    `index` BIGINT NOT NULL DEFAULT 0,
+    `visit` DATETIME NULL DEFAULT NOW(),
+    `number` BIGINT NOT NULL DEFAULT 0);
 
 
 
