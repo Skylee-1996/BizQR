@@ -20,4 +20,5 @@ public class StoreVO {
     private String storeType;
     private String company;
     private String regAt;
+    private String logoImage;
 }

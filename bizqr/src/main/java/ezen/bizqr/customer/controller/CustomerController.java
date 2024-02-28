@@ -37,38 +37,59 @@ public class CustomerController {
         return "/customer/customerIndex";
     }
 
-    @GetMapping(value="/itemList/{storeId}/{tabName}/{tableId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    ResponseEntity<List<ItemVO>> index (@PathVariable("tableId") String tableId, @PathVariable("storeId") long storeId, @PathVariable("tabName") String tabName){
-        log.info("tableId >>> {}", tableId);
+    @GetMapping(value="/itemList/{storeId}/{tabName}", produces = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<List<ItemVO>> itemList (@PathVariable("storeId") long storeId, @PathVariable("tabName") String tabName){
         log.info("storeId >>> {}", storeId);
         log.info("tabName >>> {}", tabName);
 
         List<ItemVO> ivo = new ArrayList<ItemVO>(csv.itemList(storeId, tabName));
         log.info("ivo >>> {}", ivo);
 
-        int isOk = csv.basketCount(tableId);
-
         return new ResponseEntity<List<ItemVO>>(ivo, HttpStatus.OK);
     }
 
+    @GetMapping(value="/basketCount/{storeId}/{tableId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<Integer> basketCount (@PathVariable("tableId") String tableId, @PathVariable("storeId") long storeId){
+        log.info("storeId >>> {}", storeId);
+        log.info("tableId >>> {}", tableId);
+
+        return new ResponseEntity<Integer>(csv.basketCount(tableId, storeId), HttpStatus.OK);
+    }
+
+    @GetMapping(value="/tabList/{storeId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<List<String>> tabList (@PathVariable("storeId") long storeId){
+        log.info("storeId >>> {}", storeId);
+
+        List<String> tabList = new ArrayList<String>(csv.tabList(storeId));
+
+        return new ResponseEntity<List<String>>(tabList, HttpStatus.OK);
+    }
+
     @PostMapping("/customerIndex")
-    public String index(OrderItemVO oivo){
+    public String index(OrderItemVO oivo, Model m){
         log.info("oivo >>> {}", oivo);
 
         int isOk = csv.basket(oivo);
 
         log.info("basket 실행 결과 >>> {}", isOk>0?"성공":"실패");
 
+        log.info("tableId >>> {}", oivo.getTableId());
+        log.info("storeId >>> {}", oivo.getStoreId());
+
+        m.addAttribute("tableId", oivo.getTableId());
+        m.addAttribute("storeId", oivo.getStoreId());
+
         return "/customer/customerIndex";
     }
 
     @GetMapping("/customerBasket")
-    public void basket(Model m, @RequestParam("tableId") String tableId){
+    public void basket(Model m, @RequestParam("tableId") String tableId, @RequestParam("storeId") long storeId){
         long menuMainTotal = 0;
 
-        log.info(tableId);
+        log.info("tableId >>> {}", tableId);
+        log.info("storeId >>> {}", storeId);
 
-        List<OrderItemVO> oilist = new ArrayList<OrderItemVO>(csv.basketList(tableId));
+        List<OrderItemVO> oilist = new ArrayList<OrderItemVO>(csv.basketList(tableId, storeId));
         log.info("oilist >>> {}", oilist.toString());
 
         OrderItemVO oivo = new OrderItemVO();

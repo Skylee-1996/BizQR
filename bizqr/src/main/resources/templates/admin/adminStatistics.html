@@ -28,25 +28,25 @@
         </div>
 
         <div class="sidebar">
-            <a href="#">
+            <a th:href="@{/admin/index}">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
                 <h3>Dashboard</h3>
             </a>
-            <a href="#">
+            <a th:href="@{/user/list}">
                     <span class="material-icons-sharp">
                         person_outline
                     </span>
                 <h3>Users</h3>
             </a>
-            <a href="#">
+            <a th:href="@{/admin/adminRegisterList}">
                     <span class="material-icons-sharp">
                         receipt_long
                     </span>
-                <h3>History</h3>
+                <h3>RegisterList</h3>
             </a>
-            <a href="#" class="active">
+            <a th:href="@{/admin/adminStatistics}" class="active">
                     <span class="material-icons-sharp">
                         insights
                     </span>
@@ -150,28 +150,33 @@
 
 
         <!-- Recent Orders Table -->
-        <h2>업종별 분포도</h2>
-        <div class="chart-div">
-            <div class="sales">
-                <div class="status">
-                    <div class="info">
-                <canvas id="pieChartCanvas" width="500px" height="500px"></canvas>
+        <div style="width: 1200px; height: 700px;">
+            <div style="width: 650px; height: 650px; float: left">
+                <h2>업종별 분포도</h2>
+                <div class="chart-div">
+                    <div class="sales">
+                        <div class="status">
+                            <div class="info">
+                        <canvas id="pieChartCanvas" style="width: 550px; height: 550px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 550px; height: 550px; float: right">
+                <h2>업종별 분포도</h2>
+                <div class="chart-div">
+                    <div class="sales">
+                        <div class="status">
+                            <div class="info">
+                                <canvas id="line-chart" style="width: 450px; height: 450px;"></canvas>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <h2>업종별 분포도</h2>
-        <div class="chart-div">
-            <div class="sales">
-                <div class="status">
-                    <div class="info">
-                        <canvas id="line-chart" width="10" height="10"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- End of Recent Orders -->
 
     </main>

@@ -41,18 +41,30 @@ public class StoreServiceImpl implements StoreService {
     public List<StoreVO> selectEmail(String userEmail) {
         return storeMapper.selectEmail(userEmail);
     }
+
     public int insertStore(StoreVO svo) {
 
         return storeMapper.insertStore(svo);
     }
+
     @Override
     public StoreVO getDetailFromStore(String storeId) {
         return storeMapper.getDetailFromStore(storeId);
     }
 
     @Override
+<<<<<<< HEAD
     public List<RegisterVO> getRegisterList() {
         return storeMapper.getRegisterList();
+=======
+    public void updateStore(StoreVO svo) {
+        storeMapper.updateStore(svo);
+    }
+
+    @Override
+    public List<StoreVO> getStoreList() {
+        return storeMapper.getStoreList();
+>>>>>>> 8ef0bd2f7ce085aa44ec78da0b13e0c073407d02
     }
 
 }

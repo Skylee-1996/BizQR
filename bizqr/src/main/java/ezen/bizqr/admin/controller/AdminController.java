@@ -29,6 +29,12 @@ public class AdminController {
         m.addAttribute("list", list);
     }
 
+//    @RequestMapping("/")
+//    public void Main() {
+//        //일 방문자수 ++ - 02.19
+//        asv.addVisit();
+//    }
+
     @PostMapping("/approve")
     @ResponseBody
     public String post(@RequestBody RegisterVO rvo) {
@@ -36,21 +42,21 @@ public class AdminController {
         int isOk = asv.update(rvo);
         log.info(">>>>>> update success >>> {}", isOk);
         if(isOk > 0 ){
-           RegisterVO registeredRvo = ssv.getDetail(rvo.getRegisterNum());
-           StoreVO svo = new StoreVO();
+            RegisterVO registeredRvo = ssv.getDetail(rvo.getRegisterNum());
+            StoreVO svo = new StoreVO();
 
-           svo.setEmail(registeredRvo.getEmail());
-           svo.setRegisterNum(registeredRvo.getRegisterNum());
-           svo.setStoreName(registeredRvo.getStoreName());
-           svo.setStoreAddress(registeredRvo.getStoreAddress());
-           svo.setStoreNumber(registeredRvo.getStoreNum());
-           svo.setStoreType(registeredRvo.getStoreType());
-           svo.setCompany(registeredRvo.getCompany());
+            svo.setEmail(registeredRvo.getEmail());
+            svo.setRegisterNum(registeredRvo.getRegisterNum());
+            svo.setStoreName(registeredRvo.getStoreName());
+            svo.setStoreAddress(registeredRvo.getStoreAddress());
+            svo.setStoreNumber(registeredRvo.getStoreNum());
+            svo.setStoreType(registeredRvo.getStoreType());
+            svo.setCompany(registeredRvo.getCompany());
 
-           log.info(">>>>>> svo >>>>  {}", svo);
-           int isRegistered =  ssv.insertStore(svo);
+            log.info(">>>>>> svo >>>>  {}", svo);
+            int isRegistered =  ssv.insertStore(svo);
 
-           log.info(">>> store insert >>> {}", (isRegistered > 0) ? "success" : "failed");
+            log.info(">>> store insert >>> {}", (isRegistered > 0) ? "success" : "failed");
 
 
 

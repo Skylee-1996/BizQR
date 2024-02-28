@@ -13,6 +13,7 @@
 
 <form action="/customer/customerBasket" method="post" id="orderForm">
     <input type="hidden" id="tableId" name="tableId" th:value="${oivo.tableId}">
+    <input type="hidden" id="storeId" name="tableId" th:value="${oivo.storeId}">
 
 <!--/*@thymesVar id="oilist" type="list"*/-->
 <div class="basket-list" th:each="basket:${oilist}">
@@ -70,7 +71,9 @@
 
 
 <div class="btn-zone">
-    <button type="button" class="add-menu" id="add-menu">메뉴 추가</button>
+    <a th:href="@{/customer/customerIndex/${oivo.storeId}/${oivo.tableId}}">
+        <button type="button" class="add-menu" id="add-menu">메뉴 추가</button>
+    </a>
 </div>
 
 <div class="order-amount">

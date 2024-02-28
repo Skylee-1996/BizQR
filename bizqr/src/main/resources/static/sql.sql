@@ -51,6 +51,7 @@ CREATE TABLE IF NOT EXISTS `board` (
     `store_type` VARCHAR(255) NOT NULL,
     `store_hours` VARCHAR(255),
     `company` VARCHAR(255),
+    `logo_Image` VARCHAR(255),
     `reg_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`store_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -121,7 +122,11 @@ CREATE TABLE IF NOT EXISTS `register` (
 ALTER TABLE `bizqrdb`.`register`
     ADD COLUMN `isRegistered` TINYINT NULL DEFAULT 0 AFTER `store_num`;
 
-
+-- visit(통계)테이블 생성
+CREATE TABLE `bizqrdb`.`visit` (
+    `index` BIGINT NOT NULL DEFAULT 0,
+    `visit` DATETIME NULL DEFAULT NOW(),
+    `number` BIGINT NOT NULL DEFAULT 0);
 
 
 
