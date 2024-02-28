@@ -2,9 +2,12 @@ package ezen.bizqr.pay.service;
 
 import ezen.bizqr.pay.domain.StorePaymentVO;
 import ezen.bizqr.pay.repository.PayMapper;
+import ezen.bizqr.store.domain.RegisterVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Slf4j
 @Service
@@ -17,4 +20,5 @@ public class PayServiceImpl implements PayService {
     public int savePayment(StorePaymentVO spvo) {
         return payMapper.savePayment(spvo);
     }
+
 }
