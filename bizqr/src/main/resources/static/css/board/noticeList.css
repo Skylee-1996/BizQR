@@ -95,36 +95,25 @@
     margin-bottom: 15px;
 }
 
-small{
+.modSmall{
     font-size: 13px;
     color: rgb(192, 189, 189);
     font-style: normal;
 }
 
-.tag {
-    background: #cccccc;
-    border-radius: 50px;
-    font-size: 12px;
-    margin: 0;
-    color: #fff;
-    padding: 2px 10px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-.tag-teal {
-    background-color: #47bcd4;
-    width: 50px;
-    height: 20px;
-    text-align: center;
-    margin-top: -10px;
+.readCountSmall{
+    font-size: 13px;
+    color: rgb(192, 189, 189);
+    font-style: normal;
+    float: right;
 }
 
-.tag-purple {
-    background-color: #5e76bf;
+.user-info {
+    margin-top: 30px;
 }
-.tag-pink {
-    background-color: #cd5b9f;
-}
+
+
+
 
 
 

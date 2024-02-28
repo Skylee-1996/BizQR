@@ -1,5 +1,6 @@
 package ezen.bizqr.customer.service;
 
+import ezen.bizqr.customer.domain.ItemVO;
 import ezen.bizqr.customer.domain.OrderItemVO;
 import ezen.bizqr.customer.domain.OrderVO;
 import ezen.bizqr.customer.repository.OrderMapper;
@@ -21,7 +22,7 @@ public class CustomerServiceImpl implements CustomerService{
     public int basket(OrderItemVO oivo) {
         log.info("basket service impl");
 
-        List<OrderItemVO> dupOivo = new ArrayList<OrderItemVO>(om.basketList(oivo.getTableId()));
+        List<OrderItemVO> dupOivo = new ArrayList<OrderItemVO>(om.basketList(oivo.getTableId(), oivo.getStoreId()));
 
         for(OrderItemVO checkOivo : dupOivo){
             if(oivo.getMenuName().equals(checkOivo.getMenuName())){     //메뉴ID로 바꿀 예정
@@ -35,16 +36,16 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    public List<OrderItemVO> basketList(String tableId) {
+    public List<OrderItemVO> basketList(String tableId, long storeId) {
 
-        return om.basketList(tableId);
+        return om.basketList(tableId, storeId);
     }
 
     @Override
     public int order(OrderVO ovo) {
         log.info("order service impl");
 
-        List<OrderItemVO> oivo = new ArrayList<OrderItemVO>(om.basketList(ovo.getTableId()));
+        List<OrderItemVO> oivo = new ArrayList<OrderItemVO>(om.basketList(ovo.getTableId(), ovo.getStoreId()));
 
         for(OrderItemVO orderItemVO : oivo){
             om.insertOrderHistory(orderItemVO);
@@ -60,5 +61,26 @@ public class CustomerServiceImpl implements CustomerService{
         log.info("basket update service impl");
 
         return om.basketUpdate(oivo);
+    }
+
+    @Override
+    public int basketCount(String tableId, long storeId) {
+        log.info("basketCount service impl");
+
+        return om.basketCount(tableId, storeId);
+    }
+
+    @Override
+    public List<ItemVO> itemList(long storeId, String tabName) {
+        log.info("itemList service impl");
+
+        return om.itemList(storeId, tabName);
+    }
+
+    @Override
+    public List<String> tabList(long storeId) {
+        log.info("tabList service impl");
+
+        return om.tabList(storeId);
     }
 }

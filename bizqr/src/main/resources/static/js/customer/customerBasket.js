@@ -134,9 +134,18 @@ document.addEventListener('click', (e)=>{
         mainTotal.querySelector(".totalPrice").value = totalPrice;
     }else if(e.target.closest("button").classList.contains("basket-del")){
         console.log("basket del");
-    }
+        const deleteBtn = e.target.closest("button");
 
+        deleteBtn.setAttribute("data-menuId",1);
+        deleteBtn.setAttribute("data-tableId",1);
+    }
 })
+
+async function basketDel(){
+    const config = {
+
+    }
+}
 
 document.getElementById("order-shop").addEventListener('click', ()=>{
     document.getElementById("orderForm").submit();

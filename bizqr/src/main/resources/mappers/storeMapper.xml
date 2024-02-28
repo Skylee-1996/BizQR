@@ -6,8 +6,8 @@
 
     <insert id="storeRegister">
         insert into register
-        (name, email, company, store_name, store_address, store_type, owner_num, store_num)
-        values(#{name}, #{email}, #{company}, #{storeName}, #{storeAddress}, #{storeType}, #{ownerNum}, #{storeNum})
+        (name, email, company, store_name, store_address, store_type, owner_num, store_num, subscribe)
+        values(#{name}, #{email}, #{company}, #{storeName}, #{storeAddress}, #{storeType}, #{ownerNum}, #{storeNum}, #{subscribe})
     </insert>
     <insert id="menuInsert">
         insert into menu_item
@@ -22,6 +22,7 @@
     <select id="selectEmail" resultType="ezen.bizqr.store.domain.StoreVO">
         select * from store where email = #{userEmail}
     </select>
+
     <insert id="insertStore">
         insert into store
         (email, register_num, store_name, store_address, store_number, store_type, company)
@@ -32,5 +33,24 @@
         select max(menu_id) from menu_item
     </select>
 
-
+    <select id="getDetailFromStore" resultType="ezen.bizqr.store.domain.StoreVO">
+        select * from store where store_id = #{storeId}
+    </select>
+    <update id="updateStore">
+    UPDATE store
+    SET
+    email = #{email},
+    store_name = #{storeName},
+    store_address = #{storeAddress},
+    store_number = #{storeNumber},
+    store_hours = #{storeHours},
+    store_type = #{storeType},
+    company = #{company},
+    logo_image = #{logoImage}
+    WHERE
+    store_id = #{storeId};
+    </update>
+    <select id="getStoreList" resultType="ezen.bizqr.store.domain.StoreVO">
+        select * from store;
+    </select>
 </mapper>

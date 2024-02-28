@@ -5,7 +5,21 @@
     font-style: normal;
 }
 
+.headLabel{
+    font-size: 14.7px;
+    font-weight: bold;
+    position: relative;
+    left: -450px;
+}
 
+.dateLabel{
+    font-size: 14.7px;
+    font-weight: bold;
+    position: relative;
+    right: -18px;
+}
+
+/* button */
 #listBtn{
     padding: 10px 15px;
     width: 100px;
@@ -13,6 +27,7 @@
     border-radius: 2px;
     border: none;
     background-color: #e4e4e4;
+    margin-top: 10px;
 }
 
 #modBtn{
@@ -33,8 +48,17 @@
     background-color: #e4e4e4;
 }
 
-.btnAll{
+.btnAll {
     text-align: center;
     margin-top: 60px;
     margin-bottom: 150px;
 }
+
+.btnAll button {
+    margin: 0 10px;
+}
+
+.btnGroup {
+    display: inline-block;
+}
+

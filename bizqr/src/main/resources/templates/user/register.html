@@ -1,5 +1,6 @@
 <html lang="kor" xmlns:th="http://www.thymeleaf.org">
 
+<script src="../../static/js/user/userRegister.js"></script>
 <th:block th:replace="~{/layout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
         <link rel="stylesheet" th:href="@{/css/loginstyle.css}">
@@ -39,8 +40,7 @@
         </div>
 
 
-
         </body>
-        <script th:src="@{/js/userRegister.js}"></script>
+        <script th:src="@{/js/user/userRegister.js}"></script>
     </th:block>
 </th:block>

@@ -1,365 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="39dcdc24-5c2e-4823-bd00-33f81335f534" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/image/more-services-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/image/more-services-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/image/more-services-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/image/more-services-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/js/lib/jindo2.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/photo_uploader/callback.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/photo_uploader/img/btn_confirm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/photo_uploader/img/btn_confirm2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/photo_uploader/img/btn_find.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/photo_uploader/jindo.fileuploader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/photo_uploader/jindo.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/photo_uploader/photo_uploader.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/Builder/Xml.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/Exception.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/InterchangeBuilder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Attr.AllowedClasses.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Attr.DefaultImageAlt.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Attr.DefaultInvalidImageAlt.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Attr.DefaultTextDir.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/AutoFormat.Custom.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/AutoFormat.DisplayLinkURI.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/AutoFormat.PurifierLinkify.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/AutoFormat.RemoveEmpty.Predicate.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/AutoFormat.RemoveEmpty.RemoveNbsp.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/CSS.DefinitionRev.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/CSS.ForbiddenProperties.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/CSS.Trusted.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Cache.SerializerPath.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Cache.SerializerPermissions.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Core.CollectErrors.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Core.EnableIDNA.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Core.EscapeInvalidTags.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Core.MaintainLineNumbers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Core.RemoveScriptContents.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Filter.ExtractStyleBlocks.Escaping.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Filter.ExtractStyleBlocks.Scope.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/HTML.DefinitionRev.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/HTML.ForbiddenAttributes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/HTML.ForbiddenElements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/HTML.Nofollow.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/HTML.Parent.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/HTML.Strict.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/HTML.TargetNoreferrer.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/HTML.TidyAdd.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/HTML.XHTML.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Output.FixInnerHTML.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Output.Newline.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Output.SortAttr.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Test.ForceNoIconv.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.DefaultScheme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.DisableExternal.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.DisableExternalResources.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.DisableResources.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.HostBlacklist.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/URI.MungeSecretKey.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/DefinitionCache/Serializer/HTML/4.8.0,b6889960956c877d241a7e8f87e613efc7a3611d,1.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/Filter/ExtractStyleBlocks.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/Filter/YouTube.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/sample/viewer/htmlpurifier/standalone/HTMLPurifier/Printer/ConfigForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bizqr/src/main/resources/templates/info/serviceDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/_final_workspace.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/BizqrApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/BizqrApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/domain/BoardVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/domain/BoardVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/domain/CommentVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/domain/CommentVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/domain/FileVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/domain/FileVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/handler/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/handler/FileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/handler/FileSweeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/handler/FileSweeper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/service/BoardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/service/BoardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/service/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/java/ezen/bizqr/board/service/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/mappers/boardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/mappers/boardMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/mappers/commentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/mappers/commentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/mappers/fileMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/mappers/fileMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/boardRegister.css" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/boardRegister.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/searchBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/searchBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/CODE_OF_CONDUCT.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/TODO.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/jest.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/webpack.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/developer_guide/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/browser.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/01.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/02.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/03.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/04.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/05.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/06.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/07.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/08.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/09.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/10.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/11.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/12.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/13.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/14.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/15.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/16.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/17.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/details/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/1_intro/features.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/2_install/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/2_install/download.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/2_install/prerequisite.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/2_install/setting.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/2_install/structure.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/2_install/upgrade.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/3_customizing/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/3_customizing/buttons.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/3_customizing/override.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/3_customizing/plugins/01.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/3_customizing/plugins/02.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/3_customizing/plugins/03.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/3_customizing/plugins/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/3_customizing/remove.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/4_photouploader/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/4_photouploader/install/01.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/4_photouploader/install/02.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/4_photouploader/install/03.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/4_photouploader/install/04.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/4_photouploader/install/05.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/4_photouploader/install/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/4_photouploader/intro.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/4_photouploader/structure.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/5_fileuploader/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/5_fileuploader/events.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/5_fileuploader/features.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/5_fileuploader/init.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/5_fileuploader/methods.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/5_fileuploader/workflow.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/SUMMARY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/backgroundcolor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/backgroundcolor_palette.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/basicstyle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/colorexample.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/colorpalette.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/findexample.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/findreplace.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/font.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/fontcolor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/fontexample.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/fontsize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/fontsize_example.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image044.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image046.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image066.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image068.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image070.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image072.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image074.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image076.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image078.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image080.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image082.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image083.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image084.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image086.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image088.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image089.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image090.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image091.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/image092.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/lineheight.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/lineheight_example.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/linkexample.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/modeeditor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/modehtml.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/modetext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/order.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/orderlist_example.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/quote.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/quoteexample.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/replaceexample.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/supsub.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/tabexample.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/table.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/tableedit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/tabletemplate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/toolbarmore.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/docs/user_guide/assets/unorder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/package/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/package/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/package/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/package/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/bundle/base.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/bundle/extra.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/bundle/husky-range.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/bundle/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/bundle/lazy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/common/base/hp_SE2M_Toolbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/extra/hp_SE2B_CSSLoader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/extra/hp_SE_OuterIFrameControl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/extra/hp_SE_ToolbarToggler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/extra/husky_SE2B_Lang_en_US.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/extra/husky_SE2B_Lang_ja_JP.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/extra/husky_SE2B_Lang_ko_KR.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/extra/husky_SE2B_Lang_zh_CN.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/extra/husky_SE2B_Lang_zh_TW.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/advanced/N_FindReplace.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/advanced/SE2M_TableTemplate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/advanced/hp_SE2M_FindReplacePlugin$Lazy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/advanced/hp_SE2M_FindReplacePlugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/advanced/hp_SE2M_Quote$Lazy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/advanced/hp_SE2M_Quote.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/advanced/hp_SE2M_SCharacter$Lazy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/advanced/hp_SE2M_SCharacter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/advanced/hp_SE2M_StyleRemover.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/advanced/hp_SE2M_TableBlockStyler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/advanced/hp_SE2M_TableCreator$Lazy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/advanced/hp_SE2M_TableCreator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/advanced/hp_SE2M_TableEditor$Lazy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/advanced/hp_SE2M_TableEditor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/colorpicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE2M_Accessibility.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE2M_BGColor$Lazy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE2M_BGColor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE2M_ColorPalette.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE2M_ExecCommand.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE2M_FontColor$Lazy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE2M_FontColor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE2M_FontNameWithLayerUI.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE2M_FontSizeWithLayerUI.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE2M_Hyperlink$Lazy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE2M_Hyperlink.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE2M_LineHeightWithLayerUI$Lazy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE2M_LineHeightWithLayerUI.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE2M_LineStyler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE_WYSIWYGStyleGetter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/base/hp_SE_WYSIWYGStyler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/editing/hp_SE2M_EditingModeChanger.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/editing/hp_SE_EditingAreaManager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/editing/hp_SE_EditingAreaVerticalResizer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/editing/hp_SE_EditingArea_HTMLSrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/editing/hp_SE_EditingArea_TEXT.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/editing/hp_SE_EditingArea_WYSIWYG.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/editing/hp_SE_PasteHandler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/fundamental/editing/hp_SE_WYSIWYGEnterKey.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/husky_framework/HuskyCore.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/husky_framework/HuskyRange.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/husky_framework/hp_CorePlugin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/husky_framework/hp_HuskyRangeManager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/quick_editor/hp_SE2M_QuickEditor_Common$Lazy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/quick_editor/hp_SE2M_QuickEditor_Common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/shortcut/hp_Hotkey.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/shortcut/shortcut.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/undo_redo/hp_SE_UndoRedo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/util/N_DraggableLayer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/util/hp_ActiveLayerManager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/util/hp_DialogLayerManager$Lazy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/util/hp_DialogLayerManager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/util/hp_LazyLoader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/util/hp_MessageManager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/util/hp_PopupManager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/util/hp_SE2M_Utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/util/hp_StringConverterManager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/src/util/hp_Utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/SmartEditor2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/SmartEditor2Skin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/SmartEditor2Skin_en_US.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/SmartEditor2Skin_ja_JP.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/SmartEditor2Skin_ko_KR.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/SmartEditor2Skin_zh_CN.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/SmartEditor2Skin_zh_TW.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/en_US/smart_editor2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/en_US/smart_editor2_in.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/en_US/smart_editor2_items.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/en_US/smart_editor2_out.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/ja_JP/smart_editor2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/ja_JP/smart_editor2_in.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/ja_JP/smart_editor2_items.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/ja_JP/smart_editor2_out.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/ko_KR/smart_editor2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/ko_KR/smart_editor2_in.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/ko_KR/smart_editor2_items.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/ko_KR/smart_editor2_out.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/zh_CN/smart_editor2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/zh_CN/smart_editor2_in.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/zh_CN/smart_editor2_items.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/zh_CN/smart_editor2_out.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/zh_TW/smart_editor2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/zh_TW/smart_editor2_in.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/zh_TW/smart_editor2_items.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/css/zh_TW/smart_editor2_out.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/bg_b1.png" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/img/bg_b1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/bg_button.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/bg_button_left.gif" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/img/bg_button_left.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/bg_button_right.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/bg_find_h3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/bg_help.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/bg_line1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/bg_quote2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/bg_set.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/bg_spell.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/bg_text_tool.gif" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/img/bg_text_tool.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/bx_set_110302.gif" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/img/ko_KR/bx_set_110302.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/en_US/btn_set.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/en_US/text_tool_set.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/ico_extend.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/icon_set.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/ja_JP/btn_set.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/ja_JP/text_tool_set.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/ko_KR/btn_set.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/ko_KR/text_tool_set.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/zh_CN/btn_set.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/zh_CN/text_tool_set.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/zh_TW/btn_set.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/img/zh_TW/text_tool_set.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/js/lib/jindo2.all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/js/lib/jindo_component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/js/service/HuskyEZCreator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/js/service/SE2BasicCreator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/js/service/SE2M_Configuration.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/smart_editor2_inputarea.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/static/smart_editor2_inputarea_ie8.html" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/smarteditor/smart_editor2_inputarea_ie8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/test/__helpers__/event.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/test/__helpers__/markup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/test/bundle/base.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/test/bundle/extra.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/test/bundle/husky-range.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/test/bundle/lazy.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/test/common/base/hp_SE2M_Toolbar.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/test/husky_framework/HuskyCore.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/test/husky_framework/hp_CorePlugin.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/test/husky_framework/hp_HuskyRangeManager.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/css/smarteditor2-master/workspace/test/util/hp_SE2M_Utils.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/js/boardList.js" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/js/boardList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/js/boardRegister2.js" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/js/boardRegister2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/js/smartEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/js/smartEditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/static/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/static/sql.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/templates/board/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/templates/board/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/templates/board/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/templates/board/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bizqr/src/main/resources/templates/board/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/bizqr/src/main/resources/templates/board/register.html" afterDir="false" />
-    </list>
+    <list default="true" id="39dcdc24-5c2e-4823-bd00-33f81335f534" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/bizqr">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -376,21 +42,46 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Gradle.Build bizqr.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BizqrApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/_final&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/sub&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-107bc6b7" />
-      </set>
-    </attachedChunks>
+  <component name="RunManager">
+    <configuration name="BizqrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="bizqr.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ezen.bizqr.BizqrApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ezen.bizqr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.BizqrApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -402,6 +93,13 @@
       <updated>1707389415194</updated>
       <workItem from="1707389416257" duration="54000" />
       <workItem from="1707389473254" duration="2000" />
+      <workItem from="1708493124011" duration="494000" />
+      <workItem from="1708493637355" duration="3614000" />
+      <workItem from="1708499523150" duration="6489000" />
+      <workItem from="1708564235970" duration="12939000" />
+      <workItem from="1709003122424" duration="6956000" />
+      <workItem from="1709017478945" duration="1574000" />
+      <workItem from="1709023670986" duration="489000" />
     </task>
     <servers />
   </component>

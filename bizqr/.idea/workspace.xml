@@ -4,14 +4,81 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="aac62688-27a4-4c4f-9861-d1c6f229bcdb" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="e5d2d537-fad7-417c-b596-72e923e21d6b" name="Changes" comment="" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="93dc7b8d-0f07-4528-a7dd-35e54dd7a042" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/store/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/store/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/store/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/store/register.html" afterDir="false" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="e2b8b136-7ec5-4b30-8d89-fde802f4046b" name="변경" comment="" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="33935e92-54bf-4970-9fcb-cf196c4f77c4" name="Changes" comment="" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="8d5f1571-fa32-450d-84d9-7c943020db2a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/board/boardDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/board/boardDetail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/loginstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/loginstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/board/boardComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/board/boardComment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/modify.html" afterDir="false" />
+=======
+    <list default="true" id="aac62688-27a4-4c4f-9861-d1c6f229bcdb" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/controller/PayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/domain/PayInfoDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/repository/PayMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/request/MakePayRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/request/PayRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/response/Amount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/response/PayApproveResDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/response/PayReadyResDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/service/PayService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/payment/pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/payment/pay.html" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/store/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/store/register.html" afterDir="false" />
+>>>>>>> origin/main
+>>>>>>> 38731cf28d58d23de499f83bb8e2e28e3e611934
+>>>>>>> origin/main
+>>>>>>> origin/main
     </list>
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+=======
+>>>>>>> origin/main
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -20,17 +87,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="bizqr" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -40,38 +99,66 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
-        <option value="Interface" />
-        <option value="CSS File" />
-        <option value="HTTP Request" />
-        <option value="JavaScript File" />
-        <option value="Kotlin Class" />
-        <option value="HTML File" />
+<<<<<<< HEAD
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2csh4d8h1jsKakvoA3b3qvXpjVw" />
+=======
+<<<<<<< HEAD
+        <option value="JUnit5 Test Class" />
+        <option value="CSS File" />
+        <option value="HTTP Request" />
+>>>>>>> origin/main
+        <option value="JavaScript File" />
+>>>>>>> origin/main
+        <option value="Class" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/resources/static/css/board/boardRegister.css" root0="SKIP_HIGHLIGHTING" />
-  </component>
+<<<<<<< HEAD
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+=======
+<<<<<<< HEAD
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+=======
+>>>>>>> origin/main
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+>>>>>>> origin/main
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+<<<<<<< HEAD
+  <component name="ProjectId" id="2cvaFVa2rkwZy3cjL33OfZ1OUxg" />
+=======
+<<<<<<< HEAD
+  <component name="ProjectId" id="2ctAwmfIuHEVSyYxkIpJroFUtWT" />
+=======
+  <component name="ProjectId" id="2cshVThHstStifnCaBHHRKHyTO5" />
+=======
   <component name="ProjectColorInfo">{
-    &quot;associatedIndex&quot;: 6
-    }</component>
+        &quot;associatedIndex&quot;: 6
+        }</component>
   <component name="ProjectId" id="2bq1RC6A1uQB0czhNKO7faLKVMt" />
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
   <component name="ProjectViewState">
-    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
@@ -91,6 +178,96 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    "Gradle.Build bizqr.executor": "Run",
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.BizqrApplication.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/_final/bizqr",
+=======
+<<<<<<< HEAD
+    "Spring Boot.BizqrApplication.executor": "Run",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+=======
+>>>>>>> origin/main
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.BizqrApplication.executor": "Run",
+    "kotlin-language-version-configured": "true",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    "list.type.of.created.stylesheet": "CSS",
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
+<<<<<<< HEAD
+  }
+}]]></component>
+  <component name="RunManager">
+=======
+  }
+}]]></component>
+<<<<<<< HEAD
+=======
+  <component name="RunManager">
+    <configuration name="BizqrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+<<<<<<< HEAD
+=======
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BizqrApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+>>>>>>> origin/main
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -233,15 +410,30 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+>>>>>>> origin/main
     <configuration name="BizqrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="DEBUG_MODE" value="true" />
+>>>>>>> origin/main
+>>>>>>> origin/main
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="bizqr.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ezen.bizqr.BizqrApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ezen.bizqr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
     <list>
       <item itemvalue="Gradle.bizqr" />
       <item itemvalue="Gradle.bizqr [dependencies]" />
@@ -250,26 +442,58 @@
       <item itemvalue="Gradle.BoardMapperTest" />
       <item itemvalue="Spring Boot.BizqrApplication" />
     </list>
+>>>>>>> origin/main
+>>>>>>> origin/main
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.bizqr" />
-        <item itemvalue="Gradle.bizqr [dependencies]" />
-        <item itemvalue="Gradle.BizqrApplicationTests" />
-        <item itemvalue="Gradle.BoardMapperTest" />
-        <item itemvalue="Gradle.BizqrApplicationTests.contextLoads" />
+        <item itemvalue="Spring Boot.BizqrApplication" />
       </list>
     </recent_temporary>
+>>>>>>> origin/main
   </component>
+>>>>>>> origin/main
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-107bc6b7" />
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
       </set>
     </attachedChunks>
   </component>
+<<<<<<< HEAD
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="e2b8b136-7ec5-4b30-8d89-fde802f4046b" name="변경" comment="" />
+      <created>1708906004317</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708906004317</updated>
+      <workItem from="1708906006656" duration="530000" />
+      <workItem from="1708906542087" duration="43000" />
+      <workItem from="1708906605761" duration="13978000" />
+=======
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="e5d2d537-fad7-417c-b596-72e923e21d6b" name="Changes" comment="" />
+      <created>1708994403810</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708994403810</updated>
+      <workItem from="1708994406055" duration="6621000" />
+=======
+      <changelist id="93dc7b8d-0f07-4528-a7dd-35e54dd7a042" name="Changes" comment="" />
+      <created>1708920742419</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+<<<<<<< HEAD
+      <updated>1708920742419</updated>
+      <workItem from="1708920744812" duration="6449000" />
+=======
+      <updated>1708906217303</updated>
+      <workItem from="1708906219563" duration="11034000" />
+=======
       <changelist id="aac62688-27a4-4c4f-9861-d1c6f229bcdb" name="변경" comment="" />
       <created>1706927784972</created>
       <option name="number" value="Default" />
@@ -322,13 +546,32 @@
       <workItem from="1707868312604" duration="8073000" />
       <workItem from="1707976469754" duration="5000" />
       <workItem from="1708176894935" duration="17382000" />
+<<<<<<< HEAD
       <workItem from="1708845936186" duration="904000" />
+=======
+<<<<<<< HEAD
+      <workItem from="1708915211922" duration="7810000" />
+=======
+>>>>>>> origin/main
+>>>>>>> 38731cf28d58d23de499f83bb8e2e28e3e611934
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -340,21 +583,23 @@
       </map>
     </option>
   </component>
+>>>>>>> origin/main
+>>>>>>> origin/main
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.io.FileNotFoundException" package="java.io" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ezen/bizqr/BizqrApplication.java</url>
+          <line>6</line>
           <option name="timeStamp" value="1" />
-        </breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/resources/static/js/store/create.js</url>
-          <line>120</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
@@ -362,4 +607,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/bizqr$BizqrApplication.ic" NAME="BizqrApplication Coverage Results" MODIFIED="1707957137469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
 </project>

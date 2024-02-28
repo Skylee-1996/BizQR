@@ -1,20 +1,12 @@
 package ezen.bizqr.store.controller;
 
-import ezen.bizqr.board.domain.BoardVO;
-import ezen.bizqr.board.domain.PagingVO;
-import ezen.bizqr.board.handler.PagingHandler;
-import ezen.bizqr.board.service.BoardService;
-
 import ezen.bizqr.file.FileHandler;
+import ezen.bizqr.file.FileMapper;
 import ezen.bizqr.file.FileVO;
 import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.domain.StoreVO;
 import ezen.bizqr.store.service.StoreService;
-
-import ezen.bizqr.user.security.UserVO;
-import ezen.bizqr.user.service.UserService;
-import jakarta.servlet.http.HttpServletRequest;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -36,21 +28,35 @@ public class StoreController {
 
     private final StoreService ssv;
     private final FileHandler fh;
+    private final FileMapper fm;
 
     @GetMapping("/register")
     public void storeRegister(){}
 
     @PostMapping("/register")
-    public String storeRegister(RegisterVO rvo) {
+    public String storeRegister(RegisterVO rvo, Model m) {
         log.info(">>>>> svo 들어온지 확인하자 >>>>> {} " , rvo);
+        
+        //결제 완료 후 db 저장해야함으로 주석처리함 2024-02-26 - cbj
+        //ssv.insertRegister(rvo);
 
-        ssv.insertRegister(rvo);
+        m.addAttribute("rvo", rvo);
 
-        return "index";
+        return "/payment/pay";
     }
 
     @GetMapping("/create")
-    public void storeCreate(){}
+    public String createStoreForm() {
+        return "/store/create";
+    }
+
+    @GetMapping("/modify")
+    public String modify(Model model, @RequestParam("storeId") String storeId) {
+        StoreVO svo = ssv.getDetailFromStore(storeId);
+        model.addAttribute("svo", svo);
+        return "/store/modify";
+    }
+
 
     @GetMapping("/table")
     public void table(){}
@@ -65,18 +71,13 @@ public class StoreController {
     public ResponseEntity<String> addMenu(@ModelAttribute MenuItemVO mvo, @RequestParam(name="image", required = false) MultipartFile imageFile) {
 
             log.info(">>>>>>>>>>mvo >>>>>>> {}", mvo);
-
-
-
         long MenuId = ssv.insertMenu(mvo);
-
-
            FileVO fvo = fh.uploadFile(imageFile);
            fvo.setMenuId(MenuId);
-
             if (!imageFile.isEmpty()) {
 
                 log.info(">>>>>>>>>>>Received file>>>>>>>>>>>>: " + imageFile.getOriginalFilename());
+                fm.insertFile(fvo);
             }
 
 
@@ -94,6 +95,18 @@ public class StoreController {
         return "/store/myStoreList";
     }
 
+    @PostMapping("/modify")
+    public String modifyStore(StoreVO svo, @RequestParam("file") MultipartFile file, Model m) {
+
+        log.info(">>>>>>>>> svo >>>{}", svo);
+
+          FileVO fvo= fh.uploadStoreImage(file, svo.getStoreId());
+          svo.setLogoImage(fvo.getFileName());
+          ssv.updateStore(svo);
+          m.addAttribute("svo", svo);
+
+        return "/store/create";
+    }
 }
 
 

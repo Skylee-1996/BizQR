@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <th:block th:replace="~{layout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
         <link rel="stylesheet" th:href="@{/css/board/noticeList.css}">
@@ -28,7 +28,7 @@
                 </div>
             </section>
 
-
+            <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
             <!-- menu btn -->
             <div class="fab-wrapper">
                 <input id="fabCheckbox" type="checkbox" class="fab-checkbox" />
@@ -52,7 +52,7 @@
                     </a>
                 </div>
             </div>
-
+            </li>
 
             <!-- card section -->
             <div class="listContainer">
@@ -60,15 +60,15 @@
                     <div class="card">
                         <a th:if="${bvo.bno != null}" th:href="@{'/board/detail?bno=' + ${bvo.bno}}">
                             <div class="card-header">
-                                <img url="C:\_bizqr_fileUpload\tui-editor\" alt="image" />
+                                <img th:src="@{|/upload/tui-editor/${bvo.mainImage}|}" alt="이미지">
                             </div>
                             <div class="card-body">
-                                <span class="tag tag-teal">진행</span>
                                 <h4 class="h4_title" th:text="${bvo.title}">
                                 </h4>
                                 <div class="user">
                                     <div class="user-info">
-                                        <small th:text="${bvo.modAt}"></small>
+                                        <small class="modSmall" th:text="${bvo.modAt}"></small>
+                                        <small class="readCountSmall">조회수: [[${bvo.readCount}]]</small>
                                     </div>
                                 </div>
                             </div>
@@ -77,9 +77,7 @@
                 </div>
             </div>
 
-
             <!-- Pagination line -->
-            <br>
             <ul class="pagination modal-2">
                 <li th:if="${ph.prev}" class="page-item">
                     <a class="page-link" th:href="@{/board/list(pageNo=${ph.startPage-1},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" aria-label="Previous">
@@ -90,13 +88,14 @@
                     <li class="page-item" th:classappend="${ph.pgvo.pageNo == i ? 'active' : ''}" aria-current="page">
                         <a class="page-link" th:href="@{/board/list(pageNo=${i},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" th:text="${i}"></a>
                     </li>
-                    <li th:if="${ph.next}" class="page-item">
-                        <a class="page-link" th:href="@{/board/list(pageNo=${ph.endPage+1},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" aria-label="Next">
-                            <span aria-hidden="true">Next</span>
-                        </a>
-                    </li>
                 </th:block>
+                <li th:if="${ph.next}" class="page-item">
+                    <a class="page-link" th:href="@{/board/list(pageNo=${ph.endPage+1},qty=${ph.pgvo.qty},type=${ph.pgvo.type},keyword=${ph.pgvo.keyword})}" aria-label="Next">
+                        <span aria-hidden="true">Next</span>
+                    </a>
+                </li>
             </ul>
+
         </div>
         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

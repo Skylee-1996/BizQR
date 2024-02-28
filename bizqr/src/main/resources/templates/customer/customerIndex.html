@@ -6,29 +6,21 @@
         @import url(/css/customer/customerIndex.css);
         @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
         @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap);
-
     </style>
-    <!-- Font Awesome CDN Link for Icons -->
-<!--    <link rel="stylesheet" th:href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">-->
 
+        <!-- Font Awesome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
 <th:block th:replace="~{/customer/customerLayout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
 
     <body>
-    <div class="wrapper">
-        <div class="icon"><i id="left" class="fa-solid fa-angle-left"></i></div>
-        <ul class="tabs-box">
-            <li class="tab" th:name="tabName">Coding</li>
-            <li class="tab active">JavaScript</li>
-            <li class="tab">Podcasts</li>
-            <li class="tab">Databases</li>
-            <li class="tab">Web Development</li>
-            <li class="tab">Unboxing</li>
-            <li class="tab">History</li>
-        </ul>
-        <div class="icon"><i id="right" class="fa-solid fa-angle-right"></i></div>
+    <input type="hidden" name="tableId" id="tableId" th:value="${tableId}">
+    <input type="hidden" name="storeId" id="storeId" th:value="${storeId}">
+
+    <div class="wrapper" id="tab">
+
     </div>
 
     <!-- 공지사항 -->
@@ -38,54 +30,6 @@
 
     <!-- 상품 목록 -->
     <article class="menu-container" id="menu-container">
-
-        <div class="menu-list" id="menu-list">
-            <div class="menu-img">
-                <img src="" alt="메뉴 사진">
-            </div>
-            <div class="menu-info">
-                <div class="menu-name">돼지갈비찜</div>
-                <input type="hidden" class="menuName" value="돼지갈비찜">
-                <div class="menu-price">25000</div>
-                <input type="hidden" class="menuPrice" value="25000">
-            </div>
-        </div>
-
-        <div class="menu-list">
-            <div class="menu-img">
-                <img src="" alt="메뉴 사진">
-            </div>
-            <div class="menu-info">
-                <div class="menu-name">미역줄거리</div>
-                <input type="hidden" class="menuName" value="미역줄거리">
-                <div class="menu-price">20000</div>
-                <input type="hidden" class="menuPrice" value="20000">
-            </div>
-        </div>
-
-        <div class="menu-list">
-            <div class="menu-img">
-                <img src="" alt="메뉴 사진">
-            </div>
-            <div class="menu-info">
-                <div class="menu-name">김치</div>
-                <input type="hidden" class="menuName" value="김치">
-                <div class="menu-price">200</div>
-                <input type="hidden" class="menuPrice" value="200">
-            </div>
-        </div>
-
-        <div class="menu-list">
-            <div class="menu-img">
-                <img src="" alt="메뉴 사진">
-            </div>
-            <div class="menu-info">
-                <div class="menu-name">양고기</div>
-                <input type="hidden" class="menuName" value="양고기">
-                <div class="menu-price">2300</div>
-                <input type="hidden" class="menuPrice" value="2300">
-            </div>
-        </div>
 
     </article>
 
@@ -131,8 +75,8 @@
                 </div>
             </div>
 
-            <a href="/customer/customerBasket?tableId=dd" class="my-list">
-                <span class="my-select">갯수</span>
+            <a th:href="@{/customer/customerBasket(tableId=${tableId}, storeId=${storeId})}" class="my-list">
+                <span class="my-select" id="my-select">갯수</span>
                 <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(135, 134, 134);" width="50" height="50" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
                     <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
                     <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6H2.163z"/>
@@ -156,8 +100,8 @@
             </div>
 
             <form action="/customer/customerIndex" method="post">
-
-                <input type="hidden" name="tableId" value="dd">
+                <input type="hidden" name="tableId" id="modal-menuId" th:value="${tableId}">
+                <input type="hidden" name="storeId" id="modal-storeId" th:value="${storeId}">
 
             <div class="modal-menu-list" id="modal-menu-list">
                 <div class="modal-menu-img">
@@ -212,4 +156,5 @@
         </th:block>
     </th:block>
 <script src="/js/customer/customerIndex.js"></script>
+<script src="/js/customer/tab.js"></script>
 </html>
