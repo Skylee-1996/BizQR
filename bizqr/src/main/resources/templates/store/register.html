@@ -50,17 +50,17 @@
                                         <tr>
                                             <td class="h-td">업종 선택 <small style="color: red; font-weight: bold">*</small></td>
                                             <td>
-                                                <input type="radio" name="storeType" id="dot-1" th:text="'카페'">
-                                                <input type="radio" name="storeType" id="dot-2" th:text="'레스토랑'">
-                                                <input type="radio" name="storeType" id="dot-3" th:text="'호텔'">
-                                                <input type="radio" name="storeType" id="dot-4" th:text="'기타'">
+                                                <input type="radio" name="storeType" id="dot-1" th:value="Cafe" th:text="카페">
+                                                <input type="radio" name="storeType" id="dot-2" th:value="Restaurant" th:text="레스토랑">
+                                                <input type="radio" name="storeType" id="dot-3" th:value="Hotel" th:text="호텔">
+                                                <input type="radio" name="storeType" id="dot-4" th:value="Etc" th:text="기타">
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="h-td">구독 선택 <small style="color: red; font-weight: bold">*</small></td>
                                             <td>
-                                                <input type="radio" name="subscribe" id="payment1" th:text="'monthly'">
-                                                <input type="radio" name="subscribe" id="payment2" th:text="'yearly'">
+                                                <input type="radio" name="subscribe" id="monthly" th:value="monthly" th:text="1개월">
+                                                <input type="radio" name="subscribe" id="yearly" th:value="yearly" th:text="1년">
                                             </td>
                                         </tr>
                                         </tbody>
@@ -70,8 +70,47 @@
                                         <input type="submit" value="확인" class="regBtn-store">
                                     </div>
                                 </form>
+<<<<<<< HEAD
+<!--                    <div class="title">Registeration</div>-->
+<!--                    <br>-->
+<!--                    <form action="/payment/pay" method="post">-->
+<!--                        <div class="user-details">-->
+<!--                            <div class="input-box">-->
+<!--                                <label for="name"><span class="details">대표자명</span></label>-->
+<!--                                <input type="text" name="name" id="name" placeholder="이름을 입력해주세요.." required>-->
+<!--                            </div>-->
+<!--                            <div class="input-box">-->
+<!--                                <label for="email"><span class="details">이메일</span></label>-->
+<!--                                <input type="email" name="email" id="email" th:value="${#authentication.name}" readonly>-->
+<!--                            </div>-->
+<!--                            <div class="input-box">-->
+<!--                                <label for="company"><span class="details">회사명</span></label>-->
+<!--                                <input type="text" name="company" id="company" placeholder="회사명을 입력해주세요.." required>-->
+<!--                            </div>-->
+<!--                            <div class="input-box">-->
+<!--                                <label for="storeName"><span class="details">점포명</span></label>-->
+<!--                                <input type="text" name="storeName" id="storeName" placeholder="점포명을 입력해주세요.." required>-->
+<!--                            </div>-->
+<!--                            <div class="input-box">-->
+<!--                                <label for="storeNumber"><span class="details">점포전화번호</span></label>-->
+<!--                                <input type="text" name="storeNumber" id="storeNumber" placeholder="점포번호를 입력해주세요.." required>-->
+<!--                            </div>-->
+<!--                            <div class="input-box">-->
+<!--                                <label for="ownerNum"><span class="details">대표자 전화번호</span></label>-->
+<!--                                <input type="text" name="ownerNum" id="ownerNum" placeholder="전화번호을 입력해주세요.." required>-->
+<!--                            </div>-->
+<!--                            <div class="input-box">-->
+<!--                                <label for="storeAddress"><span class="details">주소</span></label>-->
+<!--                                <input type="text" name="storeAddress" id="storeAddress" placeholder="주소를 입력해주세요.." required>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </form>-->
+                </div>
+            </div>
+=======
                             </div>
                         </div>
+>>>>>>> bc5c99e711f6fcd142e56671feb9eda1f772b49a
 
 
 

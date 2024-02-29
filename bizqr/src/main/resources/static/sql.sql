@@ -115,6 +115,7 @@ CREATE TABLE IF NOT EXISTS `register` (
     `owner_num` VARCHAR(255),
     `store_num` VARCHAR(255),
     `paid_time` VARCHAR(255) NOT NULL,
+    `merchant_uid` VARCHAR(255) NOT NULL,
     PRIMARY KEY (`register_num`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
