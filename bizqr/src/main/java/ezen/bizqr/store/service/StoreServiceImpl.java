@@ -64,5 +64,8 @@ public class StoreServiceImpl implements StoreService {
     public List<StoreVO> getStoreList() {
         return storeMapper.getStoreList();
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
 }

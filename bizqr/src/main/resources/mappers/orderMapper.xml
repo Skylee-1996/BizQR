@@ -9,7 +9,7 @@
     </insert>
 
     <update id="basketUpdate">
-        UPDATE `order_items` SET menu_amount = #{menuAmount} WHERE menu_name = #{menuName}
+        UPDATE `order_items` SET menu_amount = #{menuAmount} WHERE menu_name = #{menuName} AND store_id = #{storeId} AND table_id = #{tableId}
     </update>
 
     <select id="basketList" resultType="ezen.bizqr.customer.domain.OrderItemVO">
@@ -41,4 +41,9 @@
     <select id="tabList" resultType="String">
         SELECT DISTINCT tab_name FROM `menu_item` WHERE store_id = #{storeId}
     </select>
+
+    <delete id="basketDel">
+        DELETE FROM `order_items` WHERE menu_id = #{menuId} AND table_id = #{tableId} AND store_id = #{storeId}
+    </delete>
+
 </mapper>

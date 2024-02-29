@@ -83,4 +83,12 @@ public class CustomerServiceImpl implements CustomerService{
 
         return om.tabList(storeId);
     }
+
+    @Override
+    public int basketDel(long menuId, String tableId, long storeId) {
+        log.info("basketDel service impl");
+
+        return om.basketDel(menuId, tableId, storeId);
+    }
+
 }

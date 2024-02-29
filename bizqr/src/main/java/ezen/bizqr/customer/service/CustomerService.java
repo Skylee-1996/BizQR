@@ -20,4 +20,6 @@ public interface CustomerService{
     List<ItemVO> itemList(long storeId, String tabName);
 
     List<String> tabList(long storeId);
+
+    int basketDel(long menuId, String tableId, long storeId);
 }
