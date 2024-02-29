@@ -1,6 +1,7 @@
 package ezen.bizqr.customer.controller;
 
 
+import com.mysql.cj.x.protobuf.MysqlxCrud;
 import ezen.bizqr.customer.domain.ItemVO;
 import ezen.bizqr.customer.domain.OrderItemVO;
 import ezen.bizqr.customer.domain.OrderVO;
@@ -98,6 +99,7 @@ public class CustomerController {
             menuMainTotal += orderItemVO.getMenuMainTotal();
 
             oivo.setTableId(orderItemVO.getTableId());
+            oivo.setStoreId(orderItemVO.getStoreId());
         }
 
         String menuMainTotalComma = oivo.getMenuMainTotalComma(menuMainTotal);  //mainTotal의 comma를 추가하는 메서드
@@ -106,6 +108,15 @@ public class CustomerController {
         m.addAttribute("menuMainTotalComma", menuMainTotalComma);
         m.addAttribute("oivo", oivo);
         m.addAttribute("oilist", oilist);   //상품 목록
+    }
+
+    @PostMapping(value="/menuAmount", consumes = "application/json")
+    ResponseEntity<Integer> menuAmount (@RequestBody OrderItemVO oivo){
+        log.info("oivo >>> {}", oivo);
+
+        int isOk = csv.basketUpdate(oivo);
+
+        return new ResponseEntity<Integer>(isOk, HttpStatus.OK);
     }
 
     @PostMapping("/customerBasket")
@@ -118,4 +129,14 @@ public class CustomerController {
         return "/customer/customerOrderHistory";
     }
 
+    @DeleteMapping(value = "/basketDel/{menuId}/{tableId}/{storeId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<Integer> basketDel(@PathVariable("menuId") long menuId, @PathVariable("tableId") String tableId, @PathVariable("storeId") long storeId){
+        log.info("menuId >>> {}", menuId);
+        log.info("tableId >>> {}", tableId);
+        log.info("storeId >>> {}", storeId);
+
+        int isOk = csv.basketDel(menuId, tableId, storeId);
+
+        return new ResponseEntity<Integer>(isOk, HttpStatus.OK);
+    }
 }

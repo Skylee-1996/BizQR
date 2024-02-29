@@ -26,9 +26,6 @@ public class PayController {
         return "/payment/pay";
     }
 
-<<<<<<< HEAD
-
-=======
     @PostMapping("/pay")
     public String pay(RegisterVO rvo, Model m){
         log.info("registerVO rvo >>>>> {}", rvo);
@@ -47,6 +44,5 @@ public class PayController {
 
         return "index";
     }
->>>>>>> origin/main
 
 }

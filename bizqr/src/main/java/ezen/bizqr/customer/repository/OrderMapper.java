@@ -27,4 +27,6 @@ public interface OrderMapper {
     List<ItemVO> itemList(@Param("storeId") long storeId, @Param("tabName") String tabName);
 
     List<String> tabList(long storeId);
+
+    int basketDel(@Param("menuId") long menuId, @Param("tableId") String tableId, @Param("storeId") long storeId);
 }
