@@ -19,5 +19,6 @@ public class StorePaymentVO {
     private String buyerStoreTelNum;
     private String itemName;
     private String itemAmount;
+    private String paidTime;
 
 }

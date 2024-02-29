@@ -111,6 +111,7 @@
                     <th scope="col">개인 전화번호</th>
                     <th scope="col">주소</th>
                     <th scope="col">업종</th>
+                    <th scope="col">결제일</th>
                     <th scope="col">상태</th>
                 </tr>
                 </thead>
@@ -125,6 +126,7 @@
                     <td th:text="${rvo.ownerNum}">Owner Number</td>
                     <td th:text="${rvo.storeNum}">Store Number</td>
                     <td th:class="${rvo.storeType == 'Cafe'} ? 'warning' : (${rvo.storeType == 'Restaurant'} ? 'success' : (${rvo.storeType == 'Hotel'} ? 'primary' : 'danger'))" th:text="${rvo.storeType}">Store Type</td>
+                    <td th:text="${rvo.paidTime}">Paid Time</td>
                     <th:block th:switch="${rvo.isRegistered}">
                         <th:block th:case="0">
                             <td>
