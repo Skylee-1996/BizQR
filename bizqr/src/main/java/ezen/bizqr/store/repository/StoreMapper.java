@@ -10,7 +10,7 @@ import java.util.List;
 
 @Mapper
 public interface StoreMapper {
-    void storeRegister(RegisterVO rvo);
+    int storeRegister(RegisterVO rvo);
 
     void menuInsert(MenuItemVO mvo);
 
@@ -22,11 +22,23 @@ public interface StoreMapper {
 
     long getMenuId();
 
-
+<<<<<<< HEAD
     StoreVO getDetailFromStore(String storeId);
 
     void updateStore(StoreVO svo);
 
     List<StoreVO> getStoreList();
+=======
 
+    StoreVO getDetailFromStore(String storeId);
+
+<<<<<<< HEAD
+    List<RegisterVO> getRegisterList();
+=======
+    void updateStore(StoreVO svo);
+
+    List<StoreVO> getStoreList();
+
+>>>>>>> 8ef0bd2f7ce085aa44ec78da0b13e0c073407d02
+>>>>>>> origin/main
 }

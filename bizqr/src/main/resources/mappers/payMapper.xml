@@ -6,7 +6,7 @@
 
     <insert id="savePayment">
         insert into store_payment
-        values(#{impUid}, #{merchantUid}, #{buyerEmail}, #{buyerName}, #{buyerCompany}, #{buyerAddress}, #{buyerOwnerTelNum}, #{buyerStoreTelNum}, #{itemName}, #{itemAmount})
+        values(#{impUid}, #{merchantUid}, #{buyerEmail}, #{buyerName}, #{buyerCompany}, #{buyerAddress}, #{buyerOwnerTelNum}, #{buyerStoreTelNum}, #{itemName}, #{itemAmount}, #{paidTime})
     </insert>
 
 </mapper>

@@ -6,8 +6,8 @@
 
     <insert id="storeRegister">
         insert into register
-        (name, email, company, store_name, store_address, store_type, owner_num, store_num, subscribe)
-        values(#{name}, #{email}, #{company}, #{storeName}, #{storeAddress}, #{storeType}, #{ownerNum}, #{storeNum}, #{subscribe})
+        (name, email, company, store_name, store_address, store_type, owner_num, store_num, subscribe, paid_time)
+        values(#{name}, #{email}, #{company}, #{storeName}, #{storeAddress}, #{storeType}, #{ownerNum}, #{storeNum}, #{subscribe}, #{paidTime})
     </insert>
     <insert id="menuInsert">
         insert into menu_item
@@ -36,6 +36,13 @@
     <select id="getDetailFromStore" resultType="ezen.bizqr.store.domain.StoreVO">
         select * from store where store_id = #{storeId}
     </select>
+<<<<<<< HEAD
+
+    <select id="getRegisterList" resultType="ezen.bizqr.store.domain.RegisterVO">
+        select * from register
+    </select>
+
+=======
     <update id="updateStore">
     UPDATE store
     SET
@@ -53,4 +60,5 @@
     <select id="getStoreList" resultType="ezen.bizqr.store.domain.StoreVO">
         select * from store;
     </select>
+>>>>>>> 8ef0bd2f7ce085aa44ec78da0b13e0c073407d02
 </mapper>
