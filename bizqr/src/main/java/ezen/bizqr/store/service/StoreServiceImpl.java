@@ -20,13 +20,12 @@ public class StoreServiceImpl implements StoreService {
     private final StoreMapper storeMapper;
 
     @Override
-    public void insertRegister(RegisterVO rvo) {
-        storeMapper.storeRegister(rvo);
+    public int insertRegister(RegisterVO rvo) {
+        return storeMapper.storeRegister(rvo);
     }
 
     @Override
     public long insertMenu(MenuItemVO mvo) {
-
         storeMapper.menuInsert(mvo);
         long menuid = storeMapper.getMenuId();
         return menuid;
@@ -52,11 +51,30 @@ public class StoreServiceImpl implements StoreService {
         return storeMapper.getDetailFromStore(storeId);
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
     @Override
+    public List<RegisterVO> getRegisterList() {
+        return storeMapper.getRegisterList();
+    }
     public void updateStore(StoreVO svo) {
         storeMapper.updateStore(svo);
     }
 
+<<<<<<< HEAD
 
 }
+=======
+    @Override
+    public List<StoreVO> getStoreList() {
+        return storeMapper.getStoreList();
+    }
+
+    @Override
+    public List<StoreVO> getStoreListByType(String storeType) {
+        return storeMapper.getStoreListByType(storeType);
+    }
+}
+>>>>>>> origin/main

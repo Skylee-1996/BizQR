@@ -21,5 +21,7 @@ public class RegisterVO {
     private String storeNum;
     private String subscribe;
     private int isRegistered;
+    private String paidTime;
+    private String merchantUid;
 
 }

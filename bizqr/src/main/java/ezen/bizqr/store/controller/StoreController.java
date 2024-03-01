@@ -95,6 +95,17 @@ public class StoreController {
         return "/store/myStoreList";
     }
 
+    @PostMapping("/registerSuccess")
+    @ResponseBody
+    public String postRegisterSuccess(@RequestBody RegisterVO rvo){
+
+        log.info(">>> RegisterVO rvo >>> {}", rvo);
+
+        int isOk = ssv.insertRegister(rvo);
+
+        return isOk > 0 ? "1" : "0";
+    }
+
     @PostMapping("/modify")
     public String modifyStore(StoreVO svo, @RequestParam("file") MultipartFile file, Model m) {
 

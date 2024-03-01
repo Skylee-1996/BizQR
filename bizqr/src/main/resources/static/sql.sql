@@ -114,6 +114,8 @@ CREATE TABLE IF NOT EXISTS `register` (
     `subscribe` VARCHAR(255) NOT NULL,
     `owner_num` VARCHAR(255),
     `store_num` VARCHAR(255),
+    `paid_time` VARCHAR(255) NOT NULL,
+    `merchant_uid` VARCHAR(255) NOT NULL,
     PRIMARY KEY (`register_num`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -262,6 +264,7 @@ create table store_payment(
     buyer_storeTelNum varchar(255) not null,
     item_name varchar(255) not null,
     item_amount int not null,
+    paid_time varchar(255) not null,
     primary key(imp_uid)
     );
 

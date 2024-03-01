@@ -112,6 +112,7 @@
                     <th scope="col">주소</th>
                     <th scope="col">업종</th>
                     <th scope="col">결제일</th>
+                    <th scope="col">번호</th>
                     <th scope="col">상태</th>
                 </tr>
                 </thead>
@@ -127,11 +128,12 @@
                     <td th:text="${rvo.storeNum}">Store Number</td>
                     <td th:class="${rvo.storeType == 'Cafe'} ? 'warning' : (${rvo.storeType == 'Restaurant'} ? 'success' : (${rvo.storeType == 'Hotel'} ? 'primary' : 'danger'))" th:text="${rvo.storeType}">Store Type</td>
                     <td th:text="${rvo.paidTime}">Paid Time</td>
+                    <td th:text="${rvo.merchantUid}">Merchant Uid</td>
                     <th:block th:switch="${rvo.isRegistered}">
                         <th:block th:case="0">
                             <td>
-                                <button th:attr="data-rnum=${rvo.registerNum}" class="btn app" type="button" value="1">승인</button>
-                                <button th:attr="data-rnum=${rvo.registerNum}" class="btn ref" type="button" value="2">거절</button>
+                                <button th:attr="data-rnum=${rvo.registerNum}, date-merchantUid=${rvo.merchantUid}" class="btn app" type="button" value="1">승인</button>
+                                <button th:attr="data-rnum=${rvo.registerNum}, date-merchantUid=${rvo.merchantUid}" class="btn ref" type="button" value="2">거절</button>
                             </td>
                         </th:block>
                         <th:block th:case="1">
@@ -249,8 +251,17 @@
 
 </div>
 
+<script type="text/javascript">
+    // document.addEventListener('click', (e)=>{
+    //     console.log(e.target);
+    //     if(e.target.class == 'ref'){
+    //
+    //     }
+    // })
+</script>
 
-<script th:src="@{/js/admin/adminIndex.js}"></script>
+
+<!--<script th:src="@{/js/admin/adminIndex.js}"></script>-->
 </body>
 
 </html>

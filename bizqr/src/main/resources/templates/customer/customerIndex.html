@@ -19,18 +19,8 @@
     <input type="hidden" name="tableId" id="tableId" th:value="${tableId}">
     <input type="hidden" name="storeId" id="storeId" th:value="${storeId}">
 
-    <div class="wrapper">
-        <div class="icon"><i id="left" class="fa-solid fa-angle-left"></i></div>
-        <ul class="tabs-box">
-            <li class="tab">집</li>
-            <li class="tab active">JavaScript</li>
-            <li class="tab">Podcasts</li>
-            <li class="tab">Databases</li>
-            <li class="tab">Web Development</li>
-            <li class="tab">Unboxing</li>
-            <li class="tab">History</li>
-        </ul>
-        <div class="icon"><i id="right" class="fa-solid fa-angle-right"></i></div>
+    <div class="wrapper" id="tab">
+
     </div>
 
     <!-- 공지사항 -->
@@ -85,7 +75,7 @@
                 </div>
             </div>
 
-            <a href="/customer/customerBasket?tableId=dd" class="my-list">
+            <a th:href="@{/customer/customerBasket(tableId=${tableId}, storeId=${storeId})}" class="my-list">
                 <span class="my-select" id="my-select">갯수</span>
                 <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(135, 134, 134);" width="50" height="50" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
                     <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
@@ -165,9 +155,6 @@
 
         </th:block>
     </th:block>
-<script src="/js/customer/customerIndex.js">
-</script>
-<script th:inline="javascript">
-</script>
+<script src="/js/customer/customerIndex.js"></script>
 <script src="/js/customer/tab.js"></script>
 </html>

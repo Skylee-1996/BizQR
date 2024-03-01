@@ -12,7 +12,7 @@ import java.util.List;
 public interface OrderMapper {
     int basket(OrderItemVO oivo);
 
-    List<OrderItemVO> basketList(String tableId);
+    List<OrderItemVO> basketList(@Param("tableId") String tableId, @Param("storeId") long storeId);
 
     int order(OrderVO ovo);
 
@@ -22,7 +22,11 @@ public interface OrderMapper {
 
     int basketUpdate(OrderItemVO oivo);
 
-    int basketCount(String tableId);
+    int basketCount(@Param("tableId") String tableId, @Param("storeId") long storeId);
 
     List<ItemVO> itemList(@Param("storeId") long storeId, @Param("tabName") String tabName);
+
+    List<String> tabList(long storeId);
+
+    int basketDel(@Param("menuId") long menuId, @Param("tableId") String tableId, @Param("storeId") long storeId);
 }
