@@ -16,7 +16,7 @@
     <a href="/" class="logo">BizQR</a>
     <div class="links">
       <a href="/">Home</a>
-      <a href="/store/register">가입하기</a>
+      <a href="/user/register">가입하기</a>
       <a href="/store/myStoreList">점포관리</a>
       <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
         <a href="/user/list"><button type="button">유저관리</button></a>
@@ -24,21 +24,17 @@
       <a href="/board/service">About Us</a>
     </div>
     <div class="login">
-      <button class="signup">Get Started</button>
+      <a href="/user/register"><button type="button">Sign</button></a>
+
       <li class="nav-item" sec:authorize="isAnonymous()">
         <a href="/user/login"><button type="button">Login</button></a>
-        <a href="/user/register"><button type="button">Register</button></a>
       </li>
 
       <li class="nav-item" sec:authorize="isAuthenticated()">
-        <a href="/user/modify"><button type="button">Modify</button></a>
         <a href="/user/logout"><button type="button">Logout</button></a>
         <a class="nav-link" th:href="@{/user/modify}" th:text="${#authentication.name}"></a>
-<!--        <a class="nav-link"-->
-<!--          th:with="auth=${#authentication.getPrincipal()}"-->
-<!--           th:text="${auth.uvo.nickName}"></a>-->
       </li>
-<!--      <a class="nav-link" th:href="@{/user/modify}" th:text="${#authentication.name}"></a>-->
+
     </div>
   </nav>
 

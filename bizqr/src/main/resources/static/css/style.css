@@ -46,6 +46,10 @@ nav .login button{
 
 }
 
+.login{
+    display: flex;
+}
+
 nav  .login button.signup{
     background-color: #000;
     color:#fff;
@@ -584,4 +588,8 @@ footer .right p{
         font-size: 13px;
     }
 
+}
+
+li{
+    list-style: none;
 }
