@@ -11,14 +11,14 @@ document.getElementById('checkEmail').addEventListener('click', ()=>{
     let emailText = document.getElementById('emailText');
     if(checkEmail == null || checkEmail == ''){
         emailText.style.color = 'red';
-        emailText.innerText = "이메일을 입력해주세요.";
+        emailText.innerText = "* 이메일을 입력해주세요.";
         checkSuccess();
     }
 
     checkEmailToServer(checkEmail).then(result => {
         if(result == '0'){
             emailText.style.color = 'red';
-            emailText.innerText = "중복된 이메일입니다.";
+            emailText.innerText = "존재하는 이메일입니다.";
             checkEmailSuccess = 0;
             checkSuccess();
         }else if(result == '1'){
@@ -75,3 +75,6 @@ function  checkSuccess(){
         signUp.disabled = true;
     }
 }
+
+
+
