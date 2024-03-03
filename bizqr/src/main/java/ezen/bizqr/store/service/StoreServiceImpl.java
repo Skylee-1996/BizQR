@@ -26,7 +26,6 @@ public class StoreServiceImpl implements StoreService {
 
     @Override
     public long insertMenu(MenuItemVO mvo) {
-
         storeMapper.menuInsert(mvo);
         long menuid = storeMapper.getMenuId();
         return menuid;
@@ -52,6 +51,10 @@ public class StoreServiceImpl implements StoreService {
         return storeMapper.getDetailFromStore(storeId);
     }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/main
     @Override
     public List<RegisterVO> getRegisterList() {
         return storeMapper.getRegisterList();
@@ -66,8 +69,21 @@ public class StoreServiceImpl implements StoreService {
         storeMapper.updateStore(svo);
     }
 
+<<<<<<< HEAD
+
+}
+=======
     @Override
     public List<StoreVO> getStoreList() {
         return storeMapper.getStoreList();
     }
+<<<<<<< HEAD
+=======
+
+    @Override
+    public List<StoreVO> getStoreListByType(String storeType) {
+        return storeMapper.getStoreListByType(storeType);
+    }
+>>>>>>> eb551ee597500a941407327de654c94501c25018
 }
+>>>>>>> origin/main

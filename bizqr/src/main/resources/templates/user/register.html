@@ -3,43 +3,75 @@
 <script src="../../static/js/user/userRegister.js"></script>
 <th:block th:replace="~{/layout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
-        <link rel="stylesheet" th:href="@{/css/loginstyle.css}">
+        <link rel="stylesheet" th:href="@{/css/user/register.css}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 
         <body>
 
-        <div class="login-card">
-            <h2>Register</h2>
-            <h3>Enter your credentials</h3>
+        <div class="register">
+            <div class="container">
+                <div class="title"><img src="/image/logo-social.png" alt="logo" style="width: 200px; height: 200px"></div>
 
             <form action="/user/register" method="post" class="login-form" >
-                <div>
-                    <h5>이메일</h5>
-                    <h5 id="emailText"></h5>
+               <div class="reg-div">
+                <div class="form-group">
+                    <span class="material-symbols-outlined">person</span>
+                    <input class="form-field" type="text" name="email" id="e" placeholder="example@email.com" required>
                 </div>
-                <input type="text" name="email" id="e" placeholder="UserEmail">
-                <button type="button" id="checkEmail">중복 확인</button>
+                <button type="button" id="checkEmail">확인</button>
+               </div>
+                <h5 id="emailText" class="e"></h5>
 
-                <div>
-                    <h5>비밀번호</h5>
-                    <h5 id="pwdText"></h5>
-                </div>
-                <input type="password" name="pwd" id="p1" placeholder="Password">
-
-                <div>
-                    <h5>비밀번호 확인</h5>
-                    <h5></h5>
+                <div class="form-group">
+                    <span class="material-symbols-outlined">lock</span>
+                    <input class="form-field" type="password" name="pwd" id="p1" placeholder="비밀번호를 입력해주세요." required>
                 </div>
 
-                <input type="password" name="pwdCheck2" id="p2" placeholder="Password">
-                <h5>닉네임</h5>
-                <input type="text" name="nickName" id="n" placeholder="UserNickName">
-                <a href="#">Forgot your password?</a>
-                <button type="submit" id="signUp">SignUp</button>
+                <div class="form-group">
+                    <span class="material-symbols-outlined">task_alt</span>
+                    <input class="form-field" type="password" name="pwdCheck2" id="p2" placeholder="비밀번호를 한번 더 입력해주세요." required>
+                </div>
+
+                <button type="submit" id="signUp">가입</button>
+
+<!--                <div class="form-group">-->
+<!--                    <input class="form-field" type="email" placeholder="Email">-->
+<!--                    <span>@gmail.com</span>-->
+<!--                </div>-->
+
+
+
+
+<!--                <div>-->
+<!--                    <h5>이메일</h5>-->
+<!--                    <h5 id="emailText"></h5>-->
+<!--                </div>-->
+<!--                <input type="text" name="email" id="e" placeholder="UserEmail">-->
+<!--                <button type="button" id="checkEmail">중복 확인</button>-->
+
+<!--                <div>-->
+<!--                    <h5>비밀번호</h5>-->
+<!--                    <h5 id="pwdText"></h5>-->
+<!--                </div>-->
+<!--                <input type="password" name="pwd" id="p1" placeholder="Password">-->
+
+<!--                <div>-->
+<!--                    <h5>비밀번호 확인</h5>-->
+<!--                    <h5></h5>-->
+<!--                </div>-->
+
+<!--                <input type="password" name="pwdCheck2" id="p2" placeholder="Password">-->
+<!--                <h5>닉네임</h5>-->
+<!--                <input type="text" name="nickName" id="n" placeholder="UserNickName">-->
+<!--                <a href="#">Forgot your password?</a>-->
+<!--                <button type="submit" id="signUp">SignUp</button>-->
+<!--            </form>-->
+<!--        </div>-->
+
             </form>
+            </div>
         </div>
-
-
         </body>
         <script th:src="@{/js/user/userRegister.js}"></script>
     </th:block>

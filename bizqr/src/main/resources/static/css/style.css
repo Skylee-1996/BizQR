@@ -46,6 +46,10 @@ nav .login button{
 
 }
 
+.login{
+    display: flex;
+}
+
 nav  .login button.signup{
     background-color: #000;
     color:#fff;
@@ -165,12 +169,12 @@ h2.separator{
      margin-top: 30px;
  }
 
-.stores .category{
+.stores .storeType{
     display: flex;
     gap: 14px;
 }
 
-.stores .category a{
+.stores .storeType a{
     background-color: #dfdcdc;
     padding: 8px 14px;
     font-size: 15px;
@@ -178,7 +182,7 @@ h2.separator{
     transition: all 0.3s ease;
 }
 
-.stores .category a:hover{
+.stores .storeType a:hover{
     color: #fff;
     background-color: #0f2182;
 }
@@ -580,8 +584,12 @@ footer .right p{
         width: 47%;
     }
 
-    .stores .category a{
+    .stores .storeType a{
         font-size: 13px;
     }
 
+}
+
+li{
+    list-style: none;
 }

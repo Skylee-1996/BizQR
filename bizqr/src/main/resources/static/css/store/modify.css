@@ -84,18 +84,18 @@ form .store-details .store-title{
 }
 
 
-form .store-details .category{
+form .store-details .storeType{
     display: flex;
     width: 80%;
     margin: 14px 0;
     justify-content: space-between;
 }
 
-.store-details .category label{
+.store-details .storeType label{
     display: flex;
     align-items: center;
 }
-.store-details .category .dot{
+.store-details .storeType .dot{
     height: 18px;
     width: 18px;
     background: #d9d9d9;
@@ -104,10 +104,10 @@ form .store-details .category{
     border: 5px solid transparent;;
 }
 
-#dot-1:checked ~ .category label .one,
-#dot-2:checked ~ .category label .two,
-#dot-3:checked ~ .category label .three,
-#dot-4:checked ~ .category label .four{
+#dot-1:checked ~ .storeType label .one,
+#dot-2:checked ~ .storeType label .two,
+#dot-3:checked ~ .storeType label .three,
+#dot-4:checked ~ .storeType label .four{
     border-color:#d9d9d9;
     background: #9b59b6;
 }
@@ -154,7 +154,7 @@ form .button input:hover{
         margin-bottom:  15px;
         width: 100%;
     }
-    form .store-details .category{
+    form .store-details .storeType{
         width: 100%;
     }
     .container form .user-details{

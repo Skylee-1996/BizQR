@@ -1,8 +1,16 @@
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
 *{
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 table{
     margin-bottom: 100px;
@@ -21,12 +29,15 @@ table{
 .h-td{
     background-color: rgba(211, 211, 211, 0.19);
     width: 200px;
+    font-family: 'SUITE-Regular';
 }
 
 td > input[type="text"]{
     width: 300px;
     height: 30px;
     border: 1px solid #b1b1b1;
+    padding-left: 6px;
+    font-family: 'SUITE-Regular';
 }
 
 /* 기본 스타일 제거 */
@@ -62,7 +73,14 @@ hr{
     align-items: center;
     margin-top: 50px;
     font-weight: bold;
+    font-family: 'SUITE-Regular';
 }
+
+/* 라디오 버튼 사이의 간격 조정 */
+input[type="radio"] + span {
+    margin-right: 8px; /* 라디오 버튼과 텍스트 사이의 간격을 조정합니다. */
+}
+
 
 .pi{
     font-size: 10px;
@@ -71,6 +89,7 @@ hr{
     align-items: center;
     margin-top: 10px;
     margin-bottom: 50px;
+    font-family: 'SUITE-Regular';
 }
 
 .p1 {
@@ -78,11 +97,13 @@ hr{
     font-size: 10px;
     margin-bottom: 10px;
     margin-right: 187px;
+    font-family: 'SUITE-Regular';
 }
 
 .s1 {
     color: red;
     font-weight: bold;
+    font-family: 'SUITE-Regular';
 }
 
 .regBtn-store{
@@ -95,6 +116,7 @@ hr{
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
+    font-family: 'SUITE-Regular';
 }
 
 
