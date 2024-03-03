@@ -21,4 +21,9 @@ public class PayServiceImpl implements PayService {
         return payMapper.savePayment(spvo);
     }
 
+    @Override
+    public StorePaymentVO getImpUidWithMerchantUid(String merchantUid) {
+        return payMapper.getImpUidWithMerchantUid(merchantUid);
+    }
+
 }

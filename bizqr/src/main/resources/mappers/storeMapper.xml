@@ -58,4 +58,8 @@
     <select id="getStoreList" resultType="ezen.bizqr.store.domain.StoreVO">
         select * from store;
     </select>
+
+    <update id="alterRegisterInfo">
+        update register set isRegistered = #{isRegistered} where register_num = #{registerNum}
+    </update>
 </mapper>

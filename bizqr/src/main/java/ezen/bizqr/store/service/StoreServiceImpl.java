@@ -56,6 +56,12 @@ public class StoreServiceImpl implements StoreService {
     public List<RegisterVO> getRegisterList() {
         return storeMapper.getRegisterList();
     }
+
+    @Override
+    public int alterRegisterInfo(long registerNum, int isRegistered) {
+        return storeMapper.alterRegisterInfo(registerNum, isRegistered);
+    }
+
     public void updateStore(StoreVO svo) {
         storeMapper.updateStore(svo);
     }
@@ -64,8 +70,4 @@ public class StoreServiceImpl implements StoreService {
     public List<StoreVO> getStoreList() {
         return storeMapper.getStoreList();
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
 }
