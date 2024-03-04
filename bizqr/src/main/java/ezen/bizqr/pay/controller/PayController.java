@@ -3,6 +3,7 @@ package ezen.bizqr.pay.controller;
 import ezen.bizqr.pay.domain.StorePaymentVO;
 import ezen.bizqr.pay.service.PayService;
 import ezen.bizqr.store.domain.RegisterVO;
+import ezen.bizqr.store.domain.StoreVO;
 import ezen.bizqr.store.service.StoreService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -62,10 +63,6 @@ public class PayController {
 
         return isOk > 0 ? "1" : "0";
     }
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 //    @PostMapping("/takeUserInfo/{registerNum}")
 //    public ResponseEntity<Object> takeUserInfo(@PathVariable("registerNum") long registerNum){
 //
@@ -193,8 +190,4 @@ public class PayController {
         return response;
     }
      */
-
-=======
->>>>>>> origin/main
->>>>>>> eb551ee597500a941407327de654c94501c25018
 }

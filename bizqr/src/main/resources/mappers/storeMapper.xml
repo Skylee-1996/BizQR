@@ -59,13 +59,10 @@
         select * from store;
     </select>
 
-<<<<<<< HEAD
     <update id="alterRegisterInfo">
         update register set isRegistered = #{isRegistered} where register_num = #{registerNum}
     </update>
-=======
     <select id="getStoreListByType" resultType="ezen.bizqr.store.domain.StoreVO" >
         select * from store where store_type = #{storeType}
     </select>
->>>>>>> eb551ee597500a941407327de654c94501c25018
 </mapper>

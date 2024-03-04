@@ -23,32 +23,15 @@ public interface StoreMapper {
 
     long getMenuId();
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> eb551ee597500a941407327de654c94501c25018
     StoreVO getDetailFromStore(String storeId);
 
     void updateStore(StoreVO svo);
 
-<<<<<<< HEAD
     List<StoreVO> getStoreList();
 
     List<RegisterVO> getRegisterList();
 
     int alterRegisterInfo(@Param("registerNum") long registerNum, @Param("isRegistered") int isRegistered);
-=======
-=======
-    StoreVO getDetailFromStore(String storeId);
-
-    List<RegisterVO> getRegisterList();
-
-    void updateStore(StoreVO svo);
-
-    List<StoreVO> getStoreList();
 
     List<StoreVO> getStoreListByType(String storeType);
->>>>>>> origin/main
->>>>>>> eb551ee597500a941407327de654c94501c25018
 }
