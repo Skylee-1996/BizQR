@@ -9,4 +9,5 @@ import java.util.List;
 public interface PayService {
     int savePayment(StorePaymentVO spvo);
 
+    StorePaymentVO getImpUidWithMerchantUid(String merchantUid);
 }

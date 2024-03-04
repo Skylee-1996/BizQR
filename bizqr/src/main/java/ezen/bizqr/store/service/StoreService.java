@@ -13,19 +13,53 @@ public interface StoreService {
 
     RegisterVO getDetail(long registerNum);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    List<StoreVO> selectEmail(String userEmail);
+    int insertStore(StoreVO svo);
+    
+
+    List<StoreVO> getStoreList();
+    
+    
+    StoreVO getDetailFromStore(String storeId);
+
+    
+    List<RegisterVO> getRegisterList();
+
+    int alterRegisterInfo(long registerNum, int isRegistered);
+
+=======
+
+>>>>>>> origin/main
     List<StoreVO> selectEmail(String userEmail);
     int insertStore(StoreVO svo);
 
 
     StoreVO getDetailFromStore(String storeId);
 
+<<<<<<< HEAD
 
     List<RegisterVO> getRegisterList();
     void updateStore(StoreVO svo);
 
 
+=======
+    int alterRegisterInfo(long registerNum, int isRegistered);
+>>>>>>> origin/main
     List<StoreVO> getStoreList();
+>>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
 
     List<StoreVO> getStoreListByType(String storeType);
 
+<<<<<<< HEAD
+=======
+    void updateStore(StoreVO svo);
+<<<<<<< HEAD
+=======
+
+    List<RegisterVO> getRegisterList();
+>>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
+>>>>>>> origin/main
 }
