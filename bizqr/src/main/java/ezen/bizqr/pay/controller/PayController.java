@@ -63,6 +63,10 @@ public class PayController {
 
         return isOk > 0 ? "1" : "0";
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
 //    @PostMapping("/takeUserInfo/{registerNum}")
 //    public ResponseEntity<Object> takeUserInfo(@PathVariable("registerNum") long registerNum){
 //
@@ -88,6 +92,21 @@ public class PayController {
 
         int isOk = ssv.alterRegisterInfo(registerNum, isRegistered);
 
+        if(isRegistered > 0 ){
+            RegisterVO registeredRvo = ssv.getDetail(registerNum);
+            StoreVO svo = new StoreVO();
+
+            svo.setEmail(registeredRvo.getEmail());
+            svo.setRegisterNum(registeredRvo.getRegisterNum());
+            svo.setStoreName(registeredRvo.getStoreName());
+            svo.setStoreAddress(registeredRvo.getStoreAddress());
+            svo.setStoreNumber(registeredRvo.getStoreNum());
+            svo.setStoreType(registeredRvo.getStoreType());
+            svo.setCompany(registeredRvo.getCompany());
+
+            log.info(">>>>>> svo >>>>  {}", svo);
+            ssv.insertStore(svo);
+        }
         return isOk > 0 ?
                 new ResponseEntity<String>("0", HttpStatus.OK) :
                     new ResponseEntity<String>("1", HttpStatus.INTERNAL_SERVER_ERROR);
@@ -190,4 +209,8 @@ public class PayController {
         return response;
     }
      */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
 }
