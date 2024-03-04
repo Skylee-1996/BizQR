@@ -3,6 +3,7 @@ package ezen.bizqr.pay.controller;
 import ezen.bizqr.pay.domain.StorePaymentVO;
 import ezen.bizqr.pay.service.PayService;
 import ezen.bizqr.store.domain.RegisterVO;
+import ezen.bizqr.store.domain.StoreVO;
 import ezen.bizqr.store.service.StoreService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -62,10 +63,7 @@ public class PayController {
 
         return isOk > 0 ? "1" : "0";
     }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 //    @PostMapping("/takeUserInfo/{registerNum}")
 //    public ResponseEntity<Object> takeUserInfo(@PathVariable("registerNum") long registerNum){
 //
@@ -91,6 +89,21 @@ public class PayController {
 
         int isOk = ssv.alterRegisterInfo(registerNum, isRegistered);
 
+        if(isRegistered > 0 ){
+            RegisterVO registeredRvo = ssv.getDetail(registerNum);
+            StoreVO svo = new StoreVO();
+
+            svo.setEmail(registeredRvo.getEmail());
+            svo.setRegisterNum(registeredRvo.getRegisterNum());
+            svo.setStoreName(registeredRvo.getStoreName());
+            svo.setStoreAddress(registeredRvo.getStoreAddress());
+            svo.setStoreNumber(registeredRvo.getStoreNum());
+            svo.setStoreType(registeredRvo.getStoreType());
+            svo.setCompany(registeredRvo.getCompany());
+
+            log.info(">>>>>> svo >>>>  {}", svo);
+            ssv.insertStore(svo);
+        }
         return isOk > 0 ?
                 new ResponseEntity<String>("0", HttpStatus.OK) :
                     new ResponseEntity<String>("1", HttpStatus.INTERNAL_SERVER_ERROR);
@@ -194,7 +207,4 @@ public class PayController {
     }
      */
 
-=======
->>>>>>> origin/main
->>>>>>> eb551ee597500a941407327de654c94501c25018
 }
