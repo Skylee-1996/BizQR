@@ -65,10 +65,6 @@ public class StoreServiceImpl implements StoreService {
         storeMapper.updateStore(svo);
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
     @Override
     public List<StoreVO> getStoreList() {
         return storeMapper.getStoreList();
@@ -78,8 +74,4 @@ public class StoreServiceImpl implements StoreService {
     public List<StoreVO> getStoreListByType(String storeType) {
         return storeMapper.getStoreListByType(storeType);
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
 }

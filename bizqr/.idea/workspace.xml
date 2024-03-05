@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="aac62688-27a4-4c4f-9861-d1c6f229bcdb" name="변경" comment="">
+    <list default="true" id="205e510c-242f-42da-828c-df9e6af363a9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/controller/PayController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/repository/StoreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/repository/StoreMapper.java" afterDir="false" />
@@ -14,81 +14,32 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/store/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/store/register.html" afterDir="false" />
     </list>
-=======
-    <list default="true" id="4f43b33d-691a-4a81-bc0e-cc128b01155f" name="Changes" comment="" />
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< HEAD
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="bizqr" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
-        <option value="Interface" />
-        <option value="CSS File" />
-        <option value="HTTP Request" />
         <option value="JavaScript File" />
-        <option value="Kotlin Class" />
-        <option value="HTML File" />
-        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/resources/static/css/board/boardRegister.css" root0="SKIP_HIGHLIGHTING" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
-        &quot;associatedIndex&quot;: 6
-        }</component>
-  <component name="ProjectId" id="2bq1RC6A1uQB0czhNKO7faLKVMt" />
-=======
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2dCbxbEu0vaaHHDwOMohbLMY1rc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Gradle.Build bizqr.executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -107,202 +58,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ezen.bizqr.user.config" />
-      <recent name="ezen.bizqr.board.domain" />
-      <recent name="ezen.bizqr.board.repository" />
-      <recent name="ezen.bizqr.board.service" />
-      <recent name="ezen.bizqr.domain" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\_final\bizqr\src\main\java\ezen\bizqr/board" />
-      <recent name="C:\_final\bizqr\src\main\java\ezen\bizqr" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\_programming\_finalproject\_final\bizqr\src\main\resources\static\js\admin" />
-      <recent name="C:\_final\bizqr\src\main\resources\static\js\board" />
-      <recent name="C:\_final\bizqr\src\main\resources\static\css\board" />
-      <recent name="C:\_final_project\bizqr\src\main\resources\static\asset" />
-      <recent name="C:\_final_project\bizqr\src\main\resources\static\css" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="ezen.bizqr.repository" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Spring Boot.BizqrApplication">
-    <configuration name="BizqrApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ezen.bizqr.BizqrApplicationTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="BizqrApplicationTests.contextLoads" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ezen.bizqr.BizqrApplicationTests.contextLoads&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="BoardMapperTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ezen.bizqr.repository.BoardMapperTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="bizqr [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="bizqr" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="BizqrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="DEBUG_MODE" value="true" />
-=======
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build bizqr.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.BizqrApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="BizqrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="bizqr.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ezen.bizqr.BizqrApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-<<<<<<< HEAD
-    <list>
-      <item itemvalue="Gradle.bizqr" />
-      <item itemvalue="Gradle.bizqr [dependencies]" />
-      <item itemvalue="Gradle.BizqrApplicationTests" />
-      <item itemvalue="Gradle.BizqrApplicationTests.contextLoads" />
-      <item itemvalue="Gradle.BoardMapperTest" />
-      <item itemvalue="Spring Boot.BizqrApplication" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.bizqr" />
-        <item itemvalue="Gradle.bizqr [dependencies]" />
-        <item itemvalue="Gradle.BizqrApplicationTests" />
-        <item itemvalue="Gradle.BoardMapperTest" />
-        <item itemvalue="Gradle.BizqrApplicationTests.contextLoads" />
-      </list>
-    </recent_temporary>
-=======
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -313,109 +68,17 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-<<<<<<< HEAD
-      <changelist id="aac62688-27a4-4c4f-9861-d1c6f229bcdb" name="변경" comment="" />
-      <created>1706927784972</created>
+      <changelist id="205e510c-242f-42da-828c-df9e6af363a9" name="Changes" comment="" />
+      <created>1709515255720</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1706927784972</updated>
-      <workItem from="1706927786011" duration="3792000" />
-      <workItem from="1706931790427" duration="7000" />
-      <workItem from="1706931804908" duration="13777000" />
-      <workItem from="1707014723750" duration="12652000" />
-      <workItem from="1707028426925" duration="2797000" />
-      <workItem from="1707031353588" duration="17541000" />
-      <workItem from="1707050810925" duration="2098000" />
-      <workItem from="1707091377336" duration="9157000" />
-      <workItem from="1707123102132" duration="8665000" />
-      <workItem from="1707178445507" duration="18772000" />
-      <workItem from="1707211338419" duration="1002000" />
-      <workItem from="1707212355988" duration="1249000" />
-      <workItem from="1707213621750" duration="397000" />
-      <workItem from="1707214037303" duration="6499000" />
-      <workItem from="1707224800348" duration="5732000" />
-      <workItem from="1707264511892" duration="2684000" />
-      <workItem from="1707267664493" duration="7161000" />
-      <workItem from="1707277844640" duration="7320000" />
-      <workItem from="1707390126040" duration="3721000" />
-      <workItem from="1707393871279" duration="142000" />
-      <workItem from="1707394021173" duration="304000" />
-      <workItem from="1707394334834" duration="645000" />
-      <workItem from="1707394989870" duration="934000" />
-      <workItem from="1707395962324" duration="104000" />
-      <workItem from="1707396075241" duration="1398000" />
-      <workItem from="1707444620479" duration="8720000" />
-      <workItem from="1707453389119" duration="7124000" />
-      <workItem from="1707474605511" duration="14134000" />
-      <workItem from="1707523416251" duration="9058000" />
-      <workItem from="1707544460945" duration="5059000" />
-      <workItem from="1707557112988" duration="8798000" />
-      <workItem from="1707566543763" duration="2349000" />
-      <workItem from="1707614742674" duration="7881000" />
-      <workItem from="1707649758455" duration="10090000" />
-      <workItem from="1707709520427" duration="7204000" />
-      <workItem from="1707716954976" duration="19816000" />
-      <workItem from="1707878621784" duration="10959000" />
-      <workItem from="1707835884951" duration="6746000" />
-      <workItem from="1707844925044" duration="356000" />
-      <workItem from="1707845289258" duration="260000" />
-      <workItem from="1707845556622" duration="389000" />
-      <workItem from="1707845953566" duration="718000" />
-      <workItem from="1707846678135" duration="101000" />
-      <workItem from="1707846788854" duration="1950000" />
-      <workItem from="1707868312604" duration="8073000" />
-      <workItem from="1707976469754" duration="5000" />
-      <workItem from="1708176894935" duration="17382000" />
-      <workItem from="1709498247123" duration="1129000" />
-      <workItem from="1709509403708" duration="3694000" />
-=======
-      <changelist id="4f43b33d-691a-4a81-bc0e-cc128b01155f" name="Changes" comment="" />
-      <created>1709510414229</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1709510414229</updated>
-      <workItem from="1709510414988" duration="4734000" />
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
+      <updated>1709515255720</updated>
+      <workItem from="1709515257548" duration="1875000" />
+      <workItem from="1709596964543" duration="9920000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-<<<<<<< HEAD
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.io.FileNotFoundException" package="java.io" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/resources/static/js/store/create.js</url>
-          <line>120</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/bizqr$BizqrApplication.ic" NAME="BizqrApplication Coverage Results" MODIFIED="1707957137469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-=======
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
 </project>
