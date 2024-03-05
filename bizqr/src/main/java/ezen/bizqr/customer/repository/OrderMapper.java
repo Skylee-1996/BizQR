@@ -16,9 +16,9 @@ public interface OrderMapper {
 
     int order(OrderVO ovo);
 
-    void insertOrderHistory(OrderItemVO oivo);
+    void insertOrderHistory(@Param("ovo") OrderVO ovo, @Param("oivo") OrderItemVO orderItemVO);
 
-    void deleteOrderBasket(String tableId);
+    int deleteOrderBasket(@Param("tableId") String tableId, @Param("storeId") long storeId);
 
     int basketUpdate(OrderItemVO oivo);
 

@@ -1,8 +1,10 @@
 package ezen.bizqr.customer.service;
 
 import ezen.bizqr.customer.domain.ItemVO;
+import ezen.bizqr.customer.domain.OrderHistoryDTO;
 import ezen.bizqr.customer.domain.OrderItemVO;
 import ezen.bizqr.customer.domain.OrderVO;
+import ezen.bizqr.customer.handler.IdHandler;
 import ezen.bizqr.customer.repository.OrderMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -45,15 +47,32 @@ public class CustomerServiceImpl implements CustomerService{
     public int order(OrderVO ovo) {
         log.info("order service impl");
 
-        List<OrderItemVO> oivo = new ArrayList<OrderItemVO>(om.basketList(ovo.getTableId(), ovo.getStoreId()));
+        IdHandler ih = new IdHandler();
+        String orderId = ih.orderIdHandler(ovo.getStoreId(), ovo.getTableId());
+        ovo.setOrderId(orderId);
 
-        for(OrderItemVO orderItemVO : oivo){
-            om.insertOrderHistory(orderItemVO);
+        om.order(ovo);
+
+        OrderHistoryDTO odto = new OrderHistoryDTO();
+        odto.setOilist(om.basketList(ovo.getTableId(), ovo.getStoreId()));
+
+        OrderVO historyOvo = new OrderVO();
+        odto.setOvo(historyOvo);
+        odto.getOvo().setOrderId(ovo.getOrderId());
+
+        for(int i=0; i<odto.getOilist().size(); i++){
+            if(i==odto.getOilist().size()-1){
+                log.info("마지막 메뉴 저장 완료");
+                odto.setOvo(ovo);
+                om.insertOrderHistory(odto.getOvo(), odto.getOilist().get(i));
+
+                break;
+            }
+            om.insertOrderHistory(odto.getOvo(), odto.getOilist().get(i));
+            log.info((i+1)+"번째 메뉴 저장 완료");
         }
 
-        om.deleteOrderBasket(ovo.getTableId());
-
-        return om.order(ovo);
+        return om.deleteOrderBasket(ovo.getTableId(), ovo.getStoreId());
     }
 
     @Override

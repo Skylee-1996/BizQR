@@ -125,6 +125,7 @@ function postItemList(storeId, tabName) {
                         <img src="" alt="메뉴 사진">
                     </div>
                     <div class="menu-info">
+                    <input type="hidden" class="menuId" value="${result[i].menuId}">
                         <div class="menu-name">${result[i].menuName}</div>
                         <input type="hidden" class="menuName" value="${result[i].menuName}">
                             <div class="menu-price">${result[i].menuPrice}</div>
@@ -149,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // 모달 열기 함수
-function openModal(menuName, menuPrice) {
+function openModal(menuName, menuPrice, menuId) {
     document.getElementById('modal').style.display = 'block';
 
     console.log(menuName);
@@ -159,6 +160,8 @@ function openModal(menuName, menuPrice) {
     document.getElementById("modal-menu-price").innerText = menuPrice;
     document.getElementById("modalItemName").value = menuName;
     document.getElementById("modalItemPrice").value = menuPrice;
+
+    document.getElementById("modalMenuId").value = menuId;
 }
 
 // 모달 닫기 함수
@@ -189,11 +192,13 @@ document.addEventListener('click', (event) => {
     if (menuList) {
         let menuName = menuList.querySelector('.menuName').value;
         let menuPrice = menuList.querySelector('.menuPrice').value;
+        let menuId = menuList.querySelector('.menuId').value;
 
         console.log(menuName);
         console.log(menuPrice);
+        console.log(menuId);
 
-        document.getElementsByClassName('.menu-list').onclick = openModal(menuName, menuPrice);
+        document.getElementsByClassName('.menu-list').onclick = openModal(menuName, menuPrice, menuId);
     }
 
 })

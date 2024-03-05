@@ -108,6 +108,9 @@ public class CustomerController {
         m.addAttribute("menuMainTotalComma", menuMainTotalComma);
         m.addAttribute("oivo", oivo);
         m.addAttribute("oilist", oilist);   //상품 목록
+
+        m.addAttribute("tableId", tableId);
+        m.addAttribute("storeId", storeId);
     }
 
     @PostMapping(value="/menuAmount", consumes = "application/json")
@@ -126,7 +129,7 @@ public class CustomerController {
         int isOk = csv.order(ovo);
         log.info("order 실행 결과 >>> {}", isOk>0?"성공":"실패");
 
-        return "/customer/customerOrderHistory";
+        return "redirect:/customer/customerOrderHistory?storeId=" + ovo.getStoreId() + "&tableId=" + ovo.getTableId();
     }
 
     @DeleteMapping(value = "/basketDel/{menuId}/{tableId}/{storeId}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -138,5 +141,14 @@ public class CustomerController {
         int isOk = csv.basketDel(menuId, tableId, storeId);
 
         return new ResponseEntity<Integer>(isOk, HttpStatus.OK);
+    }
+
+    @GetMapping("/customerOrderHistory")
+    public void orderHistory(Model m, @RequestParam("tableId") String tableId, @RequestParam("storeId") long storeId){
+        log.info("tableId >>> {}", tableId);
+        log.info("storeId >>> {}", storeId);
+
+        m.addAttribute("tableId", tableId);
+        m.addAttribute("storeId", storeId);
     }
 }

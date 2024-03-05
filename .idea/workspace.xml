@@ -4,40 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39dcdc24-5c2e-4823-bd00-33f81335f534" name="Changes" comment="" />
+    <list default="true" id="90dee8d4-415a-400d-bbdb-c1aed568b658" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$/bizqr">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
+  &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="2c5775sIBXUYZsix2IBrmPxS3ub" />
+  <component name="ProjectId" id="2dCmoYLQF8j6VvTsIPB3JWWlVk5" />
   <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
@@ -50,15 +41,12 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Spring Boot.BizqrApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/sub&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -86,27 +74,15 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="39dcdc24-5c2e-4823-bd00-33f81335f534" name="Changes" comment="" />
-      <created>1707389415194</created>
+      <changelist id="90dee8d4-415a-400d-bbdb-c1aed568b658" name="Changes" comment="" />
+      <created>1709520618319</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1707389415194</updated>
-      <workItem from="1707389416257" duration="54000" />
-      <workItem from="1707389473254" duration="2000" />
-      <workItem from="1708493124011" duration="494000" />
-      <workItem from="1708493637355" duration="3614000" />
-      <workItem from="1708499523150" duration="6489000" />
-      <workItem from="1708564235970" duration="12939000" />
-      <workItem from="1709003122424" duration="6956000" />
-      <workItem from="1709017478945" duration="1574000" />
-      <workItem from="1709023670986" duration="489000" />
-      <workItem from="1709048239988" duration="2313000" />
-      <workItem from="1709087054640" duration="43000" />
-      <workItem from="1709089622101" duration="1375000" />
-      <workItem from="1709103697270" duration="3925000" />
-      <workItem from="1709108713222" duration="700000" />
-      <workItem from="1709133588590" duration="4759000" />
-      <workItem from="1709180512536" duration="4290000" />
+      <updated>1709520618319</updated>
+      <workItem from="1709520622479" duration="8579000" />
+      <workItem from="1709604564155" duration="7027000" />
+      <workItem from="1709616760904" duration="3917000" />
+      <workItem from="1709629355737" duration="7817000" />
     </task>
     <servers />
   </component>

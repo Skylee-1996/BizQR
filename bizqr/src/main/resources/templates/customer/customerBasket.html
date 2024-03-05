@@ -71,7 +71,7 @@
 
 
 <div class="btn-zone">
-    <a th:href="@{/customer/customerIndex/${oivo.storeId}/${oivo.tableId}}">
+    <a th:href="@{/customer/{storeId}/{tableId}(storeId=${storeId}, tableId=${tableId})}">
         <button type="button" class="add-menu" id="add-menu">메뉴 추가</button>
     </a>
 </div>

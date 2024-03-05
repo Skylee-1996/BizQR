@@ -5,7 +5,7 @@
 <mapper namespace="ezen.bizqr.customer.repository.OrderMapper">
     <insert id="basket">
         INSERT INTO `order_items` (menu_id, store_id, table_id, menu_name, menu_price, menu_amount) VALUES
-        ('1', #{storeId}, #{tableId}, #{menuName}, #{menuPrice}, #{menuAmount})
+        (#{menuId}, #{storeId}, #{tableId}, #{menuName}, #{menuPrice}, #{menuAmount})
     </insert>
 
     <update id="basketUpdate">
@@ -18,16 +18,16 @@
 
     <insert id="order">
         INSERT INTO `order` (order_id, table_id, store_id, order_status, total_price, user_request) VALUES
-        ('dd', #{tableId}, #{storeId}, '1', #{totalPrice}, #{userRequest})
+        (#{orderId}, #{tableId}, #{storeId}, '1', #{totalPrice}, #{userRequest})
     </insert>
 
     <insert id="insertOrderHistory">
-        INSERT INTO `order_history` (order_id, table_id, store_id, total_price, user_request, order_status) VALUES
-        ('dd', #{tableId}, #{storeId}, #{totalPrice}, #{userRequest}, '1')
+        INSERT INTO `order_history` (order_id, table_id, store_id, menu_id, menu_name, menu_price, menu_amount, total_price, order_status, user_request) VALUES
+        (#{ovo.orderId}, #{oivo.tableId}, #{oivo.storeId}, #{oivo.menuId}, #{oivo.menuName}, #{oivo.menuPrice}, #{oivo.menuAmount}, #{ovo.totalPrice}, '1', #{ovo.userRequest})
     </insert>
 
     <delete id="deleteOrderBasket">
-        DELETE FROM `order_items` WHERE table_id = #{tableId}
+        DELETE FROM `order_items` WHERE table_id = #{tableId} AND store_id = #{storeId}
     </delete>
 
     <select id="basketCount" resultType="int">
