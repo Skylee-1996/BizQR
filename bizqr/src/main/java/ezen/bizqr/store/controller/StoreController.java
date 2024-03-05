@@ -10,6 +10,7 @@ import ezen.bizqr.store.service.StoreService;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.catalina.Store;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -46,7 +47,9 @@ public class StoreController {
     }
 
     @GetMapping("/create")
-    public String createStoreForm() {
+    public String createStoreForm(Model m, @RequestParam("storeId") String storeId) {
+        StoreVO svo = ssv.getDetailFromStore(storeId);
+        m.addAttribute("svo", svo);
         return "/store/create";
     }
 
@@ -59,7 +62,10 @@ public class StoreController {
 
 
     @GetMapping("/table")
-    public void table(){}
+    public void table(Model model, @RequestParam("storeId") String storeId){
+        StoreVO svo = ssv.getDetailFromStore(storeId);
+        model.addAttribute("svo", svo);
+    }
 
     @GetMapping("/posPage")
     public String posPage() {

@@ -4,6 +4,7 @@
 <th:block th:replace="~{/layout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
         <head>
+            <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
             <link rel="stylesheet" th:href="@{/css/store/register.css}">
             <title>register</title>
         </head>
@@ -15,7 +16,6 @@
                     <p class="p1"><small class="s1" style="color: red; font-weight: bold">*</small> 표기된 항목은 필수입력 항목입니다.</p>
                     <hr>
 
-                                <form action="/payment/pay" method="post">
                                     <table>
                                         <tr>
                                             <td class="h-td">대표자명 <small style="color: red; font-weight: bold">*</small></td>
@@ -71,12 +71,20 @@
                                         </tr>
                                         </tbody>
                                     </table>
-
                                     <div class="button">
+<<<<<<< HEAD
                                         <input type="submit" value="확인" class="regBtn-store">
                                     </div>
                                 </form>
 
+=======
+<<<<<<< HEAD
+                                        <button type="submit" class="regBtn-store">확인</button>
+=======
+                                        <button type="button" class="regBtn-store" onclick="requestPay()">결제하기</button>
+>>>>>>> origin/main
+                                    </div>
+>>>>>>> origin/main
 <!--                    <div class="title">Registeration</div>-->
 <!--                    <br>-->
 <!--                    <form action="/payment/pay" method="post">-->
@@ -113,11 +121,23 @@
 <!--                    </form>-->
                 </div>
             </div>
+<<<<<<< HEAD
 
+=======
+                            </div>
+                        </div>
+>>>>>>> origin/main
 <!--
                             </div>
                         </div>
 -->
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/main
 
 
             <!--                    <form action="/payment/pay" method="post">-->
@@ -197,5 +217,6 @@
             <!--                        </div>-->
 
         </body>
+        <script th:src="@{/js/pay/pay.js}"></script>
     </th:block>
 </th:block>

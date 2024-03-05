@@ -5,23 +5,67 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+    <list default="true" id="273d493f-b4d6-4039-8515-dd343575f0bc" name="Changes" comment="">
+=======
+<<<<<<< HEAD
+    <list default="true" id="205e510c-242f-42da-828c-df9e6af363a9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="29d0de2c-3fbd-4b47-9a13-f903d2f78373" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/font+img+수정.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/font+img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/font.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/test1.png" afterDir="false" />
+=======
+<<<<<<< HEAD
     <list default="true" id="aac62688-27a4-4c4f-9861-d1c6f229bcdb" name="변경" comment="">
+>>>>>>> origin/main
+>>>>>>> ef545580000efe1070f540661582351283e5f263
+>>>>>>> origin/main
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/service/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/admin/service/AdminServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/controller/PayController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/repository/StoreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/repository/StoreMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/store/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/store/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/info/contactUs.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/info/contactUs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/info/contactUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/info/contactUs.html" afterDir="false" />
     </list>
-=======
-    <list default="true" id="4f43b33d-691a-4a81-bc0e-cc128b01155f" name="Changes" comment="" />
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2dFGsHXMru1YCKvXkeWaV3feUd3" />
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+<<<<<<< HEAD
+  <component name="ProjectId" id="2dDikhFKVgGfFahNhSdSfoiMzuZ" />
+=======
+  <component name="ProjectId" id="2dCriSq9S38KtI9kN5yvM2NtAJ1" />
+>>>>>>> origin/main
+=======
 <<<<<<< HEAD
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -48,47 +92,48 @@
       </state>
     </system>
   </component>
+>>>>>>> ef545580000efe1070f540661582351283e5f263
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
-        <option value="Interface" />
-        <option value="CSS File" />
-        <option value="HTTP Request" />
         <option value="JavaScript File" />
-        <option value="Kotlin Class" />
-        <option value="HTML File" />
-        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/resources/static/css/board/boardRegister.css" root0="SKIP_HIGHLIGHTING" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
+<<<<<<< HEAD
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2dCbxbEu0vaaHHDwOMohbLMY1rc" />
+=======
         &quot;associatedIndex&quot;: 6
         }</component>
   <component name="ProjectId" id="2bq1RC6A1uQB0czhNKO7faLKVMt" />
 =======
 >>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> ef545580000efe1070f540661582351283e5f263
+>>>>>>> origin/main
+>>>>>>> origin/main
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="autoscrollFromSource" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Gradle.Build bizqr.executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -98,15 +143,26 @@
     &quot;Spring Boot.BizqrApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+<<<<<<< HEAD
+=======
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+>>>>>>> origin/main
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+<<<<<<< HEAD
+=======
   }
 }</component>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  <component name="RunManager">
+    <configuration name="BizqrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+=======
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ezen.bizqr.user.config" />
@@ -251,9 +307,9 @@
     <configuration name="BizqrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="DEBUG_MODE" value="true" />
 =======
+>>>>>>> origin/main
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Gradle.Build bizqr.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -262,57 +318,83 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.BizqrApplication.executor": "Run",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "vue.rearranger.settings.migration": "true"
+>>>>>>> origin/main
   }
-}]]></component>
+}</component>
   <component name="RunManager">
-    <configuration name="BizqrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
+    <configuration name="BizqrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="bizqr.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ezen.bizqr.BizqrApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ezen.bizqr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
-    <list>
-      <item itemvalue="Gradle.bizqr" />
-      <item itemvalue="Gradle.bizqr [dependencies]" />
-      <item itemvalue="Gradle.BizqrApplicationTests" />
-      <item itemvalue="Gradle.BizqrApplicationTests.contextLoads" />
-      <item itemvalue="Gradle.BoardMapperTest" />
-      <item itemvalue="Spring Boot.BizqrApplication" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.bizqr" />
-        <item itemvalue="Gradle.bizqr [dependencies]" />
-        <item itemvalue="Gradle.BizqrApplicationTests" />
-        <item itemvalue="Gradle.BoardMapperTest" />
-        <item itemvalue="Gradle.BizqrApplicationTests.contextLoads" />
+        <item itemvalue="Spring Boot.BizqrApplication" />
       </list>
     </recent_temporary>
-=======
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
   </component>
+>>>>>>> ef545580000efe1070f540661582351283e5f263
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-107bc6b7" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="273d493f-b4d6-4039-8515-dd343575f0bc" name="Changes" comment="" />
+      <created>1709549195854</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709549195854</updated>
+      <workItem from="1709549198042" duration="1116000" />
+      <workItem from="1709554790165" duration="7000" />
+      <workItem from="1709554837418" duration="2000" />
+      <workItem from="1709554974948" duration="3000" />
+      <workItem from="1709555014064" duration="185000" />
+      <workItem from="1709555261645" duration="2000" />
+      <workItem from="1709555337304" duration="7000" />
+      <workItem from="1709555537214" duration="10000" />
+      <workItem from="1709596653706" duration="14109000" />
+=======
+<<<<<<< HEAD
+      <changelist id="205e510c-242f-42da-828c-df9e6af363a9" name="Changes" comment="" />
+      <created>1709515255720</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709515255720</updated>
+      <workItem from="1709515257548" duration="1875000" />
+      <workItem from="1709596964543" duration="9920000" />
+=======
+<<<<<<< HEAD
+      <changelist id="29d0de2c-3fbd-4b47-9a13-f903d2f78373" name="Changes" comment="" />
+      <created>1709523033222</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709523033222</updated>
+      <workItem from="1709523036712" duration="87000" />
+      <workItem from="1709523229718" duration="257000" />
+      <workItem from="1709547855848" duration="4000" />
+      <workItem from="1709548370260" duration="11000" />
+=======
 <<<<<<< HEAD
       <changelist id="aac62688-27a4-4c4f-9861-d1c6f229bcdb" name="변경" comment="" />
       <created>1706927784972</created>
@@ -374,14 +456,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709510414229</updated>
+<<<<<<< HEAD
+      <workItem from="1709510414988" duration="8592000" />
+      <workItem from="1709596620149" duration="10873000" />
+=======
       <workItem from="1709510414988" duration="4734000" />
 >>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+>>>>>>> ef545580000efe1070f540661582351283e5f263
+>>>>>>> origin/main
+>>>>>>> origin/main
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -418,4 +516,7 @@
   </component>
 =======
 >>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
+>>>>>>> origin/main
+>>>>>>> ef545580000efe1070f540661582351283e5f263
+>>>>>>> origin/main
 </project>

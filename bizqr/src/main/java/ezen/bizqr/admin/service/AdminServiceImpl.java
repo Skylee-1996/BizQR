@@ -25,6 +25,4 @@ public class AdminServiceImpl implements AdminService{
         return adminMapper.registeredUpdate(rvo);
     }
 
-
-
 }

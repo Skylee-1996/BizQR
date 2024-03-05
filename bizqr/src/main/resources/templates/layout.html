@@ -16,15 +16,13 @@
     <a href="/" class="logo">BizQR</a>
     <div class="links">
       <a href="/">Home</a>
-      <a href="/user/register">가입하기</a>
-      <a href="/store/myStoreList">점포관리</a>
-      <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
-        <a href="/user/list"><button type="button">유저관리</button></a>
-      </li>
+      <a href="/store/register">점포 등록</a>
+      <a href="/store/myStoreList">내 점포</a>
+        <a href="/admin/index" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">관리자페이지</a>
       <a href="/board/service">About Us</a>
     </div>
     <div class="login">
-      <a href="/user/register"><button type="button">Sign</button></a>
+      <a href="/user/register" sec:authorize="isAnonymous()"><button type="button">Sign</button></a>
 
       <li class="nav-item" sec:authorize="isAnonymous()">
         <a href="/user/login"><button type="button">Login</button></a>
