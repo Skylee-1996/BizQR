@@ -9,115 +9,60 @@
 
   <div id="wrap">
     <div id="headers">
-      <h3 class="title">BizQR 고객센터</h3>
-      <hr class="title-hr">
+      <h3 class="title">문의하기</h3>
+      <small class="title-s"><small class="small-tag">*</small> 필수입력 사항입니다.</small>
     </div>
     <!-- headers -->
 
-  <div id="image-div">
-    <img src="/image/test1.png" alt="img" >
-  </div>
-
-    <!-- img -->
-    <div class="contents">
-      <section class="p-sec"><p class="bizqr-p">BizQR 고객센터<br>주요기능 TOP3</p></section>
-      <section class="sec-class">
-        <div class="sec1">
-          <span class="material-symbols-outlined" style="font-size: 40px">person_check</span>
-        </div>
-        <div class="p-title">
-          <p class="title-p">간편한 회원가입</p>
-          <small class="p-small">
-            모바일에서 인증(SMS,아이핀)을<br>통해 회원가입 및 고객 인증<br>처리를 한꺼번에!
-          </small>
-        </div>
+    <div class="content">
+      <section id="sec-1">
+        <label class="name">성명(Name)<small class="small-tag">*</small></label>
+        <input type="text" class="user" placeholder="이름을 입력해 주세요.">
+        <label class="name">연락처(Phone Number)<small class="small-tag">*</small></label>
+        <input type="text" class="phone-number" placeholder="휴대폰 번호를 입력해 주세요.">
       </section>
 
-      <section id="sec2">
-        <div class="sec2">
-          <span class="material-symbols-outlined" style="font-size: 40px">security_update_good</span>
-        </div>
-        <div class="p-title">
-          <p class="title-p">조회부터 추가까지</p>
-          <small class="p-small">
-            테이블 조회 이후 즉시 메뉴 추가를 통해<br>직접 선택이 가능합니다.
-          </small>
-        </div>
-      </section>
-
-      <section id="sec3">
-        <div class="sec3">
-          <span class="material-symbols-outlined" style="font-size: 40px">approval_delegation</span>
-        </div>
-        <div class="p-title">
-          <p class="title-p">1:1 실시간 상담문의</p>
-          <small class="p-small">
-            모바일을 통해 언제서든<br>1:1 상담문의가 가능하며<br>답변도 확인 가능합니다.
-          </small>
-        </div>
+      <section id="sec-3">
+        <label class="name">이메일(E-mail)<small class="small-tag">*</small></label>
+        <input type="email" class="email" placeholder="이메일을 입력해 주세요.">
+        <label class="name">문의 종류<small class="small-tag">*</small></label>
+        <select class="name" id="inquiryType">
+          <option class="op-type" value="general">일반 문의</option>
+          <option class="op-type" value="technical">기술 문의</option>
+          <option class="op-type" value="billing">금액 문의</option>
+          <option class="op-type" value="billing">기타 문의</option>
+        </select>
       </section>
     </div>
 
+    <section class="sec-4">
+      <label class="name" id="name-p">개인정보 수집ꞏ이용에 대한 안내(필수 수집ꞏ이용 항목)</label>
+      <p class="p-1">문의주신 내용의 답변을 위하여 고객님의 개인정보를 수집합니다. 개인정보 수집에 동의하신 분에 한하여 문의 접수가 가능합니다.<br>
+        수집하는 개인정보 항목: 이름 / 연락처 / 이메일
+      </p>
+      <small class="s-1">
+        To provide a response to your inquiry, we collect your personal information.<br>
+        Inquiry submissions are only available to those who consent to the collection of personal information.<br>
+        Personal information collected: Name/Contact information/Email</small>
+      <div class="round">
+        <input type="checkbox" checked id="checkbox">
+        <label for="checkbox"></label>
+        <div class="r-check">동의합니다.</div>
+      </div>
+    </section>
     <hr class="content-hr">
-
-    <div id="container">
-      <aside class="a-aside">A</aside>
-      <section class="sec-a">
-        <div class="item b-1"><span></span><p>자주 찾는 메뉴 한눈에!</p>
-          <small>요금정보 및 내가 이용하는 상품 등<br>자주 쓰는 바로가기 메뉴 구성</small>
-        </div>
-        <div class="item b-2">B-2</div>
-        <div class="item c-1">C-1</div>
-        <div class="item c-2">C-2</div>
-      </section>
-    </div>
-
-
-
-
-
-    <hr class="content-hr">
-
-    <div class="contents">
-      <section class="p-sec"><p class="bizqr-p">BizQR 고객센터<br>주요기능 TOP3</p></section>
-      <section class="sec-class">
-        <div class="sec1">
-          <span class="material-symbols-outlined" style="font-size: 40px">person_check</span>
-        </div>
-        <div class="p-title">
-          <p class="title-p">간편한 회원가입</p>
-          <small class="p-small">
-            모바일에서 인증(SMS,아이핀)을<br>통해 회원가입 및 고객 인증<br>처리를 한꺼번에!
-          </small>
-        </div>
-      </section>
-
-      <section id="sec2">
-        <div class="sec2">
-          <span class="material-symbols-outlined" style="font-size: 40px">security_update_good</span>
-        </div>
-        <div class="p-title">
-          <p class="title-p">조회부터 추가까지</p>
-          <small class="p-small">
-            테이블 조회 이후 즉시 메뉴 추가를 통해<br>직접 선택이 가능합니다.
-          </small>
-        </div>
-      </section>
-
-      <section id="sec3">
-        <div class="sec3">
-          <span class="material-symbols-outlined" style="font-size: 40px">approval_delegation</span>
-        </div>
-        <div class="p-title">
-          <p class="title-p">1:1 실시간 상담문의</p>
-          <small class="p-small">
-            모바일을 통해 언제서든<br>1:1 상담문의가 가능하며<br>답변도 확인 가능합니다.
-          </small>
-        </div>
-      </section>
-    </div>
   </div>
-</body>
+      <!-- contents -->
+
+  <button type="submit" id="user-btn">문의글 전송하기</button>
+
+  </div>
+    <!-- wrap -->
+
+<script>
+
+</script>
+    </body>
   </th:block>
 </th:block>
 </html>
