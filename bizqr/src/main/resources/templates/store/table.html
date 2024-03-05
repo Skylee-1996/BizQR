@@ -3,14 +3,56 @@
     <th:block th:fragment="content">
         <head>
             <link rel="stylesheet" th:href="@{/css/store/table.css}">
+            <link rel="stylesheet" th:href="@{/css/store/aside.css}">
+            <title>modify</title>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+            <style>
+                @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
+                @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap);
+            </style>
         </head>
         <body>
         <div class="container">
+            <aside>
+                <div class="toggle">
+                    <div class="logo">
+                        <img class="order" src="/asset/큐오더_원형.png">
+                        <h2><span class="BizQR">Store</span></h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <a th:href="@{/store/modify(storeId=${svo.storeId})}">
+                    <span class="material-symbols-outlined">
+                     home
+                    </span>
+                        <h3>정보 수정</h3>
+                    </a>
+                    <a th:href="@{/store/create(storeId=${svo.storeId})}">
+                   <span class="material-symbols-outlined">
+                    restaurant_menu
+                    </span>
+                        <h3>메뉴 수정</h3>
+                    </a>
+                    <a th:href="@{/store/table(storeId=${svo.storeId})}" class="active">
+                     <span class="material-symbols-outlined">
+                    qr_code_2
+                    </span>
+                        <h3>QR 생성</h3>
+                    </a>
+                </div>
+            </aside>
+            <div class="qr">
             <div class="storeInfo">
                 <label for="storeName">점포명:</label>
-                <input type="text" name="storeName" id="storeName">
+                <input type="text" name="storeName" id="storeName" th:value="${svo.getStoreId()}">
                 <label for="storeId">스토어 아이디:</label>
-                <input type="text" name="storeId" id="storeId" >
+                <input type="text" name="storeId" id="storeId" th:value="${svo.getStoreName()}">
                 <label for="tableNum">테이블 번호:</label>
                 <input type="text" name="tableNum" id="tableNum">
             </div>
@@ -20,6 +62,7 @@
             </div>
             <div class="qr-code">
                 <img src="" alt="qr-code">
+            </div>
             </div>
         </div>
         <script src="/js/store/table.js"></script>

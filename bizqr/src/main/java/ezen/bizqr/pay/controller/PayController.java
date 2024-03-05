@@ -89,7 +89,7 @@ public class PayController {
 
         int isOk = ssv.alterRegisterInfo(registerNum, isRegistered);
 
-        if(isRegistered > 0 ){
+        if(isRegistered == 1 ){
             RegisterVO registeredRvo = ssv.getDetail(registerNum);
             StoreVO svo = new StoreVO();
 
