@@ -4,136 +4,65 @@
 <th:block th:replace="~{layout :: setFragment(~{this::content})}">
   <th:block th:fragment="content">
     <link rel="stylesheet" href="/css/info/contactUs.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <body>
 
-    <div id="wrap">
+  <div id="wrap">
+    <div id="headers">
+      <h3 class="title">문의하기</h3>
+      <small class="title-s"><small class="small-tag">*</small> 필수입력 사항입니다.</small>
+    </div>
+    <!-- headers -->
 
+    <div class="content">
+      <section id="sec-1">
+        <label class="name">성명(Name)<small class="small-tag">*</small></label>
+        <input type="text" class="user" placeholder="이름을 입력해 주세요.">
+        <label class="name">연락처(Phone Number)<small class="small-tag">*</small></label>
+        <input type="text" class="phone-number" placeholder="휴대폰 번호를 입력해 주세요.">
+      </section>
 
-  <div class="font-wrap">
-    <h3>서비스 문의하기</h3>
-  <small>무엇이든 문의하세요.<br> BizQR 담당자가 빠른 시간 내에 연락드리겠습니다.</small>
-  </div>
-
-
-  <div class="box-wrap">
-
-    <div class="btn-wrap">
-    <button type="button" class="btn1">제휴 및 견적문의</button>
-    <button type="button" class="btn2">기술문의</button>
+      <section id="sec-3">
+        <label class="name">이메일(E-mail)<small class="small-tag">*</small></label>
+        <input type="email" class="email" placeholder="이메일을 입력해 주세요.">
+        <label class="name">문의 종류<small class="small-tag">*</small></label>
+        <select class="name" id="inquiryType">
+          <option class="op-type" value="general">일반 문의</option>
+          <option class="op-type" value="technical">기술 문의</option>
+          <option class="op-type" value="billing">금액 문의</option>
+          <option class="op-type" value="billing">기타 문의</option>
+        </select>
+      </section>
     </div>
 
-    <p class="qp">문의 유형</p>
-    <div class="question-wrap">
-    <div class="tile">
-      <input type="checkbox" name="questions" id="question1">
-      <label for="question1">
-        <h6>어쩌고</h6>
-      </label>
-    </div>
-    <div class="tile">
-      <input type="checkbox" name="questions" id="question2">
-      <label for="question2">
-        <h6>어쩌고</h6>
-      </label>
-    </div>
-    </div>
-
-
-    <p class="yp">연동 방식</p>
-    <div class="y-wrap">
-      <div class="tile">
-        <input type="checkbox" name="y" id="y1">
-        <label for="y1">
-          <h6>어쩌고</h6>
-        </label>
-      </div>
-      <div class="tile">
-        <input type="checkbox" name="y" id="y2">
-        <label for="y2">
-          <h6>어쩌고</h6>
-        </label>
-      </div>
-    <div class="tile">
-      <input type="checkbox" name="y" id="y3">
-      <label for="y3">
-        <h6>어쩌고</h6>
-      </label>
-    </div>
-  </div>
-
-
-
-    <p>API 선택</p>
-  <div id="section-wrap">
-
-    <section>
-      <div class="tile">
-        <input type="checkbox" name="sports" id="sport1">
-        <label for="sport1">
-          <h6>어쩌고</h6>
-        </label>
-      </div>
-      <div class="tile">
-        <input type="checkbox" name="sports" id="sport2">
-        <label for="sport2">
-          <h6>저쩌고</h6>
-        </label>
-      </div>
-      <div class="tile">
-        <input type="checkbox" name="sports" id="sport3">
-        <label for="sport3">
-          <h6>샬라샬라</h6>
-        </label>
+    <section class="sec-4">
+      <label class="name" id="name-p">개인정보 수집ꞏ이용에 대한 안내(필수 수집ꞏ이용 항목)</label>
+      <p class="p-1">문의주신 내용의 답변을 위하여 고객님의 개인정보를 수집합니다. 개인정보 수집에 동의하신 분에 한하여 문의 접수가 가능합니다.<br>
+        수집하는 개인정보 항목: 이름 / 연락처 / 이메일
+      </p>
+      <small class="s-1">
+        To provide a response to your inquiry, we collect your personal information.<br>
+        Inquiry submissions are only available to those who consent to the collection of personal information.<br>
+        Personal information collected: Name/Contact information/Email</small>
+      <div class="round">
+        <input type="checkbox" checked id="checkbox">
+        <label for="checkbox"></label>
+        <div class="r-check">동의합니다.</div>
       </div>
     </section>
-<br>
-    <section>
-      <div class="tile">
-        <input type="checkbox" name="sports" id="sport4">
-        <label for="sport4">
-          <h6>어쩌고</h6>
-        </label>
-      </div>
-      <div class="tile">
-        <input type="checkbox" name="sports" id="sport5">
-        <label for="sport5">
-          <h6>저쩌고</h6>
-        </label>
-      </div>
-      <div class="tile">
-        <input type="checkbox" name="sports" id="sport6">
-        <label for="sport6">
-          <h6>샬라샬라</h6>
-        </label>
-      </div>
-    </section>
+    <hr class="content-hr">
+  </div>
+      <!-- contents -->
+
+  <button type="submit" id="user-btn">문의글 전송하기</button>
 
   </div>
+    <!-- wrap -->
 
-    <p>담당자 정보</p>
-    <div class="dam-div">
-    <div></div>
-    <div></div>
-    </div>
+<script>
 
-    <div class="dam-div">
-    <div></div>
-    <div></div>
-    </div>
-
-    <p>문의 내용</p>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-
-
-
-  </div>
-</div>
-    </div>
-
-</body>
+</script>
+    </body>
   </th:block>
 </th:block>
 </html>

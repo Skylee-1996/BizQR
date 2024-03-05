@@ -4,6 +4,7 @@
 <th:block th:replace="~{/layout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
         <head>
+            <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
             <link rel="stylesheet" th:href="@{/css/store/register.css}">
             <title>register</title>
         </head>
@@ -15,7 +16,6 @@
                     <p class="p1"><small class="s1" style="color: red; font-weight: bold">*</small> 표기된 항목은 필수입력 항목입니다.</p>
                     <hr>
 
-                                <form action="/payment/pay" method="post">
                                     <table>
                                         <tr>
                                             <td class="h-td">대표자명 <small style="color: red; font-weight: bold">*</small></td>
@@ -58,14 +58,6 @@
                                                 <span>숙박업체</span>
                                                 <input type="radio" name="storeType" id="dot-4" th:value="etc.">
                                                 <span>기타</span>
-<<<<<<< HEAD
-                                                <input type="radio" name="storeType" id="dot-1" th:value="Cafe" th:text="카페">
-                                                <input type="radio" name="storeType" id="dot-2" th:value="Restaurant" th:text="레스토랑">
-                                                <input type="radio" name="storeType" id="dot-3" th:value="Hotel" th:text="호텔">
-                                                <input type="radio" name="storeType" id="dot-4" th:value="Etc" th:text="기타">
-=======
-
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
                                             </td>
                                         </tr>
                                         <tr>
@@ -75,24 +67,17 @@
                                                 <span>월 단위</span>
                                                 <input type="radio" name="subscribe" id="payment2" th:value="yearly">
                                                 <span>연 단위</span>
-<<<<<<< HEAD
-                                                <input type="radio" name="subscribe" id="monthly" th:value="monthly" th:text="1개월">
-                                                <input type="radio" name="subscribe" id="yearly" th:value="yearly" th:text="1년">
-=======
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
                                             </td>
                                         </tr>
                                         </tbody>
                                     </table>
-
                                     <div class="button">
-                                        <button type="submit" class="regBtn-store">확인</button>
-                                    </div>
-                                </form>
 <<<<<<< HEAD
+                                        <button type="submit" class="regBtn-store">확인</button>
 =======
-
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
+                                        <button type="button" class="regBtn-store" onclick="requestPay()">결제하기</button>
+>>>>>>> origin/main
+                                    </div>
 <!--                    <div class="title">Registeration</div>-->
 <!--                    <br>-->
 <!--                    <form action="/payment/pay" method="post">-->
@@ -129,15 +114,12 @@
 <!--                    </form>-->
                 </div>
             </div>
-<<<<<<< HEAD
                             </div>
                         </div>
-=======
 <!--
                             </div>
                         </div>
 -->
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
 
 
 
@@ -219,11 +201,8 @@
             <!--                                </label>-->
             <!--                            </div>-->
             <!--                        </div>-->
-<<<<<<< HEAD
-=======
-
->>>>>>> 3ba1bda8cea9d55069c672bc9bde2f3e8c18b4be
 
         </body>
+        <script th:src="@{/js/pay/pay.js}"></script>
     </th:block>
 </th:block>
