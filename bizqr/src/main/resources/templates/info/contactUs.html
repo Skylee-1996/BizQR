@@ -4,135 +4,119 @@
 <th:block th:replace="~{layout :: setFragment(~{this::content})}">
   <th:block th:fragment="content">
     <link rel="stylesheet" href="/css/info/contactUs.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <body>
 
-    <div id="wrap">
+  <div id="wrap">
+    <div id="headers">
+      <h3 class="title">BizQR 고객센터</h3>
+      <hr class="title-hr">
+    </div>
+    <!-- headers -->
 
-
-  <div class="font-wrap">
-    <h3>서비스 문의하기</h3>
-  <small>무엇이든 문의하세요.<br> BizQR 담당자가 빠른 시간 내에 연락드리겠습니다.</small>
+  <div id="image-div">
+    <img src="/image/test1.png" alt="img" >
   </div>
 
+    <!-- img -->
+    <div class="contents">
+      <section class="p-sec"><p class="bizqr-p">BizQR 고객센터<br>주요기능 TOP3</p></section>
+      <section class="sec-class">
+        <div class="sec1">
+          <span class="material-symbols-outlined" style="font-size: 40px">person_check</span>
+        </div>
+        <div class="p-title">
+          <p class="title-p">간편한 회원가입</p>
+          <small class="p-small">
+            모바일에서 인증(SMS,아이핀)을<br>통해 회원가입 및 고객 인증<br>처리를 한꺼번에!
+          </small>
+        </div>
+      </section>
 
-  <div class="box-wrap">
+      <section id="sec2">
+        <div class="sec2">
+          <span class="material-symbols-outlined" style="font-size: 40px">security_update_good</span>
+        </div>
+        <div class="p-title">
+          <p class="title-p">조회부터 추가까지</p>
+          <small class="p-small">
+            테이블 조회 이후 즉시 메뉴 추가를 통해<br>직접 선택이 가능합니다.
+          </small>
+        </div>
+      </section>
 
-    <div class="btn-wrap">
-    <button type="button" class="btn1">제휴 및 견적문의</button>
-    <button type="button" class="btn2">기술문의</button>
+      <section id="sec3">
+        <div class="sec3">
+          <span class="material-symbols-outlined" style="font-size: 40px">approval_delegation</span>
+        </div>
+        <div class="p-title">
+          <p class="title-p">1:1 실시간 상담문의</p>
+          <small class="p-small">
+            모바일을 통해 언제서든<br>1:1 상담문의가 가능하며<br>답변도 확인 가능합니다.
+          </small>
+        </div>
+      </section>
     </div>
 
-    <p class="qp">문의 유형</p>
-    <div class="question-wrap">
-    <div class="tile">
-      <input type="checkbox" name="questions" id="question1">
-      <label for="question1">
-        <h6>어쩌고</h6>
-      </label>
-    </div>
-    <div class="tile">
-      <input type="checkbox" name="questions" id="question2">
-      <label for="question2">
-        <h6>어쩌고</h6>
-      </label>
-    </div>
+    <hr class="content-hr">
+
+    <div id="container">
+      <aside class="a-aside">A</aside>
+      <section class="sec-a">
+        <div class="item b-1"><span></span><p>자주 찾는 메뉴 한눈에!</p>
+          <small>요금정보 및 내가 이용하는 상품 등<br>자주 쓰는 바로가기 메뉴 구성</small>
+        </div>
+        <div class="item b-2">B-2</div>
+        <div class="item c-1">C-1</div>
+        <div class="item c-2">C-2</div>
+      </section>
     </div>
 
 
-    <p class="yp">연동 방식</p>
-    <div class="y-wrap">
-      <div class="tile">
-        <input type="checkbox" name="y" id="y1">
-        <label for="y1">
-          <h6>어쩌고</h6>
-        </label>
-      </div>
-      <div class="tile">
-        <input type="checkbox" name="y" id="y2">
-        <label for="y2">
-          <h6>어쩌고</h6>
-        </label>
-      </div>
-    <div class="tile">
-      <input type="checkbox" name="y" id="y3">
-      <label for="y3">
-        <h6>어쩌고</h6>
-      </label>
+
+
+
+    <hr class="content-hr">
+
+    <div class="contents">
+      <section class="p-sec"><p class="bizqr-p">BizQR 고객센터<br>주요기능 TOP3</p></section>
+      <section class="sec-class">
+        <div class="sec1">
+          <span class="material-symbols-outlined" style="font-size: 40px">person_check</span>
+        </div>
+        <div class="p-title">
+          <p class="title-p">간편한 회원가입</p>
+          <small class="p-small">
+            모바일에서 인증(SMS,아이핀)을<br>통해 회원가입 및 고객 인증<br>처리를 한꺼번에!
+          </small>
+        </div>
+      </section>
+
+      <section id="sec2">
+        <div class="sec2">
+          <span class="material-symbols-outlined" style="font-size: 40px">security_update_good</span>
+        </div>
+        <div class="p-title">
+          <p class="title-p">조회부터 추가까지</p>
+          <small class="p-small">
+            테이블 조회 이후 즉시 메뉴 추가를 통해<br>직접 선택이 가능합니다.
+          </small>
+        </div>
+      </section>
+
+      <section id="sec3">
+        <div class="sec3">
+          <span class="material-symbols-outlined" style="font-size: 40px">approval_delegation</span>
+        </div>
+        <div class="p-title">
+          <p class="title-p">1:1 실시간 상담문의</p>
+          <small class="p-small">
+            모바일을 통해 언제서든<br>1:1 상담문의가 가능하며<br>답변도 확인 가능합니다.
+          </small>
+        </div>
+      </section>
     </div>
   </div>
-
-
-
-    <p>API 선택</p>
-  <div id="section-wrap">
-
-    <section>
-      <div class="tile">
-        <input type="checkbox" name="sports" id="sport1">
-        <label for="sport1">
-          <h6>어쩌고</h6>
-        </label>
-      </div>
-      <div class="tile">
-        <input type="checkbox" name="sports" id="sport2">
-        <label for="sport2">
-          <h6>저쩌고</h6>
-        </label>
-      </div>
-      <div class="tile">
-        <input type="checkbox" name="sports" id="sport3">
-        <label for="sport3">
-          <h6>샬라샬라</h6>
-        </label>
-      </div>
-    </section>
-<br>
-    <section>
-      <div class="tile">
-        <input type="checkbox" name="sports" id="sport4">
-        <label for="sport4">
-          <h6>어쩌고</h6>
-        </label>
-      </div>
-      <div class="tile">
-        <input type="checkbox" name="sports" id="sport5">
-        <label for="sport5">
-          <h6>저쩌고</h6>
-        </label>
-      </div>
-      <div class="tile">
-        <input type="checkbox" name="sports" id="sport6">
-        <label for="sport6">
-          <h6>샬라샬라</h6>
-        </label>
-      </div>
-    </section>
-
-  </div>
-
-    <p>담당자 정보</p>
-    <div class="dam-div">
-    <div></div>
-    <div></div>
-    </div>
-
-    <div class="dam-div">
-    <div></div>
-    <div></div>
-    </div>
-
-    <p>문의 내용</p>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-
-
-
-  </div>
-</div>
-    </div>
-
 </body>
   </th:block>
 </th:block>
