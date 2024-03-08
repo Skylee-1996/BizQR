@@ -1,0 +1,15 @@
+<html lang="kor" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>calling</title>
+</head>
+
+<th:block th:replace="~{/customer/customerLayout :: setFragment(~{this::content})}">
+    <th:block th:fragment="content">
+        <input type="hidden" id="tableId" name="tableId" th:value="${tableId}">
+        <input type="hidden" id="storeId" name="storeId" th:value="${storeId}">
+
+
+    </th:block>
+</th:block>
+
+</html>

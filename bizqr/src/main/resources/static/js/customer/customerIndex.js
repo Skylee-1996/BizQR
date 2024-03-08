@@ -4,6 +4,24 @@ let FirstTabName;
 console.log(OrderStoreId);
 console.log(CustomerTableId);
 
+async function getMenuPriceFromServer(storeId, tableId){
+    try {
+        console.log("getMenuPrice");
+        const resp = await fetch("/customer/getMenuPrice/"+storeId+"/"+tableId);
+
+        return await resp.text();
+    }catch (e) {
+        console.log(e);
+    }
+}
+
+function menuPriceToClient(storeId, tableId){
+    getMenuPriceFromServer(storeId, tableId).then(result => {
+        console.log(result);
+        document.getElementById("menuPrice").innerText = result.toString();
+    })
+}
+
 async function getTabListFromServer(storeId){
     try {
         console.log("getTabList");
@@ -147,6 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
     postTabList(OrderStoreId); // 이 함수 내에서 FirstTabName이 설정되고, 그 후 postItemList 호출
     postBasketCount(OrderStoreId, CustomerTableId);
     // postItemList(OrderStoreId, FirstTabName); 이 부분을 삭제하고, postTabList 안에서 호출
+    menuPriceToClient(OrderStoreId, CustomerTableId);
 });
 
 // 모달 열기 함수
@@ -199,6 +218,20 @@ document.addEventListener('click', (event) => {
         console.log(menuId);
 
         document.getElementsByClassName('.menu-list').onclick = openModal(menuName, menuPrice, menuId);
+    }else if(event.target.closest("button").classList.contains("plus")){
+        let menuAmount = document.getElementById("menuAmount").value;
+
+        menuAmount++;
+
+        document.getElementById("menuAmount").value = menuAmount;
+    }else if(event.target.closest("button").classList.contains("minus")){
+        let menuAmount = document.getElementById("menuAmount").value;
+
+        if(menuAmount>0){
+            menuAmount--;
+        }
+
+        document.getElementById("menuAmount").value = menuAmount;
     }
 
 })

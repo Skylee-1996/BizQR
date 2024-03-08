@@ -1,9 +1,6 @@
 package ezen.bizqr.customer.service;
 
-import ezen.bizqr.customer.domain.ItemVO;
-import ezen.bizqr.customer.domain.OrderHistoryDTO;
-import ezen.bizqr.customer.domain.OrderItemVO;
-import ezen.bizqr.customer.domain.OrderVO;
+import ezen.bizqr.customer.domain.*;
 import ezen.bizqr.customer.handler.IdHandler;
 import ezen.bizqr.customer.repository.OrderMapper;
 import lombok.RequiredArgsConstructor;
@@ -108,6 +105,39 @@ public class CustomerServiceImpl implements CustomerService{
         log.info("basketDel service impl");
 
         return om.basketDel(menuId, tableId, storeId);
+    }
+
+    @Override
+    public String menuPrice(long storeId, String tableId) {
+        log.info("menuPrice service impl");
+
+        long menuPrice = 0;
+
+        List<OrderItemVO> oilist = om.menuPrice(storeId, tableId);
+        OrderItemVO oivo = new OrderItemVO();
+
+        for(OrderItemVO orderItemVO : oilist){
+            menuPrice += (orderItemVO.getMenuPrice() * orderItemVO.getMenuAmount());
+        }
+
+        return oivo.getMenuMainTotalComma(menuPrice);
+    }
+
+    @Override
+    public List<PostOrderHistoryVO> orderHistory(long storeId, String tableId) {
+        log.info("orderHistory service impl");
+
+        List<String> orderIdList = om.orderHistoryOrderId(storeId, tableId);
+
+        List<PostOrderHistoryVO> ohlist = new ArrayList<PostOrderHistoryVO>();
+
+        for (String orderId : orderIdList) {
+            PostOrderHistoryVO pohvo = new PostOrderHistoryVO(om.orderHistory(storeId, tableId, orderId));
+
+            ohlist.add(pohvo);
+        }
+
+        return ohlist;
     }
 
 }

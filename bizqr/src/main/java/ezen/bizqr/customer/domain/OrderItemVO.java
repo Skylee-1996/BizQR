@@ -21,6 +21,7 @@ public class OrderItemVO {
     private long menuAmount;
     private String regAt;
 
+
     public String getMenuSubTotalComma(){
         NumberFormat formatKR = NumberFormat.getNumberInstance(Locale.KOREA);
 
