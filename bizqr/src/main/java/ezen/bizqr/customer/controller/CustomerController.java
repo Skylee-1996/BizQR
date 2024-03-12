@@ -174,9 +174,11 @@ public class CustomerController {
     }
 
     @PostMapping("/customerCalling")
-    public String calling(OrderVO ovo){
+    public String calling(OrderVO ovo, Model m){
         csv.order(ovo);
+        m.addAttribute("storeId", ovo.getStoreId());
+        m.addAttribute("tableId", ovo.getTableId());
 
-        return "redirect:/customer/customerOrderHistory?storeId=" + ovo.getStoreId() + "&tableId=" + ovo.getTableId();
+        return "/customer/customerIndex";
     }
 }

@@ -57,6 +57,18 @@ public class CustomerServiceImpl implements CustomerService{
         odto.setOvo(historyOvo);
         odto.getOvo().setOrderId(ovo.getOrderId());
 
+        if(odto.getOilist().isEmpty()){
+            log.info("only request service impl");
+            OrderItemVO oivo = new OrderItemVO();
+            oivo.setTableId(ovo.getTableId());
+            oivo.setStoreId(ovo.getStoreId());
+            oivo.setMenuName("요청사항");
+
+            om.insertOrderHistory(ovo, oivo);
+
+            return om.deleteOrderBasket(ovo.getTableId(), ovo.getStoreId());
+        }
+
         for(int i=0; i<odto.getOilist().size(); i++){
             if(i==odto.getOilist().size()-1){
                 log.info("마지막 메뉴 저장 완료");

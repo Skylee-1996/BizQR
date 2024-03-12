@@ -43,24 +43,24 @@
                 </svg>
             </div>
             <ul>
-                <li>
+                <li class="nav-list">
                     <!-- 경로(path) 방식 -->
                     <a th:href="@{/customer/{storeId}/{tableId}(storeId=${storeId}, tableId=${tableId})}">
                         메뉴추가
                     </a>
                 </li>
-                <li>
+                <li class="nav-list">
                     <!-- 쿼리스트링(param)방식 -->
                     <a th:href="@{/customer/customerBasket(storeId=${storeId}, tableId=${tableId})}">
                         장바구니
                     </a>
                 </li>
-                <li>
+                <li class="nav-list">
                     <a th:href="@{/customer/customerOrderHistory(storeId=${storeId}, tableId=${tableId})}">
                         주문내역
                     </a>
                 </li>
-                <li>
+                <li class="nav-list">
                     <a href="">
                         공지사항
                     </a>

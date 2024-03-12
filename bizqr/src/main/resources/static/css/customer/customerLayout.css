@@ -67,4 +67,18 @@
     .overlay-active {
         display: block;
     }
+
+    a{
+        font-size: larger;
+        text-decoration: none;
+    }
+
+    a:visited{
+        color: black;
+    }
+
+    .nav-list{
+        margin-top: 5%;
+    }
+
 }

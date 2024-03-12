@@ -28,8 +28,8 @@ function postOrderHistoryToClient(storeId, tableId) {
                 divContent += `</h2>`;
                 divContent += `<div id="flush-collapse${order}" class="accordion-collapse collapse" aria-labelledby="heading${order}" data-bs-parent="#accordionFlushExample">`;
                 divContent += `<div class="accordion-body">`;
-                if(result[order].ohlist.length > 0) {
-                    for (let i = 0; i < result[order].ohlist.length; i++) {
+                for (let i = 0; i < result[order].ohlist.length; i++) {
+                    if(result[order].ohlist[i].menuId > 0) {
                         divContent += `메뉴 이름 = "${result[order].ohlist[i].menuName}"<br>`; // <br>을 사용하여 줄 바꿈
                         divContent += `메뉴 수량 = "${result[order].ohlist[i].menuAmount}"<br>`;
                         divContent += `메뉴 단가 = "${result[order].ohlist[i].menuPrice}"<br>`;
@@ -38,6 +38,9 @@ function postOrderHistoryToClient(storeId, tableId) {
                             divContent += `고객 요청 = "${result[order].ohlist[i].userRequest}"<br>`;
                             divContent += `주문 상태 = ${result[order].ohlist[i].orderStatus === 1 ? "주문완료" : "대기중"}`;
                         }
+                    }else{
+                        divContent += `고객 요청 = "${result[order].ohlist[i].userRequest}"<br>`;
+                        divContent += `주문 상태 = ${result[order].ohlist[i].orderStatus === 1 ? "주문완료" : "대기중"}`;
                     }
                 }
                 divContent += `</div>`;
