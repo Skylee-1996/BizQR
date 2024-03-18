@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -115,6 +116,8 @@ public class CustomerController {
 
         m.addAttribute("tableId", tableId);
         m.addAttribute("storeId", storeId);
+
+
     }
 
     @PostMapping(value="/menuAmount", consumes = "application/json")
@@ -127,11 +130,13 @@ public class CustomerController {
     }
 
     @PostMapping("/customerBasket")
-    public String basket(OrderVO ovo){
+    public String basket(OrderVO ovo, RedirectAttributes re){
         log.info("ovo >>> {}", ovo);
 
         int isOk = csv.order(ovo);
         log.info("order 실행 결과 >>> {}", isOk>0?"성공":"실패");
+
+        re.addFlashAttribute("isOk", isOk);
 
         return "redirect:/customer/customerOrderHistory?storeId=" + ovo.getStoreId() + "&tableId=" + ovo.getTableId();
     }

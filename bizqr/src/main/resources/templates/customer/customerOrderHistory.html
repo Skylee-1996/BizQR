@@ -16,6 +16,18 @@
 
     </th:block>
 </th:block>
+<script>
+    const isOk = `<%= request.getAttribute("isOk") %>`;
+    console.log(isOk);
+
+    if(isOk === "1"){
+        alert("주문이 완료되었습니다.");
+    }else if(isOk === "2"){
+        alert("장바구니가 비어있습니다.");
+    }else if(isOk === "3"){
+        alert("요청사항을 입력해주세요.");
+    }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="/js/customer/customerOrderHistory.js"></script>
 </html>

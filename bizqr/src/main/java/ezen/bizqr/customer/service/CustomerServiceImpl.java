@@ -48,8 +48,6 @@ public class CustomerServiceImpl implements CustomerService{
         String orderId = ih.orderIdHandler(ovo.getStoreId(), ovo.getTableId());
         ovo.setOrderId(orderId);
 
-        om.order(ovo);
-
         OrderHistoryDTO odto = new OrderHistoryDTO();
         odto.setOilist(om.basketList(ovo.getTableId(), ovo.getStoreId()));
 
@@ -57,7 +55,12 @@ public class CustomerServiceImpl implements CustomerService{
         odto.setOvo(historyOvo);
         odto.getOvo().setOrderId(ovo.getOrderId());
 
-        if(odto.getOilist().isEmpty()){
+        if(odto.getOilist().isEmpty()){         //단순 직원호출
+            if(ovo.getUserRequest() == null){   //아무것도 요청 안한경우 및 장바구니에서 그냥 주문하기를 눌렀을경우
+                return 3;
+            }
+            om.order(ovo);
+
             log.info("only request service impl");
             OrderItemVO oivo = new OrderItemVO();
             oivo.setTableId(ovo.getTableId());
@@ -66,8 +69,12 @@ public class CustomerServiceImpl implements CustomerService{
 
             om.insertOrderHistory(ovo, oivo);
 
-            return om.deleteOrderBasket(ovo.getTableId(), ovo.getStoreId());
+            om.deleteOrderBasket(ovo.getTableId(), ovo.getStoreId());
+
+            return 2;
         }
+
+        om.order(ovo);
 
         for(int i=0; i<odto.getOilist().size(); i++){
             if(i==odto.getOilist().size()-1){
@@ -81,7 +88,9 @@ public class CustomerServiceImpl implements CustomerService{
             log.info((i+1)+"번째 메뉴 저장 완료");
         }
 
-        return om.deleteOrderBasket(ovo.getTableId(), ovo.getStoreId());
+        om.deleteOrderBasket(ovo.getTableId(), ovo.getStoreId());
+
+        return 1;
     }
 
     @Override
