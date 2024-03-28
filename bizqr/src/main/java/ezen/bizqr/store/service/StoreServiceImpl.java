@@ -47,6 +47,12 @@ public class StoreServiceImpl implements StoreService {
     }
 
     @Override
+    public int insertTables(int storeId, int tableNum) {
+        String tableId = storeId+"_"+tableNum;
+        return storeMapper.insertTable(storeId,tableId);
+    }
+
+    @Override
     public StoreVO getDetailFromStore(String storeId) {
         return storeMapper.getDetailFromStore(storeId);
     }
@@ -65,10 +71,6 @@ public class StoreServiceImpl implements StoreService {
         storeMapper.updateStore(svo);
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
     @Override
     public List<StoreVO> getStoreList() {
         return storeMapper.getStoreList();
@@ -78,10 +80,6 @@ public class StoreServiceImpl implements StoreService {
     public List<StoreVO> getStoreListByType(String storeType) {
         return storeMapper.getStoreListByType(storeType);
     }
-<<<<<<< HEAD
-}
-=======
+
 
 }
-
->>>>>>> origin/main

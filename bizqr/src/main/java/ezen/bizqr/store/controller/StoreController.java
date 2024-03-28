@@ -124,6 +124,18 @@ public class StoreController {
 
         return "/store/create";
     }
+
+
+    @GetMapping("/insertTable/{storeId}/{tableNum}")
+    @ResponseBody
+    public String insertTable(@PathVariable("storeId") int storeId, @PathVariable("tableNum") int tableNum){
+        log.info(">>> storeId  >>> {}", storeId);
+        log.info(">>> tableNum  >>> {}", tableNum);
+
+        int isOk = ssv.insertTables(storeId,tableNum);
+
+        return isOk > 0 ? "1" : "0";
+    }
 }
 
 

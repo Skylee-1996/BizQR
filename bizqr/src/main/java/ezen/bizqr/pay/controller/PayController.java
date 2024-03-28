@@ -63,8 +63,7 @@ public class PayController {
 
         return isOk > 0 ? "1" : "0";
     }
-<<<<<<< HEAD
-=======
+
 
 
 //    @PostMapping("/takeUserInfo/{registerNum}")
@@ -211,5 +210,4 @@ public class PayController {
     }
      */
 
->>>>>>> origin/main
 }

@@ -1,6 +1,5 @@
 package ezen.bizqr.store.repository;
 
-import ezen.bizqr.board.domain.PagingVO;
 import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.domain.StoreVO;
@@ -25,11 +24,6 @@ public interface StoreMapper {
 
     StoreVO getDetailFromStore(String storeId);
 
-<<<<<<< HEAD
-    List<RegisterVO> getRegisterList();
-
-=======
->>>>>>> origin/main
     void updateStore(StoreVO svo);
 
     List<StoreVO> getStoreList();
@@ -39,8 +33,6 @@ public interface StoreMapper {
     int alterRegisterInfo(@Param("registerNum") long registerNum, @Param("isRegistered") int isRegistered);
 
     List<StoreVO> getStoreListByType(String storeType);
-<<<<<<< HEAD
+
+    int insertTable(@Param("storeId") int storeId,@Param("tableId") String tableId);
 }
-=======
-}
->>>>>>> origin/main
