@@ -4,6 +4,24 @@ let FirstTabName;
 console.log(OrderStoreId);
 console.log(CustomerTableId);
 
+async function getMenuPriceFromServer(storeId, tableId){
+    try {
+        console.log("getMenuPrice");
+        const resp = await fetch("/customer/getMenuPrice/"+storeId+"/"+tableId);
+
+        return await resp.text();
+    }catch (e) {
+        console.log(e);
+    }
+}
+
+function menuPriceToClient(storeId, tableId){
+    getMenuPriceFromServer(storeId, tableId).then(result => {
+        console.log(result);
+        document.getElementById("menuPrice").innerText = result.toString();
+    })
+}
+
 async function getTabListFromServer(storeId){
     try {
         console.log("getTabList");
@@ -125,6 +143,7 @@ function postItemList(storeId, tabName) {
                         <img src="" alt="메뉴 사진">
                     </div>
                     <div class="menu-info">
+                    <input type="hidden" class="menuId" value="${result[i].menuId}">
                         <div class="menu-name">${result[i].menuName}</div>
                         <input type="hidden" class="menuName" value="${result[i].menuName}">
                             <div class="menu-price">${result[i].menuPrice}</div>
@@ -146,10 +165,11 @@ document.addEventListener('DOMContentLoaded', function() {
     postTabList(OrderStoreId); // 이 함수 내에서 FirstTabName이 설정되고, 그 후 postItemList 호출
     postBasketCount(OrderStoreId, CustomerTableId);
     // postItemList(OrderStoreId, FirstTabName); 이 부분을 삭제하고, postTabList 안에서 호출
+    menuPriceToClient(OrderStoreId, CustomerTableId);
 });
 
 // 모달 열기 함수
-function openModal(menuName, menuPrice) {
+function openModal(menuName, menuPrice, menuId) {
     document.getElementById('modal').style.display = 'block';
 
     console.log(menuName);
@@ -159,6 +179,8 @@ function openModal(menuName, menuPrice) {
     document.getElementById("modal-menu-price").innerText = menuPrice;
     document.getElementById("modalItemName").value = menuName;
     document.getElementById("modalItemPrice").value = menuPrice;
+
+    document.getElementById("modalMenuId").value = menuId;
 }
 
 // 모달 닫기 함수
@@ -189,11 +211,27 @@ document.addEventListener('click', (event) => {
     if (menuList) {
         let menuName = menuList.querySelector('.menuName').value;
         let menuPrice = menuList.querySelector('.menuPrice').value;
+        let menuId = menuList.querySelector('.menuId').value;
 
         console.log(menuName);
         console.log(menuPrice);
+        console.log(menuId);
 
-        document.getElementsByClassName('.menu-list').onclick = openModal(menuName, menuPrice);
+        document.getElementsByClassName('.menu-list').onclick = openModal(menuName, menuPrice, menuId);
+    }else if(event.target.closest("button").classList.contains("plus")){
+        let menuAmount = document.getElementById("menuAmount").value;
+
+        menuAmount++;
+
+        document.getElementById("menuAmount").value = menuAmount;
+    }else if(event.target.closest("button").classList.contains("minus")){
+        let menuAmount = document.getElementById("menuAmount").value;
+
+        if(menuAmount>0){
+            menuAmount--;
+        }
+
+        document.getElementById("menuAmount").value = menuAmount;
     }
 
 })

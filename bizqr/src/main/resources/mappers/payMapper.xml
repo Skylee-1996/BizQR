@@ -9,4 +9,8 @@
         values(#{impUid}, #{merchantUid}, #{buyerEmail}, #{buyerName}, #{buyerCompany}, #{buyerAddress}, #{buyerOwnerTelNum}, #{buyerStoreTelNum}, #{itemName}, #{itemAmount}, #{paidTime})
     </insert>
 
+    <select id="getImpUidWithMerchantUid" resultType="ezen.bizqr.pay.domain.StorePaymentVO">
+        select * from store_payment where merchant_uid = #{merchantUid};
+    </select>
+
 </mapper>

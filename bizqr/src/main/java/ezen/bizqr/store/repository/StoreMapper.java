@@ -5,6 +5,7 @@ import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.domain.StoreVO;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -24,11 +25,22 @@ public interface StoreMapper {
 
     StoreVO getDetailFromStore(String storeId);
 
+<<<<<<< HEAD
     List<RegisterVO> getRegisterList();
 
+=======
+>>>>>>> origin/main
     void updateStore(StoreVO svo);
 
     List<StoreVO> getStoreList();
 
+    List<RegisterVO> getRegisterList();
+
+    int alterRegisterInfo(@Param("registerNum") long registerNum, @Param("isRegistered") int isRegistered);
+
     List<StoreVO> getStoreListByType(String storeType);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/main

@@ -1,6 +1,7 @@
 package ezen.bizqr.customer.repository;
 
 import ezen.bizqr.customer.domain.ItemVO;
+import ezen.bizqr.customer.domain.OrderHistoryVO;
 import ezen.bizqr.customer.domain.OrderItemVO;
 import ezen.bizqr.customer.domain.OrderVO;
 import org.apache.ibatis.annotations.Mapper;
@@ -16,9 +17,9 @@ public interface OrderMapper {
 
     int order(OrderVO ovo);
 
-    void insertOrderHistory(OrderItemVO oivo);
+    void insertOrderHistory(@Param("ovo") OrderVO ovo, @Param("oivo") OrderItemVO orderItemVO);
 
-    void deleteOrderBasket(String tableId);
+    int deleteOrderBasket(@Param("tableId") String tableId, @Param("storeId") long storeId);
 
     int basketUpdate(OrderItemVO oivo);
 
@@ -29,4 +30,10 @@ public interface OrderMapper {
     List<String> tabList(long storeId);
 
     int basketDel(@Param("menuId") long menuId, @Param("tableId") String tableId, @Param("storeId") long storeId);
+
+    List<OrderItemVO> menuPrice(@Param("storeId") long storeId, @Param("tableId") String tableId);
+
+    List<OrderHistoryVO> orderHistory(@Param("storeId") long storeId, @Param("tableId") String tableId, @Param("orderId") String orderId);
+
+    List<String> orderHistoryOrderId(@Param("storeId") long storeId, @Param("tableId") String tableId);
 }

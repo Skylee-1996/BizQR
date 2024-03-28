@@ -10,4 +10,5 @@ import java.util.List;
 public interface PayMapper {
     int savePayment(StorePaymentVO spvo);
 
+    StorePaymentVO getImpUidWithMerchantUid(String merchantUid);
 }

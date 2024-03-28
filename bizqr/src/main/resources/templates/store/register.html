@@ -4,22 +4,18 @@
 <th:block th:replace="~{/layout :: setFragment(~{this::content})}">
     <th:block th:fragment="content">
         <head>
+            <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
             <link rel="stylesheet" th:href="@{/css/store/register.css}">
             <title>register</title>
         </head>
         <body>
             <div class="register">
                 <div class="container">
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
                     <div class="title">가게정보 입력</div>
                     <p class="pi">이용약관과 개인정보처리방침에 대한 안내를 읽고 동의 해주세요.</p>
                     <p class="p1"><small class="s1" style="color: red; font-weight: bold">*</small> 표기된 항목은 필수입력 항목입니다.</p>
                     <hr>
 
-                                <form action="/payment/pay" method="post">
                                     <table>
                                         <tr>
                                             <td class="h-td">대표자명 <small style="color: red; font-weight: bold">*</small></td>
@@ -54,7 +50,6 @@
                                         <tr>
                                             <td class="h-td">업종 선택 <small style="color: red; font-weight: bold">*</small></td>
                                             <td>
-<<<<<<< HEAD
                                                 <input type="radio" name="storeType" id="dot-1" th:value="cafe">
                                                 <span>카페</span>
                                                 <input type="radio" name="storeType" id="dot-2" th:value="restaurant">
@@ -63,38 +58,33 @@
                                                 <span>숙박업체</span>
                                                 <input type="radio" name="storeType" id="dot-4" th:value="etc.">
                                                 <span>기타</span>
-=======
-                                                <input type="radio" name="storeType" id="dot-1" th:value="Cafe" th:text="카페">
-                                                <input type="radio" name="storeType" id="dot-2" th:value="Restaurant" th:text="레스토랑">
-                                                <input type="radio" name="storeType" id="dot-3" th:value="Hotel" th:text="호텔">
-                                                <input type="radio" name="storeType" id="dot-4" th:value="Etc" th:text="기타">
->>>>>>> origin/main
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="h-td">구독 선택 <small style="color: red; font-weight: bold">*</small></td>
                                             <td>
-<<<<<<< HEAD
                                                 <input type="radio" name="subscribe" id="payment1" th:value="monthly">
                                                 <span>월 단위</span>
                                                 <input type="radio" name="subscribe" id="payment2" th:value="yearly">
                                                 <span>연 단위</span>
-=======
-                                                <input type="radio" name="subscribe" id="monthly" th:value="monthly" th:text="1개월">
-                                                <input type="radio" name="subscribe" id="yearly" th:value="yearly" th:text="1년">
->>>>>>> origin/main
                                             </td>
                                         </tr>
                                         </tbody>
                                     </table>
-
                                     <div class="button">
+<<<<<<< HEAD
                                         <input type="submit" value="확인" class="regBtn-store">
                                     </div>
                                 </form>
-<<<<<<< HEAD
+
 =======
 <<<<<<< HEAD
+                                        <button type="submit" class="regBtn-store">확인</button>
+=======
+                                        <button type="button" class="regBtn-store" onclick="requestPay()">결제하기</button>
+>>>>>>> origin/main
+                                    </div>
+>>>>>>> origin/main
 <!--                    <div class="title">Registeration</div>-->
 <!--                    <br>-->
 <!--                    <form action="/payment/pay" method="post">-->
@@ -131,14 +121,23 @@
 <!--                    </form>-->
                 </div>
             </div>
+<<<<<<< HEAD
+
 =======
                             </div>
                         </div>
->>>>>>> bc5c99e711f6fcd142e56671feb9eda1f772b49a
+>>>>>>> origin/main
+<!--
+                            </div>
+                        </div>
+-->
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> origin/main
 
 
             <!--                    <form action="/payment/pay" method="post">-->
@@ -216,8 +215,8 @@
             <!--                                </label>-->
             <!--                            </div>-->
             <!--                        </div>-->
->>>>>>> origin/main
 
         </body>
+        <script th:src="@{/js/pay/pay.js}"></script>
     </th:block>
 </th:block>
