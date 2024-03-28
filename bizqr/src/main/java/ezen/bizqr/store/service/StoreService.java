@@ -14,22 +14,24 @@ public interface StoreService {
     RegisterVO getDetail(long registerNum);
 
 
-    List<StoreVO> getStoreList();
-    
-    
+    List<StoreVO> selectEmail(String userEmail);
+    int insertStore(StoreVO svo);
+
+
     StoreVO getDetailFromStore(String storeId);
 
-    
     List<RegisterVO> getRegisterList();
+    void updateStore(StoreVO svo);
+
+
+    List<StoreVO> getStoreList();
+    
+
 
     int alterRegisterInfo(long registerNum, int isRegistered);
 
-    void updateStore(StoreVO svo);
 
     List<StoreVO> getStoreListByType(String storeType);
-
-    List<StoreVO> selectEmail(String userEmail);
-    int insertStore(StoreVO svo);
 
     int insertTables(int storeId, int tableNum);
 }

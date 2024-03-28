@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c1696ed-4285-4124-91cd-e01ef72b6156" name="변경" comment="">
+    <list default="true" id="cb57dace-c382-4fa7-9f7a-b092e00bc446" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/pay/controller/PayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/repository/StoreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/repository/StoreMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/store/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/store/table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sql.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/customer/customerOrderHistory.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/customer/customerOrderHistory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/store/table.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/store/table.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,43 +18,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "Spring Boot.BizqrApplication.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "main 병합 중",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ezen.bizqr.store.domain" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="BizqrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="bizqr.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ezen.bizqr.BizqrApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="TaskManager">
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/resources/static/js/board/boardComment.js</url>
-          <line>29</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

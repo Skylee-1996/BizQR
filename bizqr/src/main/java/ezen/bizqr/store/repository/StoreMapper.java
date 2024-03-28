@@ -34,5 +34,7 @@ public interface StoreMapper {
 
     List<StoreVO> getStoreListByType(String storeType);
 
+
     int insertTable(@Param("storeId") int storeId,@Param("tableId") String tableId);
 }
+
