@@ -1,0 +1,28 @@
+.order-shop{
+    width: 100%;
+    height: 7%;
+    text-align: center;
+    line-height: 400%;
+    border-top: solid 1px #9595c3;
+    border-radius: 5px;
+    background-color: rgb(204, 204, 236);
+    z-index: 30;
+}
+
+.request{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.request-bar{
+    width: 70%;
+    height: 35%;
+}
+
+.request-limit{
+    color: rgb(135, 134, 134);
+    margin-left: 3%;
+}

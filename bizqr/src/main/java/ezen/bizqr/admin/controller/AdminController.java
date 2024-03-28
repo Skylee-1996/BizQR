@@ -58,10 +58,6 @@ public class AdminController {
 
             log.info(">>> store insert >>> {}", (isRegistered > 0) ? "success" : "failed");
 
-
-
-
-
         }
 
         return isOk > 0 ? "1" : "0";

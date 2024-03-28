@@ -63,6 +63,13 @@ public class PayController {
 
         return isOk > 0 ? "1" : "0";
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 438cb7534a6da31bf915ee3515e3e405716f4d24
 //    @PostMapping("/takeUserInfo/{registerNum}")
 //    public ResponseEntity<Object> takeUserInfo(@PathVariable("registerNum") long registerNum){
 //
@@ -87,6 +94,7 @@ public class PayController {
         log.info(">>> isRegistered >>> " + isRegistered);
 
         int isOk = ssv.alterRegisterInfo(registerNum, isRegistered);
+
 
         if(isRegistered == 1){
             RegisterVO registeredRvo = ssv.getDetail(registerNum);
@@ -205,4 +213,9 @@ public class PayController {
         return response;
     }
      */
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
+>>>>>>> 438cb7534a6da31bf915ee3515e3e405716f4d24
 }

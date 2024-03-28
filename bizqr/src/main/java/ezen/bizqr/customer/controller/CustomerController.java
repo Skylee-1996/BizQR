@@ -1,10 +1,7 @@
 package ezen.bizqr.customer.controller;
 
 
-import com.mysql.cj.x.protobuf.MysqlxCrud;
-import ezen.bizqr.customer.domain.ItemVO;
-import ezen.bizqr.customer.domain.OrderItemVO;
-import ezen.bizqr.customer.domain.OrderVO;
+import ezen.bizqr.customer.domain.*;
 import ezen.bizqr.customer.service.CustomerService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,6 +52,14 @@ public class CustomerController {
         log.info("tableId >>> {}", tableId);
 
         return new ResponseEntity<Integer>(csv.basketCount(tableId, storeId), HttpStatus.OK);
+    }
+
+    @GetMapping(value="/getMenuPrice/{storeId}/{tableId}", produces = MediaType.TEXT_PLAIN_VALUE)
+    ResponseEntity<String> menuPrice (@PathVariable("storeId") long storeId, @PathVariable("tableId") String tableId){
+        log.info("storeId >>> {}", storeId);
+        log.info("tableId >>> {}", tableId);
+
+        return new ResponseEntity<String>(csv.menuPrice(storeId, tableId),HttpStatus.OK);
     }
 
     @GetMapping(value="/tabList/{storeId}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -108,6 +113,11 @@ public class CustomerController {
         m.addAttribute("menuMainTotalComma", menuMainTotalComma);
         m.addAttribute("oivo", oivo);
         m.addAttribute("oilist", oilist);   //상품 목록
+
+        m.addAttribute("tableId", tableId);
+        m.addAttribute("storeId", storeId);
+
+
     }
 
     @PostMapping(value="/menuAmount", consumes = "application/json")
@@ -120,13 +130,15 @@ public class CustomerController {
     }
 
     @PostMapping("/customerBasket")
-    public String basket(OrderVO ovo){
+    public String basket(OrderVO ovo, RedirectAttributes re){
         log.info("ovo >>> {}", ovo);
 
         int isOk = csv.order(ovo);
         log.info("order 실행 결과 >>> {}", isOk>0?"성공":"실패");
 
-        return "/customer/customerOrderHistory";
+        re.addFlashAttribute("isOk", isOk);
+
+        return "redirect:/customer/customerOrderHistory?storeId=" + ovo.getStoreId() + "&tableId=" + ovo.getTableId();
     }
 
     @DeleteMapping(value = "/basketDel/{menuId}/{tableId}/{storeId}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -138,5 +150,40 @@ public class CustomerController {
         int isOk = csv.basketDel(menuId, tableId, storeId);
 
         return new ResponseEntity<Integer>(isOk, HttpStatus.OK);
+    }
+
+    @GetMapping("/customerOrderHistory")
+    public void orderHistory(Model m, @RequestParam("tableId") String tableId, @RequestParam("storeId") long storeId){
+        log.info("tableId >>> {}", tableId);
+        log.info("storeId >>> {}", storeId);
+
+
+        m.addAttribute("tableId", tableId);
+        m.addAttribute("storeId", storeId);
+    }
+
+    @GetMapping(value = "getOrderHistory/{storeId}/{tableId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<List<PostOrderHistoryVO>> postOrderHistory(@PathVariable("storeId") long storeId, @PathVariable("tableId") String tableId){
+        List<PostOrderHistoryVO> ohlist = csv.orderHistory(storeId, tableId);
+
+        return new ResponseEntity<List<PostOrderHistoryVO>>(ohlist, HttpStatus.OK);
+    }
+
+    @GetMapping("/customerCalling")
+    public void calling(Model m, @RequestParam("tableId") String tableId, @RequestParam("storeId") long storeId){
+        log.info("tableId >>> {}", tableId);
+        log.info("storeId >>> {}", storeId);
+
+        m.addAttribute("tableId", tableId);
+        m.addAttribute("storeId", storeId);
+    }
+
+    @PostMapping("/customerCalling")
+    public String calling(OrderVO ovo, Model m){
+        csv.order(ovo);
+        m.addAttribute("storeId", ovo.getStoreId());
+        m.addAttribute("tableId", ovo.getTableId());
+
+        return "/customer/customerIndex";
     }
 }

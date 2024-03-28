@@ -30,6 +30,8 @@
                 <img src="" alt="이미지">
             </div>
 
+            <input type="hidden" class="basket-menuId" th:value="${basket.menuId}">
+
             <div class="basket-name">[[${basket.menuName}]]</div>
 
             <div class="basket-price">[[${basket.menuPrice}]]</div>
@@ -71,7 +73,7 @@
 
 
 <div class="btn-zone">
-    <a th:href="@{/customer/customerIndex/${oivo.storeId}/${oivo.tableId}}">
+    <a th:href="@{/customer/{storeId}/{tableId}(storeId=${storeId}, tableId=${tableId})}">
         <button type="button" class="add-menu" id="add-menu">메뉴 추가</button>
     </a>
 </div>
@@ -101,9 +103,5 @@
 
     </th:block>
 </th:block>
-<script th:inline="javascript">
-</script>
-<script src="/js/customer/customerBasket.js">
-
-</script>
+<script src="/js/customer/customerBasket.js"></script>
 </html>

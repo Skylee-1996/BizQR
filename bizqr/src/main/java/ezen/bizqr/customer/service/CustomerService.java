@@ -1,8 +1,6 @@
 package ezen.bizqr.customer.service;
 
-import ezen.bizqr.customer.domain.ItemVO;
-import ezen.bizqr.customer.domain.OrderItemVO;
-import ezen.bizqr.customer.domain.OrderVO;
+import ezen.bizqr.customer.domain.*;
 
 import java.util.List;
 
@@ -22,4 +20,9 @@ public interface CustomerService{
     List<String> tabList(long storeId);
 
     int basketDel(long menuId, String tableId, long storeId);
+
+    String menuPrice(long storeId, String tableId);
+
+    List<PostOrderHistoryVO> orderHistory(long storeId, String tableId);
+
 }
