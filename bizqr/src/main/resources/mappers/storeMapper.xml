@@ -66,4 +66,9 @@
     <select id="getStoreListByType" resultType="ezen.bizqr.store.domain.StoreVO" >
         select * from store where store_type = #{storeType}
     </select>
+    <insert id="insertTable">
+        insert into tables
+        (table_id, store_id)
+        values(#{tableId}, #{storeId})
+    </insert>
 </mapper>

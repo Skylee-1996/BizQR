@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const qrInput = document.querySelector(".form input"),
         generateBtn = document.querySelector(".form button"),
         qrImg = document.querySelector(".qr-code img"),
-        storeNameInput = document.getElementById("storeName"), // 사용되지 않지만 예시로 포함
         storeIdInput = document.getElementById("storeId"),
         tableNumInput = document.getElementById("tableNum");
     let preValue;
@@ -21,16 +20,41 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     generateBtn.addEventListener("click", () => {
+        const storeId = storeIdInput.value.trim();
+        const tableNum = tableNumInput.value.trim();
         let qrValue = qrInput.value.trim();
         if(!qrValue || preValue === qrValue) return;
         preValue = qrValue;
         generateBtn.innerText = "Generating QR Code...";
         qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrValue)}`;
         qrImg.onload = () => {
-            document.querySelector(".container").classList.add("active");
+            document.querySelector(".qr").classList.add("active");
             generateBtn.innerText = "Generate QR Code";
         };
-    });
+
+        if(tableNumInput === ''){
+            alert("테이블 개수를 입력해주세요.");
+            tableNumInput.focus();
+            return false;
+        } else {
+            insertTableNum(storeId,tableNum).then(result=>{
+                if(result === '1'){
+                    alert("테이블이 등록되었습니다.");
+                }
+            })
+
+        }
+    })
+
+    async function insertTableNum(storeId,tableNum) {
+        try {
+            const resp = await fetch('/store/insertTable/' + storeId + "/" + tableNum);
+            return await resp.json();
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
 
     qrInput.addEventListener("keyup", () => {
         if(!qrInput.value.trim()) {
@@ -38,4 +62,6 @@ document.addEventListener("DOMContentLoaded", function() {
             preValue = "";
         }
     });
-});
+
+    });
+

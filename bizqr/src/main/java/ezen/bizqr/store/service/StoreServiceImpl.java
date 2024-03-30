@@ -47,6 +47,12 @@ public class StoreServiceImpl implements StoreService {
     }
 
     @Override
+    public int insertTables(int storeId, int tableNum) {
+        String tableId = storeId + "_" + tableNum;
+        return storeMapper.insertTable(storeId, tableId);
+    }
+
+    @Override
     public StoreVO getDetailFromStore(String storeId) {
         return storeMapper.getDetailFromStore(storeId);
     }
