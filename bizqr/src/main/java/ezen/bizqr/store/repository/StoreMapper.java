@@ -25,11 +25,6 @@ public interface StoreMapper {
 
     StoreVO getDetailFromStore(String storeId);
 
-<<<<<<< HEAD
-    List<RegisterVO> getRegisterList();
-
-=======
->>>>>>> origin/main
     void updateStore(StoreVO svo);
 
     List<StoreVO> getStoreList();
@@ -41,9 +36,3 @@ public interface StoreMapper {
     List<StoreVO> getStoreListByType(String storeType);
 
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/main
->>>>>>> 438cb7534a6da31bf915ee3515e3e405716f4d24

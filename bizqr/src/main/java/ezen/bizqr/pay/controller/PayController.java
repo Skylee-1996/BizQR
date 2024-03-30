@@ -63,13 +63,6 @@ public class PayController {
 
         return isOk > 0 ? "1" : "0";
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 438cb7534a6da31bf915ee3515e3e405716f4d24
 //    @PostMapping("/takeUserInfo/{registerNum}")
 //    public ResponseEntity<Object> takeUserInfo(@PathVariable("registerNum") long registerNum){
 //
@@ -213,9 +206,4 @@ public class PayController {
         return response;
     }
      */
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
->>>>>>> 438cb7534a6da31bf915ee3515e3e405716f4d24
 }

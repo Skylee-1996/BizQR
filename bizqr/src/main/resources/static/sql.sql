@@ -138,7 +138,6 @@ CREATE TABLE IF NOT EXISTS `tables` (
     `table_qr` VARCHAR(255),
     `total_price` BIGINT,
     `is_using` INT(1) DEFAULT 0,
-    PRIMARY KEY (`table_id`),
     FOREIGN KEY (`store_id`) REFERENCES `store`(`store_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

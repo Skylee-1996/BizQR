@@ -67,8 +67,10 @@ public class StoreController {
         model.addAttribute("svo", svo);
     }
 
-    @GetMapping("/posPage")
-    public String posPage() {
+    @GetMapping("/posPage/{storeId}")
+    public String posPage(@PathVariable("storeId") long storeId) {
+        log.info("storeId >>> {}", storeId);
+
         return "/store/posPage";
     }
 
