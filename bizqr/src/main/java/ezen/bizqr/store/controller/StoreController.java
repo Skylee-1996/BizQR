@@ -6,6 +6,7 @@ import ezen.bizqr.file.FileVO;
 import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.domain.StoreVO;
+import ezen.bizqr.store.domain.TablesVO;
 import ezen.bizqr.store.service.StoreService;
 
 import lombok.RequiredArgsConstructor;
@@ -68,8 +69,21 @@ public class StoreController {
     }
 
     @GetMapping("/posPage/{storeId}")
-    public String posPage(@PathVariable("storeId") long storeId) {
+    public String posPage(Model model, @PathVariable("storeId") long storeId) {
         log.info("storeId >>> {}", storeId);
+
+        List<TablesVO> list = ssv.getTablesList(storeId);
+        log.info("table list >>> : " + list);
+
+        for(TablesVO table : list){
+            String tableIdString = table.getTableId();
+            String[] parts = tableIdString.split("_");
+            if(parts.length > 1){
+                table.setTableId(parts[1]);
+            }
+        }
+
+        model.addAttribute("list", list);
 
         return "/store/posPage";
     }

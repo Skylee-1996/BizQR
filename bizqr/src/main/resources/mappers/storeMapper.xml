@@ -71,4 +71,8 @@
         (table_id, store_id)
         values(#{tableId}, #{storeId})
     </insert>
+
+    <select id="getTablesList" resultType="ezen.bizqr.store.domain.TablesVO" >
+        select * from tables where store_id = #{storeId}
+    </select>
 </mapper>

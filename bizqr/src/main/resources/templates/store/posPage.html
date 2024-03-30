@@ -40,162 +40,178 @@
 
     <!-- content -->
     <div class="card-container">
-    <div class="card">
-        <h3 class="blog-title">Table 1</h3>
-        <p class="description">
-            메뉴: (개수)
-        </p>
-        <div class="options">
-    <span>
-      총 금액: 원
-    </span>
-            <button class="btn">추가</button>
-        </div>
-    </div>
+        <th:block th:each="tvo:${list}">
+            <div class="card">
+                <h3 class="blog-title" th:text="'Table' + ${tvo.tableId}"></h3>
+                <p class="description">
+                    메뉴: (개수)
+                </p>
+                <div class="options">
+                    <span>
+                        총 금액 : 원
+                    </span>
+                    <button class="btn">추가</button>
+                </div>
+                </div>
+        </th:block>
 
-    <div class="card">
-        <h3 class="blog-title">Table 2</h3>
-        <p class="description">
-            메뉴: (개수)
-        </p>
-        <div class="options">
-    <span>
-      총 금액: 원
-    </span>
-            <button class="btn">추가</button>
-        </div>
-    </div>
 
-    <div class="card">
-        <h3 class="blog-title">Table 3</h3>
-        <p class="description">
-            메뉴: (개수)
-        </p>
-        <div class="options">
-    <span>
-      총 금액: 원
-    </span>
-            <button class="btn">추가</button>
-        </div>
-    </div>
+<!--    <div class="card">-->
+<!--        <h3 class="blog-title">Table 1</h3>-->
+<!--        <p class="description">-->
+<!--            메뉴: (개수)-->
+<!--        </p>-->
+<!--        <div class="options">-->
+<!--    <span>-->
+<!--      총 금액: 원-->
+<!--    </span>-->
+<!--            <button class="btn">추가</button>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <div class="card">
-        <h3 class="blog-title">Table 4</h3>
-        <p class="description">
-            메뉴: (개수)
-        </p>
-        <div class="options">
-    <span>
-      총 금액: 원
-    </span>
-            <button class="btn">추가</button>
-        </div>
-    </div>
+<!--    <div class="card">-->
+<!--        <h3 class="blog-title">Table 2</h3>-->
+<!--        <p class="description">-->
+<!--            메뉴: (개수)-->
+<!--        </p>-->
+<!--        <div class="options">-->
+<!--    <span>-->
+<!--      총 금액: 원-->
+<!--    </span>-->
+<!--            <button class="btn">추가</button>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <div class="card">
-        <h3 class="blog-title">Table 5</h3>
-        <p class="description">
-            메뉴: (개수)
-        </p>
-        <div class="options">
-    <span>
-      총 금액: 원
-    </span>
-            <button class="btn">추가</button>
-        </div>
-    </div>
+<!--    <div class="card">-->
+<!--        <h3 class="blog-title">Table 3</h3>-->
+<!--        <p class="description">-->
+<!--            메뉴: (개수)-->
+<!--        </p>-->
+<!--        <div class="options">-->
+<!--    <span>-->
+<!--      총 금액: 원-->
+<!--    </span>-->
+<!--            <button class="btn">추가</button>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <div class="card">
-        <h3 class="blog-title">Table 6</h3>
-        <p class="description">
-            메뉴: (개수)
-        </p>
-        <div class="options">
-    <span>
-      총 금액: 원
-    </span>
-            <button class="btn">추가</button>
-        </div>
-    </div>
+<!--    <div class="card">-->
+<!--        <h3 class="blog-title">Table 4</h3>-->
+<!--        <p class="description">-->
+<!--            메뉴: (개수)-->
+<!--        </p>-->
+<!--        <div class="options">-->
+<!--    <span>-->
+<!--      총 금액: 원-->
+<!--    </span>-->
+<!--            <button class="btn">추가</button>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <div class="card">
-        <h3 class="blog-title">Table 7</h3>
-        <p class="description">
-            메뉴: (개수)
-        </p>
-        <div class="options">
-    <span>
-      총 금액: 원
-    </span>
-            <button class="btn">추가</button>
-        </div>
-    </div>
+<!--    <div class="card">-->
+<!--        <h3 class="blog-title">Table 5</h3>-->
+<!--        <p class="description">-->
+<!--            메뉴: (개수)-->
+<!--        </p>-->
+<!--        <div class="options">-->
+<!--    <span>-->
+<!--      총 금액: 원-->
+<!--    </span>-->
+<!--            <button class="btn">추가</button>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <div class="card">
-        <h3 class="blog-title">Table 8</h3>
-        <p class="description">
-            메뉴: (개수)
-        </p>
-        <div class="options">
-    <span>
-      총 금액: 원
-    </span>
-            <button class="btn">추가</button>
-        </div>
-    </div>
+<!--    <div class="card">-->
+<!--        <h3 class="blog-title">Table 6</h3>-->
+<!--        <p class="description">-->
+<!--            메뉴: (개수)-->
+<!--        </p>-->
+<!--        <div class="options">-->
+<!--    <span>-->
+<!--      총 금액: 원-->
+<!--    </span>-->
+<!--            <button class="btn">추가</button>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <div class="card">
-        <h3 class="blog-title">Table 9</h3>
-        <p class="description">
-            메뉴: (개수)
-        </p>
-        <div class="options">
-    <span>
-      총 금액: 원
-    </span>
-            <button class="btn">추가</button>
-        </div>
-    </div>
+<!--    <div class="card">-->
+<!--        <h3 class="blog-title">Table 7</h3>-->
+<!--        <p class="description">-->
+<!--            메뉴: (개수)-->
+<!--        </p>-->
+<!--        <div class="options">-->
+<!--    <span>-->
+<!--      총 금액: 원-->
+<!--    </span>-->
+<!--            <button class="btn">추가</button>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <div class="card">
-        <h3 class="blog-title">Table 10</h3>
-        <p class="description">
-            메뉴: (개수)
-        </p>
-        <div class="options">
-    <span>
-      총 금액: 원
-    </span>
-            <button class="btn">추가</button>
-        </div>
-    </div>
+<!--    <div class="card">-->
+<!--        <h3 class="blog-title">Table 8</h3>-->
+<!--        <p class="description">-->
+<!--            메뉴: (개수)-->
+<!--        </p>-->
+<!--        <div class="options">-->
+<!--    <span>-->
+<!--      총 금액: 원-->
+<!--    </span>-->
+<!--            <button class="btn">추가</button>-->
+<!--        </div>-->
+<!--    </div>-->
 
-        <div class="card">
-            <h3 class="blog-title">Table 11</h3>
-            <p class="description">
-                메뉴: (개수)
-            </p>
-            <div class="options">
-    <span>
-      총 금액: 원
-    </span>
-                <button class="btn">추가</button>
-            </div>
-        </div>
+<!--    <div class="card">-->
+<!--        <h3 class="blog-title">Table 9</h3>-->
+<!--        <p class="description">-->
+<!--            메뉴: (개수)-->
+<!--        </p>-->
+<!--        <div class="options">-->
+<!--    <span>-->
+<!--      총 금액: 원-->
+<!--    </span>-->
+<!--            <button class="btn">추가</button>-->
+<!--        </div>-->
+<!--    </div>-->
 
-        <div class="card">
-            <h3 class="blog-title">Table 12</h3>
-            <p class="description">
-                메뉴: (개수)
-            </p>
-            <div class="options">
-    <span>
-      총 금액: 원
-    </span>
-                <button class="btn">추가</button>
-            </div>
-        </div>
-    </div>
+<!--    <div class="card">-->
+<!--        <h3 class="blog-title">Table 10</h3>-->
+<!--        <p class="description">-->
+<!--            메뉴: (개수)-->
+<!--        </p>-->
+<!--        <div class="options">-->
+<!--    <span>-->
+<!--      총 금액: 원-->
+<!--    </span>-->
+<!--            <button class="btn">추가</button>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--        <div class="card">-->
+<!--            <h3 class="blog-title">Table 11</h3>-->
+<!--            <p class="description">-->
+<!--                메뉴: (개수)-->
+<!--            </p>-->
+<!--            <div class="options">-->
+<!--    <span>-->
+<!--      총 금액: 원-->
+<!--    </span>-->
+<!--                <button class="btn">추가</button>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="card">-->
+<!--            <h3 class="blog-title">Table 12</h3>-->
+<!--            <p class="description">-->
+<!--                메뉴: (개수)-->
+<!--            </p>-->
+<!--            <div class="options">-->
+<!--    <span>-->
+<!--      총 금액: 원-->
+<!--    </span>-->
+<!--                <button class="btn">추가</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     <!-- content end -->
 
 </form>

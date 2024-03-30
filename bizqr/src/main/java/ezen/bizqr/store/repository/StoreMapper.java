@@ -3,6 +3,7 @@ package ezen.bizqr.store.repository;
 import ezen.bizqr.store.domain.MenuItemVO;
 import ezen.bizqr.store.domain.RegisterVO;
 import ezen.bizqr.store.domain.StoreVO;
+import ezen.bizqr.store.domain.TablesVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -34,11 +35,7 @@ public interface StoreMapper {
 
     List<StoreVO> getStoreListByType(String storeType);
 
-<<<<<<< HEAD
-}
-=======
-
     int insertTable(@Param("storeId") int storeId,@Param("tableId") String tableId);
-}
 
->>>>>>> 0de22025aca83ea0ae5e1c4e38cd2bc3e257943c
+    List<TablesVO> getTablesList(long storeId);
+}
