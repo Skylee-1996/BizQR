@@ -44,15 +44,16 @@
             <div class="card">
                 <h3 class="blog-title" th:text="'Table' + ${tvo.tableId}"></h3>
                 <p class="description">
-                    메뉴: (개수)
+                    메뉴:
+                    <th:block th:each="order:${tvo.orderHistory}">
+                        <span th:text="${order.menuName} + ' (' + ${order.menuAmount} + ')'"></span>
+                    </th:block>
                 </p>
                 <div class="options">
-                    <span>
-                        총 금액 : 원
-                    </span>
+                    <span th:text="'총 금액: ' + ${tvo.totalMoney} + '원'"></span>
                     <button class="btn">추가</button>
                 </div>
-                </div>
+            </div>
         </th:block>
 
 

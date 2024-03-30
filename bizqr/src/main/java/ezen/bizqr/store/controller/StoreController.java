@@ -3,10 +3,7 @@ package ezen.bizqr.store.controller;
 import ezen.bizqr.file.FileHandler;
 import ezen.bizqr.file.FileMapper;
 import ezen.bizqr.file.FileVO;
-import ezen.bizqr.store.domain.MenuItemVO;
-import ezen.bizqr.store.domain.RegisterVO;
-import ezen.bizqr.store.domain.StoreVO;
-import ezen.bizqr.store.domain.TablesVO;
+import ezen.bizqr.store.domain.*;
 import ezen.bizqr.store.service.StoreService;
 
 import lombok.RequiredArgsConstructor;
@@ -73,15 +70,22 @@ public class StoreController {
         log.info("storeId >>> {}", storeId);
 
         List<TablesVO> list = ssv.getTablesList(storeId);
-        log.info("table list >>> : " + list);
 
         for(TablesVO table : list){
             String tableIdString = table.getTableId();
+            List<OrderHistoryVO> ohlist = ssv.getTableOrderHistory(table.getStoreId(), table.getTableId());
+            table.setOrderHistory(ohlist);
+            int money = 0;
+            for(OrderHistoryVO oh : ohlist){
+                money += oh.getTotalPrice();
+            }
+            table.setTotalMoney(money);
             String[] parts = tableIdString.split("_");
             if(parts.length > 1){
                 table.setTableId(parts[1]);
             }
         }
+        log.info("table list >>> : " + list);
 
         model.addAttribute("list", list);
 

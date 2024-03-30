@@ -1,9 +1,6 @@
 package ezen.bizqr.store.repository;
 
-import ezen.bizqr.store.domain.MenuItemVO;
-import ezen.bizqr.store.domain.RegisterVO;
-import ezen.bizqr.store.domain.StoreVO;
-import ezen.bizqr.store.domain.TablesVO;
+import ezen.bizqr.store.domain.*;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -38,4 +35,6 @@ public interface StoreMapper {
     int insertTable(@Param("storeId") int storeId,@Param("tableId") String tableId);
 
     List<TablesVO> getTablesList(long storeId);
+
+    List<OrderHistoryVO> getTableOrderHistory(@Param("storeId") long storeId, @Param("tableId") String tableId);
 }

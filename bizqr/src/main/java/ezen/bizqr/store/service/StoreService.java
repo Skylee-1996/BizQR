@@ -1,9 +1,6 @@
 package ezen.bizqr.store.service;
 
-import ezen.bizqr.store.domain.MenuItemVO;
-import ezen.bizqr.store.domain.RegisterVO;
-import ezen.bizqr.store.domain.StoreVO;
-import ezen.bizqr.store.domain.TablesVO;
+import ezen.bizqr.store.domain.*;
 
 import java.util.List;
 
@@ -31,4 +28,6 @@ public interface StoreService {
     int insertTables(int storeId, int tableNum);
 
     List<TablesVO> getTablesList(long storeId);
+
+    List<OrderHistoryVO> getTableOrderHistory(long storeId, String tableId);
 }

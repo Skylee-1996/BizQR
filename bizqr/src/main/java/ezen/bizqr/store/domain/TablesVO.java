@@ -2,6 +2,8 @@ package ezen.bizqr.store.domain;
 
 import lombok.*;
 
+import java.util.List;
+
 @Getter
 @Setter
 @ToString
@@ -14,4 +16,6 @@ public class TablesVO {
     String tableQr;
     long totalPrice;
     int isUsing;
+    List<OrderHistoryVO> orderHistory;
+    int totalMoney;
 }

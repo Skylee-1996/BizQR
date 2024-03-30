@@ -75,4 +75,9 @@
     <select id="getTablesList" resultType="ezen.bizqr.store.domain.TablesVO" >
         select * from tables where store_id = #{storeId}
     </select>
+
+    <select id="getTableOrderHistory" resultType="ezen.bizqr.store.domain.OrderHistoryVO" >
+        select * from order_history where table_id = #{tableId} and store_id = #{storeId}
+    </select>
+
 </mapper>
