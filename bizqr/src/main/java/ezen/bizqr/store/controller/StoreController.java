@@ -24,7 +24,6 @@ import java.util.List;
 @Controller
 @RequiredArgsConstructor
 public class StoreController {
-
     private final StoreService ssv;
     private final FileHandler fh;
     private final FileMapper fm;
@@ -35,12 +34,9 @@ public class StoreController {
     @PostMapping("/register")
     public String storeRegister(RegisterVO rvo, Model m) {
         log.info(">>>>> svo 들어온지 확인하자 >>>>> {} " , rvo);
-        
         //결제 완료 후 db 저장해야함으로 주석처리함 2024-02-26 - cbj
         //ssv.insertRegister(rvo);
-
         m.addAttribute("rvo", rvo);
-
         return "/payment/pay";
     }
 
@@ -108,17 +104,19 @@ public class StoreController {
     @PostMapping("/addMenu")
     public ResponseEntity<String> addMenu(@ModelAttribute MenuItemVO mvo, @RequestParam(name="image", required = false) MultipartFile imageFile) {
 
+<<<<<<< HEAD
         log.info(">>>>>>>>>>mvo >>>>>>> {}", mvo);
         long MenuId = ssv.insertMenu(mvo);
+=======
+            log.info(">>>>>>>>>>mvo >>>>>>> {}", mvo);
+            long MenuId = ssv.insertMenu(mvo);
+>>>>>>> 023b13bbbaea968a5da5cd8bbb324e928363aff0
            FileVO fvo = fh.uploadFile(imageFile);
            fvo.setMenuId(MenuId);
             if (!imageFile.isEmpty()) {
-
                 log.info(">>>>>>>>>>>Received file>>>>>>>>>>>>: " + imageFile.getOriginalFilename());
                 fm.insertFile(fvo);
             }
-
-
             return ResponseEntity.ok("menu add success");
         }
 
@@ -146,14 +144,11 @@ public class StoreController {
 
     @PostMapping("/modify")
     public String modifyStore(StoreVO svo, @RequestParam("file") MultipartFile file, Model m) {
-
         log.info(">>>>>>>>> svo >>>{}", svo);
-
           FileVO fvo= fh.uploadStoreImage(file, svo.getStoreId());
           svo.setLogoImage(fvo.getFileName());
           ssv.updateStore(svo);
           m.addAttribute("svo", svo);
-
         return "/store/create";
     }
 
@@ -163,9 +158,7 @@ public class StoreController {
     public String insertTable(@PathVariable("storeId") int storeId, @PathVariable("tableNum") int tableNum){
         log.info(">>> storeId  >>> {}", storeId);
         log.info(">>> tableNum  >>> {}", tableNum);
-
         int isOk = ssv.insertTables(storeId,tableNum);
-
         return isOk > 0 ? "1" : "0";
     }
 
