@@ -29,5 +29,9 @@ public interface StoreService {
 
     List<TablesVO> getTablesList(long storeId);
 
-    List<OrderHistoryVO> getTableOrderHistory(long storeId, String tableId);
+    List<OrderHistoryVO> getTableOrderHistory(long storeId, String combinedTableId);
+
+    int saveTablePay(tablePayHistoryVO tphvo);
+
+    int deleteTableOrderHistory(long storeId, String tableId);
 }

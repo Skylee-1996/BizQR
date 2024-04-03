@@ -37,4 +37,8 @@ public interface StoreMapper {
     List<TablesVO> getTablesList(long storeId);
 
     List<OrderHistoryVO> getTableOrderHistory(@Param("storeId") long storeId, @Param("tableId") String tableId);
+
+    int saveTablePay(tablePayHistoryVO tphvo);
+
+    int deleteTableOrderHistory(@Param("storeId") long storeId, @Param("combinedTableId") String combinedTableId);
 }
