@@ -80,4 +80,12 @@
         select * from order_history where table_id = #{tableId} and store_id = #{storeId}
     </select>
 
+    <insert id="saveTablePay">
+        insert into table_pay_history values(#{impUid}, #{merchantUid}, #{storeId}, #{tableId}, #{totalPrice}, #{paidTime})
+    </insert>
+
+    <delete id="deleteTableOrderHistory">
+        delete from order_history where store_id = #{storeId} and table_id = #{combinedTableId}
+    </delete>
+
 </mapper>

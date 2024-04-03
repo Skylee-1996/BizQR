@@ -61,6 +61,16 @@ public class StoreServiceImpl implements StoreService {
     }
 
     @Override
+    public int saveTablePay(tablePayHistoryVO tphvo) {
+        return storeMapper.saveTablePay(tphvo);
+    }
+
+    @Override
+    public int deleteTableOrderHistory(long storeId, String combinedTableId) {
+        return storeMapper.deleteTableOrderHistory(storeId, combinedTableId);
+    }
+
+    @Override
     public StoreVO getDetailFromStore(String storeId) {
         return storeMapper.getDetailFromStore(storeId);
     }

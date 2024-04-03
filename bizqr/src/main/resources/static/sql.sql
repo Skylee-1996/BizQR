@@ -271,3 +271,13 @@ create table store_payment(
     primary key(imp_uid)
     );
 
+create table table_pay_history(
+    imp_uid varchar(255) not null,
+    merchant_uid varchar(255),
+    store_id bigint,
+    table_id varchar(255),
+    total_price bigint,
+    paid_time varchar(255),
+    primary key(imp_uid)
+    );
+

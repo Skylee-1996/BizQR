@@ -92,11 +92,23 @@ public class StoreController {
         return "/store/posPage";
     }
 
+    @DeleteMapping("/deleteTableOrderHistory/{storeId}/{combinedTableId}")
+    @ResponseBody
+    public String deleteTableOrder(@PathVariable("storeId") long storeId, @PathVariable("combinedTableId") String combinedTableId){
+        log.info("storeId >>> : " + storeId);
+        log.info("tableId >>> : " + combinedTableId);
+
+        int isOk = ssv.deleteTableOrderHistory(storeId, combinedTableId);
+
+        return isOk > 0 ? "1" : "0";
+    }
+
+
 
     @PostMapping("/addMenu")
     public ResponseEntity<String> addMenu(@ModelAttribute MenuItemVO mvo, @RequestParam(name="image", required = false) MultipartFile imageFile) {
 
-            log.info(">>>>>>>>>>mvo >>>>>>> {}", mvo);
+        log.info(">>>>>>>>>>mvo >>>>>>> {}", mvo);
         long MenuId = ssv.insertMenu(mvo);
            FileVO fvo = fh.uploadFile(imageFile);
            fvo.setMenuId(MenuId);
@@ -153,6 +165,16 @@ public class StoreController {
         log.info(">>> tableNum  >>> {}", tableNum);
 
         int isOk = ssv.insertTables(storeId,tableNum);
+
+        return isOk > 0 ? "1" : "0";
+    }
+
+    @PostMapping("/saveTablePayHistory")
+    @ResponseBody
+    public String saveTablePay(@RequestBody tablePayHistoryVO tphvo){
+        log.info("saveTablePayHistoryVO >>> tphvo >>> {}", tphvo);
+
+        int isOk = ssv.saveTablePay(tphvo);
 
         return isOk > 0 ? "1" : "0";
     }
