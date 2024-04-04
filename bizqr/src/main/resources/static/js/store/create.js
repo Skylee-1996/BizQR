@@ -26,8 +26,8 @@ function openModal(item) {
     document.getElementById('modal-save').addEventListener('click', function(e) {
         e.preventDefault(); // 폼 기본 제출 방지
         // 입력된 값으로 항목 데이터 업데이트
-        item.querySelector('h2').textContent = document.getElementById('modal-item-name').value;
-        item.querySelector('.price').textContent = document.getElementById('modal-item-price').value;
+        item.querySelector('.menu-name').textContent = document.getElementById('modal-item-name').value;
+        item.querySelector('.menu-price').textContent = document.getElementById('modal-item-price').value;
         // 이미지 미리보기에서 설정된 이미지 src를 사용하여 항목의 이미지 업데이트
         item.querySelector('img').src = document.getElementById('image-preview').src;
         closeModal(); // 모달 닫기
@@ -208,12 +208,18 @@ document.addEventListener('DOMContentLoaded', function () {
         item.className = "item";
         item.setAttribute('data-id', itemId++); // 각 항목에 고유 ID 부여
         item.innerHTML = `
-            <img src="/image/pig.png" alt="">
-            <h2>메뉴 이름</h2>
-            <div class="price">메뉴 가격</div>
-            <button class="modifyItem">수정하기</button>
-            <button class="removeItem">삭제</button>
-        `;
+        <div class="menu-list" id="menu-list">
+            <div class="menu-img">
+                <img src="" alt="/image/pig.png"/>
+            </div>
+            <div class="menu-info">
+                <div class="menu-name">메뉴이름</div>
+                <div class="menu-price">메뉴가격</div>
+            </div>
+        </div>
+        <button class="modifyItem">수정하기</button>
+        <button class="removeItem">삭제</button>
+            `;
 
         // 수정하기 버튼에 이벤트 리스너 추가
         item.querySelector('.modifyItem').addEventListener('click', function () {
@@ -235,10 +241,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
         tab.className = "tab";
         tab.innerHTML = `
-            <div class="Tab">
-                <button class="removeTab"><span class="material-icons-sharp">remove</span></button>
-                <h3>Tab</h3>
-            </div>
+        < div
+
+        class
+
+        = "Tab" >
+            < button
+
+        class
+
+        = "removeTab" > < span
+
+        class
+
+        = "material-icons-sharp" > remove < /span></
+        button >
+        < h3 > Tab < /h3>
+    </div>
         `;
 
         // Remove 버튼에 이벤트 리스너 추가

@@ -4,31 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="b8cd58ee-0dc1-47e5-bd76-dc0182274e78" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/repository/StoreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/repository/StoreMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/service/StoreServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/storeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/pay/pay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/pay/pay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/sql.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/store/posPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/store/posPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/store/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/store/register.html" afterDir="false" />
-    </list>
-=======
-    <list default="true" id="b8cd58ee-0dc1-47e5-bd76-dc0182274e78" name="Changes" comment="" />
->>>>>>> 023b13bbbaea968a5da5cd8bbb324e928363aff0
+    <list default="true" id="e9e02d83-5b4d-43e3-bd3d-86347ba3dbf3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
   </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
@@ -47,65 +27,17 @@
       </state>
     </system>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2eOKOJjvS3vr6pMfjs4JWkSRn8X" />
+  <component name="ProjectId" id="2eaTMUR8HQ6Wy5M5kWJfisAQDRd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.posPage.html.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BizqrApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-<<<<<<< HEAD
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lhn00/Desktop/창세/DoctorInHome&quot;,
-=======
->>>>>>> origin/main
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-<<<<<<< HEAD
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-=======
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
-=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JavaScript Debug.posPage.html.executor": "Run",
+    "JavaScript Debug.create.html.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -113,35 +45,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.BizqrApplication.executor": "Run",
-    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/lhn00/Desktop/bizqr/bizqr",
+    "last_opened_file_path": "C:/Users/lhn00/Desktop/project",
     "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "vue.rearranger.settings.migration": "true"
->>>>>>> origin/main
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\lhn00\Desktop\bizqr\bizqr\src\main\resources" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="BizqrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="bizqr.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ezen.bizqr.BizqrApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
->>>>>>> 023b13bbbaea968a5da5cd8bbb324e928363aff0
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -152,31 +64,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b8cd58ee-0dc1-47e5-bd76-dc0182274e78" name="Changes" comment="" />
-      <created>1711770152048</created>
+      <changelist id="e9e02d83-5b4d-43e3-bd3d-86347ba3dbf3" name="Changes" comment="" />
+      <created>1712141642129</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1711770152048</updated>
-      <workItem from="1711770154196" duration="2122000" />
-      <workItem from="1711772311377" duration="6257000" />
-<<<<<<< HEAD
-      <workItem from="1712025947148" duration="10830000" />
-      <workItem from="1712102562063" duration="357000" />
-      <workItem from="1712103213755" duration="3707000" />
-      <workItem from="1712111098478" duration="16000" />
-      <workItem from="1712111260796" duration="848000" />
-      <workItem from="1712112187484" duration="1507000" />
-      <workItem from="1712118105701" duration="6255000" />
-=======
-<<<<<<< HEAD
-      <workItem from="1711778607287" duration="345000" />
-      <workItem from="1711856653019" duration="4740000" />
-      <workItem from="1711961510812" duration="3800000" />
-      <workItem from="1712041078321" duration="205000" />
-=======
-      <workItem from="1712025947148" duration="2792000" />
->>>>>>> 023b13bbbaea968a5da5cd8bbb324e928363aff0
->>>>>>> origin/main
+      <updated>1712141642129</updated>
+      <workItem from="1712141644062" duration="200000" />
+      <workItem from="1712190219348" duration="6376000" />
     </task>
     <servers />
   </component>

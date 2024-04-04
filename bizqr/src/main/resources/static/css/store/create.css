@@ -95,6 +95,7 @@ header{
     align-items: center;
     padding: 20px 0;
 }
+/*
 
 .listProduct .item img{
     width: 90%;
@@ -104,20 +105,20 @@ header{
 .listProduct {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Align items to the start of the container */
-    gap: 20px; /* Ensure there's a gap between items */
+    justify-content: flex-start; !* Align items to the start of the container *!
+    gap: 20px; !* Ensure there's a gap between items *!
 }
 
 .listProduct .item {
-    width: calc(50% - 20px); /* Fixed width for larger screens, adjust the calculation if the gap changes */
-    max-width: 400px; /* Set a max width for each item */
-    flex: 0 1 auto; /* Do not grow, allow shrink, auto basis */
+    width: calc(50% - 20px); !* Fixed width for larger screens, adjust the calculation if the gap changes *!
+    max-width: 400px; !* Set a max width for each item *!
+    flex: 0 1 auto; !* Do not grow, allow shrink, auto basis *!
     background-color: #EEEEE6;
     height: 300px;
     padding: 20px;
     border-radius: 20px;
     margin-top: 50px;
-    margin-bottom: 50px; /* Add margin-bottom for spacing between rows */
+    margin-bottom: 50px; !* Add margin-bottom for spacing between rows *!
 }
 .listProduct .item h2{
     font-weight: 500;
@@ -137,6 +138,7 @@ header{
     border-radius: 20px;
 }
 
+*/
 
 .modal {
     display: none;
@@ -425,6 +427,8 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 /* 상품명, 가격 컨테이너 */
