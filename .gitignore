@@ -39,3 +39,5 @@ out/
 *.idea/*
 .idea/misc.xml
 .idea/workspace.xml
+
+/bizqr/.idea/workspace.xml
