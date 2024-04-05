@@ -57,7 +57,7 @@ function postTabList(storeId) {
                     console.log(FirstTabName); // 여기서 로그 확인 가능
                     tabLi.classList.add('active');
 
-                    postItemList(OrderStoreId, FirstTabName); // 첫 번째 탭에 대한 아이템 리스트 요청
+                    postItemList(storeId, FirstTabName); // 첫 번째 탭에 대한 아이템 리스트 요청
                 }
                 tabLi.textContent = tabName;
                 tabLi.addEventListener('click', function() {

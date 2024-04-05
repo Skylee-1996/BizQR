@@ -104,8 +104,14 @@ public class StoreController {
     @PostMapping("/addMenu")
     public ResponseEntity<String> addMenu(@ModelAttribute MenuItemVO mvo, @RequestParam(name="image", required = false) MultipartFile imageFile) {
 
+<<<<<<< HEAD
         log.info(">>>>>>>>>>mvo >>>>>>> {}", mvo);
         long MenuId = ssv.insertMenu(mvo);
+=======
+
+            log.info(">>>>>>>>>>mvo >>>>>>> {}", mvo);
+            long MenuId = ssv.insertMenu(mvo);
+>>>>>>> f32e6c3a37c94a419486627533cfc1ebfaaf1783
            FileVO fvo = fh.uploadFile(imageFile);
            fvo.setMenuId(MenuId);
             if (!imageFile.isEmpty()) {
