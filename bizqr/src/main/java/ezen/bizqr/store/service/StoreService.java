@@ -1,8 +1,6 @@
 package ezen.bizqr.store.service;
 
-import ezen.bizqr.store.domain.MenuItemVO;
-import ezen.bizqr.store.domain.RegisterVO;
-import ezen.bizqr.store.domain.StoreVO;
+import ezen.bizqr.store.domain.*;
 
 import java.util.List;
 
@@ -13,7 +11,6 @@ public interface StoreService {
 
     RegisterVO getDetail(long registerNum);
 
-
     List<StoreVO> selectEmail(String userEmail);
     int insertStore(StoreVO svo);
 
@@ -23,15 +20,18 @@ public interface StoreService {
     List<RegisterVO> getRegisterList();
     void updateStore(StoreVO svo);
 
-
-    List<StoreVO> getStoreList();
-    
-
-
-    int alterRegisterInfo(long registerNum, int isRegistered);
-
-
     List<StoreVO> getStoreListByType(String storeType);
 
+    int alterRegisterInfo(long registerNum, int isRegistered);
+    List<StoreVO> getStoreList();
+
     int insertTables(int storeId, int tableNum);
+
+    List<TablesVO> getTablesList(long storeId);
+
+    List<OrderHistoryVO> getTableOrderHistory(long storeId, String combinedTableId);
+
+    int saveTablePay(tablePayHistoryVO tphvo);
+
+    int deleteTableOrderHistory(long storeId, String tableId);
 }

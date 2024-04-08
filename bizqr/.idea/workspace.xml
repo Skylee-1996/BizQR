@@ -4,15 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb57dace-c382-4fa7-9f7a-b092e00bc446" name="변경" comment="">
+<<<<<<< HEAD
+    <list default="true" id="235adee7-bbea-4e49-b639-1629014602bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ezen/bizqr/store/controller/StoreController.java" afterDir="false" />
+>>>>>>> origin/main
     </list>
+=======
+    <list default="true" id="e9e02d83-5b4d-43e3-bd3d-86347ba3dbf3" name="Changes" comment="" />
+>>>>>>> f32e6c3a37c94a419486627533cfc1ebfaaf1783
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -26,39 +35,119 @@
   "associatedIndex": 6
 }]]></component>
   <component name="ProjectId" id="2eUDb8FQBCoaNfz80r57mJnm7Wh" />
+=======
+<<<<<<< HEAD
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+=======
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="bizqr" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+>>>>>>> f32e6c3a37c94a419486627533cfc1ebfaaf1783
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+<<<<<<< HEAD
+  <component name="ProjectId" id="2eZlKW1Ic0EfeQc2ymZLhT9gH9T" />
+=======
+  <component name="ProjectId" id="2eaTMUR8HQ6Wy5M5kWJfisAQDRd" />
+>>>>>>> f32e6c3a37c94a419486627533cfc1ebfaaf1783
+>>>>>>> origin/main
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+<<<<<<< HEAD
     "Application.BizqrApplication.executor": "Run",
+=======
+<<<<<<< HEAD
+=======
+    "JavaScript Debug.create.html.executor": "Run",
+>>>>>>> f32e6c3a37c94a419486627533cfc1ebfaaf1783
+>>>>>>> origin/main
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.selected.package.tslint": "(autodetect)"
+=======
+    "Spring Boot.BizqrApplication.executor": "Run",
+    "kotlin-language-version-configured": "true",
+<<<<<<< HEAD
+=======
+    "last_opened_file_path": "C:/Users/lhn00/Desktop/project",
+>>>>>>> f32e6c3a37c94a419486627533cfc1ebfaaf1783
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> origin/main
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+<<<<<<< HEAD
         <option value="jdk-17.0.9-corretto-17.0.9-249ae16d76d6-98297cd8" />
+=======
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+>>>>>>> origin/main
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <created>1711950333755</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711950333755</updated>
+=======
+<<<<<<< HEAD
+      <changelist id="235adee7-bbea-4e49-b639-1629014602bf" name="Changes" comment="" />
+      <created>1712119919078</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712119919078</updated>
+      <workItem from="1712119921156" duration="137000" />
+      <workItem from="1712291664857" duration="1425000" />
+=======
+      <changelist id="e9e02d83-5b4d-43e3-bd3d-86347ba3dbf3" name="Changes" comment="" />
+      <created>1712141642129</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712141642129</updated>
+      <workItem from="1712141644062" duration="200000" />
+      <workItem from="1712190219348" duration="6376000" />
+>>>>>>> f32e6c3a37c94a419486627533cfc1ebfaaf1783
+>>>>>>> origin/main
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

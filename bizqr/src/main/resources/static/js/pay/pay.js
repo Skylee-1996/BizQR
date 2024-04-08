@@ -95,7 +95,6 @@ function requestPay() {
                             itemAmount: amountVal,
                             paidTime: nowTime
                         };
-                        7
                         postStorePaySuccess(data);
 
                         window.location.href = '/';

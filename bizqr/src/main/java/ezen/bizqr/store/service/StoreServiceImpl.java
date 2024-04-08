@@ -1,9 +1,7 @@
 package ezen.bizqr.store.service;
 
 import ezen.bizqr.board.domain.PagingVO;
-import ezen.bizqr.store.domain.MenuItemVO;
-import ezen.bizqr.store.domain.RegisterVO;
-import ezen.bizqr.store.domain.StoreVO;
+import ezen.bizqr.store.domain.*;
 import ezen.bizqr.store.repository.StoreMapper;
 import ezen.bizqr.user.security.UserVO;
 import lombok.RequiredArgsConstructor;
@@ -50,6 +48,26 @@ public class StoreServiceImpl implements StoreService {
     public int insertTables(int storeId, int tableNum) {
         String tableId = storeId + "_" + tableNum;
         return storeMapper.insertTable(storeId, tableId);
+    }
+
+    @Override
+    public List<TablesVO> getTablesList(long storeId) {
+        return storeMapper.getTablesList(storeId);
+    }
+
+    @Override
+    public List<OrderHistoryVO> getTableOrderHistory(long storeId, String tableId) {
+        return storeMapper.getTableOrderHistory(storeId, tableId);
+    }
+
+    @Override
+    public int saveTablePay(tablePayHistoryVO tphvo) {
+        return storeMapper.saveTablePay(tphvo);
+    }
+
+    @Override
+    public int deleteTableOrderHistory(long storeId, String combinedTableId) {
+        return storeMapper.deleteTableOrderHistory(storeId, combinedTableId);
     }
 
     @Override
