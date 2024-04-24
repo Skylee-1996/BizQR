@@ -161,4 +161,9 @@ public class CustomerServiceImpl implements CustomerService{
         return ohlist;
     }
 
+    @Override
+    public String isTable(String tableId, long storeId) {
+        return om.isTable(storeId, tableId);
+    }
+
 }

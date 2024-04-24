@@ -25,4 +25,5 @@ public interface CustomerService{
 
     List<PostOrderHistoryVO> orderHistory(long storeId, String tableId);
 
+    String isTable(String tableId, long storeId);
 }

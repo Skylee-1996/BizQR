@@ -19,7 +19,7 @@ public interface OrderMapper {
 
     void insertOrderHistory(@Param("ovo") OrderVO ovo, @Param("oivo") OrderItemVO orderItemVO);
 
-    int deleteOrderBasket(@Param("tableId") String tableId, @Param("storeId") long storeId);
+    void deleteOrderBasket(@Param("tableId") String tableId, @Param("storeId") long storeId);
 
     int basketUpdate(OrderItemVO oivo);
 
@@ -36,4 +36,6 @@ public interface OrderMapper {
     List<OrderHistoryVO> orderHistory(@Param("storeId") long storeId, @Param("tableId") String tableId, @Param("orderId") String orderId);
 
     List<String> orderHistoryOrderId(@Param("storeId") long storeId, @Param("tableId") String tableId);
+
+    String isTable(@Param("storeId") long storeId, @Param("tableId") String tableId);
 }

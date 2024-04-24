@@ -79,6 +79,9 @@
         font-size: 25px;
         height: 100%;
         width: 100%;
+        white-space: nowrap;  /* 텍스트를 한 줄로 처리 */
+        overflow: hidden;  /* 넘치는 내용 숨김 */
+        text-overflow: ellipsis;  /* 텍스트가 넘치면 말줄임표(...)로 표시 */
         text-align: center;
         line-height: 250%;
         border-right: solid 1px black;

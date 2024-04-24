@@ -51,10 +51,14 @@
     </select>
 
     <select id="orderHistory" resultType="ezen.bizqr.customer.domain.OrderHistoryVO">
-        SELECT * FROM `order_history` WHERE store_id = #{storeId} AND table_id = #{tableId} AND order_id = #{orderId} AND order_status = '1';
+        SELECT * FROM `order_history` WHERE store_id = #{storeId} AND table_id = #{tableId} AND order_id = #{orderId} AND order_status = '1'
     </select>
 
     <select id="orderHistoryOrderId" resultType="String">
-        SELECT DISTINCT order_id FROM `order_history` WHERE store_id = #{storeId} AND table_id = #{tableId} AND order_status = '1';
+        SELECT DISTINCT order_id FROM `order_history` WHERE store_id = #{storeId} AND table_id = #{tableId} AND order_status = '1'
+    </select>
+
+    <select id="isTable" resultType="String">
+        SELECT table_id FROM `tables` WHERE store_id = #{storeId} AND table_id = #{tableId}
     </select>
 </mapper>

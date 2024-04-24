@@ -29,10 +29,18 @@ public class CustomerController {
         log.info("tableId >>> {}", tableId);
         log.info("storeId >>> {}", storeId);
 
-        m.addAttribute("tableId", tableId);
-        m.addAttribute("storeId", storeId);
+        String isTable = csv.isTable(tableId, storeId);
 
-        return "/customer/customerIndex";
+        log.info("isTable >>> {}", isTable);
+
+        if(isTable.equals(tableId)){
+            m.addAttribute("tableId", tableId);
+            m.addAttribute("storeId", storeId);
+
+            return "/customer/customerIndex";
+        }
+
+        return "";
     }
 
     @GetMapping(value="/itemList/{storeId}/{tabName}", produces = MediaType.APPLICATION_JSON_VALUE)
