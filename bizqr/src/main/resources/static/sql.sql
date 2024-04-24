@@ -244,9 +244,7 @@ CREATE TABLE IF NOT EXISTS `transaction` (
 
 ----------- 02/08 -----------
 /* 관리자계정 추가 */
-
-INSERT INTO user (email, pwd, nick_name, phone_num)
-VALUES ('admin@admin.com','admin','admin','010-8282-9999');
+/* 관리자 계정 회원가입에서 admin@admin.com 으로 가입후 권한 추가 하기*/
 
 INSERT INTO auth_user (email, auth)
 VALUES ('admin@admin.com', 'ROLE_ADMIN');
@@ -269,6 +267,16 @@ create table store_payment(
     item_name varchar(255) not null,
     item_amount int not null,
     paid_time varchar(255) not null,
+    primary key(imp_uid)
+    );
+
+create table table_pay_history(
+    imp_uid varchar(255) not null,
+    merchant_uid varchar(255),
+    store_id bigint,
+    table_id varchar(255),
+    total_price bigint,
+    paid_time varchar(255),
     primary key(imp_uid)
     );
 
